@@ -1,8 +1,18 @@
 ![Claude for Designers](assets/banner.png)
 
+<p align="center">
+  <img src="https://img.shields.io/badge/license-MIT-101828?style=flat-square&labelColor=FFC000" alt="MIT License">
+  <img src="https://img.shields.io/badge/built%20with-Claude-101828?style=flat-square&labelColor=FFC000" alt="Built with Claude">
+  <img src="https://img.shields.io/badge/skills-7-101828?style=flat-square&labelColor=FFC000" alt="7 skills">
+  <img src="https://img.shields.io/badge/interfaces-Chat%20%C2%B7%20Cowork%20%C2%B7%20Code-101828?style=flat-square&labelColor=FFC000" alt="Works across Chat, Cowork, Code">
+  <img src="https://img.shields.io/badge/for-UI%2FUX%20designers-101828?style=flat-square&labelColor=FFC000" alt="For UI/UX designers">
+</p>
+
 # Claude for Designers
 
 A working repository for designers who use Claude as a collaborator. Skills, principles, project templates, and a career vault. Not a pile of prompts to paste, a system to work inside.
+
+> **New here?** Jump to [Install](#install) to get the seven skills running in two minutes, or read [Why this exists](#why-this-exists) first.
 
 Most designers use Claude like a vending machine: paste a request, take whatever drops out. This repo is the opposite. You clone it, brief Claude once through a working contract, and then run a seven-step design process where every step builds on the last. The output stops being generic the moment Claude knows your project, your market, and your constraints.
 
@@ -20,27 +30,9 @@ The designers who stay valuable are the ones who bring what Claude structurally 
 
 ## The seven-step process
 
-```mermaid
-flowchart LR
-    A["/grill-me<br/>stress-test the brief"] --> B["/design-brief<br/>single source of truth"]
-    B --> C["/information-architecture<br/>structure before pixels"]
-    C --> D["/design-tokens<br/>the system foundation"]
-    D --> E["/brief-to-tasks<br/>executable work"]
-    E --> F["/frontend-design<br/>build with full context"]
-    F --> G["/design-review<br/>critique like it's someone else's"]
-```
+![The seven-step process](assets/flow.png)
 
 Run them in order on any project. Skip a step and the next one does that step's work badly.
-
-| Step | Command | What it does |
-|---|---|---|
-| 1 | `/grill-me` | Stress-tests the brief before any design begins. Returns the five questions the brief never answered. |
-| 2 | `/design-brief` | Turns the interrogated brief into a single source of truth. |
-| 3 | `/information-architecture` | Maps screens and flows before a single pixel is drawn. |
-| 4 | `/design-tokens` | Locks colors, type, and spacing as a system, not loose decisions. |
-| 5 | `/brief-to-tasks` | Breaks the brief into time-boxed, executable work. |
-| 6 | `/frontend-design` | Builds the interface using the brief, IA, and tokens as context. |
-| 7 | `/design-review` | Critiques the output with the rigor you would apply to a stranger's work. |
 
 ---
 
