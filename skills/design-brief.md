@@ -6,6 +6,8 @@ First, ask the following if no Requirements Handshake exists from `/grill-me`:
 - What emotions should the design evoke when a user succeeds at their task?
 - What does "done" look like for this project?
 
+Ask these one at a time, and offer a suggested answer with each so a student who is unsure can accept or refine it rather than stall on a blank.
+
 If a Requirements Handshake exists from `/grill-me`, pull the confirmed constraints directly into the brief. Do not re-ask questions that are already answered there.
 
 Then generate a brief with these six sections:

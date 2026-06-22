@@ -14,7 +14,7 @@ A working repository for designers who use Claude as a collaborator. Skills, pri
 
 > **New here?** Jump to [Install](#install) to get the seven skills running in two minutes, or read [Why this exists](#why-this-exists) first.
 
-Most designers use Claude like a vending machine: paste a request, take whatever drops out. This repo is the opposite. You clone it, brief Claude once through a working contract, and then run a seven-step design process where every step builds on the last. The output stops being generic the moment Claude knows your project, your market, and your constraints.
+Most designers use Claude like a vending machine: paste a request, take whatever drops out. This repo is the opposite. You download it, brief Claude once through a working contract, and then run a seven-step design process where every step builds on the last. The output stops being generic the moment Claude knows your project, your market, and your constraints.
 
 Built for the [Claude for UI/UX Designers](https://ostad.app) course on Ostad, with Bangladesh-market design as the worked example. You do not need the course to use the repo.
 
@@ -58,13 +58,13 @@ claude-for-designers/
 
 ## Install
 
-Pick the Claude interface you use. Same files work everywhere, only the install path changes.
+Pick the Claude interface you use. The files are the same everywhere; only the install path changes. **However you got the repo: the green Code button on GitHub gives you a ZIP (download and unzip it, no Git needed), or clone it if you know Git. The contents are identical. The unzipped folder may be named `claude-for-designers-main`; that is fine.**
 
-### Claude Code (terminal, or the Desktop App's Code tab)
+### Claude Code (the Desktop App's Code tab, or a terminal)
+
+You only need this from Class 6. The seven skills live in `skills/`. To turn them into slash commands, open a terminal in your unzipped (or cloned) repo folder and run:
 
 ```bash
-git clone https://github.com/mshadmanrahman/claude-for-designers.git
-cd claude-for-designers
 mkdir -p ~/.claude/skills
 for f in grill-me design-brief information-architecture design-tokens brief-to-tasks frontend-design design-review; do
   mkdir -p ~/.claude/skills/$f
@@ -72,7 +72,7 @@ for f in grill-me design-brief information-architecture design-tokens brief-to-t
 done
 ```
 
-Restart Claude Code, type `/`, and the seven commands appear.
+Restart Claude Code, type `/`, and the seven commands appear. Prefer Git over the ZIP? Run `git clone https://github.com/mshadmanrahman/claude-for-designers.git` first, then the loop. Not comfortable in a terminal? You do not need it; the Chat path below works without one.
 
 ### Claude Cowork (Desktop App, Cowork tab)
 

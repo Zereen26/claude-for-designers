@@ -70,5 +70,5 @@ Rafi
 
 ## How this file is used in the course
 
-- **Class 3:** You run `/grill-me` on this thread. The skill should surface the contradictions: desktop-first vs mobile-must, Stripe vs bKash, English vs Bengali, students-as-primary vs parents-as-decision-makers. Capture the output in `brief-v2-interrogated.md`.
+- **Class 3:** You run `/grill-me` on this thread. The skill should surface the contradictions: desktop-first vs mobile-must, Stripe vs bKash, English vs Bengali, students-as-primary vs parents-as-decision-makers. Capture the output in `brief-v3-interrogated.md`.
 - **Class 4:** When you critique a generated screen, this thread is the reason most generated screens are wrong. They follow the client brief, not the real brief.

@@ -55,5 +55,5 @@ Jamie
 ## How this file is used in the course
 
 - **Class 2:** You paste this into Claude alongside your `principles/claude-contract.md` so Claude has its first project context.
-- **Class 3:** You interrogate this brief with the `/grill-me` skill. The output of that interrogation lives in `brief-v2-interrogated.md` (which you build during Class 3).
+- **Class 3:** You interrogate this brief with the `/grill-me` skill. The output of that interrogation lives in `brief-v3-interrogated.md` (which you build during Class 3).
 - **Classes 4-6:** You reference this brief as the original ask. The interrogated brief is your working source of truth.
