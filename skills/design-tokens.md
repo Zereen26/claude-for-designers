@@ -22,3 +22,11 @@ Flat (no shadow), subtle (card), medium (dropdown), high (modal).
 Output as a ready-to-paste CSS `:root` block. Include a brief comment above each category explaining the system logic. No inline documentation that pads length; every comment must earn its space.
 
 Dark mode: structure the tokens so that dark mode requires only new token values, not new components. Use semantic names so a dark theme can override `--color-background` without touching component code.
+
+**Token audit (use this when Figma and the frontend do not match)**
+
+If a value looks correct in Figma but renders differently in the browser, run this audit before filing a bug. Paste your Figma token export and your CSS file and ask:
+
+"I am going to paste two things: a Figma token export and a CSS file. Compare them. Tell me: (1) which tokens in the export are not referenced anywhere in the CSS, (2) which CSS values are hardcoded instead of using a token, and (3) whether there are any unit mismatches between the token values and the CSS values (for example, a px value in the token but a rem value in the CSS). List each issue with the specific token name and the line in the CSS where the problem appears."
+
+The four most common causes of a mismatch: the token was never exported from Figma, the token was exported but the CSS references a hardcoded value instead, the units differ (px in Figma, rem in CSS), or the comparison is being made at different zoom levels. Confirm all four before concluding something is broken.

@@ -19,6 +19,8 @@ This project teaches a seven-step design process. Each step is its own slash com
 5. `/brief-to-tasks`: break the brief into executable, time-boxed work
 6. `/frontend-design`: build the interface using everything above
 7. `/design-review`: critique with the rigor you would apply to someone else's work
+8. `/heuristic-evaluation`: audit any design against Nielsen's 10 usability heuristics — every finding references a specific element with a specific fix
+9. `/persona-acid-test`: stress-test the design through three lenses (confused user, skeptical engineer, impatient PM) before sharing with a stakeholder
 
 When a student runs one of these commands, follow the prompt template in the corresponding file under `skills/`. The order matters: Step 6 should not run before Steps 1-5.
 
