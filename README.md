@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT-101828?style=flat-square&labelColor=FFC000" alt="MIT License">
   <img src="https://img.shields.io/badge/built%20with-Claude-101828?style=flat-square&labelColor=FFC000" alt="Built with Claude">
-  <img src="https://img.shields.io/badge/skills-7-101828?style=flat-square&labelColor=FFC000" alt="7 skills">
+  <img src="https://img.shields.io/badge/skills-9-101828?style=flat-square&labelColor=FFC000" alt="9 skills">
   <img src="https://img.shields.io/badge/interfaces-Chat%20%C2%B7%20Cowork%20%C2%B7%20Code-101828?style=flat-square&labelColor=FFC000" alt="Works across Chat, Cowork, Code">
   <img src="https://img.shields.io/badge/for-UI%2FUX%20designers-101828?style=flat-square&labelColor=FFC000" alt="For UI/UX designers">
 </p>
@@ -12,9 +12,9 @@
 
 A working repository for designers who use Claude as a collaborator. Skills, principles, project templates, and a career vault. Not a pile of prompts to paste, a system to work inside.
 
-> **New here?** Jump to [Install](#install) to get the seven skills running in two minutes, or read [Why this exists](#why-this-exists) first.
+> **New here?** Jump to [Install](#install) to get the nine skills running in two minutes, or read [Why this exists](#why-this-exists) first.
 
-Most designers use Claude like a vending machine: paste a request, take whatever drops out. This repo is the opposite. You download it, brief Claude once through a working contract, and then run a seven-step design process where every step builds on the last. The output stops being generic the moment Claude knows your project, your market, and your constraints.
+Most designers use Claude like a vending machine: paste a request, take whatever drops out. This repo is the opposite. You download it, brief Claude once through a working contract, and then run a nine-step design process where every step builds on the last. The output stops being generic the moment Claude knows your project, your market, and your constraints.
 
 Built for the [Claude for UI/UX Designers](https://ostad.app) course on Ostad, with Bangladesh-market design as the worked example. You do not need the course to use the repo.
 
@@ -28,9 +28,9 @@ The designers who stay valuable are the ones who bring what Claude structurally 
 
 ---
 
-## The seven-step process
+## The nine-step process
 
-![The seven-step process](assets/flow.png)
+![The nine-step process](assets/flow.png)
 
 Run them in order on any project. Skip a step and the next one does that step's work badly.
 
@@ -46,7 +46,7 @@ claude-for-designers/
 │   ├── design-taste.md        taste principles for designers using AI
 │   ├── anti-ai-slop.md        patterns to refuse to ship
 │   └── bd-defaults.md         market context block (swap for your market)
-├── skills/                the capability layer: the seven commands
+├── skills/                the capability layer: the nine commands
 ├── projects/              where work happens, one folder per project
 │   └── edubridge/             the worked example, brief through built screen
 └── career-vault/          positioning, portfolio stories, interview prep
@@ -62,21 +62,21 @@ Pick the Claude interface you use. The files are the same everywhere; only the i
 
 ### Claude Code (the Desktop App's Code tab, or a terminal)
 
-You only need this from Class 6. The seven skills live in `skills/`. To turn them into slash commands, open a terminal in your unzipped (or cloned) repo folder and run:
+You only need this from Class 6. The nine skills live in `skills/`. To turn them into slash commands, open a terminal in your unzipped (or cloned) repo folder and run:
 
 ```bash
 mkdir -p ~/.claude/skills
-for f in grill-me design-brief information-architecture design-tokens brief-to-tasks frontend-design design-review; do
+for f in grill-me design-brief information-architecture design-tokens brief-to-tasks frontend-design design-review heuristic-evaluation persona-acid-test; do
   mkdir -p ~/.claude/skills/$f
   cp skills/$f.md ~/.claude/skills/$f/SKILL.md
 done
 ```
 
-Restart Claude Code, type `/`, and the seven commands appear. Prefer Git over the ZIP? Run `git clone https://github.com/mshadmanrahman/claude-for-designers.git` first, then the loop. Not comfortable in a terminal? You do not need it; the Chat path below works without one.
+Restart Claude Code, type `/`, and the nine commands appear. Prefer Git over the ZIP? Run `git clone https://github.com/mshadmanrahman/claude-for-designers.git` first, then the loop. Not comfortable in a terminal? You do not need it; the Chat path below works without one.
 
 ### Claude Cowork (Desktop App, Cowork tab)
 
-Open the Cowork tab, go to Settings, Plugins, Upload plugin, and point it at this repo's `skills/` folder. The seven skills become slash commands.
+Open the Cowork tab, go to Settings, Plugins, Upload plugin, and point it at this repo's `skills/` folder. The nine skills become slash commands.
 
 ### Claude (Chat, on claude.ai or the Desktop App)
 
@@ -101,7 +101,7 @@ cp -r projects/edubridge projects/your-project
 cd projects/your-project
 ```
 
-Replace the brief, run `/grill-me`, and work down the seven steps. The folder is the process, not just the output of it.
+Replace the brief, run `/grill-me`, and work down the nine steps. The folder is the process, not just the output of it.
 
 ---
 
