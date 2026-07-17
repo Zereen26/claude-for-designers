@@ -2,6 +2,8 @@
 
 Source: Nusrat, as a real Arogga user. Not a client brief — self-initiated redesign based on lived experience with the app.
 
+> **Update, 2026-07-17:** After reviewing 26 real screenshots of the actual flow, all three problems below turned out to already be built into the app (confirmation screen, order list, and an 8-step timeline). Kept here as-is for the record. See `research-notes.md` → "Original assumptions overturned" and "Real opportunities found instead" for what's actually true and what the redesign should focus on now.
+
 ## Context for every output (BD)
 
 - Users are 18-45, mobile-first, often on 3G or 4G.
