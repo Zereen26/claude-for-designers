@@ -1,70 +1,72 @@
 ---
 project: EduBridge Bangladesh
-status: template: you fill this in during Class 5
+status: complete
 ---
 
 # EduBridge BD: Design Tokens (Class 5 output)
 
 Tokens are how you stop describing colors and sizes in every prompt. Define them once, reference them by name. Then Claude reads "primary brand color" and knows you mean `#00A651`.
 
-Fill this file in during Class 5 after your hygiene passes. Use it as the reference for any Claude Code prompt in Class 6.
+Source file: [Figma — EduBridge, Approach B2 AFTER (clean system)](https://www.figma.com/design/UKrHagmQWWdBAWUH0geIr3/Edubridge?node-id=5-3). Values below are pulled directly from that frame, not guessed. Use this file as the reference for any Claude Code prompt in Class 6.
 
 ---
 
 ## Color
 
-| Token | Value | Use for |
-|---|---|---|
-| `bg.surface` | `#FFFFFF` | Default screen background |
-| `bg.subtle` | `#F9FAFB` | Cards, secondary surfaces |
-| `bg.inverse` | `#0A2540` | Dark sections, headers |
-| `text.primary` | `#0A2540` | Body text on light surfaces |
-| `text.secondary` | `#4F5868` | Captions, supporting text |
-| `text.muted` | `#9AA0A6` | Tertiary text, metadata |
-| `text.inverse` | `#FFFFFF` | Text on dark surfaces |
-| `accent.primary` | `#00A651` | Primary CTA, success states |
-| `accent.danger` | `#C53030` | Errors, destructive actions |
-| `accent.warning` | `#F59E0B` | Warnings, pending states |
-| `border.default` | `#E5E7EB` | Card borders, dividers |
-| `border.strong` | `#D1D5DB` | Inputs, emphasized borders |
+| Token | Value | Use for | Wired? |
+|---|---|---|---|
+| `accent.primary` | `#00A651` | Primary CTA, verified checkmarks, total cost value (bKash green) | ✅ Figma Variable — bound to `primary-button` fill, `check-icon` fill, `verify-row` status text, `total-cost-row` value |
+| `bg.surface` | `#FFFFFF` | Default screen background, cards | not yet wired |
+| `bg.subtle` | `#F5F5F5` | Bio card background | not yet wired |
+| `bg.success-subtle` | `#EDF7F0` | Verification card background | not yet wired |
+| `bg.neutral-subtle` | `#F7F7F7` | Schedule card background | not yet wired |
+| `text.primary` | `#0D0D0D` | Screen title, status bar | not yet wired |
+| `text.secondary` | `#4D4D4D` | Bio label, verification label | not yet wired |
+| `text.muted` | `#666666` / `#808080` | Subject line, payment note | not yet wired |
+| `accent.warning` | `#BF800D` | "Next available" availability text | not yet wired |
+| `border.default` | `#D9D9D9` | Divider above total cost | not yet wired |
+| `border.success` | `#D9EBDB` | Verification card border | not yet wired |
 
-> Adjust these based on your Class 4 critique. Names stay; values change.
+> Only `accent.primary` is a live Figma Variable right now — that's the one the assignment requires you to wire ("buttons read from it, not a hard-coded hex"), and it's confirmed: change the variable, the button, checkmarks, and price all repaint together. The rest of the palette above is applied consistently across the file but as hard-coded hex, not Variables yet. Worth wiring in a later pass, not blocking for this submission.
 
 ## Type
 
-**Family:** [pick one. Recommend Inter + Noto Sans Bengali for the Bangla fallback]
+**Family:** Inter (no Bangla fallback set yet — add Noto Sans Bengali when Bangla copy is introduced)
 
-| Token | Size | Weight | Line height | Use for |
-|---|---|---|---|---|
-| `text.display` | 32px | 700 | 1.2 | Page title |
-| `text.heading` | 22px | 600 | 1.3 | Section heading |
-| `text.body` | 16px | 400 | 1.5 | Body text |
-| `text.body.small` | 14px | 400 | 1.45 | Captions, metadata |
-| `text.label` | 12px | 600 | 1.4 | Form labels, badges, eyebrows |
+| Token | Size | Weight | Use for |
+|---|---|---|---|
+| `text.title` | 18px | 700 | Tutor name, total cost value |
+| `text.heading` | 17px | 700 | Screen title ("Booking Request") |
+| `text.body` | 16px | 700 | Button label |
+| `text.body.default` | 15px | 700 | Total cost label |
+| `text.body.small` | 14px | 400 | Subject line, back nav |
+| `text.label` | 13px | 400/700 | Bio title, field labels, verification rows |
+| `text.caption` | 12px | 400/700 | Bio text, availability, PM suffix |
+| `text.micro` | 11px | 400 | Payment note |
 
 ## Spacing
 
-Multiples of 4. Pick a base of 4, then `4, 8, 12, 16, 24, 32, 48, 64`. No values outside this scale.
+Pulled from actual gaps/padding in the AFTER frame. Not a clean 4px multiple everywhere — flagged where it drifts.
 
-| Token | Value |
-|---|---|
-| `space.1` | 4px |
-| `space.2` | 8px |
-| `space.3` | 12px |
-| `space.4` | 16px |
-| `space.6` | 24px |
-| `space.8` | 32px |
-| `space.12` | 48px |
-| `space.16` | 64px |
+| Token | Value | Use for |
+|---|---|---|
+| `space.1` | 4px | field-row internal padding |
+| `space.2` | 6px | verify-row padding/gap, status icon gap |
+| `space.2b` | 8px | verification-card internal gap |
+| `space.3` | 10px | schedule-card internal gap |
+| `space.3b` | 14px | tutor-summary gap, bio-card padding *(off-scale — round to 12 or 16 next pass)* |
+| `space.4` | 16px | schedule-card padding |
+| `space.5` | 20px | content column gap *(off-scale — round to 16 or 24 next pass)* |
+| `space.6` | 24px | content horizontal padding |
 
 ## Radius
 
-| Token | Value |
-|---|---|
-| `radius.sm` | 4px |
-| `radius.md` | 8px |
-| `radius.lg` | 12px |
-| `radius.full` | 999px (pills, avatars) |
+| Token | Value | Use for | Wired? |
+|---|---|---|---|
+| `radius.sm` | 4px | field-icon | not yet wired |
+| `radius.md` | 6px | field-row, verify-row | not yet wired |
+| `radius.lg` | 12px | primary-button, verification-card, schedule-card | ✅ Figma Variable — bound to `primary-button` corner radius |
+| `radius.full` | 9px on 18px box | check-icon (circle) | not yet wired |
 
 ## Motion
 
@@ -79,6 +81,26 @@ Multiples of 4. Pick a base of 4, then `4, 8, 12, 16, 24, 32, 48, 64`. No values
 ## Trust signals
 
 Not a token strictly, but a design rule worth writing down here so Claude sees it: anywhere a tutor's verified status is shown, use `accent.primary` (the green) at full weight, paired with a check or shield icon. Verified badge is `space.6` tall, never decorative, always meaningful.
+
+## Components
+
+Built as real Figma components with variants, not flat copy-pasted shapes:
+
+| Component | Variants | Where used |
+|---|---|---|
+| `primary-button` | `State=Default`, `State=Disabled` | Send Booking Request CTA |
+| `field-row` | `Type=Date`, `Type=Time` | Schedule card (2 instances) |
+| `verify-row` | single, reused as 3 instances | NID Verification, Qualification Certificate, Background Check |
+| `check-icon` | — | nested inside each `verify-row` instance |
+
+## Before / after
+
+Layer hygiene pass on Approach B2 (the winner from [critique-notes.md](critique-notes.md)). Also removes the session-quantity stepper the Class 4 synthesis flagged as a logic error (asking for session count before the tutor accepts).
+
+- Before: [assignment-5-submission/before.png](assignment-5-submission/before.png) — unnamed layers (`Frame`, `Frame`...), session stepper still present
+- After: [assignment-5-submission/after.png](assignment-5-submission/after.png) — readable layer tree, session stepper removed, back nav added
+
+Everything you need to submit — the Figma link, both screenshots, and a copy-pasteable token summary — is gathered in [assignment-5-submission/README.md](assignment-5-submission/README.md).
 
 ---
 
