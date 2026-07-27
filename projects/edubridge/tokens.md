@@ -1,87 +1,113 @@
 ---
+created: 2026-07-27
+type: reference
+status: template
+tags: [edubridge, class-5, workbook, design-tokens]
 project: EduBridge Bangladesh
-status: template: you fill this in during Class 5
 ---
 
-# EduBridge BD: Design Tokens (Class 5 output)
+# EduBridge BD: Design Tokens
 
-Tokens are how you stop describing colors and sizes in every prompt. Define them once, reference them by name. Then Claude reads "primary brand color" and knows you mean `#00A651`.
+**What this file is for:** the named values your design is made of, written once so you stop retyping hex codes into every prompt and every Figma layer.
 
-Fill this file in during Class 5 after your hygiene passes. Use it as the reference for any Claude Code prompt in Class 6.
+**Why Claude needs it:** without it, "use a nice green" produces a different green every session. With it, Claude writes `#00A651` because you told it what `accent.primary` means, and your Figma variables and your built screen finally agree.
+
+**Which class:** Class 5. Class 6 pastes this file into the prompt that builds the screen.
+
+<!--
+COURSE NOTE for the student. This is not an instruction to Claude.
+
+Everything between here and `## YOUR TURN` is teaching material. Delete it once your own answers are in.
+-->
+
+## How you produce it
+
+Do the Figma hygiene pass first, then, in one Claude Code session on Sonnet 5 at medium effort:
+
+1. Run `/information-architecture` if you have not already fixed the structure. Tokens on top of a broken structure just make the mess consistent.
+2. Run `/design-tokens`. It proposes a set from your brief and your Class 4 critique.
+3. Edit the proposal. Delete every token you cannot point at a real use for. A token nothing uses is a token you will have to defend later.
+4. Name the values in Figma to match, exactly, character for character.
+
+The names are the contract. Values change all the way to launch; names should not.
+
+## Example: the token set behind `booking-screen.html`
+
+Labelled as the example. This is the real system behind the Class 6 screen, written up in full in `DESIGN.md`. It is deliberately small: eleven colors, five type steps, one accent that means one thing.
+
+**Color.** `navy-ink` #0A2540 (header, avatar, headlines, price). `confirm-green` #00A651 (verified badge, input focus, primary CTA, and nothing else). `confirm-green-pressed` #007A3D (CTA `:active` only). `bkash-pink` #E2136E (used exactly once, as the payment-method prefix). `screen-surface` #FFFFFF. `page-surround` #F3F4F6. `border-default` #E5E7EB. `text-tertiary` #374151. `text-secondary` #6B7280. `text-muted` #9CA3AF. `placeholder` #D1D5DB.
+
+**Type.** System stack, no webfont, because it renders instantly on 3G with no font-loading flash and it looks like the parent's own phone. `display` 22px/700 (the session price, the number being decided on). `headline` 18px/700 (tutor name). `title` 17px/600 (header title, CTA label). `body` 15px/400 (detail rows). `label` 12px/600, 0.05em tracking (section labels, verified badge). Inputs sit at 16px on purpose, larger than body, because anything smaller makes iOS zoom on focus.
+
+**Spacing.** `xs` 8px, `sm` 12px, `md` 16px, `lg` 20px. Multiples of four, nothing off the scale.
+
+**Radius.** `sm` 8px (inputs), `md` 12px (buttons), `full` 100px (the verified pill).
+
+**Motion.** Nothing over 220ms, and the CTA press feedback is 80ms. On a slow device a long transition reads as a hang, not as polish.
+
+**The named rule.** The One Confirm Color Rule. Green appears in exactly three places: the verified badge, the input focus ring, the CTA. If a new element wants to stand out, it does not get a new color. It earns green only if it means the same thing, trust confirmed or action ready. That rule is why the badge still means something on the fourth screen.
 
 ---
 
-## Color
+## YOUR TURN
+
+Answer each question in place. Fill the tables with your own values, from your own critique.
+
+### Color
+
+***Which colors does your screen actually need, and what does each one mean? Give every token a use, and delete any row you cannot fill in. Keep the names; change the values.***
 
 | Token | Value | Use for |
 |---|---|---|
-| `bg.surface` | `#FFFFFF` | Default screen background |
-| `bg.subtle` | `#F9FAFB` | Cards, secondary surfaces |
-| `bg.inverse` | `#0A2540` | Dark sections, headers |
-| `text.primary` | `#0A2540` | Body text on light surfaces |
-| `text.secondary` | `#4F5868` | Captions, supporting text |
-| `text.muted` | `#9AA0A6` | Tertiary text, metadata |
-| `text.inverse` | `#FFFFFF` | Text on dark surfaces |
-| `accent.primary` | `#00A651` | Primary CTA, success states |
-| `accent.danger` | `#C53030` | Errors, destructive actions |
-| `accent.warning` | `#F59E0B` | Warnings, pending states |
-| `border.default` | `#E5E7EB` | Card borders, dividers |
-| `border.strong` | `#D1D5DB` | Inputs, emphasized borders |
+| `bg.surface` |  |  |
+| `bg.inverse` |  |  |
+| `text.primary` |  |  |
+| `text.secondary` |  |  |
+| `text.muted` |  |  |
+| `accent.primary` |  |  |
+| `accent.danger` |  |  |
+| `border.default` |  |  |
 
-> Adjust these based on your Class 4 critique. Names stay; values change.
+### Type
 
-## Type
-
-**Family:** [pick one. Recommend Inter + Noto Sans Bengali for the Bangla fallback]
+***Which font family, and which five steps? For each step, what is the one thing on screen that uses it? A step with no user is not a step.***
 
 | Token | Size | Weight | Line height | Use for |
 |---|---|---|---|---|
-| `text.display` | 32px | 700 | 1.2 | Page title |
-| `text.heading` | 22px | 600 | 1.3 | Section heading |
-| `text.body` | 16px | 400 | 1.5 | Body text |
-| `text.body.small` | 14px | 400 | 1.45 | Captions, metadata |
-| `text.label` | 12px | 600 | 1.4 | Form labels, badges, eyebrows |
+| `text.display` |  |  |  |  |
+| `text.heading` |  |  |  |  |
+| `text.body` |  |  |  |  |
+| `text.body.small` |  |  |  |  |
+| `text.label` |  |  |  |  |
 
-## Spacing
+### Spacing and radius
 
-Multiples of 4. Pick a base of 4, then `4, 8, 12, 16, 24, 32, 48, 64`. No values outside this scale.
-
-| Token | Value |
-|---|---|
-| `space.1` | 4px |
-| `space.2` | 8px |
-| `space.3` | 12px |
-| `space.4` | 16px |
-| `space.6` | 24px |
-| `space.8` | 32px |
-| `space.12` | 48px |
-| `space.16` | 64px |
-
-## Radius
+***What is your base unit, and what is the full scale? Then your radius set. If a value in your Figma file is not on this scale, either the value is wrong or the scale is.***
 
 | Token | Value |
 |---|---|
-| `radius.sm` | 4px |
-| `radius.md` | 8px |
-| `radius.lg` | 12px |
-| `radius.full` | 999px (pills, avatars) |
+| `space.1` |  |
+| `space.2` |  |
+| `space.3` |  |
+| `space.4` |  |
+| `space.6` |  |
+| `space.8` |  |
+| `radius.sm` |  |
+| `radius.md` |  |
+| `radius.full` |  |
 
-## Motion
+### Motion
+
+***What are your three durations, and what is your ceiling? Justify the ceiling against the device your user is actually holding.***
 
 | Token | Duration | Easing | Use for |
 |---|---|---|---|
-| `motion.fast` | 80ms | ease-out | Button press, micro-feedback |
-| `motion.default` | 150ms | ease-out | Most transitions |
-| `motion.slow` | 220ms | ease-out | Page-level changes, large surfaces |
+| `motion.fast` |  |  |  |
+| `motion.default` |  |  |  |
+| `motion.slow` |  |  |  |
 
-> Anything over 220ms is too slow for this product. If a transition needs more time, redesign it.
+### The one rule your system has to enforce
 
-## Trust signals
+***Write the single rule that keeps this system honest, in the shape "X appears only when it means Y." Name it. A rule with a name gets followed; a preference gets argued with.***
 
-Not a token strictly, but a design rule worth writing down here so Claude sees it: anywhere a tutor's verified status is shown, use `accent.primary` (the green) at full weight, paired with a check or shield icon. Verified badge is `space.6` tall, never decorative, always meaningful.
-
----
-
-## How this file gets used in Class 6
-
-Paste this entire file at the top of any Claude Code prompt that builds a screen. Claude Code now has your design system as input. Generated HTML uses `var(--accent-primary)` or `#00A651`, not "use a nice green."
+<!-- COURSE SCAFFOLDING: delete everything above YOUR TURN once you have filled it in. This becomes your real working file. -->

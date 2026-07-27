@@ -1,73 +1,76 @@
 ---
+created: 2026-07-27
+type: brief
+status: template
+tags: [edubridge, class-3, workbook, brief]
 project: EduBridge Bangladesh
-brief-version: 3: interrogated synthesis
-status: template: you fill this in during Class 3
+brief-version: "3: interrogated synthesis"
 ---
 
-# EduBridge BD: Interrogated Brief (Class 3 output)
+# EduBridge BD: Interrogated Brief
 
-This file is the synthesis you produce during Class 3. You write it. Claude does not.
+**What this file is for:** the one brief you actually design from, written by you after you have pulled apart the client brief (v1) and the PM thread (v2).
 
-After running `/grill-me` on the client brief (v1) and the PM thread (v2), you should have answers to the questions both briefs left open. Write them down here. This becomes the source of truth for Classes 4-6.
+**Why Claude needs it:** v1 and v2 contradict each other in seven places. If you hand Claude both and no decision, it picks for you, quietly, and you get a screen built on the wrong user, the wrong device and the wrong payment method.
 
-Fill in the sections below. Delete the prompts in italics when you have written your answer. Keep the headings.
+**Which class:** Class 3. You keep using it in Classes 4, 5 and 6.
 
----
+<!--
+COURSE NOTE for the student. This is not an instruction to Claude.
 
-## Who is actually using this
+Everything between here and `## YOUR TURN` is teaching material. Delete it once your own answers are in.
+-->
 
-*One paragraph. Primary user, with specifics: device, connection, language preference, what they are trying to accomplish, and what they are afraid of.*
+## How you produce it
 
-> Example: "The primary user is a 42-year-old parent in Dhaka, on a sub-15K taka Android, evening hours on home Wi-Fi or slow 4G. Choosing a tutor for their 16-year-old preparing for HSC. Afraid of being scammed by an unverified person. Wants to see proof of qualifications before they consider booking."
+Read `brief-v1-client.md` and `brief-v2-pm-thread.md` first. Both, in full, before you write anything.
 
-## What the contradictions actually were
+Then, in one Claude Code session on Sonnet 5 at medium effort, opened at this project folder:
 
-*List the conflicts between v1 and v2. For each, write your decision and why.*
+1. Run `/design-brief` with both briefs in context. It will not resolve the contradictions for you. It will name them, and it will ask you to decide.
+2. Write your decisions into `## YOUR TURN` below. In your words, not Claude's.
+3. Run `/persona-acid-test` on what you wrote. If the confused user, the skeptical engineer or the impatient PM can knock a section over, that section is not finished.
 
-> Example:
-> - **Desktop-first vs mobile-must:** Mobile-first. Sub-15K taka Android is the default device. Desktop is the edge case.
-> - **Stripe vs bKash:** bKash + Nagad. Stripe does not work in BD; pretending otherwise wastes the sprint.
-> - **English vs Bengali:** Bilingual MVP. "Strongly preferred" from the client's manager is a soft must.
-> - **Students vs parents:** Parents. They make the financial decision; they need the trust signal.
+The skills surface the conflict. You make the call. That is the whole point of the class: a brief you agreed to without reading is a brief you will be blamed for.
 
-## What I am building first
+## Example: the instructor's filled version
 
-*One sentence. The single screen or flow you will spend the next four weeks on.*
+Labelled as the example. This is one designer's set of decisions, not the answer key. If your version comes out identical to this, you did not interrogate anything, you copied. The full worked version is in `brief-v3-interrogated.example.md`.
 
-> Example: "The tutor booking request screen. Parent-facing. Shows tutor name, subject, verified badge, qualifications, hourly rate in BDT, and one CTA to send a booking request."
+**Who is actually using this.** A 42-year-old parent in Dhaka on a sub-15K taka Android, home Wi-Fi in the evening or slow 4G during the day. Choosing a tutor for a 16-year-old preparing for HSC. Afraid of being scammed by someone claiming qualifications they do not have. Will not book until they see proof of verification, and will not commit until the total cost is obvious.
 
-## What is out of scope
+**What the contradictions actually were.** Desktop-first (v1) versus mobile-must (v2): mobile-first, because the sub-15K taka Android is the default device and desktop is the edge case. Stripe (v1) versus bKash (v2): bKash, because Stripe does not operate in BD and designing for it burns the sprint. English-only (v1) versus Bengali "strongly preferred" (v2): plan Bengali UI strings now, retrofitting is more expensive later. Students as primary (v1) versus parents as decision-makers (v2): parents, because they hold the money.
 
-*What you are NOT building, even though the brief might suggest it.*
+**Scope.** Building first: the parent-facing tutor booking request screen (tutor name, subject, verified badge, qualifications, hourly rate in BDT, one CTA). Out: video calling, search and discovery, tutor onboarding, translation of tutor-written content.
 
-> Example:
-> - Video calling in the booking flow. Will be a separate epic after MVP launch.
-> - Search and discovery. Different sprint.
-> - Tutor onboarding. Different sprint.
-> - Multilingual content management. Phase 2.
+**Assumptions carried forward.** bKash first with Nagad likely second, priority unconfirmed. Tutors will hand over NID and qualification documents. Bengali means UI strings only. The 3-lakh budget is firm.
 
-## Assumptions I am carrying forward
-
-*Things you are treating as true without confirmation. Flag them so you can verify later.*
-
-> Example:
-> - bKash and Nagad are equally important: verify with Rafi.
-> - Tutors are willing to share documents for verification: verify before designing the verification flow.
-> - Bengali support means UI strings, not user-generated content translation: verify with Jamie.
-
-## Open questions for Rafi or Jamie
-
-*Things that block design progress. Send these as a message before you go further.*
-
-> Example:
-> - Do we have a verified-badge issuer? Who verifies the tutor documents?
-> - What does "trust is the main thing" mean to the client in practice: a badge, a video, a phone call, or all three?
-> - Is 3 lakhs budget firm? If so, video calling is definitely out.
+**Open questions.** Who issues the verified badge and who checks the documents; without an issuer the badge is decoration. What "trust is the main thing" means in practice: badge, video, phone call, or all three. Whether Nagad is in MVP.
 
 ---
 
-## How this file gets used in later classes
+## YOUR TURN
 
-- **Class 4:** When you critique a generated screen, you compare it against this file. Generated screens that don't match this brief are wrong, even if they look polished.
-- **Class 5:** Your Figma file should be built from this brief, not the client brief.
-- **Class 6:** Your prompt to Claude Code includes the constraints from this file. Specifically the user paragraph, the scope, and the assumptions.
+Answer each question in place. Replace the italic line with your answer; keep the heading.
+
+### Who is actually using this
+
+***One paragraph. Who is the primary user, on what device, on what connection, in what language, trying to do what, and afraid of what? Name the fear. Trust work is designed against a fear.***
+
+### What the contradictions actually were
+
+***List every place v1 and v2 disagree. For each one: your decision, and the reason. If you cannot give a reason, you have not decided, you have guessed.***
+
+### Scope: what I am building first, and what I am not
+
+***One sentence on the single screen or flow you will spend the rest of the course on. Then a list of things the brief hints at that you are deliberately not building.***
+
+### Assumptions I am carrying forward
+
+***What are you treating as true without confirmation? Write each one down so it stops being invisible. An unwritten assumption becomes someone else's fault later.***
+
+### Open questions for Rafi or Jamie
+
+***What blocks design progress until someone answers it? These questions are the raw material for the pushback email you send this week, so write them the way you would send them.***
+
+<!-- COURSE SCAFFOLDING: delete everything above YOUR TURN once you have filled it in. This becomes your real working file. -->

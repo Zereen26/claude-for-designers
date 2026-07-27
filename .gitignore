@@ -2,3 +2,7 @@
 *.swp
 *~
 node_modules/
+
+# Tool state that should never ship to students
+.impeccable/
+.playwright-mcp/

@@ -1,11 +1,17 @@
 ---
+created: 2026-07-27
+type: brief
+status: complete
+tags: [edubridge, class-3, reference, brief]
 project: EduBridge Bangladesh
-brief-version: 1: client
+brief-version: "1: client"
 source: Jamie Thornton, Product Lead, EduBridge Ltd
 received: Tuesday, 10:42 AM London time
 ---
 
 # EduBridge BD: Design Brief v1.0
+
+**Reference, not homework.** This is the brief as the client sent it. You read it, you do not edit it. It is polished, confident, and wrong in several places, which is exactly why it is here. Your work for Class 3 goes in `brief-v3-interrogated.md`.
 
 **From:** Jamie Thornton, Product Lead, EduBridge Ltd
 **To:** [Your agency]
@@ -54,6 +60,5 @@ Jamie
 
 ## How this file is used in the course
 
-- **Class 2:** You paste this into Claude alongside your `principles/claude-contract.md` so Claude has its first project context.
-- **Class 3:** You interrogate this brief with the `/grill-me` skill. The output of that interrogation lives in `brief-v3-interrogated.md` (which you build during Class 3).
-- **Classes 4-6:** You reference this brief as the original ask. The interrogated brief is your working source of truth.
+- **Class 3:** you read this and `brief-v2-pm-thread.md` together, then run `/design-brief` over both. Your decisions land in `brief-v3-interrogated.md`.
+- **Classes 4 to 6:** this stays as the record of the original ask. `brief-v3-interrogated.md` is the brief you actually design from.

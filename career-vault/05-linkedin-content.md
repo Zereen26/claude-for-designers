@@ -1,185 +1,216 @@
+---
+created: 2026-07-27
+type: workbook
+status: complete
+tags: [ostad, batch-02, career-vault, class-08, linkedin]
+---
+
 # LinkedIn Content
 
-LinkedIn is where recruiters look you up, where hiring managers find you, and where your work either reaches an audience or stays invisible. This file is your LinkedIn operating system.
+**What this file is for:** your LinkedIn bio, your posting templates, and your outreach messages, kept in one place so posting is a ten-minute job instead of a decision.
 
-Three pieces: bio, post templates, outreach DM templates.
+**Why Claude needs it:** when you ask Claude to draft a post or a message, this file is where your voice and your subject matter come from. Skip it and you get the LinkedIn voice everyone can smell, all clean parallel sentences and no opinion.
 
----
+**Class:** Class 8. Bio and first post written in class, then one post a week after that.
 
-## Bio (headline + about)
+LinkedIn is where a recruiter checks you after your resume lands, and where a hiring manager finds you before any resume exists. Three parts here: the bio, the posts, the messages.
 
-### Headline (one line, under the name)
-
-This is your one-line positioning. Copy from `01-positioning.md` and shorten.
-
-> Example: "Product designer building trust-first mobile experiences for BD users on low-end Android."
-
-Avoid: "Designer | UX | UI | Researcher | Product Thinker": the pipe-bar resume style is a junior tell.
-
-### About section (3 paragraphs)
-
-**Paragraph 1: what you do, with a specific market.**
-
-> Example: "I'm a product designer in Dhaka. I work on apps for Bangladeshi users on entry-level Android phones: fintech, edtech, anything that touches money or trust. Most of what I do is figuring out the real problem before any design happens, because briefs rarely have it written down."
-
-**Paragraph 2: how you work, with the AI piece named.**
-
-> Example: "I work in the Claude-plus-Figma loop. Claude accelerates execution; I direct decisions. That means I interrogate briefs, write design tokens before any screen exists, build HTML when it's faster than handing off to engineering, and reject AI output that doesn't fit the market. The combination is faster than either tool alone."
-
-**Paragraph 3: what you're looking for.**
-
-> Example: "Open to product design roles at BD-based companies or international companies with a BD market focus. Especially interested in fintech, edtech, and health. Reach out: [email]."
+One thing worth saying plainly. The reason to post is not reach. It is that a recruiter comparing you against another designer in Dhaka with the same experience finds a written record of how you think on one profile and nothing on the other. That is the whole mechanism. It does not require going viral.
 
 ---
 
-## Post templates
+## The EduBridge example
 
-LinkedIn rewards consistency. Post once a week. The templates below are starting points; rewrite each in your voice.
+This is the example. Do not copy it, especially not the posts. A copied post reads as copied.
 
-### Template 1: "What I learned shipping X" (most-used)
+### Headline
 
-```
-[1 sentence: what you shipped]
+One line, under your name. It is your positioning sentence, shortened.
 
-[3-5 sentences: the specific decision or constraint you wrestled with]
+"Product designer building trust-first mobile experiences for BD users on low-end Android."
 
-[1-2 sentences: what the lesson generalizes to]
+Avoid the pipe-bar style: "Designer | UX | UI | Researcher | Product Thinker". It is a junior tell and it says nothing.
 
-[Optional: 1 line ask: "if you've done similar work, would love to compare notes"]
-```
+### About section, three paragraphs
 
-> Example:
->
-> Shipped the EduBridge BD booking flow this week. Parent-first, mobile-only, document-verified tutor signal.
->
-> The hardest decision was rejecting the client's initial brief that put students as the primary user. After running brief interrogation, parents emerged as the actual decision-makers: they hold the phone, the payment method, and the veto power. We redirected the whole flow around them.
->
-> Lesson I keep relearning: the brief is rarely the brief. The real problem hides under the polite version of the request.
->
-> If you've shipped a parent-decision flow in BD or similar markets, would love to compare notes on the trust signals that actually worked.
+Paragraph one, what you do and for whom:
 
-### Template 2: "Counterintuitive observation"
+"I'm a product designer in Dhaka. I work on apps for people here using entry-level Android phones, mostly things that touch money or trust. Most of my job is working out the real problem before any design starts, because the brief almost never has it written down."
 
-```
-[1 sentence: a claim that goes against common wisdom]
+Paragraph two, how you work, with the AI part said out loud:
 
-[2-3 sentences: why people get it wrong]
+"I work in a Claude and Figma loop. Claude makes execution fast; I direct the decisions. In practice that means I interrogate the brief first, write design tokens before any screen exists, build the HTML myself when that is faster than a handoff, and throw away the AI output that does not fit this market. Together they are faster than either one alone."
 
-[2-3 sentences: what's actually true and the evidence]
+Paragraph three, what you want:
 
-[1 sentence: implication]
-```
+"Open to product design roles at BD companies, or at international companies building for this market. Most interested in fintech, edtech and health. Reach me at [email]."
 
-> Example:
->
-> "Mobile-first" is not the same as "designing for low-end phones first."
->
-> Most designers I've seen say mobile-first and then design on a MacBook with a Chrome window narrowed to 400px. The screen looks fine. Then they ship to a sub-15K taka Android, and the layout collapses or the animations stutter or the fonts don't render Bangla.
->
-> Mobile-first that works in BD means designing on a real phone, on real 3G, with the real device font stack. That changes everything from button hit targets to image weights to how much you can put above the fold.
->
-> If you design for emerging markets and you only have a MacBook, you're not designing for your users. You're designing for yourself.
+Naming the AI question in paragraph two is deliberate. Whoever reads your profile is already wondering. Answer it on your terms.
 
-### Template 3: "Process I'm refining"
+### Post template one: what I learned shipping something
 
 ```
-[1 sentence: a process you've started using]
+[one sentence: what you shipped]
 
-[3-4 sentences: how it works, with one concrete example]
+[three to five sentences: the specific decision or constraint you wrestled with]
 
-[1-2 sentences: what changed for you]
+[one or two sentences: what the lesson generalizes to]
+
+[optional, one line: an ask]
 ```
 
-> Example:
->
-> Started writing a "working contract" with Claude before any project.
->
-> It's a markdown file that lives in my workspace. It tells Claude how I want to be communicated with (direct, specific, no marketing language), what constraints are non-negotiable for the project (BD mobile-first, 3G-friendly, animations under 150ms), and what I will not delegate (the client conversation, the first critique pass, the portfolio narrative).
->
-> Three projects in, the quality of Claude's first-draft output is noticeably better because I'm not re-briefing it every conversation. The contract compounds.
+Filled in:
 
----
+"Shipped the booking flow for a BD tutoring product this week. Parent-first, mobile only, verified-tutor signal.
 
-## Outreach DM templates
+The hardest call was rejecting the brief's assumption that students are the primary user. Once I actually mapped who does what, parents came out as the decision-makers. They hold the phone, they hold the payment method, and they hold the veto. So the whole flow got rebuilt around them, which cost us three days in a three-week sprint.
 
-When you message someone you don't know on LinkedIn, you have ~10 seconds before they decide to read or archive. Make the first sentence specific to them, not about you.
+The thing I keep relearning: the brief is rarely the brief. The real problem hides underneath the polite version of the request.
 
-### DM 1: To a senior designer for advice
+If you have built a parent-decides flow in this market, I would like to compare notes on which trust signals actually worked for you."
+
+### Post template two: something counterintuitive you actually believe
+
+```
+[one sentence: a claim that goes against the common line]
+
+[two to three sentences: why people get it wrong]
+
+[two to three sentences: what is actually true, with evidence]
+
+[one sentence: the implication]
+```
+
+Filled in:
+
+"'Mobile-first' and 'designing for low-end phones first' are not the same thing.
+
+Most designers I have watched say mobile-first, then design on a laptop with a Chrome window dragged to 400px wide. On that screen it looks fine. Then it ships to a sub-15K taka Android and the layout collapses, or the animation stutters, or Bangla does not render in the font they picked.
+
+Mobile-first that works here means designing on a real phone, on a real connection, with the fonts that device actually has. That changes your hit targets, your image weights, and how much you can put above the fold.
+
+If you design for this market and you only ever look at your own laptop, you are designing for yourself."
+
+### Post template three: a process you are refining
+
+```
+[one sentence: the process you started using]
+
+[three or four sentences: how it works, with one concrete example]
+
+[one or two sentences: what changed for you]
+```
+
+Filled in:
+
+"Started writing a working contract with Claude before any project begins.
+
+It is one markdown file in my workspace. It says how I want to be talked to (direct, specific, no marketing language), which constraints are non-negotiable on the project (mobile-first, works on 3G, no motion over 150ms), and what I will not hand over (the client conversation, the first critique pass, the story I tell about the work).
+
+Three projects in, the first draft Claude gives me is noticeably better, because I am not re-explaining myself every session. The contract compounds."
+
+### Outreach messages
+
+You have about ten seconds before someone decides to read or archive. The first sentence has to be about them.
+
+To a senior designer, for advice:
 
 ```
 Hi [name],
 
-I noticed [specific thing they posted/shipped]: [one-line genuine reaction].
+I saw [the specific thing they posted or shipped]. [One honest sentence
+about what struck you.]
 
-I'm a [your role] working on [your domain]. I've been thinking about
-[specific question that connects to their work] and would love your
-take.
+I'm a [your role] working on [your domain]. I have been thinking about
+[a specific question that connects to their work] and would value your
+read on it.
 
-Not looking for a job. 15 minutes on Zoom if you have it, or even a
-written reply works. Happy to do all the prep work.
+Not asking about a job. Fifteen minutes on a call if you have it, or a
+written reply is just as useful. I'll do the prep.
+
+Thanks either way.
+[your name]
+```
+
+To a hiring manager, on a specific role:
+
+```
+Hi [name],
+
+I applied for the [role] position. One thing that did not fit in the
+application:
+
+[One specific overlap between your work and their product. Not "I am
+passionate about design." A real overlap.]
+
+If fifteen minutes would help you assess fit faster than the formal
+process, I am free [day], [day] or [day].
 
 Thanks for considering.
-[Your name]
+[your name, portfolio link]
 ```
 
-### DM 2: To a hiring manager for a specific role
-
-```
-Hi [name],
-
-Just applied for the [role title] position. Wanted to flag one thing
-that didn't fit in the application:
-
-[One specific reason your work is relevant to their product. Not "I'm
-passionate about design." A specific overlap.]
-
-If a 15-minute conversation would help you assess fit faster than the
-formal process, I'm available [day], [day], or [day].
-
-Thanks for considering.
-[Your name + link to portfolio]
-```
-
-### DM 3: Following up on a conversation
+Following up after a conversation:
 
 ```
 Hi [name],
 
-Thanks again for [the conversation] on [day]. The thing you said about
-[specific thing they said] has been sitting with me: [one-sentence
-reflection on why it mattered].
+Thanks again for [the conversation] on [day]. What you said about
+[the specific thing] has stayed with me: [one sentence on why].
 
-[Optional: a follow-up question or a small offer like "I wrote up the
-brief interrogation pattern we discussed, happy to share if useful."]
+[Optional: a follow-up question, or a small offer. "I wrote up the
+brief interrogation pattern we talked about, happy to send it."]
 
-[Your name]
+[your name]
 ```
 
-The rule: every DM mentions one specific thing about them. Generic outreach gets generic results.
+Every message names one specific thing about them. Generic outreach gets ignored, and rightly.
 
----
+### What not to post
 
-## What NOT to post on LinkedIn
-
-- "Excited to announce..." with no actual announcement.
+- "Excited to announce" with no announcement attached.
 - "Humbled" anything.
-- Selfies with caption "designer at work."
+- A selfie captioned "designer at work".
 - AI-generated motivational quotes.
-- "Should designers learn to code?" debate. Tired.
-- Long screenshots of ChatGPT conversations. Show the work, not the chat.
+- The "should designers learn to code" debate. Settled and tired.
+- Long screenshots of a chat with an AI. Show the work, not the conversation.
+
+### Repost or share
+
+Repost a specific, well-argued post from someone five to ten years ahead of you, with one line of your own take on it. Share industry news only when you have a real opinion; a share with no opinion is engagement farming, a share with your take is participation. Do not repost everything one person writes. You become their echo.
+
+### Cadence
+
+One post a week, same day, roughly the same time. Tuesday mid-morning Dhaka time works. Update the bio once a quarter, after you ship something. Reread your about section every six months, and if it sounds like someone who has not shipped anything, rewrite it.
 
 ---
 
-## What to repost vs what to share
+## YOUR TURN
 
-- **Repost:** Specific, well-argued posts from designers 5-10 years ahead of you, with a one-line take from you in the repost copy.
-- **Share with comment:** Industry news where you have a real opinion. A reposted article without your take is content theft for engagement; a reposted article with your take is participation.
-- **Do not:** Repost everything from your design hero. You become an echo chamber.
+<!-- COURSE SCAFFOLDING: delete everything above YOUR TURN once you have filled it in. This becomes your real working file. -->
 
----
+Write yours below. Pull the headline from `01-positioning.md` and the post material from `02-portfolio-story.md`; if those are done honestly, you are mostly editing rather than writing.
 
-## Update cadence
+One warning before you start. This is the file where it is most tempting to let Claude write the whole thing, and the one where that is most obvious to a reader. Draft in your own words first, then use Claude Code at the root of this workspace on Sonnet 5 at medium effort to cut length and catch anything that reads like marketing copy. Ask it specifically to flag sentences that could have been written by any designer about any project. Fits in one session.
 
-- Post once a week. Same day, roughly same time. Tuesdays 10 AM Dhaka works.
-- Update bio once a quarter, after you ship a project.
-- Audit your "about" section every 6 months. If you read it and it sounds like a junior who has not shipped anything, rewrite it.
+### 1. What is your headline and about section?
+
+Headline, one line, no pipe bars.
+
+About, three paragraphs: what you do and for whom, how you work with the AI part named directly, what you are looking for and how to reach you.
+
+### 2. Write post one: what you learned shipping your Class 6 screen
+
+Use template one. The middle section is the post; the shipped thing is just the excuse to write it. Name a decision you made and what it cost you. If the post could be about any project by any designer, it is not finished.
+
+### 3. Write post two: something you believe that most designers around you do not
+
+Use template two. It has to be something you actually think, and you have to have evidence for it. A contrarian claim you cannot back is worse than no post.
+
+### 4. Write one outreach message to one specific real person
+
+Pick someone real: a senior designer whose work you have actually read. Write the message. The first sentence must reference a specific thing they made or wrote, which means you have to go read it first. Do not send a version that would work equally well for anyone.
+
+### 5. What is your cadence, and what is your next post?
+
+Name the day and time you will post each week. Then write the one-line idea for next week's post, so future you does not start from a blank page.

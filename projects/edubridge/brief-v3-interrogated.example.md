@@ -1,15 +1,18 @@
 ---
 created: 2026-06-22
+updated: 2026-07-27
 type: brief
 status: complete
 tags: [edubridge, class-3, class-6, reference, example]
 project: EduBridge Bangladesh
-brief-version: 3: interrogated synthesis (reference example)
+brief-version: "3: interrogated synthesis (reference example)"
 ---
 
 # EduBridge BD: Interrogated Brief (reference example)
 
-This is a populated "what good looks like" version of `brief-v3-interrogated.md`, for the teacher to use in the Class 6 live demo. The real `brief-v3-interrogated.md` ships as an empty worksheet because students fill it in during Class 3. Use this file when you need a worked brief Claude Code can read in the demo (for example, to answer "what does this brief say about the primary user?") without depending on a student's own incomplete file.
+**Reference, not homework.** This is the fully worked "what good looks like" version of `brief-v3-interrogated.md`. That file is the workbook students fill in during Class 3; it carries a condensed version of these decisions as its labelled example. This file is the full one, for the teacher to point Claude Code at during the Class 6 live demo (for example, to answer "what does this brief say about the primary user?") without depending on a student's own half-filled file.
+
+Students: open this after you have written your own, not before.
 
 The decisions below match the Class 3 interrogation outcome carried through the end-to-end worked example: parent as primary user, mobile-first on sub-15K taka Android, bKash payment, no video calling in MVP, trust signals via verification badge.
 

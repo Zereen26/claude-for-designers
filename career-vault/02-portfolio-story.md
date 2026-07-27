@@ -1,77 +1,109 @@
-# Portfolio Story Template
+---
+created: 2026-07-27
+type: workbook
+status: complete
+tags: [ostad, batch-02, career-vault, class-07, portfolio]
+---
 
-One project gets one story. The story is structured. You do not improvise.
+# Portfolio Story
 
-Use this template for every project in `projects/`. The Class 7 version focuses on EduBridge. Once you have your own real projects, you fill in this template for each.
+**What this file is for:** one project, one structured story, so that when someone says "tell me about a project" you do not improvise.
 
-Copy this file when you start a new project's story:
+**Why Claude needs it:** this is the file Claude reads when you ask it to draft a case study page, a LinkedIn post, or an interview answer about your work. It only knows what you decided if you wrote it down.
+
+**Class:** Class 7. You write the EduBridge story in class. After that, one story per real project, forever.
+
+One project gets one story. Five parts, in order. The parts are chosen so the story is about your judgment, not about the tool. A story that says "I used AI to build a booking screen" is worth nothing. A story that says "the brief was wrong about who the user was, here is how I found out, here is what I cut" is worth an interview.
+
+When you start a new project's story, copy this file:
 
 ```bash
+mkdir -p career-vault/portfolio-stories
 cp career-vault/02-portfolio-story.md career-vault/portfolio-stories/{project-name}.md
 ```
 
 ---
 
-## Project: [Name]
+## The EduBridge example
 
-*Example: EduBridge Bangladesh: tutor booking screen*
+This is the example. It is the story of the booking screen built in Class 6, written the way it should be written. Do not copy it. Your project had different problems.
 
----
+### Part 1. What was the brief
 
-## The brief I received (one paragraph)
+"An offshore client asked us to localize their existing UK and AU tutoring marketplace for Bangladesh. The brief was polished. Three-week sprint, MVP scope, desktop-first, Stripe for payment, students as the primary user."
 
-*What you were asked to do, in plain language.*
+### Part 2. How I directed AI, and what I built
 
-> Example: "An offshore client asked us to localize their existing UK/AU tutoring marketplace for Bangladesh. Polished brief, three-week sprint, MVP scope."
+"I ran brief interrogation before anything got drawn, which is what surfaced the contradictions in part 3. I wrote the design tokens before a single screen existed, so the system was locked before Claude could invent its own spacing scale. Then I used Claude Code to write the HTML and CSS for one screen.
 
-## What was actually broken about the brief
+The split was this. Claude wrote the markup. I chose the screen, the layout order, the fold position, the copy on the button, and the motion budget. I tested the result on a sub-15K taka Android on throttled 3G, which is where two of the rejections in part 4 came from.
 
-*The contradictions, the assumptions, the missing pieces. This is the part most designers leave out and it is the most important part.*
+What I built: the tutor booking request screen. Parent-facing, mobile, max-width 400px. Tutor name, photo below the fold to save bandwidth, verified-document badges for NID and qualifications, price in BDT, and exactly one call to action."
 
-> Example: "The brief said desktop-first; the local PM said mobile-must. It assumed Stripe; bKash is what BD users use. It positioned students as the primary user; parents are the actual decision-makers. The brief and the reality were two different projects."
+### Part 3. What problem did I solve
 
-## What I decided to do about it
+"The brief and the reality were two different projects, and nobody had said so out loud.
 
-*The decisions you made. Not Claude's decisions. Yours.*
+The brief said desktop-first. The local PM said mobile is the only thing that matters here. The brief assumed Stripe, which almost nobody in this market uses; bKash and Nagad are what people actually pay with. The brief put students as the primary user, but parents hold the phone, the money, and the veto.
 
-> Example: "I rewrote the brief. Parent-first. Mobile-first. bKash and Nagad for payment. Trust signals over aesthetics. Bengali support as a hard requirement, not a phase-2. Three weeks meant booking-screen-only: search and onboarding were out."
+So the problem I actually solved was not 'design a booking screen.' It was 'this brief will produce a product nobody here can use, and someone has to say that in week one instead of week three.' I rewrote the brief: parent-first, mobile-first, bKash and Nagad, Bangla as a requirement and not a phase two, trust signals ahead of aesthetics. Three weeks meant one screen only, so search and onboarding went out of scope on purpose."
 
-## What I built (one specific screen or flow)
+### Part 4. What did I reject, and why
 
-*A single screen or flow with a clear description. Not the whole product.*
+"Claude's first booking screen had a large tutor photo above the fold and a 400ms fade-in on load. I cut both. The photo pushes the booking button below the fold and costs bandwidth on a connection that cannot spare it. The fade-in reads as a broken page on the devices these parents actually hold.
 
-> Example: "The tutor booking request screen. Parent-facing. Vertical layout, mobile-first, max-width 400px. Shows tutor name, photo (below the fold to save 3G bandwidth), explicit verified-document badges (NID, qualifications, background check), price in BDT, and one CTA: 'Send Booking Request.'"
+I also rejected the first three versions of the button copy. Claude kept writing 'Get Started,' which tells a parent nothing about what happens when they tap. It became 'Send Booking Request,' which says who is doing what.
 
-## How I worked with Claude
+None of this reached a reviewer. It got cut before the screen was shown to anyone."
 
-*Be specific about what you delegated and what you kept. This is the heart of the story.*
+### Part 5. What was the outcome, including what I got wrong
 
-> Example: "I used `/grill-me` to surface what the brief did not say. I used `/design-tokens` to lock the system before any screen got built. I used Claude Code to write the HTML/CSS once the tokens and brief were stable. Claude wrote the markup; I directed the structure, rejected the first generated CTA copy, and tested every screen on a sub-15K taka Android with throttled 3G. The decisions were mine. The keystrokes were Claude's."
+"Outcome: a class project, so it did not ship to real users. It was reviewed by a senior product designer, who found two things I had missed. There is no error state when a bKash payment fails, and the verified badges have no offline fallback. Both are on my followup list with a fix written for each.
 
-## What I rejected
+What I got wrong: I assumed parents wanted document-level verification visible on the screen, and I designed three badge variants before I tested that assumption with anyone. When I finally tested with five parents, three of them said they would rather see a short introduction video from the tutor than a row of document badges. I had spent two days on the wrong solution. The mistake was not the badges. It was testing the assumption after the design instead of before it."
 
-*The work Claude generated that you said no to. This proves you have taste.*
+Do not leave this part out and do not soften it. An honest failure in a portfolio story is the single fastest way to read as someone who has done real work. Every experienced designer in the room has a story like this. The juniors are the ones who claim they do not.
 
-> Example: "Claude's first booking screen had a hero photo above the fold and a 400ms fade-in. I rejected both. The hero photo wastes 3G bandwidth and pushes the booking button below the fold. The fade-in feels broken on common BD devices. Both got cut before the screen was reviewable."
+### The sixty-second version
 
-## What I would do differently
+Compressed, for a recruiter call.
 
-*The honesty section. Make this real.*
-
-> Example: "I should have tested with a real parent earlier. I assumed parents wanted document-level verification visible; turns out three of the five parents I tested with were more reassured by a short tutor introduction video. I would build the video flow first next time."
-
-## Outcome
-
-*If the project shipped: what happened. If it didn't: what you learned.*
-
-> Example: "Class project. Did not ship to real users. Got reviewed by [name], a senior product designer at [company], who flagged two more issues I had missed (no error state for the bKash failure, no offline fallback for the verified badges). Both went on my followup list."
+"I rebuilt the booking screen of a tutoring marketplace for the Bangladesh market. The client brief said desktop-first and English-only; the real users are parents on entry-level Android phones switching between Bangla and English. I redirected the brief to parent-first and mobile-first, then built one screen end to end including the HTML: verified-tutor signal, bKash payment path, loads on 3G. Reviewed by a senior designer, who found two gaps I had missed."
 
 ---
 
-## Three sentences for a recruiter (the short version)
+## YOUR TURN
 
-When you have 60 seconds to describe this project on a call, this is what you say.
+<!-- COURSE SCAFFOLDING: delete everything above YOUR TURN once you have filled it in. This becomes your real working file. -->
 
-> Example: "I rebuilt the booking screen of a tutoring marketplace for the Bangladesh market. The client brief said desktop-first English-only; the actual users are parents on entry-level Android phones in Bangla and English. I redirected the brief, designed parent-first, and built one screen end-to-end including the HTML: verified-tutor signal, bKash payment path, sub-3G load profile. Reviewed by a senior at [company]."
+Write the story of the screen you built in Class 6. Answer each part in place, in order. Full sentences, first person, past tense.
 
-Practice saying this aloud. If it does not sound like real spoken English, rewrite.
+Two rules while you write. Every sentence in parts 2 through 5 should have you as the subject of the verb, not Claude. And no part is optional, including part 5.
+
+When the five parts are drafted, open Claude Code at the root of this workspace on Sonnet 5 at medium effort and ask it to find every sentence where the tool is the subject instead of you, and every claim you have not backed with something specific. Then fix them yourself. Do not let it rewrite the story; it will make it sound like everyone else's. Fits in one session.
+
+### 1. What was the brief?
+
+One paragraph, in plain language. What you were asked to do, including the parts of the ask that turned out to be wrong. Write it as the client wrote it, not as you wish they had.
+
+### 2. How did you direct AI, and what did you build?
+
+Two paragraphs. First: what you kept and what you handed over. Be exact. Which decisions were yours, which keystrokes were Claude's, and what you did to check the result. Second: the one screen or flow you actually built, described specifically enough that someone could picture it.
+
+### 3. What problem did you solve?
+
+One or two paragraphs. Not the task you were given. The problem underneath it. What was contradictory, missing, or wrong in the brief, how you found it, and what you changed as a result. This is the part most designers skip, and it is the part that gets you hired.
+
+### 4. What did you reject, and why?
+
+At least two things Claude produced that you said no to, with the reason for each. The reason matters more than the rejection. "It looked bad" is not a reason. "It pushes the primary action below the fold on the device our users hold" is a reason.
+
+### 5. What was the outcome, and what did you get wrong?
+
+Two parts, both required.
+
+Outcome first: if it shipped, what happened. If it did not ship, who reviewed it and what they found. Be honest that a class project is a class project. Nobody is fooled and nobody minds.
+
+Then the failure: one specific judgment call you regret, what happened because of it, and what you now do differently. Not "I worked too hard." Not "I missed a deadline." A decision you made with the information you had, that turned out to be wrong.
+
+Then compress the whole story into three sentences you can say out loud on a call. Say them out loud. If they do not sound like speech, rewrite them.

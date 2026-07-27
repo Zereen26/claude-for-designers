@@ -1,12 +1,40 @@
+---
+created: 2026-07-27
+type: reference
+status: complete
+class: 4
+tags: [ostad, batch-02, workbook, principles, anti-ai-slop, student-editable]
+---
+
 # Anti-AI-Slop Rules
 
-What NOT to ship. These are the patterns that scream "AI generated this and the designer did not notice." Every one of them is a tell that lowers the perceived value of your work.
+**What this file is for:** the list of things you refuse to ship, so you catch them before a client does.
 
-Some of these apply to UI Claude generates. Some apply to images, icons, and decoration Claude might suggest. Some apply to copy. All of them are things you should refuse to ship without thinking about why.
+**Why Claude needs it:** these patterns are Claude's defaults, because they are the most common patterns on the internet it learned from. Named in the folder, it avoids them. Unnamed, it produces them and waits for you to object.
+
+**Which class:** Class 4, Claude as Critic. It runs alongside `design-taste.md` and the `/design-review` skill.
+
+**`design-taste.md` says what good is. This file says what to refuse.** Together, filled in, they are the actual answer to "Sonnet produces bad design". The complaint is nearly always a folder with nothing in it about taste, not a model that cannot design. Same model, same prompt, these two files present: different output.
+
+<!--
+COURSE NOTE for the student. This is not an instruction to Claude.
+
+Everything under the EXAMPLE heading is the instructor's list as of 2026. Read it, then extend it in YOUR TURN with the tells you see in your own work and your own feed.
+
+A rule you copied is worth less than a rule you got burned by. The copied ones still work, so keep them, but the file only becomes yours once your own entries are in it.
+
+The list is never finished. What reads as AI-slop in 2026 will read differently in 2027. Add entries as you find them. Junior designers who keep a personal anti-slop file build taste faster than the ones who do not.
+-->
 
 ---
 
-## Visual style slop
+## EXAMPLE: the instructor's slop list (2026)
+
+<!-- Read it, keep what applies to you, then add your own in YOUR TURN. -->
+
+Some of these apply to UI Claude generates. Some apply to icons and decoration Claude might suggest. Some apply to copy. All of them are things to refuse to ship without a reason.
+
+### Visual style slop
 
 **Purple-to-pink gradients.** The default "AI app" aesthetic. If your screen has a gradient and you cannot defend the specific colors with a brand reason, change to a single brand color or remove.
 
@@ -20,9 +48,7 @@ Some of these apply to UI Claude generates. Some apply to images, icons, and dec
 
 **Random translucent dots and lines as decoration.** Particles in the background. Connector lines between concepts that mean nothing. Asymmetric "organic" shapes added for visual interest. Remove them.
 
----
-
-## Layout slop
+### Layout slop
 
 **Centered text where left-aligned would work.** Centered paragraphs are harder to read. Use center alignment only for hero text or single-line CTAs, never for body paragraphs.
 
@@ -30,11 +56,9 @@ Some of these apply to UI Claude generates. Some apply to images, icons, and dec
 
 **Faux-3D buttons with multiple shadows.** Skeuomorphic buttons looked dated in 2018. If a button needs depth, one shadow at most. Modern buttons are flat or have a single subtle elevation.
 
-**Hero with title + subtitle + CTA + secondary CTA + signup form + social proof + arrow pointing down.** Pick three of those. Heroes that try to do everything do nothing.
+**Hero with title plus subtitle plus CTA plus secondary CTA plus signup form plus social proof plus arrow pointing down.** Pick three of those. Heroes that try to do everything do nothing.
 
----
-
-## Copy slop
+### Copy slop
 
 **"Empower."** Banned. Nobody is empowered by your dashboard. They are using it because they have to.
 
@@ -50,9 +74,7 @@ Some of these apply to UI Claude generates. Some apply to images, icons, and dec
 
 **Three-item lists where two would do.** "Fast, reliable, and scalable." Pick the two that are actually true. Faux parallelism is an AI tell.
 
----
-
-## Component slop
+### Component slop
 
 **Toast notifications for everything.** "Item added to cart" toast every click. "Settings saved" toast every keystroke. Toasts are interruptions; use them for things the user genuinely needs to know about, not as positive reinforcement.
 
@@ -64,9 +86,7 @@ Some of these apply to UI Claude generates. Some apply to images, icons, and dec
 
 **Generic error messages.** "Something went wrong" tells the user nothing. Either tell them WHAT went wrong and what to do, or do not show the error at all.
 
----
-
-## The meta-rule
+### The meta-rule
 
 The strongest anti-slop signal is **specificity**. AI defaults to generic because generic gets approval from the widest audience. Your job is to make the work specific to a real product, a real user, a real market. The more specific you are, the less it looks AI-generated.
 
@@ -74,6 +94,23 @@ When Claude proposes something generic, ask: "What would change about this desig
 
 ---
 
-## What this list is missing
+## YOUR TURN
 
-This is a starting set. Add your own as you find them. Things that read as AI-slop in 2026 will be different in 2027. Keep this file alive. Junior designers who maintain a personal anti-slop file develop taste faster than ones who do not.
+<!-- Answer each question in the space under it. Pull from real output, not from memory. This list only protects you if the entries are yours. -->
+
+**1. Find one output Claude gave you that you would not show a client. Name the exact tell in one sentence.** Not "it looked AI." The specific element: which gradient, which grid, which sentence.
+
+
+**2. Add three slop patterns of your own** that are not on the list above. Write the fix next to each one, not just the complaint.
+
+
+**3. List five words you ban in your product copy.** If your interface is Bangla and English mixed, add the Bangla equivalents you are tired of seeing.
+
+
+**4. Write your own version of the specificity test.** One sentence describing your real user, doing the real task, on their real phone. If a design does not change when you ask that question, it is not specific enough yet.
+
+
+**5. Which rule on this list do you break on purpose, and what is your defense?** A rule you can defend breaking is taste. A rule you broke without noticing is slop.
+
+
+<!-- COURSE SCAFFOLDING: delete everything above YOUR TURN once you have filled it in. This becomes your real working file. -->
