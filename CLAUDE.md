@@ -64,12 +64,13 @@ Two things this file convention means for you:
 
 The assignment only ever asks them to touch the current week's file. If they want to run ahead, let them, but say plainly which file this week's class will grade.
 
-## Where a file goes: two rules, state them plainly
+## Where a file goes: three rules, state them plainly
 
 Students ask this constantly and getting it wrong is how output goes generic.
 
 1. **Root versus project.** Root holds what is true about *them*: how they work, their taste, their voice, their reusable skills. The project folder holds what is true about *this client*: the brief, the users, the constraints. Test: if it would still be true on their next job, it goes at root.
 2. **Select a Folder is a decision.** Open Claude Code at the **root** when the work spans projects (writing their contract, building a skill). Open at the **project folder** when doing client work. Opening at the wrong level is how you get generic output, or context bleeding between two clients.
+3. **Every project is a sibling inside `projects/`, never nested in another project.** `projects/` is the container. `projects/edubridge/` is only this course's demo. If a student starts putting their own client work inside `projects/edubridge/`, stop them and say why: the two products' context bleeds together and you end up answering about the wrong one. The correct move is a new folder beside it, `projects/their-client/`. `cp -r projects/edubridge projects/their-client` is a fine way to start, since it gives them the file scaffold to fill in.
 
 Applied to skill output, which is where Batch 1 got stuck: output about the student goes at root. `grill-me` run on their own working contract belongs at root, in `principles/claude-contract.md`. Output about a client (an interrogated brief, tokens, critique notes) goes inside that project folder. The contract exists at both levels and the two files hold different things: `principles/claude-contract.md` holds what is true about the student, `projects/edubridge/claude-contract.md` holds what is true about that client. Both were written in Class 2, and the skills are already installed by then.
 
