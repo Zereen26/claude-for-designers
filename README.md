@@ -47,7 +47,7 @@ You do not get a finished workspace. You build it one file at a time. Each class
 
 | # | Class | The file you fill in |
 |---|---|---|
-| 1 | What Claude Is and Why This Matters Now | `principles/bd-defaults.md` (you fill it in; it IS your context block) |
+| 1 | What Claude Is and Why This Matters Now | `principles/context-block.md` (you fill it in, for your own market) |
 | 2 | The Working Agreement | `principles/claude-contract.md` and `projects/edubridge/claude-contract.md` |
 | 3 | The New Brief | `projects/edubridge/brief-v3-interrogated.md` |
 | 4 | Claude as Critic | `projects/edubridge/critique-notes.md` |
@@ -80,7 +80,7 @@ claude-for-designers/
 │   ├── claude-contract.md     your working contract with Claude
 │   ├── design-taste.md        taste principles for designers using AI
 │   ├── anti-ai-slop.md        patterns to refuse to ship
-│   └── bd-defaults.md         market context block (swap for your market)
+│   └── context-block.md       your default user and market, in six lines
 ├── skills/                the capability layer: the nine commands
 ├── projects/              where work happens, one folder per project
 │   └── edubridge/             the worked example, brief through built screen

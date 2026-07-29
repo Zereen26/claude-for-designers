@@ -70,7 +70,7 @@ The repo you downloaded contains the finished workspace. That is the answer key,
 
 Across the whole workspace:
 
-- **Class 1**: `principles/bd-defaults.md`, which you fill in. That file IS your context block; there is no separate `context/` directory. This project folder exists but holds none of your work yet.
+- **Class 1**: `principles/context-block.md`, which you fill in for your own market. There is no separate `context/` directory. This project folder exists but holds none of your work yet.
 - **Class 2**: adds `principles/claude-contract.md` at root and `claude-contract.md` here in the project. Skills get installed this class, because Class 2 is the first one that runs a skill (`/grill-me`).
 - **Class 3**: the brief chain here, `brief-v1` to `brief-v2` to `brief-v3-interrogated.md`.
 - **Class 4**: adds `critique-notes.md`.

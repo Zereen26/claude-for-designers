@@ -15,7 +15,7 @@ This is the root layer. Nothing in here is about a client. If a fact would still
 
 | File | Class | What it holds | You bring back |
 |---|---|---|---|
-| `bd-defaults.md` | 1 | Your default user, in six or seven lines you can paste into any prompt | Your context block |
+| `context-block.md` | 1 | Your default user and market, in six or seven lines you can paste into any prompt | Your filled context block |
 | `claude-contract.md` | 2 | How you work, how Claude talks to you, what you will not delegate | Your contract, at root and in the project |
 | `design-taste.md` | 4 | What good means to you, specifically enough to be arguable | Filled taste file, used by `/design-review` |
 | `anti-ai-slop.md` | 4 | What you refuse to ship, and the fix for each pattern | Filled slop list, plus `critique-notes.md` in the project |

@@ -1,12 +1,13 @@
 ---
 created: 2026-07-27
+updated: 2026-07-29T11:14:28Z
 type: reference
 status: complete
 class: 1
-tags: [ostad, batch-02, workbook, principles, context-block, bangladesh, student-editable]
+tags: [ostad, batch-02, workbook, principles, context-block, market-context, student-editable]
 ---
 
-# BD Context Block
+# Your Context Block
 
 **What this file is for:** your default user, described once, so you stop describing them from scratch in every prompt.
 
@@ -40,7 +41,7 @@ Context for every output:
 
 ### How the example gets extended
 
-Those six lines cover the average BD user. For a specific product category, the instructor adds lines:
+Those six lines cover the average user in the instructor's market. For a specific product category, he adds lines:
 
 - **Fintech**: payment-method preferences, KYC sensitivity, fraud awareness
 - **Edtech**: parental decision-makers, after-school timing, Bengali-medium expectations
@@ -51,7 +52,7 @@ The point is to give Claude something specific to anchor on. Generic prompts pro
 
 ### When the block does not apply
 
-When the output is not for a BD user. If the client is German, the BD assumptions are wrong. That client gets a different block, written once and reused.
+When the output is not for the users this block describes. If your block says mobile-first on 3G and the client is a German desktop SaaS, every assumption in it is wrong. That client gets its own block, written once and reused.
 
 ---
 
@@ -65,10 +66,10 @@ When the output is not for a BD user. If the client is German, the BD assumption
 **2. Add two lines specific to your product's category.** Fintech, edtech, commerce, ride-share, or whatever yours is. What does Claude get wrong about this category by default?
 
 
-**3. Name your device floor.** The actual phone model and the actual connection you test on, not a range. "Redmi A3 on 3G in Mirpur" beats "low-end Android".
+**3. Name your device floor.** The actual phone model and the actual connection you test on, not a range. "Redmi A3 on 3G in Mirpur" beats "low-end Android". If your users are on desktop, say which browser and which screen width.
 
 
-**4. What is the real language split in your interface?** Which parts are Bangla, which stay English, and what happens to numbers, dates and currency?
+**4. What is the real language split in your interface?** Which parts are in your local language, which stay English, and what happens to numbers, dates and currency?
 
 
 **5. When does your block stop applying, and what do you paste instead?** Name one client or market where these assumptions would be wrong.

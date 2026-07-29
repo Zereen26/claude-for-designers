@@ -53,7 +53,7 @@ Two things this file convention means for you:
 
 | # | Class | Headline file(s) | Skills run | Brings back |
 |---|---|---|---|---|
-| 1 | What Claude Is and Why This Matters Now | `principles/bd-defaults.md`, which they fill in; it IS the context block, there is no separate `context/` directory | none yet | their filled `bd-defaults.md` |
+| 1 | What Claude Is and Why This Matters Now | `principles/context-block.md`, which they fill in for their own market; there is no separate `context/` directory | none yet | their filled `context-block.md` |
 | 2 | The Working Agreement | `principles/claude-contract.md` and `projects/edubridge/claude-contract.md` | `grill-me`; the nine skills get installed this class | their contract, at root and in the project |
 | 3 | The New Brief | `projects/edubridge/brief-v1-client.md`, `brief-v2-pm-thread.md`, `brief-v3-interrogated.md` | `design-brief`, `persona-acid-test` | interrogated brief plus a pushback email |
 | 4 | Claude as Critic | `principles/design-taste.md`, `principles/anti-ai-slop.md` | `design-review`, `heuristic-evaluation`, Impeccable | `projects/edubridge/critique-notes.md` |
@@ -107,7 +107,7 @@ Before anything substantive, read `principles/`. Those files override your defau
 - `principles/claude-contract.md`: the student's contract with you (voice, format, what they will not delegate)
 - `principles/design-taste.md`: taste principles for design output
 - `principles/anti-ai-slop.md`: patterns to refuse to generate
-- `principles/bd-defaults.md`: the Bangladesh context block, the default for EduBridge
+- `principles/context-block.md`: the student's own market and default user. Ships with the Bangladesh block filled in as the worked example, because that is EduBridge's market
 
 Also:
 
@@ -128,9 +128,9 @@ When the student opens a project folder, treat the briefs, tokens and critique n
 
 ## Local context: Bangladesh
 
-For a Bangladeshi audience, which is the default for EduBridge, apply the BD context block: mobile-first, sub-15K taka Android, bKash-style payment patterns, 3G and 4G connections, Bangla plus English mix, animations under 150ms, trust signals over aesthetics.
+For a Bangladeshi audience, which is the default for EduBridge, apply the Bangladesh block in `principles/context-block.md`: mobile-first, sub-15K taka Android, bKash-style payment patterns, 3G and 4G connections, Bangla plus English mix, animations under 150ms, trust signals over aesthetics.
 
-If they are designing for a different market, ask for a context block for that market first.
+If they are designing for a different market, that market's block is what `principles/context-block.md` should hold. Ask for it before drawing anything.
 
 ## Voice
 
