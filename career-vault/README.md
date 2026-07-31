@@ -54,10 +54,7 @@ career-vault/portfolio-stories/      the story about the work
 
 `02-portfolio-story.md` is the master template. When you finish a real project, copy it:
 
-```bash
-mkdir -p career-vault/portfolio-stories
-cp career-vault/02-portfolio-story.md career-vault/portfolio-stories/{project-name}.md
-```
+Ask Claude Code: *"make a copy of career-vault/02-portfolio-story.md inside a new career-vault/portfolio-stories/ folder, named after this project."* One story per project, so this file stays the template.
 
 So when a recruiter says "tell me about a project," you are not improvising. You open the right story and talk from something you already thought through carefully, once, when you had time.
 

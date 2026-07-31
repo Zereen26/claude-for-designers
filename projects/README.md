@@ -12,14 +12,13 @@ Three things live here:
 
 ## Start a new client
 
-Copy the **template**, not EduBridge.
+Duplicate the **template**, not EduBridge.
 
-```bash
-cp -r projects/_new-client projects/your-client
-cd projects/your-client
-```
+**No terminal needed.** Right-click the `_new-client` folder, choose Duplicate, rename the copy. On Windows, copy and paste it, then rename. Or just tell Claude Code: *"duplicate the _new-client folder and call it acme-fintech."*
 
-Copying `edubridge/` drags one client's users, tokens, decisions and briefs into another client's folder, and then Claude answers about the wrong product. That is the single most expensive mistake you can make in this folder.
+Getting Claude to do the boring part is the point, not a shortcut.
+
+Duplicating `edubridge/` drags one client's users, tokens, decisions and briefs into another client's folder, and then Claude answers about the wrong product. That is the single most expensive mistake you can make in this folder.
 
 Then, in roughly this order:
 

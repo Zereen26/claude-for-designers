@@ -98,7 +98,25 @@ claude-for-designers/
 
 **Model settings.** Sonnet 5 at medium effort, for everything in this course. Do not spend your session budget on a bigger model.
 
-**Turning the nine skills into slash commands.** You need this from Class 2, which is the first class that runs one (`/grill-me`). Open a terminal in your unzipped or cloned folder and run:
+**Turning the nine skills into slash commands.** You need this from Class 2, which is the first class that runs one (`/grill-me`).
+
+**No terminal.** Open Claude Code at the root of this folder and paste this:
+
+```
+Install the nine skills in the skills/ folder as slash commands for me.
+Each one needs to end up at ~/.claude/skills/<skill-name>/SKILL.md, where
+<skill-name> is the filename without .md. Do not change any of the contents.
+Then list the nine folders you created so I can check.
+```
+
+That is it. Claude Code has file access, so it does the copying and tells you what it did. Restart Claude Code, type `/`, and the nine commands appear.
+
+**Getting Claude to do your setup is not cheating and it is not a shortcut.** It is the first time in this course that you direct it at a real task instead of a design task, and it is a fair preview of the rest.
+
+<details>
+<summary>If you would rather run it yourself in a terminal</summary>
+
+Nothing in this course needs the terminal, and you can ignore this. But if you are comfortable there:
 
 ```bash
 mkdir -p ~/.claude/skills
@@ -107,17 +125,17 @@ for f in grill-me design-brief information-architecture design-tokens brief-to-t
   cp skills/$f.md ~/.claude/skills/$f/SKILL.md
 done
 ```
+</details>
 
-Restart Claude Code, type `/`, and the nine commands appear. If the terminal is unfamiliar, that is normal; bring it to the class or the office hour rather than guessing.
+If the skills do not appear after a restart, that is an office hours question. Do not reinstall repeatedly.
 
 ## Start your own client
 
-Copy the empty template, never EduBridge. EduBridge is filled in as the answer key; copying it means dragging one client's users, tokens and decisions into another client's folder.
+Duplicate the empty template, never EduBridge. EduBridge is filled in as the answer key; duplicating it means dragging one client's users, tokens and decisions into another client's folder.
 
-```bash
-cp -r projects/_new-client projects/your-client
-cd projects/your-client
-```
+**No terminal needed.** Right-click the `_new-client` folder, choose Duplicate, rename the copy. On Windows, copy and paste it, then rename. Or just tell Claude Code: *"duplicate the _new-client folder and call it acme-fintech."*
+
+Getting Claude to do the boring part is the point, not a shortcut.
 
 You do this for the first time in Class 1, on a real brief of your own, and you do it again for every client after the course. Inside you get the six files the course teaches, empty, each carrying the questions it wants answered and one example of the standard.
 

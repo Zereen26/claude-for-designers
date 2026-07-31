@@ -85,13 +85,8 @@ Confused brief, interrogated brief, critique, system, built screen. Five steps, 
 
 ## When you start your own project
 
-Copy the folder, keep the structure:
+Do not duplicate this folder. Duplicate `projects/_new-client/` instead: right-click it, Duplicate, rename the copy, or ask Claude Code to do it for you. This folder is filled in as the answer key, so copying it drags EduBridge's users, tokens and decisions into your client's folder.
 
-```bash
-cp -r projects/edubridge projects/my-real-project
-cd projects/my-real-project
-```
-
-Replace `brief-v1-client.md` with the brief you were actually sent. Replace `brief-v2-pm-thread.md` with your real PM thread, or delete it. Rewrite `PRODUCT.md` first, because everything downstream reads it. Then run the same sequence from interrogation to build.
+Then, in your own folder, work through the same sequence. Replace `brief-v2-pm-thread.md` with your real PM thread, or delete it. Rewrite `PRODUCT.md` first, because everything downstream reads it. Then run the same sequence from interrogation to build.
 
 The folder is the process, not just an output of it.

@@ -9,11 +9,11 @@ tags: [template, new-client, transfer, engagement]
 
 This folder is a template. It is the whole course, emptied out, ready for a job that is actually yours.
 
-**How to use it:** copy the folder, do not work inside it.
+**How to use it:** duplicate the folder, do not work inside it.
 
-```
-cp -r projects/_new-client projects/acme-fintech
-```
+**No terminal needed.** Right-click the `_new-client` folder, choose Duplicate, rename the copy. On Windows, copy and paste it, then rename. Or just tell Claude Code: *"duplicate the _new-client folder and call it acme-fintech."*
+
+Getting Claude to do the boring part is the point, not a shortcut.
 
 Then fill in the copy. Leave this one empty so it is there for the client after that.
 

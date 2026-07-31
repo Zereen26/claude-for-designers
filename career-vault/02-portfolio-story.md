@@ -17,10 +17,7 @@ One project gets one story. Five parts, in order. The parts are chosen so the st
 
 When you start a new project's story, copy this file:
 
-```bash
-mkdir -p career-vault/portfolio-stories
-cp career-vault/02-portfolio-story.md career-vault/portfolio-stories/{project-name}.md
-```
+Ask Claude Code: *"make a copy of career-vault/02-portfolio-story.md inside a new career-vault/portfolio-stories/ folder, named after this project."* One story per project, so this file stays the template.
 
 ---
 
