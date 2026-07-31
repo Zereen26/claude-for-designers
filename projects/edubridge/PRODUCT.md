@@ -14,7 +14,7 @@ You read this file. You do not fill it in. Nothing here is an assignment. The fi
 
 Two companion files sit beside this one and do different jobs. `BACKGROUND.md` is the story, written for you: the company, the cast, what is locked and what is open. `context.md` is the filled user context for this client. This file is the standing product context, written for Claude.
 
-When you swap EduBridge for a real product of your own from Class 4 onward, this is the file you rewrite first, because everything downstream reads it.
+If your project is your own client rather than EduBridge, the equivalent of this file in your folder is `context.md`, and it is the first thing you write, because everything downstream reads it.
 
 ## Register
 

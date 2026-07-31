@@ -10,7 +10,9 @@ project: EduBridge Bangladesh
 
 This is the project you carry from Class 3 to Class 6. By the end it is also the folder you show someone when they ask what your design process looks like.
 
-EduBridge is the only demo project through Class 3. From Class 4 you may swap in a real product of your own, but the file structure stays exactly the same.
+EduBridge is what your instructor demos on every class, because its brief has contradictions planted in it on purpose.
+
+Whether *your* assignments run on EduBridge or on your own client was decided in Class 1, and it does not change after Class 2. A case study built half from EduBridge and half from another product is weaker than one built from either. If you chose your own client, the file structure here is identical to the one in your folder, so read this as the answer key.
 
 ## Read this first: which level do you open?
 

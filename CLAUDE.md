@@ -15,7 +15,11 @@ This is the student's workspace for the course. They already know UX design. Thi
 
 The folder is the curriculum. It grows with the course. Each class the student opens one file, learns why that file exists, fills it in for their own project, and brings it back to the next class. The finished repo is the answer key, not the week-one handout.
 
-EduBridge Bangladesh is the worked example project. It runs as the only demo project through Class 3. From Class 4 a student may swap in a real product of their own.
+EduBridge Bangladesh is the worked example, and **the instructor always demos on it**. Its contradictions are planted, so the lesson lands there even for a student working on something else.
+
+**The student's own project is chosen once, in Class 1, and never switched.** They may use their own client if they have a real brief written by somebody else with access to ask questions; otherwise they use EduBridge, which is a legitimate choice and must never be described as the lazy one. Switching after Class 2 is not allowed, because a case study assembled from two different products is weaker than either.
+
+So when a student asks you to work on something, check which project is theirs before assuming EduBridge. If `projects/` contains a client folder that is not `edubridge` or `_new-client`, that is their project and the assignments run on it.
 
 ## When the student asks about the folder, orient them
 
@@ -59,8 +63,8 @@ Two things this file convention means for you:
 |---|---|---|---|---|
 | 1 | What Claude Is and Why This Matters Now | TWO files, two levels: `principles/context-block.md` (their defaults, about them) AND `projects/<their-client>/context.md`, created by copying `projects/_new-client/`. They use a real brief of their own; EduBridge has not been introduced yet | none yet | both context files, plus a same-brief-twice comparison |
 | 2 | The Working Agreement | `principles/claude-contract.md` and `projects/edubridge/claude-contract.md`. **EduBridge enters here**, as the worked comparison against their own Class 1 attempt. `engagement.md` is introduced as an idea, not filled | `grill-me`; the nine skills get installed this class | their contract, at root and in the project |
-| 3 | The New Brief | `projects/edubridge/brief-v1-client.md`, `brief-v2-pm-thread.md`, `brief-v3-interrogated.md`, and they fill `engagement.md` | `design-brief`, `persona-acid-test` | interrogated brief, a scope email, filled `engagement.md` |
-| 4 | Claude as Critic | `principles/design-taste.md`, `principles/anti-ai-slop.md` | `design-review`, `heuristic-evaluation`, Impeccable | `projects/edubridge/critique-notes.md` |
+| 3 | The New Brief | `projects/edubridge/brief-v1-client.md`, `brief-v2-pm-thread.md`, `brief-v3-interrogated.md`, and they fill `engagement.md` | `grill-me` (second use, on the brief), `design-brief` | interrogated brief, a scope email, filled `engagement.md` |
+| 4 | Claude as Critic | `principles/design-taste.md`, `principles/anti-ai-slop.md` | `design-review`, `heuristic-evaluation`, `persona-acid-test` (after doing it by hand), Impeccable optional | `projects/edubridge/critique-notes.md` |
 | 5 | Figma as Source of Truth | `projects/edubridge/tokens.md` | `information-architecture`, `design-tokens` | tokenized Figma file |
 | 6 | Claude Code and Building One Real Flow | `projects/edubridge/my-booking-screen.html` (the student's own file; `booking-screen.html` is read-only reference and must never be written to) | `brief-to-tasks`, `frontend-design` | a shipped screen |
 | 7 | How to Sell Yourself: Brand and Portfolio | `career-vault/01-positioning.md`, `02-portfolio-story.md`, `06-proposal.md` | none new | a case study and a proposal |
@@ -104,7 +108,7 @@ Nine slash commands live in `skills/`. Run them in this order on a project; skip
 6. `/frontend-design`: build the interface using everything above
 7. `/design-review`: critique with the rigor you would apply to someone else's work
 8. `/heuristic-evaluation`: audit a design against Nielsen's 10 usability heuristics, every finding tied to a specific element with a specific fix
-9. `/persona-acid-test`: stress-test the design through three lenses (confused user, skeptical engineer, impatient PM) before it goes to a stakeholder
+9. `/persona-acid-test`: stress-test the design through three lenses (confused user, skeptical engineer, impatient PM) before it goes to a stakeholder. **It needs an actual design**: an HTML file, a Figma link or a screenshot. It will refuse to start without one, so never suggest it before a screen exists.
 
 When a student runs one, follow the template in the matching file under `skills/`. Step 6 does not run before Steps 1 to 5.
 
