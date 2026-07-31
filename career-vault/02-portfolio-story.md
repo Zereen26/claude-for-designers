@@ -44,7 +44,7 @@ What I built: the tutor booking request screen. Parent-facing, mobile, max-width
 
 "The brief and the reality were two different projects, and nobody had said so out loud.
 
-The brief said desktop-first. The local PM said mobile is the only thing that matters here. The brief assumed Stripe, which almost nobody in this market uses; bKash and Nagad are what people actually pay with. The brief put students as the primary user, but parents hold the phone, the money, and the veto.
+The brief said desktop-first. The local PM said mobile is the only thing that matters here. The brief assumed one global card checkout, which converts at 19% in the UK and would have stalled here; most of these users pay with bKash or Nagad, and that is a different flow shape, not a different button. The brief put students as the primary user, but parents hold the phone, the money, and the veto.
 
 So the problem I actually solved was not 'design a booking screen.' It was 'this brief will produce a product nobody here can use, and someone has to say that in week one instead of week three.' I rewrote the brief: parent-first, mobile-first, bKash and Nagad, Bangla as a requirement and not a phase two, trust signals ahead of aesthetics. Three weeks meant one screen only, so search and onboarding went out of scope on purpose."
 

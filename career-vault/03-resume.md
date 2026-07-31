@@ -42,7 +42,7 @@ Three or four lines, not a paragraph. Note what the last sentence does: it names
 
 Reverse chronological. For each role, one summary line and three to five bullets.
 
-**Junior Product Designer, [Company] (Feb 2026 to present)**
+**Junior Product Designer, [Company] ([Month Year] to present)**
 
 Mobile product work for a BD-market edtech marketplace.
 

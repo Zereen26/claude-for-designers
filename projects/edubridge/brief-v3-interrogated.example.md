@@ -25,7 +25,7 @@ The primary user is a 42-year-old parent in Dhaka, on a sub-15K taka Android, on
 ## What the contradictions actually were
 
 - **Desktop-first vs mobile-must:** Mobile-first. The client brief said desktop-first with responsive as a nice-to-have, but the PM thread confirmed mobile is a hard must. The sub-15K taka Android is the default device for this audience; desktop is the edge case.
-- **Stripe vs bKash:** bKash, with Nagad as a likely second. Stripe does not operate in BD; the client brief assumed it because Jamie's team did not know. Designing for Stripe would waste the sprint.
+- **One global checkout versus the flow this market needs:** both paths, and the mobile-money one is a different shape. SSLCOMMERZ covers the card minority; bKash or Nagad covers the rest. Confidence: **confident** on the split, **guess** on the ratio. The real finding is not the brand name, it is that mobile money adds three to four screens and five error states (wrong TrxID, expired OTP, insufficient balance, duplicate payment, timeout) to a checkout designed around one instant card screen. Jamie has UK data at 19% on that checkout, so this needs a screen count, not an opinion. It is also scope: see `engagement.md`.
 - **English vs Bengali:** Bilingual MVP (Bangla + English). The client called Bengali optional, but the client's manager called it "strongly preferred," which is a soft must. Plan for Bengali UI strings now rather than retrofitting later.
 - **Students vs parents:** Parents. The client brief named students aged 14-22 as primary, but the PM thread confirmed parents are the real financial decision-makers. The trust signals and the booking decision are designed for the parent.
 - **Video calling in MVP vs not:** Out of MVP. The client pushed for video calling in the booking flow after seeing Preply, but with a 3-lakh budget and a three-week sprint it does not fit. Flag it as a fast-follow epic.
@@ -40,7 +40,7 @@ The tutor booking request screen, parent-facing: tutor name, subject, a document
 - Search and discovery. Different sprint.
 - Tutor onboarding and the verification submission flow. Different sprint.
 - Multilingual user-generated content (tutor bios, reviews) translation. Phase 2. MVP covers UI strings only.
-- Stripe and any non-bKash payment method.
+- A single-screen card-only checkout as the only path.
 
 ## Assumptions I am carrying forward
 

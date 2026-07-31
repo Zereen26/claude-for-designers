@@ -7,15 +7,90 @@ tags: [ostad, batch-02, career-vault, class-08, linkedin]
 
 # LinkedIn Content
 
-**What this file is for:** your LinkedIn bio, your posting templates, and your outreach messages, kept in one place so posting is a ten-minute job instead of a decision.
+**What this file is for:** your profile, and a way of never being stuck for something to write. Two jobs, no more.
 
-**Why Claude needs it:** when you ask Claude to draft a post or a message, this file is where your voice and your subject matter come from. Skip it and you get the LinkedIn voice everyone can smell, all clean parallel sentences and no opinion.
+**Where your voice lives:** not here. `principles/claude-contract.md` at the root holds how you want Claude to write, including the habits you do not want. This file holds *what* you write about; that file holds *how*. If you find yourself writing voice rules here, they belong in the contract.
 
-**Class:** Class 8. Bio and first post written in class, then one post a week after that.
+**This also covers your marketplace profile.** An Upwork or Fiverr overview is the same muscle as a LinkedIn about section: who you help, what you solve, what proof you have. Write it once here, adapt the length per platform.
+
+**Class:** Class 8. Profile and first post written in class, then one post a week after that.
 
 LinkedIn is where a recruiter checks you after your resume lands, and where a hiring manager finds you before any resume exists. Three parts here: the bio, the posts, the messages.
 
 One thing worth saying plainly. The reason to post is not reach. It is that a recruiter comparing you against another designer in Dhaka with the same experience finds a written record of how you think on one profile and nothing on the other. That is the whole mechanism. It does not require going viral.
+
+---
+
+## Read this first: you are already qualified to post
+
+The reason people in this room do not post is not that they cannot write. It is that they believe they are not senior enough to have anything worth saying. So let me take that away.
+
+> **Authority comes from specificity, not seniority.**
+
+A true, specific account of something that happened to you is not a claim to expertise. It is a report. Nobody is checking your credentials, and a specific thing that happened to a junior designer is more interesting than a generalisation from a senior one. The generalisation is available everywhere. What actually happened to you is not.
+
+You do not need a conclusion, a framework, or five years of experience. You need one specific thing and an honest sentence about why it mattered.
+
+---
+
+## Ten angles, easiest first
+
+Most posting advice assumes you have shipped something impressive. Start at the top of this list instead, and only move down it as you accumulate things to point at.
+
+| # | The angle | What it costs you |
+|---|---|---|
+| 1 | Something I stumbled on: a tool, an article, a pattern | Noticing |
+| 2 | What I took from a podcast, talk, book or course | Taking notes |
+| 3 | Something that happened to me: a mistake, a small win, a client moment | It happened |
+| 4 | A conversation I had, or a question someone asked that stuck with me | Listening |
+| 5 | A negotiation, or a hard conversation I handled | Having done it once |
+| 6 | Two things I tried, and how they differed | Trying both |
+| 7 | A question I do not have the answer to | Honesty |
+| 8 | Something I used to believe and changed my mind about | Reflection |
+| 9 | What I shipped, and the decision behind it | Having shipped |
+| 10 | A contrarian belief, with evidence | Conviction |
+
+Rungs 9 and 10 are what most people think a post has to be. That is why most people post nothing.
+
+### The recipe, which is the same for all ten
+
+1. **Name the specific thing.** One sentence. A tool, a moment, a question, a number.
+2. **Say what it changed for you.** Two or three sentences. This is the post.
+3. **Stop.** No "what do you think?", no three hashtags, no lesson-for-us-all.
+
+That is it. If step 2 is honest, the post works. If step 2 is a generalisation, no amount of formatting saves it.
+
+### One worked example per rung, short versions
+
+- **1, stumbled on:** "Found out Figma variables can hold a number, not just a colour. Rebuilt my spacing scale in an afternoon and deleted about forty hardcoded values. I had been doing that by hand for two years."
+- **2, took from something:** "Listened to a podcast where a designer said she never shows one option. Not because options are good, but because one option invites approval and three invite a decision. I have been doing the first thing for years and calling it confidence."
+- **3, happened to me:** "A client asked me to make the logo bigger. I did it, showed them, and they said it looked worse. We put it back. Twenty minutes, and it ended the argument permanently. Sometimes doing the bad version is the fastest way past it."
+- **4, a conversation:** "A developer asked me why the spacing between two cards was 14px. I did not have an answer. That is when I understood what a token is actually for."
+- **5, a negotiation:** "A client added video calling to a fixed-price project as though it were a detail. I said yes, and quoted it separately. They took it. I had spent two years assuming that sentence would lose me the job."
+- **6, two things I tried:** "Ran the same brief through Claude twice, once with a context block and once without. The second one knew my users pay with bKash and the first one suggested a card form. Six lines of context did that."
+- **7, a question:** "Genuine question for people who design for low-end Android: do you test on a real device or emulate? I have been emulating and I am starting to think I am fooling myself."
+- **8, changed my mind:** "I used to think a design system was a luxury for big teams. Then I did two revision rounds on an untokenised file and rebuilt the same button four times."
+- **9, shipped it:** the template further down this file.
+- **10, contrarian:** also further down. Save it until you have evidence.
+
+---
+
+## You already have eight posts
+
+You do not need to invent material. This course produces something postable every single week, and by the end you own eight posts without doing anything extra.
+
+| Class | The post it hands you | Rung |
+|---|---|---|
+| 1 | The same brief run twice, with and without your context block | 6 |
+| 2 | Writing down how you want to be spoken to, and what changed | 3 |
+| 3 | The scope email, and what happened when you sent it | 5 |
+| 4 | The specific things you now refuse to let AI generate | 3 or 8 |
+| 5 | The token before and after, one value changing everything | 6 |
+| 6 | The screen you shipped and the decision behind it | 9 |
+| 7 | What writing the case study taught you about your own process | 8 |
+| 8 | The interview answer you could not have given six weeks ago | 3 |
+
+Screenshot the before-and-after as you go. You will not reconstruct it later, and the screenshot is what makes the post specific instead of remembered.
 
 ---
 
@@ -181,7 +256,7 @@ Repost a specific, well-argued post from someone five to ten years ahead of you,
 
 ### Cadence
 
-One post a week, same day, roughly the same time. Tuesday mid-morning Dhaka time works. Update the bio once a quarter, after you ship something. Reread your about section every six months, and if it sounds like someone who has not shipped anything, rewrite it.
+One post a week, same day each week, roughly the same time. Pick your day and keep it; mid-morning Dhaka time works well. Update the bio once a quarter, after you ship something. Reread your about section every six months, and if it sounds like someone who has not shipped anything, rewrite it.
 
 ---
 

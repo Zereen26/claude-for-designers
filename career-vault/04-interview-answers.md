@@ -85,6 +85,70 @@ Make every trade-off audible. Not "I would design X." Instead: "I would design X
 
 If the interviewer cuts you off with "just design it," answer anyway, but note it. A team that does not want to hear the constraint question is telling you how they work.
 
+### The process questions, which are a different genre
+
+Everything above is incident-based: "tell me about a time". These five are not. They ask **how you operate**, and agency interviews lean on them heavily, because they are hiring someone who will be put in front of a client.
+
+You already have the answers. Every one of them is a file in your workspace. That is the whole point of having done the course.
+
+---
+
+**"How do you work on a brief?"**
+
+*Weak:* "I read it carefully, ask questions if anything is unclear, then start wireframing."
+
+*Strong:* "I assume the brief is out of date before I open it, because it usually is. First pass I read every version I was sent together, not one at a time, because contradictions only show up side by side. Then I pick the questions only I can answer, the ones where two readings are both defensible, and I answer them with a confidence label attached. On the last project three of my answers were guesses and I marked them as guesses. The client corrected one of them in week one instead of week four."
+
+*Why it works:* it describes a repeatable method with a specific outcome, and the confidence labelling is unusual enough to be remembered. **Source: `brief-interrogated.md`.**
+
+---
+
+**"Your boss changes the brief halfway through. What do you do?"**
+
+*Weak:* "I stay flexible and adapt. Change is part of the job."
+
+*Strong:* "I check whether it is a revision or new scope, because they get handled differently. A revision I absorb. New scope gets a sentence: happy to take that on, it is roughly this many days, that puts it outside the current sprint, want me to quote it. That is not a refusal, it is a price. Last project video calling arrived after the budget was agreed. I said yes to it and quoted it separately, and it got approved as extra."
+
+*Why it works:* it shows you can be accommodating without being exploited, which is exactly what they are checking. **Source: `engagement.md`.**
+
+---
+
+**"How do you negotiate?"**
+
+*Weak:* "I try to find a win-win and keep the relationship positive."
+
+*Strong:* "I try to have the scope written down before a number exists, because after the number everything is a negotiation instead of a definition. When I do have to push back I bring a count rather than an opinion. On the last project the client wanted one global checkout and had conversion data supporting it. I did not argue with the data. I counted the screens their flow was missing for this market, listed the five error states nobody had specified, and let the count make the argument. And I never discount without removing scope, because that teaches the client my first number was invented."
+
+*Why it works:* three concrete principles and a real example, and the last line signals you have been burned and learned. **Source: `engagement.md` and `critique-notes.md`.**
+
+---
+
+**"How do you plan a piece of work?"**
+
+*Weak:* "I break it into phases and set milestones."
+
+*Strong:* "I break the brief into tasks before I design anything, and then I deliberately do only one of them first. The mistake I used to make was starting the whole product at once, so nothing was finishable and everything was eighty percent done. Now the first deliverable is one screen, complete, including the empty and error states, because that is what surfaces the questions the brief did not answer. The rest gets easier once one thing is genuinely finished."
+
+*Why it works:* it names a mistake and the correction, which reads as experience rather than theory. **Source: `/brief-to-tasks`, Class 6.**
+
+---
+
+**"You have an idea and you want to pitch it to your boss. How?"**
+
+*Weak:* "I'd put together a presentation and explain the benefits."
+
+*Strong:* "I bring the alternative with it. An idea on its own asks them to do the work of comparing, and busy people say no to that. So I show what we do now, what I am proposing, the one thing that decided it for me, and what my option gives up. The last part matters most. If I pretend there is no downside they stop believing the rest. When I moved a verification badge above the tutor's name I could point at the finding that decided it and say plainly what the old layout did better."
+
+*Why it works:* naming the tradeoff is what separates someone with opinions from someone with judgment. **Source: `critique-notes.md`, Class 4.**
+
+---
+
+### How to use these five
+
+Do not memorise the strong versions. They are somebody else's project. Take each question, open the file named under it, and write your own from what is actually in there. If a file is thin, that is the honest signal about which part of your process needs work, not a reason to invent a better answer.
+
+**Say all five out loud once.** Written answers that fall apart when spoken are not ready, and these are longer than the STAR answers, which makes them easier to ramble.
+
 ### Three questions you ask them
 
 Always have three ready. What you ask reveals what you care about.
@@ -179,7 +243,19 @@ Result:
 
 What I learned:
 
-### 5. What three questions do you ask them?
+### 5. Answer the five process questions
+
+One paragraph each, in your own words, from your own files. Open the file named under each one first.
+
+- How do you work on a brief? (`brief-interrogated.md`)
+- Your boss changes the brief halfway through. What do you do? (`engagement.md`)
+- How do you negotiate? (`engagement.md`, `critique-notes.md`)
+- How do you plan a piece of work? (`/brief-to-tasks`)
+- How do you pitch an idea? (`critique-notes.md`)
+
+Then say each one out loud once. Fix whatever falls apart when spoken.
+
+### 6. What three questions do you ask them?
 
 One about the work, one about how you would grow there, one about how the team handles AI. Write your actual wording, not the categories.
 

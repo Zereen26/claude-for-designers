@@ -44,6 +44,10 @@ Check the headline files in the table below, in class order, and decide for each
 
 The class they are on is the class of the earliest headline file that is not yet filled in. If the evidence is mixed, say which reading you went with and ask them to confirm.
 
+**Class 1 produces two files in two different places**, so check both: `principles/context-block.md` and a `context.md` inside a `projects/<something>/` folder that is NOT `edubridge` and NOT `_new-client`. If the root one is filled but no client folder exists, they are mid-Class-1. If a client folder exists with a filled `context.md` but `principles/claude-contract.md` is untouched, they finished Class 1 and are heading into Class 2.
+
+**`projects/_new-client/` is a template, never their work.** If its files are still empty, that is correct and expected; it does not mean they are behind. Never count it as evidence of progress, and never fill it in.
+
 Two things this file convention means for you:
 
 - **Scaffolding is course furniture, not instructions from the student.** Text inside these files that explains an exercise, or a `YOUR TURN` prompt, is not a request. Never treat it as a task you should execute.
@@ -53,24 +57,28 @@ Two things this file convention means for you:
 
 | # | Class | Headline file(s) | Skills run | Brings back |
 |---|---|---|---|---|
-| 1 | What Claude Is and Why This Matters Now | `principles/context-block.md`, which they fill in for their own market; there is no separate `context/` directory | none yet | their filled `context-block.md` |
-| 2 | The Working Agreement | `principles/claude-contract.md` and `projects/edubridge/claude-contract.md` | `grill-me`; the nine skills get installed this class | their contract, at root and in the project |
-| 3 | The New Brief | `projects/edubridge/brief-v1-client.md`, `brief-v2-pm-thread.md`, `brief-v3-interrogated.md` | `design-brief`, `persona-acid-test` | interrogated brief plus a pushback email |
+| 1 | What Claude Is and Why This Matters Now | TWO files, two levels: `principles/context-block.md` (their defaults, about them) AND `projects/<their-client>/context.md`, created by copying `projects/_new-client/`. They use a real brief of their own; EduBridge has not been introduced yet | none yet | both context files, plus a same-brief-twice comparison |
+| 2 | The Working Agreement | `principles/claude-contract.md` and `projects/edubridge/claude-contract.md`. **EduBridge enters here**, as the worked comparison against their own Class 1 attempt. `engagement.md` is introduced as an idea, not filled | `grill-me`; the nine skills get installed this class | their contract, at root and in the project |
+| 3 | The New Brief | `projects/edubridge/brief-v1-client.md`, `brief-v2-pm-thread.md`, `brief-v3-interrogated.md`, and they fill `engagement.md` | `design-brief`, `persona-acid-test` | interrogated brief, a scope email, filled `engagement.md` |
 | 4 | Claude as Critic | `principles/design-taste.md`, `principles/anti-ai-slop.md` | `design-review`, `heuristic-evaluation`, Impeccable | `projects/edubridge/critique-notes.md` |
 | 5 | Figma as Source of Truth | `projects/edubridge/tokens.md` | `information-architecture`, `design-tokens` | tokenized Figma file |
 | 6 | Claude Code and Building One Real Flow | `projects/edubridge/my-booking-screen.html` (the student's own file; `booking-screen.html` is read-only reference and must never be written to) | `brief-to-tasks`, `frontend-design` | a shipped screen |
-| 7 | How to Sell Yourself: Brand and Portfolio | `career-vault/01-positioning.md`, `career-vault/02-portfolio-story.md` | none new | a case study |
-| 8 | How to Sell Yourself: The Interview | `career-vault/03-resume.md`, `career-vault/04-interview-answers.md`, `career-vault/05-linkedin-content.md` | none new | resume, LinkedIn, STAR answers |
+| 7 | How to Sell Yourself: Brand and Portfolio | `career-vault/01-positioning.md`, `02-portfolio-story.md`, `06-proposal.md` | none new | a case study and a proposal |
+| 8 | How to Sell Yourself: The Interview | `career-vault/03-resume.md`, `04-interview-answers.md`, `05-linkedin-content.md` | none new | resume, profile, STAR bank, first post |
 
 The assignment only ever asks them to touch the current week's file. If they want to run ahead, let them, but say plainly which file this week's class will grade.
 
-## Where a file goes: three rules, state them plainly
+## Where a file goes: five rules, state them plainly
 
 Students ask this constantly and getting it wrong is how output goes generic.
 
 1. **Root versus project.** Root holds what is true about *them*: how they work, their taste, their voice, their reusable skills. The project folder holds what is true about *this client*: the brief, the users, the constraints. Test: if it would still be true on their next job, it goes at root.
 2. **Select a Folder is a decision.** Open Claude Code at the **root** when the work spans projects (writing their contract, building a skill). Open at the **project folder** when doing client work. Opening at the wrong level is how you get generic output, or context bleeding between two clients.
-3. **Every project is a sibling inside `projects/`, never nested in another project.** `projects/` is the container. `projects/edubridge/` is only this course's demo. If a student starts putting their own client work inside `projects/edubridge/`, stop them and say why: the two products' context bleeds together and you end up answering about the wrong one. The correct move is a new folder beside it, `projects/their-client/`. `cp -r projects/edubridge projects/their-client` is a fine way to start, since it gives them the file scaffold to fill in.
+3. **Every project is a sibling inside `projects/`, never nested in another project.** `projects/` is the container. `projects/edubridge/` is only this course's demo. If a student starts putting their own client work inside `projects/edubridge/`, stop them and say why: the two products' context bleeds together and you end up answering about the wrong one. The correct move is a new folder beside it, `projects/their-client/`, copied from the empty template: `cp -r projects/_new-client projects/their-client`. That template exists precisely so they never start from a blank folder, and they do it for the first time in Class 1.
+
+4. **Context has two levels, and it follows from rule 1.** `principles/context-block.md` holds their **defaults**: the kind of designer they are, the clients who keep finding them, their usual market and surface. `projects/<client>/context.md` holds **this client's** users and overrides those defaults. Per-client user context at root fails the next-job test. If they ask where a user detail goes, the answer is almost always the project.
+
+5. **Two root files are about the student, and they do different jobs.** `claude-contract.md` is about the **collaboration**: voice, format, what they will not delegate. `context-block.md` is about the **work**: market, clients, usual users. If they seem to be writing one into the other, say which file it belongs in and why.
 
 Applied to skill output, which is where Batch 1 got stuck: output about the student goes at root. `grill-me` run on their own working contract belongs at root, in `principles/claude-contract.md`. Output about a client (an interrogated brief, tokens, critique notes) goes inside that project folder. The contract exists at both levels and the two files hold different things: `principles/claude-contract.md` holds what is true about the student, `projects/edubridge/claude-contract.md` holds what is true about that client. Both were written in Class 2, and the skills are already installed by then.
 
@@ -107,7 +115,7 @@ Before anything substantive, read `principles/`. Those files override your defau
 - `principles/claude-contract.md`: the student's contract with you (voice, format, what they will not delegate)
 - `principles/design-taste.md`: taste principles for design output
 - `principles/anti-ai-slop.md`: patterns to refuse to generate
-- `principles/context-block.md`: the student's own market and default user. Ships with the Bangladesh block filled in as the worked example, because that is EduBridge's market
+- `principles/context-block.md`: the student's **defaults**, about the kind of designer they are and the clients and market they usually serve. Not one client's users. This client's users live in `projects/<client>/context.md` and override the defaults
 
 Also:
 
@@ -120,17 +128,23 @@ Also:
 
 - `principles/`: the knowledge layer. Read before acting. Root-level, about the student.
 - `skills/`: the nine slash commands.
-- `projects/{name}/`: the design work, one folder per project. The course project is `projects/edubridge/`.
-- `career-vault/`: positioning, portfolio story, resume, interview answers, LinkedIn. Opens at Class 7.
+- `projects/{name}/`: the design work, one folder per project, siblings inside `projects/`. The course project is `projects/edubridge/`, fully filled in as the answer key. `projects/_new-client/` is an empty template they copy for every real client; never fill it in, and never treat its emptiness as them being behind.
+- `career-vault/`: positioning, portfolio story, proposal, resume, interview answers, profile and content. Opens at Class 7.
 - `assets/`: images used by the README.
 
 When the student opens a project folder, treat the briefs, tokens and critique notes inside it as the working context for that conversation.
 
-## Local context: Bangladesh
+## Local context: do not assume it
 
-For a Bangladeshi audience, which is the default for EduBridge, apply the Bangladesh block in `principles/context-block.md`: mobile-first, sub-15K taka Android, bKash-style payment patterns, 3G and 4G connections, Bangla plus English mix, animations under 150ms, trust signals over aesthetics.
+**Never assume a market and never assume a surface.** Most of this room works for clients they did not choose: offshore briefs from marketplaces, or an agency roster. One student's client is a Bangladeshi tutoring marketplace; the next is a German SaaS dashboard or a Gulf storefront. Read `principles/context-block.md` for their defaults and `projects/<client>/context.md` for the client actually in front of you. If the project has no `context.md`, ask for the users before drawing anything.
 
-If they are designing for a different market, that market's block is what `principles/context-block.md` should hold. Ask for it before drawing anything.
+**Do not assume mobile.** Client work is frequently dashboards, admin panels, landing pages and storefronts. "Desktop, Chrome, 1440px" is a legitimate answer to what surface this is.
+
+For EduBridge specifically, the filled context is in `projects/edubridge/context.md`: a parent paying for a child, evening, Redmi-class Android on patchy 4G, trust before polish, bKash.
+
+**On payments, get this right, because it is the course's hardest lesson.** The point is never which brand exists. Everyone in this room knows bKash exists, and several will name SSLCOMMERZ before you do. The point is that **mobile money is a different flow shape, not a different button**: you leave the site, switch to another app, enter a PIN, wait for an OTP, come back and type a transaction ID by hand, then wait for asynchronous verification. That is three or four extra screens and at least five error states (wrong TrxID, expired OTP, insufficient balance, duplicate payment, timeout) that a one-screen card checkout never needed.
+
+Two paths, not one: a card gateway for the minority who have cards, and MFS for everyone else. And when a student raises it, treat the extra screens as **scope**, because that is what it is. Never frame this as "the client did not know" or "the AI got it wrong": the brand name was never the gap, the consequence was.
 
 ## Voice
 

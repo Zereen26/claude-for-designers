@@ -53,7 +53,7 @@ The brief says students aged 14 to 22 are primary. The PM thread says parents ar
 
 These come from the market, not from the client, which is why the client keeps getting them wrong.
 
-- **Stripe does not work in Bangladesh.** bKash is the default, Nagad is likely second. The brief says Stripe. The brief is wrong.
+- **Payment here is a different flow shape, not a different button.** Cards exist via SSLCOMMERZ but most users do not have one, so realistically both paths are needed: SSLCOMMERZ for the card minority, bKash or Nagad for everyone else. The mobile-money path leaves the site, needs an app switch, a PIN, an OTP and a hand-typed transaction ID, then waits for async verification. That is three or four extra screens and at least five error states the brief never mentions. The brief assumes one instant card screen because that is what works in the UK.
 - **Mobile is the product, not a responsive afterthought.** The brief says desktop-first. Design the phone screen first and treat desktop as the adaptation.
 - **The green is `#00A651`,** from the updated brand guidelines, not the `#1DB954` in the brief. Navy is `#0A2540`.
 - **Bengali is coming.** English MVP is fine, but no hardcoded string lengths and no layouts that break when the text gets longer.
@@ -61,7 +61,7 @@ These come from the market, not from the client, which is why the client keeps g
 
 ### What this client will and will not accept
 
-- **Will accept:** being told the brief is wrong on Stripe and on desktop-first, if you show what breaks. Rafi already knows and needs the argument written down for him to forward.
+- **Will accept:** being told the brief is wrong on the checkout and on desktop-first, if you show what breaks and what it costs. Jamie has UK conversion data he trusts, so an assertion will not move him; a screen count and an error-state list will. Rafi already agrees on both.
 - **Will accept:** scope being named and cut in writing. Video calling arrived from a Preply demo, not from a user need.
 - **Will not accept:** a design that drops payment from the MVP. Payment conversion above 15 percent is one of their three success metrics.
 - **Will not accept:** a redesign of their brand. The colors are set. Argue about usage, not about the palette.
@@ -79,7 +79,7 @@ These come from the market, not from the client, which is why the client keeps g
 
 - Parents are the primary user.
 - Mobile-first, sub-15K taka Android, 3G floor.
-- bKash first, Nagad second, no Stripe.
+- bKash or Nagad for most users, SSLCOMMERZ for the card minority. Design the mobile-money flow as a multi-screen path, never as one card screen with a new logo.
 - One task per screen. Search, profile, booking request and payment stay separate.
 - Video calling is out of the MVP and the reason is written in `brief-v3-interrogated.md`.
 

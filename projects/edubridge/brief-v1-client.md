@@ -6,7 +6,7 @@ tags: [edubridge, class-3, reference, brief]
 project: EduBridge Bangladesh
 brief-version: "1: client"
 source: Jamie Thornton, Product Lead, EduBridge Ltd
-received: Tuesday, 10:42 AM London time
+received: 10:42 AM London time
 ---
 
 # EduBridge BD: Design Brief v1.0
@@ -25,14 +25,16 @@ Thanks for jumping on the call last week. Attaching the design brief for EduBrid
 
 **Project overview**
 
-EduBridge is a tutoring marketplace connecting students with qualified tutors. We are launching a Bangladesh-specific version of our platform, which already operates in the UK and Australia. The BD market is a natural fit given the high demand for private tuition and the growing middle class.
+EduBridge is a tutoring marketplace connecting students with qualified tutors. The platform already operates in the UK and Australia, and this year we are opening three new markets at once: **Bangladesh, the UAE, and Germany**. You have Bangladesh. The BD market is a natural fit given the high demand for private tuition and the growing middle class.
+
+One thing to flag up front, because it shapes everything else. We run **one platform across all markets**. Three regional forks would triple our engineering cost and we would be maintaining three products by Christmas, so the default answer to "can we do it differently in this market" is no, unless you can show me why the market makes it impossible. That is not me being difficult, it is the only way five markets stay shippable with the team we have.
 
 **What we are building**
 
 A web platform where:
 - Students and parents can search for tutors by subject, location, and price
 - Tutors can create verified profiles with qualifications and reviews
-- Payments are handled in-platform (we will integrate Stripe)
+- Payments are handled in-platform. Our existing checkout is card-based (Stripe) and it is live in the UK and Australia; we are extending the same flow to all three new markets
 
 MVP scope: search, tutor profile, booking request, and payment.
 
@@ -47,10 +49,13 @@ MVP scope: search, tutor profile, booking request, and payment.
 - Desktop-first. Mobile responsive is good to have.
 - Language: English. We may add Bengali later but not for MVP.
 - Our brand colors are navy `#0A2540` and green `#1DB954`. White backgrounds. Use these.
+- **Keep it consistent with the existing product.** A user who has seen EduBridge UK should recognise EduBridge BD. Same components, same checkout, same patterns. Germany and the UAE are getting the same instruction.
 
 **Success metrics**
 
 100 tutor signups in the first 30 days. 500 student searches. Payment conversion above 15%.
+
+For reference, UK payment conversion sits at 19% and Australia at 17% on this same checkout, so 15% felt conservative.
 
 Let me know if you have questions. Happy to jump on another call.
 

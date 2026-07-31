@@ -9,7 +9,7 @@ tags: [ostad, batch-02, career-vault, readme]
 
 **This folder does not open until Class 7.** If you are in week one or week two of the course, you can close it. Nothing in here is your assignment yet, and reading ahead will not help you, because every file in here needs work you have not done yet as its raw material. The vault is where you turn the screen you build in Class 6 into something you can be hired for. Without that screen there is nothing to write about.
 
-Come back on Wednesday 26 August.
+Come back in Class 7.
 
 ## What this folder is
 

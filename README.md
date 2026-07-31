@@ -47,23 +47,24 @@ You do not get a finished workspace. You build it one file at a time. Each class
 
 | # | Class | The file you fill in |
 |---|---|---|
-| 1 | What Claude Is and Why This Matters Now | `principles/context-block.md` (you fill it in, for your own market) |
+| 1 | What Claude Is and Why This Matters Now | Two files: `principles/context-block.md` (your defaults) and `projects/<your-client>/context.md`, copied from `_new-client/`, for a real brief of your own |
 | 2 | The Working Agreement | `principles/claude-contract.md` and `projects/edubridge/claude-contract.md` |
-| 3 | The New Brief | `projects/edubridge/brief-v3-interrogated.md` |
+| 3 | The New Brief | `projects/edubridge/brief-v3-interrogated.md` and `engagement.md` |
 | 4 | Claude as Critic | `projects/edubridge/critique-notes.md` |
 | 5 | Figma as Source of Truth | `projects/edubridge/tokens.md` |
 | 6 | Claude Code and Building One Real Flow | `projects/edubridge/my-booking-screen.html` |
-| 7 | How to Sell Yourself: Brand and Portfolio | `career-vault/01-positioning.md`, `02-portfolio-story.md` |
+| 7 | How to Sell Yourself: Brand and Portfolio | `career-vault/01-positioning.md`, `02-portfolio-story.md`, `06-proposal.md` |
 | 8 | How to Sell Yourself: The Interview | `career-vault/03-resume.md`, `04-interview-answers.md`, `05-linkedin-content.md` |
 
 Every file you fill in carries the same shape: what it is for, why Claude needs it, a filled EduBridge example, then a `## YOUR TURN` section you answer in place. When you are done, delete the scaffolding above `YOUR TURN`. What is left is your real working file.
 
 The repo you downloaded contains the finished version of everything. That is the answer key, not this week's homework. Only touch the current week's file.
 
-## Two rules about where files go
+## Three rules about where files go
 
 1. **Root versus project.** Root holds what is true about *you*: how you work, your taste, your voice, your skills. A project folder holds what is true about *that client*: their brief, their users, their constraints. Test: if it would still be true on your next job, it goes at root.
 2. **Select a Folder is a decision.** Open Claude Code at the **root** when the work spans projects (writing your contract, building a skill). Open at the **project folder** when you are doing client work. Opening at the wrong level is how you get generic output, or one client's context leaking into another's.
+3. **Context has two levels, and rule 1 decides which.** `principles/context-block.md` holds your **defaults**: the kind of designer you are, the clients who keep finding you, the surface you usually work on. `projects/<client>/context.md` holds **that client's** users and overrides your defaults. If your clients change every few weeks, which is normal, this split is what stops you starting from blank every time.
 
 ## The nine-step process
 
@@ -80,11 +81,13 @@ claude-for-designers/
 │   ├── claude-contract.md     your working contract with Claude
 │   ├── design-taste.md        taste principles for designers using AI
 │   ├── anti-ai-slop.md        patterns to refuse to ship
-│   └── context-block.md       your default user and market, in six lines
+│   └── context-block.md       your defaults: your market, clients and surface
 ├── skills/                the capability layer: the nine commands
-├── projects/              where work happens, one folder per project
+├── projects/              where work happens, one folder per client
+│   ├── _new-client/           EMPTY TEMPLATE. Copy this for every real client
+│   ├── _brief-bank/           four practice briefs that are not EduBridge
 │   └── edubridge/             the worked example, brief through built screen
-└── career-vault/          positioning, portfolio stories, interview prep
+└── career-vault/          positioning, case study, proposal, resume, interview, profile
 ```
 
 `principles/` is the part most people skip and the part that makes the difference. Claude reads it before it does anything, so the first draft already sounds like your work instead of everyone's.
@@ -107,14 +110,20 @@ done
 
 Restart Claude Code, type `/`, and the nine commands appear. If the terminal is unfamiliar, that is normal; bring it to the class or the office hour rather than guessing.
 
-## Start your own project
+## Start your own client
+
+Copy the empty template, never EduBridge. EduBridge is filled in as the answer key; copying it means dragging one client's users, tokens and decisions into another client's folder.
 
 ```bash
-cp -r projects/edubridge projects/your-project
-cd projects/your-project
+cp -r projects/_new-client projects/your-client
+cd projects/your-client
 ```
 
-Replace the brief, run `/grill-me`, and work down the nine steps. The folder is the process, not just the output of it.
+You do this for the first time in Class 1, on a real brief of your own, and you do it again for every client after the course. Inside you get the six files the course teaches, empty, each carrying the questions it wants answered and one example of the standard.
+
+`projects/_new-client/README.md` maps the eight classes onto a one-week engagement, because **the course takes eight classes to teach a process that takes about a week to run.** If you finish this course thinking the method needs two months, you will never use it on a real job.
+
+No live client this week? `projects/_brief-bank/` has four practice briefs that are deliberately not EduBridge: a desktop logistics dashboard, a Shopify storefront, a B2B landing page, and a Gulf booking app with Arabic and RTL. Each one breaks an assumption EduBridge would otherwise leave you with.
 
 ## Going deeper
 

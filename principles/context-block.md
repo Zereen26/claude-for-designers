@@ -1,78 +1,103 @@
 ---
 created: 2026-07-27
-updated: 2026-07-29T11:14:28Z
+updated: 2026-07-31
 type: reference
 status: complete
 class: 1
-tags: [ostad, batch-02, workbook, principles, context-block, market-context, student-editable]
+tags: [ostad, workbook, principles, context-block, defaults, student-editable]
 ---
 
-# Your Context Block
+# Your Context Block: your defaults
 
-**What this file is for:** your default user, described once, so you stop describing them from scratch in every prompt.
+**What this file is for:** the kind of designer you are, and the kind of work and users you usually deal with. Your starting position on any new job.
 
-**Why Claude needs it:** with nothing here, Claude designs for a generic user on a fast connection with a flagship phone. That user does not exist in your market.
+**Why Claude needs it:** with nothing here, Claude designs for a generic user on a fast connection with a flagship phone, and it assumes you are a generic designer with no opinions. Neither is true.
 
-**Which class:** Class 1, What Claude Is and Why This Matters Now. This is the first file you fill in and the thing you bring back to Class 2: your own context block.
+**This is root, so it is about you.** Its neighbour `claude-contract.md` is about how you and Claude work together (voice, format, what you will not delegate). This file is about the work itself: your market, your clients, your usual users. If you are unsure which to open, ask whether the thing you want to write down is about *you and Claude* or about *the work*.
+
+**Which class:** Class 1. This is the first file you fill in.
 
 <!--
 COURSE NOTE for the student. This is not an instruction to Claude.
 
-The block under the EXAMPLE heading is the instructor's version for EduBridge. It is six lines long on purpose. Short enough to paste at the top of any prompt, specific enough that Claude cannot fall back on defaults.
+There are two levels of context in this workspace and mixing them up is the most common mistake in week one.
 
-This is the smallest file in the workspace and it changes the output more than any other single thing you do in week one. That is the whole lesson of Class 1.
+  principles/context-block.md   <- THIS FILE. Your defaults. True across clients.
+  projects/<client>/context.md  <- Per client. This client's actual users. Overrides your defaults.
+
+The test is the same one you will learn in Class 2: would it still be true on your next job? Your usual market and the kind of work you take on: yes, root. The users of one specific client: no, that belongs in the project.
+
+If your clients change every few weeks, which is normal on a marketplace or in an agency, this file matters MORE, not less. It is what stops you starting from a blank page on every new gig.
 -->
-
----
-
-## EXAMPLE: the instructor's context block (EduBridge, Bangladesh)
-
-<!-- Read it, then write your own in YOUR TURN. Paste your version at the top of any prompt where the output is for your users. -->
-
-```
-Context for every output:
-- Users are 18-45, mobile-first, often on 3G or 4G.
-- Default device is a sub-15,000 taka Android with under 4GB RAM.
-- Users expect bKash-style payment flows. Green is the trust color.
-- Bangla and English mix is normal. Numbers are mostly English digits.
-- Animations over 150ms feel laggy on common devices. Avoid them.
-- Trust signals matter more than aesthetics. Show the policeman, not the gradient.
-```
-
-### How the example gets extended
-
-Those six lines cover the average user in the instructor's market. For a specific product category, he adds lines:
-
-- **Fintech**: payment-method preferences, KYC sensitivity, fraud awareness
-- **Edtech**: parental decision-makers, after-school timing, Bengali-medium expectations
-- **Commerce**: cash-on-delivery as default, return-on-doorstep workflows
-- **Ride-share**: pillion seating, helmet stigma, weather assumptions
-
-The point is to give Claude something specific to anchor on. Generic prompts produce generic output. The size of your context block is the size of your moat.
-
-### When the block does not apply
-
-When the output is not for the users this block describes. If your block says mobile-first on 3G and the client is a German desktop SaaS, every assumption in it is wrong. That client gets its own block, written once and reused.
 
 ---
 
 ## YOUR TURN
 
-<!-- Answer each question in the space under it. Keep the finished block to six or seven lines so it is cheap to paste into every prompt. -->
+<!-- Think about all of these. Write down five to seven lines. The questions are the thinking; the block is what is left after the thinking. Do not answer them one line each. -->
 
-**1. Rewrite the six-line block for the users you actually design for.** Change at least two lines. If all six survive unchanged, you copied instead of thinking.
+**1. What kind of clients keep finding you, and what do they have in common?**
 
-
-**2. Add two lines specific to your product's category.** Fintech, edtech, commerce, ride-share, or whatever yours is. What does Claude get wrong about this category by default?
-
-
-**3. Name your device floor.** The actual phone model and the actual connection you test on, not a range. "Redmi A3 on 3G in Mirpur" beats "low-end Android". If your users are on desktop, say which browser and which screen width.
+Not the kind you wish for. The ones who actually message you. If three of your last five jobs looked alike, say what the pattern was.
 
 
-**4. What is the real language split in your interface?** Which parts are in your local language, which stay English, and what happens to numbers, dates and currency?
+**2. What kind of work do you do your best work on, and what kind do you struggle with?**
+
+Both halves matter. The second one is the more useful answer, and the harder one to write.
 
 
-**5. When does your block stop applying, and what do you paste instead?** Name one client or market where these assumptions would be wrong.
+**3. What do you know about the market you usually serve that a designer from outside it would get wrong?**
+
+If you cannot think of anything, you have not looked. Every market has at least three things outsiders assume that are false here.
 
 
-<!-- COURSE SCAFFOLDING: delete everything above YOUR TURN once you have filled it in. This becomes your real working file. -->
+**4. What surface do you usually design for, and what is your floor on it?**
+
+Name it exactly. "Redmi A3 on 3G in Mirpur" beats "low-end Android". "Desktop, Chrome, 1440px, internal admin tool" is an equally valid answer. **Do not assume mobile.** Plenty of client work is dashboards, admin panels, landing pages and storefronts.
+
+
+**5. What do you refuse to design, or refuse to design without pushing back first?**
+
+You have a line somewhere. Say where it is, because Claude will happily walk straight past it.
+
+
+**6. When a brief arrives with no research in it, what do you assume by default, and how often does that assumption turn out to be right?**
+
+The second half is the interesting part.
+
+
+---
+
+## The bar
+
+Here is a filled example. It belongs to a different designer, working on different things, in a different market. **Read it for the standard, not for the sentences.** If more than two of your lines look like more than two of these lines, you copied instead of thinking.
+
+```
+My defaults:
+- Most of my work arrives from offshore clients who have never used their
+  own product in my market.
+- I do best on flows where trust has to be earned before money moves.
+  I struggle with brand and marketing pages.
+- Outsiders assume a card is the default payment method here. It is not,
+  and the flow shape changes because of that.
+- My floor is a Redmi A3 on 3G, unless the brief says desktop, and then
+  it is Chrome at 1366px on a five-year-old laptop.
+- I will not design a flow that hides a total price until the last screen.
+- With no research in the brief I assume the buyer and the user are
+  different people. I am right about two thirds of the time.
+```
+
+Six lines. Short enough to paste at the top of any prompt, specific enough that Claude cannot fall back on defaults.
+
+Notice what is not in there: no age range, no "18 to 45", no "mobile-first users who value simplicity". Those are demographics, and demographics are not context. Every line above is something the writer learned by watching somebody, and every line changes a design decision.
+
+---
+
+## What happens next
+
+In Class 1 you also copy `projects/_new-client/` and fill in `context.md` for a real brief of your own. That file is where **this client's** users go. This file is what you start from when you have not met them yet.
+
+<!-- DELETE EVERYTHING ABOVE THIS LINE once your answers are written.
+     Claude reads this file on every task at this level. Teaching text
+     left here costs you usage on every single call and buries the
+     answers that matter. -->
