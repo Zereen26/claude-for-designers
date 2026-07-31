@@ -10,9 +10,7 @@ Three pieces: bio, post templates, outreach DM templates.
 
 ### Headline (one line, under the name)
 
-This is your one-line positioning. Copy from `01-positioning.md` and shorten.
-
-> Example: "Product designer building trust-first mobile experiences for BD users on low-end Android."
+> "Product designer building trust-first mobile experiences for Bangladeshi parents on entry-level Android."
 
 Avoid: "Designer | UX | UI | Researcher | Product Thinker": the pipe-bar resume style is a junior tell.
 
@@ -20,15 +18,15 @@ Avoid: "Designer | UX | UI | Researcher | Product Thinker": the pipe-bar resume 
 
 **Paragraph 1: what you do, with a specific market.**
 
-> Example: "I'm a product designer in Dhaka. I work on apps for Bangladeshi users on entry-level Android phones: fintech, edtech, anything that touches money or trust. Most of what I do is figuring out the real problem before any design happens, because briefs rarely have it written down."
+> "I'm a product designer working on apps for Bangladeshi users on entry-level Android phones — the kind of product where trust and load time matter more than visual polish. Most of what I do is finding the real problem before any design happens, because briefs rarely have it written down."
 
 **Paragraph 2: how you work, with the AI piece named.**
 
-> Example: "I work in the Claude-plus-Figma loop. Claude accelerates execution; I direct decisions. That means I interrogate briefs, write design tokens before any screen exists, build HTML when it's faster than handing off to engineering, and reject AI output that doesn't fit the market. The combination is faster than either tool alone."
+> "I work in the Claude-plus-Figma loop. Claude accelerates execution; I direct the decisions. On EduBridge, that meant interrogating a desktop-first client brief until it admitted the product needed to be mobile-first and parent-facing, rejecting two Claude-generated layouts for trust signals that didn't hold up under a first-time-user critique, and cutting a feature that looked fine but created a real logic error. The HTML got written fast. The decisions took the actual time."
 
 **Paragraph 3: what you're looking for.**
 
-> Example: "Open to product design roles at BD-based companies or international companies with a BD market focus. Especially interested in fintech, edtech, and health. Reach out: [email]."
+> "Open to product design roles at BD-based companies, or international companies with a serious BD market focus. Especially interested in fintech and edtech, where trust is the product. Reach out: nusrat2020zereen@gmail.com."
 
 ---
 

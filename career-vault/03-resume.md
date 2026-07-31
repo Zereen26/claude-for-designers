@@ -8,10 +8,10 @@ When you apply for a specific role, you copy from this file into a formatted tem
 
 ## Header
 
-**Name:** *Your full name*
-**Title:** *One line: your positioning sentence's role part. "UX Designer" or "Product Designer." Not "Designer."*
-**Location:** *City, country*
-**Contact:** *email, phone, link to portfolio*
+**Name:** Nusrat Zereen
+**Title:** Product Designer
+**Location:** *(fill in — city, Bangladesh)*
+**Contact:** nusrat2020zereen@gmail.com · *(phone, portfolio link — fill in)*
 
 ---
 
@@ -19,7 +19,7 @@ When you apply for a specific role, you copy from this file into a formatted tem
 
 A condensed version of your positioning. The most important block on the resume because most recruiters read this and skip the rest.
 
-> Example: "Product designer based in Dhaka. I work on trust-first mobile experiences for BD users on entry-level devices. Four months into my career, with three end-to-end projects shipped from confused brief to working HTML. I direct the work; Claude accelerates execution."
+> "Junior product designer based in Bangladesh. I work on trust-first mobile experiences for BD users on entry-level Android devices. Built the EduBridge tutor-booking flow end-to-end: interrogated a desktop-first brief into a mobile-first parent-facing one, ran forced-perspective critique to reject two weaker layouts, and shipped a working, tokenized HTML prototype. I direct the decisions; Claude accelerates execution."
 
 Three to four lines. Not a paragraph. Recruiters do not read paragraphs.
 
@@ -47,7 +47,7 @@ Three to five bullets per role. Bullets are decisions you made, not tasks you co
 If your experience section is thin (junior career), list 2-3 projects here with one-line summaries each. Link to the corresponding portfolio story in `02-portfolio-story.md`.
 
 - **EduBridge BD: Tutor booking flow** *(course project, 2026)*
-  - Parent-first mobile flow with document-verified trust signals, bKash payment, Bangla + English support. Built end-to-end including HTML.
+  - Rewrote a desktop-first, student-targeted brief into a mobile-first, parent-facing flow after brief interrogation surfaced five contradictions between the client's brief and the PM's actual requirements. Rejected two competing layouts for weak or misplaced trust signals; cut a session-quantity stepper that let parents commit before tutor confirmation. Shipped a working, token-driven HTML prototype, verified at real phone width.
 
 - *Your project 2*
 
