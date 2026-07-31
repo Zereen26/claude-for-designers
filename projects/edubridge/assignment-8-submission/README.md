@@ -13,6 +13,8 @@ status: STAR bank and pack ready. Recording and rehearsal still needed from you.
 - The leverage-frame cheating-objection answer, evidence-backed
 - Links to the case study and your Behance portfolio
 
+**[Assignment-8-Interview-QA.pdf](Assignment-8-Interview-QA.pdf)** is an alternate set of 6 answers, same assignment, but grounded in the Arogga project instead of EduBridge (the brief allows swapping in your own real project, see `interview-qa-arogga-source.md` for the source). Simple English, shorter, easier to say out loud. Pick whichever kit (EduBridge or Arogga) you actually want to record from, they don't both need to be used.
+
 ## Still yours to do before this counts as submitted
 
 1. **Rehearse the objection answer out loud** until it's not a read-aloud.
