@@ -1,10 +1,3 @@
----
-created: 2026-07-31
-type: reference
-status: complete
-tags: [reference, briefs, practice, marketplace]
----
-
 # The brief bank: four briefs that are not EduBridge
 
 **Reference, not homework.** Four short briefs to practise on when a class says "now do it on something of your own" and you do not have a live client that week.

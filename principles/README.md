@@ -1,10 +1,3 @@
----
-created: 2026-07-27
-type: reference
-status: complete
-tags: [ostad, batch-02, principles, readme, folder-guide]
----
-
 # principles/
 
 This folder holds what is true about **you**: how you work, your taste, what you refuse to ship, and who you design for by default. Four files. Claude reads all of them before it does anything substantive in this workspace.

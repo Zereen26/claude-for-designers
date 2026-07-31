@@ -1,10 +1,3 @@
----
-created: 2026-07-27
-type: reference
-status: complete
-tags: [ostad, claude-for-designers, readme, onboarding]
----
-
 ![Claude for Designers](assets/banner.png)
 
 <p align="center">
@@ -50,7 +43,7 @@ You do not get a finished workspace. You build it one file at a time. Each class
 | 1 | What Claude Is and Why This Matters Now | Two files: `principles/context-block.md` (your defaults) and `projects/<your-client>/context.md`, copied from `_new-client/`, for a real brief of your own |
 | 2 | The Working Agreement | `principles/claude-contract.md` and `projects/edubridge/claude-contract.md` |
 | 3 | The New Brief | `projects/edubridge/brief-v3-interrogated.md` and `engagement.md` |
-| 4 | Claude as Critic | `projects/edubridge/critique-notes.md` |
+| 4 | Claude as Critic | `principles/design-taste.md`, `principles/anti-ai-slop.md`, then `projects/edubridge/critique-notes.md` |
 | 5 | Figma as Source of Truth | `projects/edubridge/tokens.md` |
 | 6 | Claude Code and Building One Real Flow | `projects/edubridge/my-booking-screen.html` |
 | 7 | How to Sell Yourself: Brand and Portfolio | `career-vault/01-positioning.md`, `02-portfolio-story.md`, `06-proposal.md` |

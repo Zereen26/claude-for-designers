@@ -1,10 +1,3 @@
----
-created: 2026-07-27
-type: reference
-status: complete
-tags: [ostad, batch-02, skills, index]
----
-
 # Skills
 
 Nine files. Nine slash commands. Seven of them are Julian Oczkowski's design sequence, run in order. Two are extra critique passes.

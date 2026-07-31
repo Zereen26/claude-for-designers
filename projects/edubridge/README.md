@@ -1,11 +1,3 @@
----
-created: 2026-07-27
-type: reference
-status: complete
-tags: [edubridge, course-project, reference, onboarding]
-project: EduBridge Bangladesh
----
-
 # EduBridge Bangladesh: the course project
 
 This is the project you carry from Class 3 to Class 6. By the end it is also the folder you show someone when they ask what your design process looks like.

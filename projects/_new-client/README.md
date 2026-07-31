@@ -1,10 +1,3 @@
----
-created: 2026-07-31
-type: reference
-status: complete
-tags: [template, new-client, transfer, engagement]
----
-
 # Start here: your next real client
 
 This folder is a template. It is the whole course, emptied out, ready for a job that is actually yours.
