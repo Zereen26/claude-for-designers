@@ -102,7 +102,7 @@ Nine slash commands live in `skills/`. Run them in this order on a project; skip
 
 1. `/grill-me`: stress-test the brief before any design begins
 2. `/design-brief`: write the single source of truth for the project
-3. `/information-architecture`: structure screens and flows before drawing
+3. `/information-architecture`: the journey first, then the screens derived from it. Returns four parts in order (journey, screen inventory with each screen naming the step it serves, navigation, hierarchy) and flags any screen that serves no journey step
 4. `/design-tokens`: establish colors, typography and spacing as a system
 5. `/brief-to-tasks`: break the brief into executable, time-boxed work
 6. `/frontend-design`: build the interface using everything above
