@@ -8,7 +8,9 @@ status: ready to submit
 
 ## 1. The case study
 
-[case-study.md](case-study.md) — full 5-part write-up (brief and what I knew, what I directed, what I rejected and why, what I kept and rebuilt, the outcome) plus an honest-failure section with a specific, reusable pattern.
+**[EduBridge-Case-Study.pdf](EduBridge-Case-Study.pdf) — this is the file to submit/attach on Ostad.** Same content as [case-study.md](case-study.md) (the source), formatted as a proper doc since Ostad doesn't accept `.md` files directly (same lesson as Class 5).
+
+Full 5-part write-up (brief and what I knew, what I directed, what I rejected and why, what I kept and rebuilt, the outcome) plus an honest-failure section with a specific, reusable pattern.
 
 Self-check against the brief:
 - All five parts present, rejection section is the strongest (names two specific rejected layouts + a cut feature, each with a BD-specific reason)

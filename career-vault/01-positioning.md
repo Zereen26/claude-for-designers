@@ -30,18 +30,19 @@ Not "I am good at design." Specific things only.
 
 ## What I am NOT good at (yet)
 
-*(This section is genuinely yours to fill in — it depends on real gaps in your own practice, not just EduBridge, and I don't have visibility into your work outside this repo. Two starting candidates based only on what's evident from EduBridge, for you to confirm or replace:)*
+1. User testing with real people. The EduBridge critique work used forced-perspective AI prompts (confused user, engineer, skeptical PM), not actual interviews with real parents. Strong for catching logic errors fast; not a substitute for a real study.
+2. Visual/brand identity from scratch. EduBridge work was systemization — hygiene, tokens, a working prototype — starting from an existing brand direction, not inventing one.
+3. Native mobile implementation. Built as a web/HTML prototype; would rely on an engineering partner to translate to native Android/iOS.
 
-1. User testing with real people — the EduBridge critique work used forced-perspective AI prompts, not actual parent interviews. Worth naming as a gap until you've run a real study.
-2. *(Add your own — brand identity, motion design, native mobile, whatever is true for you.)*
+*(These three are backed by what's actually true of the EduBridge project. If any of them isn't true of you more broadly, edit it — but don't leave this section empty; naming real gaps is what makes the rest of this file credible.)*
 
 ---
 
 ## Where I want to be in 18 months
 
-*(Personal and aspirational — only you can write this honestly. Draft below based on the trajectory visible in this repo; replace freely.)*
+> I want to be a product designer at a BD-based company, or an international company with a serious BD/South Asia focus, working in fintech or edtech where trust-first design for low-end devices is core to the product, not an afterthought. Path: finish the EduBridge case study and post it, ship 2-3 more real (non-course) projects with the same brief-interrogation-to-build process, and post on LinkedIn consistently enough that recruiters find me instead of the other way around.
 
-> Draft: "I want to be a product designer at a BD-based company (fintech or edtech) where trust-first, low-end-device design is core to the product, not an afterthought. The path: finish the EduBridge case study, ship 2-3 more real projects, and be active enough on LinkedIn that recruiters find me."
+*(This is a reasonable default built from the trajectory visible in this repo, not a guess out of nowhere. Adjust the company type, domain, or timeline if your actual ambition is different — but it's a real position to start from, not a blank.)*
 
 ---
 
