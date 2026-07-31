@@ -49,19 +49,33 @@ I am a design partner for BD-focused digital products. My clients are early-stag
 - **No em dashes.** Use commas, semicolons, periods, or restructure.
 - **No generic filler.** No marketing language ("leverage," "robust," "delight," "elevate," "intuitive" without specifics).
 
-### What I have already decided (constraints Claude must respect)
+### What I have already decided (things Claude does not get to reopen)
 
-These are the things that do not change between conversations. Claude does not get to relitigate them in every chat.
+These are your non-negotiables **as a designer**, the ones that survive to your next job. Claude does not relitigate them in every chat.
 
-- **My users:** 18-45, mobile-first, most on sub-15,000 taka Android on 3G or 4G.
-- **Green is trusted.** The bKash association carries real weight. Don't swap it out for a "cleaner" palette without naming that tradeoff.
-- **Animation budget: under 150ms.** Anything longer feels laggy on common BD devices.
-- **Bangla-English mix is normal.** Not a localization edge case, the default state of the interface.
-- **Never suggest desktop-first layouts.**
-- **Never assume fast internet.**
-- **Never suggest fonts that do not render in Bangla.**
+- **Every screen I hand over has an error state and an empty state.** If a design does not show them, it is not finished.
+- **Body text holds AA contrast.** I do not trade legibility for a palette.
+- **I do not ship dark patterns.** No fake urgency, no hidden costs, no pre-checked consent.
+- **Price is visible before the commitment, never after.**
+- **I design for the slowest device my users actually hold, not the fastest one I own.**
 
-<!-- Replace or extend these as your client base changes. These are the current defaults for BD-focused fintech, e-commerce and healthtech work. -->
+<!--
+IMPORTANT, and this is the mistake this file used to make.
+
+This section is about YOU. It must not contain one client's users, devices,
+language or payment methods. Those change every client, so they live in:
+
+  projects/<client>/context.md    who these users are
+  principles/context-block.md     your usual market, as a starting point
+
+And it must not contain design taste either. That lives in:
+
+  principles/design-taste.md      what good looks like to you
+  principles/anti-ai-slop.md      what you refuse to generate
+
+Test each line the way Class 2 teaches: would it still be true on your next
+job, for a different client, in a different market? If no, it is in the wrong file.
+-->
 
 ### What I will NOT delegate to Claude
 
