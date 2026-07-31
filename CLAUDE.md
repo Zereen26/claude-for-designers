@@ -66,7 +66,7 @@ Two things this file convention means for you:
 | 3 | The New Brief | `projects/edubridge/brief-v1-client.md`, `brief-v2-pm-thread.md`, `brief-v3-interrogated.md`, and they fill `engagement.md` | `grill-me` (second use, on the brief), `design-brief` | interrogated brief, a scope email, filled `engagement.md` |
 | 4 | Claude as Critic | `principles/design-taste.md`, `principles/anti-ai-slop.md` | `design-review`, `heuristic-evaluation`, `persona-acid-test` (after doing it by hand), Impeccable optional | `projects/edubridge/critique-notes.md` |
 | 5 | Figma as Source of Truth | `projects/edubridge/tokens.md` | `information-architecture`, `design-tokens` | tokenized Figma file |
-| 6 | Claude Code and Building One Real Flow | `projects/edubridge/my-booking-screen.html` (the student's own file; `booking-screen.html` is read-only reference and must never be written to) | `brief-to-tasks`, `frontend-design` | a shipped screen |
+| 6 | Claude Code and Building One Real Flow | `projects/edubridge/my-booking-screen.html` (the student's own file; `booking-screen.html` is read-only reference and must never be written to) | `brief-to-tasks`, `frontend-design` | a shipped screen, three states nobody asked for, and the brief line it answers |
 | 7 | How to Sell Yourself: Brand and Portfolio | `career-vault/01-positioning.md`, `02-portfolio-story.md`, `06-proposal.md` | none new | a case study and a proposal |
 | 8 | How to Sell Yourself: The Interview | `career-vault/03-resume.md`, `04-interview-answers.md`, `05-linkedin-content.md` | none new | resume, profile, STAR bank, first post |
 
