@@ -1,62 +1,52 @@
 ---
 created: 2026-07-31
 type: reference
-status: complete
-tags: [edubridge, reference, context, answer-key]
-project: EduBridge Bangladesh
+status: template
+tags: [template, context, client]
 ---
 
 # Context: EduBridge Bangladesh
 
-**Reference, not homework.** This is the instructor's filled version, for this client. You read it for the standard. Yours goes in `projects/<your-client>/context.md`, copied from `_new-client/`.
+**What this file is for:** who this client's users actually are. It overrides your defaults in `principles/context-block.md` wherever the two disagree.
 
-This file overrides `principles/context-block.md` wherever the two disagree. Root holds your defaults; this holds this client's actual users.
+**Why Claude needs it:** it reads this on every task in this folder. Whatever you leave vague here, it guesses.
 
----
+<!--
+Think about all of the questions below. Then write five to seven lines.
+The questions are the thinking. The block is what survives the thinking.
+Do not answer them one line each; that produces a form, not context.
 
-## The context block
+A good answer could only come from watching somebody. If your answer is a
+demographic, it is not context yet. "Age 18 to 45" tells Claude nothing it
+did not already assume. "Old enough that they photograph the screen to
+remember the reference number" changes three design decisions.
+-->
 
-```
-EduBridge BD, context for every output:
-- The person who taps through this is a parent, 35 to 50, paying for a
-  child who will never see the checkout. The brief says students; the
-  brief is wrong.
-- Evening, at home, phone in one hand, on a Redmi-class Android over
-  patchy 4G, with the TV on. Not a focused session.
-- They arrive already suspicious, because private tutoring here runs on
-  word of mouth and they have heard the stories. Verification outranks
-  visual polish on every screen.
-- They pay with bKash. Cards exist via SSLCOMMERZ but most of these
-  parents do not have one, and the mobile-money path leaves the site.
-- Interface is English; the money, the numbers and the tutor's own words
-  are where Bangla shows up. Currency is BDT and it is never abbreviated.
-- They abandon at the moment a stranger's qualifications stop being
-  checkable. Not at the price.
-```
+## Think about these
 
-Six lines. Notice there is no age range on its own, no "mobile-first", no "values simplicity". Every line is a thing somebody observed, and every line changes a decision on the screen.
+1. **Who actually completes this task, and who decides it should happen?** Often not the same person. The one who pays is frequently not the one who uses it.
+2. **Where are they, physically, when they use this, and what else wants their attention?**
+3. **What do they do in the ten minutes before they open this?**
+4. **What surface is this on, and what is your floor on it?** Do not assume mobile. Name the device or the browser and width.
+5. **How old are they, and what does that change about what they will tolerate on screen?** Age as a consequence, not a number.
+6. **Is this read as a product for men, for women, or for anyone, and did the client decide that or did it just happen?** The second half is the real question.
+7. **What have they used before this that shapes what they expect?**
+8. **How do they pay, and what will they refuse to use?**
+9. **What do they read, and what happens to numbers, dates and currency?**
+10. **What makes them abandon it halfway and never come back?**
+11. **What do they not trust, and what on screen earns it back?**
 
----
+## Your context block
 
-## Where each line came from
+<!-- Five to seven lines. Every line should be something a competent designer from another market could disagree with. -->
 
-Worth knowing, because none of it came from the brief.
 
-| The line | Where it came from |
-|---|---|
-| Parent, not student | Rafi's email, item 4. The brief still says students |
-| Evening, TV on, patchy 4G | Local knowledge. Nobody wrote this down anywhere |
-| Arrives suspicious | Rafi's 6:55pm message about the verification badge, read properly |
-| bKash, and the flow leaves the site | Rafi's payment item, plus having actually done it |
-| Bangla shows up around money and words | The Bengali question, which is still unresolved |
-| Abandons at unverifiable qualifications | Inference from the trust brief, and the highest-value guess in the file |
 
-The last row is labelled a guess on purpose. Two of these six lines are inferences, not facts, and knowing which is which is the difference between context and decoration.
 
----
+## The bar
 
-## What this does NOT contain
+`context.example.md`, beside this file, is the instructor's filled version for EduBridge. Read it for the standard, not the sentences. If yours comes out identical, you copied instead of looking.
 
-No brand colours, no type scale, no spacing. Those are `tokens.md`. No scope, no revision count, no sign-off. Those are `engagement.md`.
-
-This file answers one question only: **who is on the other end of the screen?**
+<!-- DELETE EVERYTHING ABOVE YOUR CONTEXT BLOCK once it is written.
+     Claude reads this file on every task in this folder. Teaching text
+     left here costs you usage on every call and buries your answers. -->

@@ -48,7 +48,7 @@ by asking, and asking early is much cheaper than asking in week three.
 
 ## The bar
 
-`projects/edubridge/engagement.md` is a filled version. Notice how much of it came from one WhatsApp line about the budget, and how much was never in the brief at all.
+`projects/edubridge/engagement.example.md` is a filled version. Notice how much of it came from one WhatsApp line about the budget, and how much was never in the brief at all.
 
 <!-- DELETE EVERYTHING EXCEPT YOUR ANSWERS once this is filled.
      Claude reads this file on every task in this folder. -->

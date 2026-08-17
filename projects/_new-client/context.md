@@ -45,7 +45,7 @@ remember the reference number" changes three design decisions.
 
 ## The bar
 
-`projects/edubridge/context.md` has a filled version for a different client. Read it for the standard, not the sentences.
+`projects/edubridge/context.example.md` has a filled version for a different client. Read it for the standard, not the sentences.
 
 <!-- DELETE EVERYTHING ABOVE YOUR CONTEXT BLOCK once it is written.
      Claude reads this file on every task in this folder. Teaching text

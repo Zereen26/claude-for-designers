@@ -17,14 +17,18 @@ So: your contract and your taste rules live at root, in `principles/`. Everythin
 
 ## What is reference, and what is yours to fill in
 
-Five files in here are yours. The rest is context you read.
+Seven files in here are yours. The rest is context you read.
 
-**Yours to fill in.** The four markdown files each carry their own instructions at the top, a filled example, and a `## YOUR TURN` section. Delete the scaffolding once your answers are in. The fifth, `my-booking-screen.html`, does not exist yet; you create it in Class 6.
+**Yours to fill in.** The six markdown files each carry their own instructions at the top, a filled example, and a `## YOUR TURN` section. Delete the scaffolding once your answers are in. The seventh, `my-booking-screen.html`, does not exist yet; you create it in Class 6.
+
+If EduBridge is your project, these are your files. If you brought your own client, fill the same files in your own folder and read these for the standard.
 
 | File | Class | What you produce |
 |---|---|---|
+| `context.md` | 1 | Who this client's users actually are, the device and connection they are on, and what they can afford. Everything downstream reads it |
 | `claude-contract.md` | 2 | What is true about this client only: who they are, who their users are, their constraints, what they will not accept. The root `principles/claude-contract.md` is the other half, and it holds what is true about you |
 | `brief-v3-interrogated.md` | 3 | Your decisions on every place the client brief and the PM thread contradict each other |
+| `engagement.md` | 3 | What the job actually is: scope, what is out, revisions, who signs off. Write it before you quote a price |
 | `critique-notes.md` | 4 | What was actually wrong with your first-pass screen, and what you changed |
 | `tokens.md` | 5 | Your color, type, spacing, radius and motion tokens, named |
 | `my-booking-screen.html` | 6 | Your own booking screen, built from your brief, critique and tokens. You create this file; `booking-screen.html` beside it stays as reference |
@@ -35,6 +39,8 @@ Five files in here are yours. The rest is context you read.
 |---|---|
 | `brief-v1-client.md` | The client brief as sent. Polished, confident, wrong in several places |
 | `brief-v2-pm-thread.md` | The same brief as it really arrives: WhatsApp and email fragments that contradict the document in seven places |
+| `context.example.md` | The instructor's filled user context for EduBridge. Open it after you have written your own, not before |
+| `engagement.example.md` | The instructor's filled engagement. Open it after you have written your own, not before |
 | `brief-v3-interrogated.example.md` | The instructor's fully worked interrogated brief. Open it after you have written your own, not before |
 | `PRODUCT.md` | Standing product context: users, purpose, brand, design principles. Claude reads this on every task in this folder |
 | `DESIGN.md` | The finished design system behind the built screen. The Class 5 answer key |
@@ -64,9 +70,9 @@ The repo you downloaded contains the finished workspace. That is the answer key,
 
 Across the whole workspace:
 
-- **Class 1**: `principles/context-block.md`, which you fill in for your own market. There is no separate `context/` directory. This project folder exists but holds none of your work yet.
+- **Class 1**: `principles/context-block.md`, which you fill in for your own market, plus `context.md` for the client itself. There is no separate `context/` directory. If you brought your own client, that second file lives in your folder rather than this one.
 - **Class 2**: adds `principles/claude-contract.md` at root and `claude-contract.md` here in the project. Skills get installed this class, because Class 2 is the first one that runs a skill (`/grill-me`).
-- **Class 3**: the brief chain here, `brief-v1` to `brief-v2` to `brief-v3-interrogated.md`.
+- **Class 3**: the brief chain here, `brief-v1` to `brief-v2` to `brief-v3-interrogated.md`, plus `engagement.md` for the commercial half.
 - **Class 4**: adds `critique-notes.md`.
 - **Class 5**: adds `tokens.md`.
 - **Class 6**: your own screen lands here as `my-booking-screen.html`.

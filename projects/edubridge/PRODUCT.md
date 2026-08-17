@@ -10,9 +10,9 @@ project: EduBridge Bangladesh
 
 **Reference, not homework.** This is the standing product context for EduBridge: who the users are, what the product is for, how the brand behaves, and the design principles that hold across every screen. Claude reads it on every task in this folder, which is why it is written for Claude and not for a slide.
 
-You read this file. You do not fill it in. Nothing here is an assignment. The files you fill in are `claude-contract.md` (Class 2), `brief-v3-interrogated.md` and `engagement.md` (Class 3), `critique-notes.md` (Class 4), `tokens.md` (Class 5) and `my-booking-screen.html` (Class 6, a new file you create; `booking-screen.html` beside it is read-only reference).
+You read this file. You do not fill it in. Nothing here is an assignment. The files you fill in are `context.md` (Class 1), `claude-contract.md` (Class 2), `brief-v3-interrogated.md` and `engagement.md` (Class 3), `critique-notes.md` (Class 4), `tokens.md` (Class 5) and `my-booking-screen.html` (Class 6, a new file you create; `booking-screen.html` beside it is read-only reference).
 
-Two companion files sit beside this one and do different jobs. `BACKGROUND.md` is the story, written for you: the company, the cast, what is locked and what is open. `context.md` is the filled user context for this client. This file is the standing product context, written for Claude.
+Two companion files sit beside this one and do different jobs. `BACKGROUND.md` is the story, written for you: the company, the cast, what is locked and what is open. `context.example.md` is the filled user context for this client, and `context.md` beside it is yours to write. This file is the standing product context, written for Claude.
 
 If your project is your own client rather than EduBridge, the equivalent of this file in your folder is `context.md`, and it is the first thing you write, because everything downstream reads it.
 
