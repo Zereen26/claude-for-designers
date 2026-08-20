@@ -71,16 +71,16 @@ Claude Code writes the HTML. You decide what the screen is for, who it is for, a
 
 ## Progressive disclosure: the reference repo has everything, your assignment does not
 
-The repo you downloaded contains the finished workspace. That is the answer key, not the week-one handout. The assignment only ever asks you to touch the current week's file, so ignore the rest until its class arrives.
+The files you write ship blank, and the worked version sits beside each one. The assignment only ever asks you to touch the current week's file, so ignore the rest until its class arrives.
 
 Across the whole workspace:
 
-- **Class 1**: `principles/context-block.md`, which you fill in for your own market, plus `context.md` for the client itself. There is no separate `context/` directory. If you brought your own client, that second file lives in your folder rather than this one.
-- **Class 2**: adds `principles/claude-contract.md` at root and `claude-contract.md` here in the project. Skills get installed this class, because Class 2 is the first one that runs a skill (`/grill-me`).
+- **Class 1**: no file. It runs in a chat window, and the repo opens in Class 2.
+- **Class 2**: adds `principles/claude-contract.md` at root and `claude-contract.md` here in the project. `context.md` sits beside the project contract for this client's users. The skills already ship inside the repo, so nothing gets installed; Class 2 is just the first class that runs one (`/grill-me`).
 - **Class 3**: the brief chain here, `brief-v1` to `brief-v2` to `brief-v3-interrogated.md`, plus `engagement.md` for the commercial half.
 - **Class 4**: adds `critique-notes.md`.
 - **Class 5**: adds `tokens.md`.
-- **Class 6**: your own screen lands here as `my-booking-screen.html`.
+- **Class 6**: `ia-map.md` and its diagram `ia-map.html`, then `tasks.md`, then your own screen as `my-booking-screen.html`, then `build-notes.md`.
 - **Class 7**: `career-vault/` opens for the first time.
 - **Class 8**: the rest of `career-vault/`.
 

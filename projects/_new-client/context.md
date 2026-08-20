@@ -7,7 +7,7 @@ tags: [template, context, client]
 
 # Context: <client name>
 
-**What this file is for:** who this client's users actually are. It overrides your defaults in `principles/context-block.md` wherever the two disagree.
+**What this file is for:** who this client's users actually are. It overrides your defaults, the block under `Who I am` in `principles/claude-contract.md`, wherever the two disagree.
 
 **Why Claude needs it:** it reads this on every task in this folder. Whatever you leave vague here, it guesses.
 

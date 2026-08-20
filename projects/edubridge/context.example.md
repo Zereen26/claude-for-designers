@@ -10,7 +10,7 @@ project: EduBridge Bangladesh
 
 **Reference, not homework.** This is the instructor's filled version, for this client. You read it for the standard. Yours goes in `projects/<your-client>/context.md`, copied from `_new-client/`.
 
-This file overrides `principles/context-block.md` wherever the two disagree. Root holds your defaults; this holds this client's actual users.
+This file overrides your defaults, the block under `Who I am` in `principles/claude-contract.md`, wherever the two disagree. Root holds what you assume when a brief says nothing; this holds this client's actual users.
 
 ---
 

@@ -48,14 +48,14 @@ Check the headline files in the table below, in class order, and decide for each
 
 The class they are on is the class of the earliest headline file that is not yet filled in. If the evidence is mixed, say which reading you went with and ask them to confirm.
 
-**Class 1 produces two files in two different places**, so check both: `principles/context-block.md` and a filled `context.md` inside whichever `projects/` folder is theirs.
+**Class 1 leaves nothing in the repo, so an untouched repo is not evidence of anything.** Class 1 runs in a chat window: the same prompt twice, once cold and once with six lines of context, then four bullets on what changed. They hand in screenshots. The repo opens in Class 2, so the earliest file that can tell you anything is `principles/claude-contract.md`.
 
-Work out which folder is theirs before you judge progress:
+If `principles/claude-contract.md` is still scaffolding, they have not finished Class 2 yet, and they may not have started it. Do not guess which of the two it is: ask whether they have had Class 2.
 
-- If `projects/` holds a folder that is not `edubridge` and not `_new-client`, that is their project, and its `context.md` is the Class 1 file to check.
-- If no such folder exists, **EduBridge is their project.** Choosing it is allowed and common, so treat `projects/edubridge/` as theirs and do not report them as behind for it. In that case `projects/edubridge/context.md` is the Class 1 file to check, exactly as it would be for any other project. The filled reference lives beside it as `context.example.md` and is never their work.
+Work out which project folder is theirs before you judge anything past Class 2:
 
-If `principles/context-block.md` is still scaffolding, they are mid-Class-1. If it is filled but `principles/claude-contract.md` is untouched, they finished Class 1 and are heading into Class 2.
+- If `projects/` holds a folder that is not `edubridge` and not `_new-client`, that is their project, and its `claude-contract.md` is the Class 2 project-level file to check.
+- If no such folder exists, **EduBridge is their project.** Choosing it is allowed and common, so treat `projects/edubridge/` as theirs and do not report them as behind for it.
 
 **`projects/_new-client/` is a template, never their work.** If its files are still empty, that is correct and expected; it does not mean they are behind. Never count it as evidence of progress, and never fill it in.
 
@@ -76,8 +76,8 @@ Any file with `.example.` in its name, and any file whose frontmatter carries th
 
 | # | Class | Headline file(s) | Skills run | Brings back |
 |---|---|---|---|---|
-| 1 | What Claude Is and Why This Matters Now | TWO files, two levels: `principles/context-block.md` (their defaults, about them) AND `context.md` for the client itself. Own client: copy `projects/_new-client/` into `projects/<their-client>/`. EduBridge: fill `projects/edubridge/context.md`, which ships as a blank template beside the filled `context.example.md` | none yet | both context files, plus a same-brief-twice comparison |
-| 2 | The Working Agreement | `principles/claude-contract.md` and `projects/edubridge/claude-contract.md`. **EduBridge enters here**, as the worked comparison against their own Class 1 attempt. `engagement.md` is introduced as an idea, not filled | `grill-me`; the skills get installed this class | their contract, at root and in the project |
+| 1 | What Claude Is and Why This Matters Now | No repo file. It runs in a chat window: the same prompt twice, once cold and once with six lines of context. The repo is not introduced until Class 2 | none yet | two screenshots and four bullets on what the context changed |
+| 2 | The Working Agreement | `principles/claude-contract.md` and `projects/edubridge/claude-contract.md`. **EduBridge enters here**, and so does the repo. Their own client means duplicating `projects/_new-client/` into `projects/<their-client>/`. `projects/<client>/context.md` sits beside the project contract and holds that client's users; it is not a hand-in, but it is where user detail goes. `engagement.md` is introduced as an idea, not filled | `grill-me`; the skills already ship in the repo, so nothing is installed | their contract, at root and in the project |
 | 3 | The New Brief | `projects/edubridge/brief-v1-client.md`, `brief-v2-pm-thread.md`, `brief-v3-interrogated.md`, and they fill `engagement.md` (blank template; the filled one is `engagement.example.md`) | `grill-me` (second use, on the brief), `design-brief` | interrogated brief, a scope email, filled `engagement.md` |
 | 4 | Claude as Critic | `principles/design-taste.md`, `principles/anti-ai-slop.md` | `design-review`, `heuristic-evaluation`, `persona-acid-test` (after doing it by hand), Impeccable optional | `projects/edubridge/critique-notes.md` |
 | 5 | Figma as Source of Truth | `projects/edubridge/tokens.md` | `design-tokens` | tokenized Figma file |
@@ -93,11 +93,11 @@ Students ask this constantly and getting it wrong is how output goes generic.
 
 1. **Root versus project.** Root holds what is true about *them*: how they work, their taste, their voice, their reusable skills. The project folder holds what is true about *this client*: the brief, the users, the constraints. Test: if it would still be true on their next job, it goes at root.
 2. **Select a Folder is a decision.** Open Claude Code at the **root** when the work spans projects (writing their contract, building a skill). Open at the **project folder** when doing client work. Opening at the wrong level is how you get generic output, or context bleeding between two clients.
-3. **Every project is a sibling inside `projects/`, never nested in another project.** `projects/` is the container. `projects/edubridge/` is only this course's demo. If a student starts putting their own client work inside `projects/edubridge/`, stop them and say why: the two products' context bleeds together and you end up answering about the wrong one. The correct move is a new folder beside it, `projects/their-client/`, duplicated from the empty `projects/_new-client/` template. **Offer to do the duplication for them rather than giving them a terminal command.** This course promises no terminal and it means it, so a `cp -r` in your answer breaks that promise and frightens people who have never used a shell. Either duplicate the folder yourself, or tell them to right-click and Duplicate. They do this for the first time in Class 1.
+3. **Every project is a sibling inside `projects/`, never nested in another project.** `projects/` is the container. `projects/edubridge/` is only this course's demo. If a student starts putting their own client work inside `projects/edubridge/`, stop them and say why: the two products' context bleeds together and you end up answering about the wrong one. The correct move is a new folder beside it, `projects/their-client/`, duplicated from the empty `projects/_new-client/` template. **Offer to do the duplication for them rather than giving them a terminal command.** This course promises no terminal and it means it, so a `cp -r` in your answer breaks that promise and frightens people who have never used a shell. Either duplicate the folder yourself, or tell them to right-click and Duplicate. They do this for the first time in Class 2, which is the first class that puts anything in the repo.
 
-4. **Context has two levels, and it follows from rule 1.** `principles/context-block.md` holds their **defaults**: the kind of designer they are, the clients who keep finding them, their usual market and surface. `projects/<client>/context.md` holds **this client's** users and overrides those defaults. Per-client user context at root fails the next-job test. If they ask where a user detail goes, the answer is almost always the project.
+4. **Context has two levels, and it follows from rule 1.** The defaults block under `Who I am` in `principles/claude-contract.md` holds what they assume when a brief says nothing: the clients who keep finding them, their usual market and surface, the device they design down to. `projects/<client>/context.md` holds **this client's** users and overrides those defaults. Per-client user context at root fails the next-job test. If they ask where a user detail goes, the answer is almost always the project.
 
-5. **Two root files are about the student, and they do different jobs.** `claude-contract.md` is about the **collaboration**: voice, format, what they will not delegate. `context-block.md` is about the **work**: market, clients, usual users. If they seem to be writing one into the other, say which file it belongs in and why.
+5. **One root file carries both halves of what is true about the student.** `principles/claude-contract.md` holds the **collaboration** under `How to talk to me`, `Always`, `Never` and `Mine to decide`, and it holds the **work** under `Who I am`: market, clients, usual surface. Batch 2 split those across two files and students wrote each into the other, so Batch 3 merged them. If a student mentions `context-block.md`, they are working from Batch 2 material; tell them it is the defaults block under `Who I am` now.
 
 Applied to skill output, which is where Batch 1 got stuck: output about the student goes at root. `grill-me` run on their own working contract belongs at root, in `principles/claude-contract.md`. Output about a client (an interrogated brief, tokens, critique notes) goes inside that project folder. The contract exists at both levels and the two files hold different things: `principles/claude-contract.md` holds what is true about the student, `projects/edubridge/claude-contract.md` holds what is true about that client. Both were written in Class 2, and the skills are already installed by then.
 
@@ -136,7 +136,6 @@ Before anything substantive, read `principles/`. Those files override your defau
 - `principles/claude-contract.md`: the student's contract with you (voice, format, what they will not delegate)
 - `principles/design-taste.md`: taste principles for design output
 - `principles/anti-ai-slop.md`: patterns to refuse to generate
-- `principles/context-block.md`: the student's **defaults**, about the kind of designer they are and the clients and market they usually serve. Not one client's users. This client's users live in `projects/<client>/context.md` and override the defaults
 
 Also:
 
@@ -157,7 +156,7 @@ When the student opens a project folder, treat the briefs, tokens and critique n
 
 ## Local context: do not assume it
 
-**Never assume a market and never assume a surface.** Most of this room works for clients they did not choose: offshore briefs from marketplaces, or an agency roster. One student's client is a Bangladeshi tutoring marketplace; the next is a German SaaS dashboard or a Gulf storefront. Read `principles/context-block.md` for their defaults and `projects/<client>/context.md` for the client actually in front of you. If the project has no `context.md`, ask for the users before drawing anything.
+**Never assume a market and never assume a surface.** Most of this room works for clients they did not choose: offshore briefs from marketplaces, or an agency roster. One student's client is a Bangladeshi tutoring marketplace; the next is a German SaaS dashboard or a Gulf storefront. Read the defaults block under `Who I am` in `principles/claude-contract.md`, and `projects/<client>/context.md` for the client actually in front of you. If the project has no `context.md`, ask for the users before drawing anything.
 
 **Do not assume mobile.** Client work is frequently dashboards, admin panels, landing pages and storefronts. "Desktop, Chrome, 1440px" is a legitimate answer to what surface this is.
 

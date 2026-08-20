@@ -22,7 +22,8 @@ This is the most important file in the workspace. The skills do not work without
 
 Five headings, and they are the five you saw in class:
 
-  Who I am           the paragraph Claude reads before anything else
+  Who I am           the paragraph Claude reads before anything else, plus
+                     your defaults: your clients, your market, your surface
   How to talk to me  the shape of the reply
   Always             things Claude must do every time
   Never              things Claude must not do, ever
@@ -36,6 +37,14 @@ and not advice.
 
 Only `Never` appears in both this file and the project file. The other four
 headings are how you can tell which file you have open.
+
+`Who I am` is doing two jobs and that is deliberate. It says who you are, and
+it says what you assume when a brief tells you nothing: the clients who keep
+finding you, what outsiders get wrong about your market, the device you design
+down to. Those are your defaults, and they are what Claude falls back on when a
+brief arrives empty. Batch 2 kept them in a second root file called
+`context-block.md`. Two root files that both sounded like "context about me" is
+one file too many, so there is one now.
 
 The root-versus-project split is one question: would this still be true on
 your next job, for a different client, in a different market? Yes, it lives
@@ -56,7 +65,17 @@ Everything under the EXAMPLE heading below is the instructor's filled version fo
 
 I am a design partner for BD-focused digital products. My clients are early-stage startups and agencies in Dhaka building fintech, e-commerce, and healthtech products.
 
-<!-- Why this paragraph matters: Claude does not know you. Every prompt is a cold start. This paragraph is the first thing you paste at the top of any non-trivial work so Claude is briefing the right person. -->
+**My defaults, when a brief tells me nothing:**
+
+- Most of my work arrives from offshore clients who have never used their own product in my market.
+- I do best on flows where trust has to be earned before money moves. I struggle with brand and marketing pages.
+- Outsiders assume a card is the default payment method here. It is not, and the flow shape changes because of that.
+- My floor is a Redmi A3 on 3G, unless the brief says desktop, and then it is Chrome at 1366px on a five-year-old laptop.
+- With no research in the brief I assume the buyer and the user are different people. I am right about two thirds of the time.
+
+<!-- Why this paragraph matters: Claude does not know you. Every prompt is a cold start. This is the first thing you paste at the top of any non-trivial work, so Claude is briefing the right person and starting from your assumptions rather than an average of everyone's.
+
+Notice what is not in the defaults: no age range, no "18 to 45", no "mobile-first users who value simplicity". Those are demographics, and demographics are not context. Every line above is something the writer learned by watching somebody, and every line changes a design decision. -->
 
 ### How to talk to me
 
@@ -116,7 +135,10 @@ devices, language or payment methods. Those change every client, so they live in
 
   projects/<client>/claude-contract.md   this client's rules
   projects/<client>/context.md           who these users are
-  principles/context-block.md            your usual market, as a starting point
+
+Your usual market, the one you fall back on when a brief says nothing, is the
+defaults block under `Who I am` above. That is a fact about you, so it stays
+here.
 
 And they must not contain design taste either. That lives in:
 
@@ -146,7 +168,38 @@ This is the discipline part. You decide what is yours and what is Claude's. The 
 
 ## Who I am
 
-<!-- Who do you design for, what kind of products, which market and city? One paragraph. -->
+<!-- Who do you design for, what kind of products, which market and city? One paragraph.
+
+Then a defaults block, four or five lines, under a bold heading like the example
+above. Think about all of these before you write it. The questions are the
+thinking; the block is what is left after the thinking. Do not answer them one
+line each.
+
+  1. What kind of clients keep finding you, and what do they have in common?
+     Not the kind you wish for. The ones who actually message you. If three of
+     your last five jobs looked alike, say what the pattern was.
+
+  2. What kind of work do you do your best work on, and what do you struggle
+     with? Both halves matter. The second is more useful and harder to write.
+
+  3. What do you know about the market you usually serve that a designer from
+     outside it would get wrong? If you cannot think of anything, you have not
+     looked. Every market has at least three things outsiders assume that are
+     false here.
+
+  4. What surface do you usually design for, and what is your floor on it?
+     Name it exactly. "Redmi A3 on 3G in Mirpur" beats "low-end Android".
+     "Desktop, Chrome, 1440px, internal admin tool" is an equally valid answer.
+     Do not assume mobile. Plenty of client work is dashboards, admin panels,
+     landing pages and storefronts.
+
+  5. When a brief arrives with no research in it, what do you assume by
+     default, and how often does that assumption turn out to be right? The
+     second half is the interesting part.
+
+If more than two of your lines look like more than two of the example's lines,
+you copied instead of thinking. What you refuse to design goes under Never, not
+here. -->
 
 ## How to talk to me
 

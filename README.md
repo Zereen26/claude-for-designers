@@ -40,7 +40,7 @@ You do not get a finished workspace. You build it one file at a time. Each class
 
 | # | Class | The file you fill in |
 |---|---|---|
-| 1 | What Claude Is and Why This Matters Now | Two files: `principles/context-block.md` (your defaults) and `projects/<your-client>/context.md`, copied from `_new-client/`, for a real brief of your own |
+| 1 | What Claude Is and Why This Matters Now | No file. The same prompt twice in a chat window, once cold and once with six lines of context, and four bullets on what changed. The repo opens in Class 2 |
 | 2 | The Working Agreement | `principles/claude-contract.md` and `projects/edubridge/claude-contract.md` |
 | 3 | The New Brief | `projects/edubridge/brief-v3-interrogated.md`, `engagement.md`, and a `scope-email.md` you write by hand in the same folder |
 | 4 | Claude as Critic | `principles/design-taste.md`, `principles/anti-ai-slop.md`, then `projects/edubridge/critique-notes.md` |
@@ -59,7 +59,7 @@ So the file with your name on it is blank when you get there, and the answer is 
 
 1. **Root versus project.** Root holds what is true about *you*: how you work, your taste, your voice, your skills. A project folder holds what is true about *that client*: their brief, their users, their constraints. Test: if it would still be true on your next job, it goes at root.
 2. **Select a Folder is a decision.** Open Claude Code at the **root** when the work spans projects (writing your contract, building a skill). Open at the **project folder** when you are doing client work. Opening at the wrong level is how you get generic output, or one client's context leaking into another's.
-3. **Context has two levels, and rule 1 decides which.** `principles/context-block.md` holds your **defaults**: the kind of designer you are, the clients who keep finding you, the surface you usually work on. `projects/<client>/context.md` holds **that client's** users and overrides your defaults. If your clients change every few weeks, which is normal, this split is what stops you starting from blank every time.
+3. **Context has two levels, and rule 1 decides which.** The defaults block under `Who I am` in `principles/claude-contract.md` holds what you assume when a brief says nothing: the clients who keep finding you, the surface you usually work on, the device you design down to. `projects/<client>/context.md` holds **that client's** users and overrides those defaults. If your clients change every few weeks, which is normal, this split is what stops you starting from blank every time.
 
 ## The nine-step process
 
@@ -76,8 +76,7 @@ claude-for-designers/
 ├── principles/            the knowledge layer: how you work
 │   ├── claude-contract.md     your working contract with Claude
 │   ├── design-taste.md        taste principles for designers using AI
-│   ├── anti-ai-slop.md        patterns to refuse to ship
-│   └── context-block.md       your defaults: your market, clients and surface
+│   └── anti-ai-slop.md        patterns to refuse to ship
 ├── skills/                the readable copy of those commands. Edit them here
 ├── projects/              where work happens, one folder per client
 │   ├── _new-client/           EMPTY TEMPLATE. Copy this for every real client

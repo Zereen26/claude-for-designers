@@ -1,19 +1,20 @@
 # principles/
 
-This folder holds what is true about **you**: how you work, your taste, what you refuse to ship, and who you design for by default. Four files. Claude reads all of them before it does anything substantive in this workspace.
+This folder holds what is true about **you**: how you work, your taste, what you refuse to ship, and who you design for by default. Three files. Claude reads all of them before it does anything substantive in this workspace.
 
 This is the root layer. Nothing in here is about a client. If a fact would still be true on your next job, it belongs in this folder. If it is only true for this client, it belongs in `projects/{client}/` instead.
 
-## The four files and when you fill them in
+## The three files and when you fill them in
 
 | File | Class | What it holds | You bring back |
 |---|---|---|---|
-| `context-block.md` | 1 | Your default user and market, in six or seven lines you can paste into any prompt | Your filled context block |
-| `claude-contract.md` | 2 | How you work, how Claude talks to you, what you will not delegate | Your contract, at root and in the project |
+| `claude-contract.md` | 2 | How you work, how Claude talks to you, what you will not delegate, and your defaults when a brief says nothing | Your contract, at root and in the project |
 | `design-taste.md` | 4 | What good means to you, specifically enough to be arguable | Filled taste file, used by `/design-review` |
 | `anti-ai-slop.md` | 4 | What you refuse to ship, and the fix for each pattern | Filled slop list, plus `critique-notes.md` in the project |
 
-Classes 3, 5 and 6 do not add files here. They work inside `projects/edubridge/`, using these four as the layer underneath.
+Class 1 adds no file here. It runs entirely in the chat window: the same prompt twice, once cold and once with six lines of context, and you compare the two. The repo opens in Class 2.
+
+Classes 3, 5 and 6 do not add files here either. They work inside `projects/edubridge/`, using these three as the layer underneath.
 
 ## How each file is built
 
