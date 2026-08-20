@@ -49,9 +49,11 @@ You do not get a finished workspace. You build it one file at a time. Each class
 | 7 | How to Sell Yourself: Brand and Portfolio | `career-vault/01-positioning.md`, `02-portfolio-story.md`, `06-proposal.md` |
 | 8 | How to Sell Yourself: The Interview | `career-vault/03-resume.md`, `04-interview-answers.md`, `05-linkedin-content.md` |
 
-Every file you fill in carries the same shape: what it is for, why Claude needs it, a filled EduBridge example, then a `## YOUR TURN` section you answer in place. When you are done, delete the scaffolding above `YOUR TURN`. What is left is your real working file.
+Every file you fill in opens the same way: what it is for, why Claude needs it, then a `## YOUR TURN` section you answer in place. When you are done, delete the scaffolding above `YOUR TURN`. What is left is your real working file.
 
-The repo you downloaded contains the finished version of everything. That is the answer key, not this week's homework. Only touch the current week's file.
+The worked EduBridge version sits in one of two places, and which one depends on the file. Some carry the example inline, above `YOUR TURN`, labelled as the example. The rest ship blank, with the worked version beside them under the same name plus `.example`: `context.example.md` next to `context.md`, `engagement.example.md` next to `engagement.md`, `brief-v3-interrogated.example.md` next to `brief-v3-interrogated.md`, `ia-map.example.md` next to the `ia-map.md` you write in Class 6.
+
+So the file with your name on it is blank when you get there, and the answer is never hidden. Read the example after you have written yours, not before. Comparing is the exercise; copying skips it.
 
 ## Three rules about where files go
 

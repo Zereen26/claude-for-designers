@@ -46,7 +46,7 @@ For each major screen, name what is primary (the first thing the eye lands on), 
 
 **Output: two files, not one**
 
-First, the four parts as a single markdown document. Use headers to separate them. This document is the source of truth, and `/brief-to-tasks` reads it next, so it has to stand on its own without the diagram beside it.
+First, the four parts as a single markdown document, written to `ia-map.md` in the project folder. Use headers to separate them. That file is the deliverable and the source of truth, and `/brief-to-tasks` reads it next, so it has to stand on its own without the diagram beside it.
 
 Then write the same mapping as an HTML page next to it, named `ia-map.html`. The reason is that the markdown buries the one thing this skill is for. The mapping is what matters: every screen names its step, and every step should have a screen. In markdown the two failures are two bullet lists plus a sentence, and the reader has to hold both lists in their head. On the page they are visible.
 

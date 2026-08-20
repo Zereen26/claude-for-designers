@@ -31,7 +31,10 @@ If EduBridge is your project, these are your files. If you brought your own clie
 | `engagement.md` | 3 | What the job actually is: scope, what is out, revisions, who signs off. Write it before you quote a price |
 | `critique-notes.md` | 4 | What was actually wrong with your first-pass screen, and what you changed |
 | `tokens.md` | 5 | Your color, type, spacing, radius and motion tokens, named |
+| `ia-map.md` | 6 | The journey first, then every screen named against the step it serves. `/information-architecture` writes it, and `ia-map.html` beside it is the same thing drawn |
+| `tasks.md` | 6 | The build broken into tasks, each with a done-when line. `/brief-to-tasks` writes it |
 | `my-booking-screen.html` | 6 | Your own booking screen, built from your brief, critique and tokens. You create this file; `booking-screen.html` beside it stays as reference |
+| `build-notes.md` | 6 | Three states nobody asked for, and the brief line each one answers |
 
 **Reference, do not edit.**
 
@@ -44,6 +47,8 @@ If EduBridge is your project, these are your files. If you brought your own clie
 | `brief-v3-interrogated.example.md` | The instructor's fully worked interrogated brief. Open it after you have written your own, not before |
 | `PRODUCT.md` | Standing product context: users, purpose, brand, design principles. Claude reads this on every task in this folder |
 | `DESIGN.md` | The finished design system behind the built screen. The Class 5 answer key |
+| `ia-map.example.md` | The instructor's worked IA for the booking flow. The Class 6 answer key. Open it after you have written your own |
+| `ia-map.example.html` | The same IA drawn as a page. Open it in a browser to see what a gap looks like |
 | `booking-screen.html` | The instructor's built screen, read-only. See below |
 
 ## `booking-screen.html`, and what Class 6 does with it

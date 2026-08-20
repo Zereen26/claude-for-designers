@@ -170,9 +170,9 @@ Check the class's dependency files before you blame the skill:
 
 Most skills write no file. They hand back text in the session, and that text goes into a file that already exists.
 
-`ia-map.html` is the one exception; `/information-architecture` writes it.
+Class 6 is the exception. `/information-architecture` writes `ia-map.md` and `ia-map.html`, and `/brief-to-tasks` writes `tasks.md`.
 
-There is no `design-brief.md`, no `ia.md`, no `review.md`, no `grill-me-output.md`. A student spent hours in the group chat asking whether their `/grill-me` output had become a new file. It had not.
+Outside Class 6 there is no `design-brief.md`, no `ia.md`, no `review.md`, no `grill-me-output.md`. A student spent hours in the group chat asking whether their `/grill-me` output had become a new file. It had not.
 
 > Nothing is missing. `/grill-me` on a brief hands you a Requirements Handshake as text and creates no file. It goes into `projects/edubridge/brief-v3-interrogated.md`, which is already in your folder waiting for it.
 >

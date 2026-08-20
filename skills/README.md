@@ -10,9 +10,9 @@ Every class from Class 2 to Class 6 runs one or two of them. If you skip a step,
 |---|---|---|---|---|
 | 1 | `/grill-me` | Interrogates you until the brief has no soft spots left. | 2 | `principles/claude-contract.md` (C2), then `projects/edubridge/brief-v3-interrogated.md` (C3) |
 | 2 | `/design-brief` | Turns the interrogation into one source of truth for the project. | 3 | `projects/edubridge/brief-v3-interrogated.md` |
-| 3 | `/information-architecture` | The journey first, then every screen named against the step it serves, plus navigation and hierarchy. | 5 | Two outputs. The markdown goes in `projects/edubridge/tokens.md`, under a `## Screens and flows` heading you add at the top. The diagram is written for you, beside it, as `ia-map.html` |
+| 3 | `/information-architecture` | The journey first, then every screen named against the step it serves, plus navigation and hierarchy. | 6 | Two files, both written for you: `projects/<yours>/ia-map.md` is the deliverable, `ia-map.html` beside it is the diagram |
 | 4 | `/design-tokens` | Fixes color, type, spacing, radius and motion as named tokens. | 5 | `projects/edubridge/tokens.md` |
-| 5 | `/brief-to-tasks` | Breaks the brief into tasks, each with a "done when" line. | 6 | No file. It stays in the session you build in. |
+| 5 | `/brief-to-tasks` | Breaks the brief into tasks, each with a "done when" line. | 6 | `projects/<yours>/tasks.md` |
 | 6 | `/frontend-design` | Builds the screen from the brief and the tokens, not from a guess. | 6 | `projects/edubridge/my-booking-screen.html` (never `booking-screen.html`, that one is read-only reference) |
 | 7 | `/design-review` | Reviews the screen on layout, accessibility, responsiveness, dark mode, edge cases. | 4 | `projects/edubridge/critique-notes.md` |
 
@@ -47,9 +47,9 @@ Two of them are exceptions.
 
 `/grill-me` in Class 2, run on a `claude-contract.md`. That run edits the contract in place, line by line, as you answer. Nothing to paste, and nothing new appears in the folder.
 
-`/information-architecture` in Class 5 hands you two things. The four-part markdown is text, and it goes into `tokens.md` under a `## Screens and flows` heading at the top. The diagram is a file the skill writes for you, `ia-map.html`, in the same project folder. Open it in your browser and check it before you show it to anyone.
+`/information-architecture` in Class 6 writes two files, and both are new. `ia-map.md` holds the four parts as text, and that is the file you hand in. `ia-map.html` beside it is the same mapping drawn, so the gaps are visible instead of buried in two bullet lists. Open the page in your browser and check it before you show it to anyone.
 
-There is no `design-brief.md`. There is no `ia.md`, no `review.md`, no `grill-me-output.md`. The IA markdown goes into `tokens.md`; `ia-map.html` is the diagram, and it is the only file any skill on this course creates from nothing. In the last batch a student ran `/grill-me`, got a clean Requirements Handshake, and then sat for hours asking the group chat whether it had become a new file. It does not. It goes into a file that already exists in your project folder, waiting for it.
+There is no `design-brief.md`. There is no `ia.md`, no `review.md`, no `grill-me-output.md`. Class 6 is the only class where a skill creates files from nothing, and it creates exactly three: `ia-map.md`, `ia-map.html` and `tasks.md`. Everywhere else the output goes into a file that already exists in your project folder, waiting for it. In the last batch a student ran `/grill-me`, got a clean Requirements Handshake, and then sat for hours asking the group chat whether it had become a new file. It had not.
 
 Two rules on pasting:
 
