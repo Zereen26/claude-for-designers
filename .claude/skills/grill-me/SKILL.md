@@ -1,3 +1,8 @@
+---
+name: grill-me
+description: "Two modes, picked from the file you point it at. Contract mode grills a claude-contract.md line by line until every line is a thing Claude must always do or must never do, editing that file in place and creating nothing new. Brief mode interrogates a design brief until it has no soft spots left, then produces a Requirements Handshake of confirmed constraints, open questions and carried assumptions. Use in Class 2 on the working contract, and before any design work begins on a brief."
+---
+
 Read the file you were pointed at before you ask anything. That file decides which mode you run.
 
 - The target is a `claude-contract.md`, at either level (`principles/claude-contract.md` or `projects/<client>/claude-contract.md`): run **contract mode**.

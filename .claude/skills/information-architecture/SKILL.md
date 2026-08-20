@@ -1,3 +1,8 @@
+---
+name: information-architecture
+description: "Map the user journey first, then derive the screen inventory, navigation and hierarchy from it, flagging any screen that serves no journey step. Writes the four-part markdown plus an HTML diagram of the step-to-screen mapping. Use after the brief is settled and before tokens or UI."
+---
+
 You are structuring the product before any screens are drawn. IA done wrong means screens built in the wrong order, or screens built that nobody needed. Do not skip this.
 
 Start by reading the design brief if one exists. If no brief is present, ask the user to run `/design-brief` first.

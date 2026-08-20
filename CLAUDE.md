@@ -77,7 +77,7 @@ Any file whose name ends `.example.md`, and any file whose frontmatter carries t
 | # | Class | Headline file(s) | Skills run | Brings back |
 |---|---|---|---|---|
 | 1 | What Claude Is and Why This Matters Now | TWO files, two levels: `principles/context-block.md` (their defaults, about them) AND `context.md` for the client itself. Own client: copy `projects/_new-client/` into `projects/<their-client>/`. EduBridge: fill `projects/edubridge/context.md`, which ships as a blank template beside the filled `context.example.md` | none yet | both context files, plus a same-brief-twice comparison |
-| 2 | The Working Agreement | `principles/claude-contract.md` and `projects/edubridge/claude-contract.md`. **EduBridge enters here**, as the worked comparison against their own Class 1 attempt. `engagement.md` is introduced as an idea, not filled | `grill-me`; the nine skills get installed this class | their contract, at root and in the project |
+| 2 | The Working Agreement | `principles/claude-contract.md` and `projects/edubridge/claude-contract.md`. **EduBridge enters here**, as the worked comparison against their own Class 1 attempt. `engagement.md` is introduced as an idea, not filled | `grill-me`; the skills get installed this class | their contract, at root and in the project |
 | 3 | The New Brief | `projects/edubridge/brief-v1-client.md`, `brief-v2-pm-thread.md`, `brief-v3-interrogated.md`, and they fill `engagement.md` (blank template; the filled one is `engagement.example.md`) | `grill-me` (second use, on the brief), `design-brief` | interrogated brief, a scope email, filled `engagement.md` |
 | 4 | Claude as Critic | `principles/design-taste.md`, `principles/anti-ai-slop.md` | `design-review`, `heuristic-evaluation`, `persona-acid-test` (after doing it by hand), Impeccable optional | `projects/edubridge/critique-notes.md` |
 | 5 | Figma as Source of Truth | `projects/edubridge/tokens.md` | `design-tokens` | tokenized Figma file |
@@ -111,9 +111,9 @@ If they ask "where does this file go?", answer with the path, not with the theor
 - Honest cost: Claude Pro is about $20 a month, plus the free Desktop app. Never say free.
 - Accounts are personal. If a student mentions sharing an account or logging in from someone else's, tell them to stop. Shared accounts get flagged by IP and held.
 
-## The nine skills
+## The skills
 
-Nine slash commands live in `skills/`. Run them in this order on a project; skipping a step makes the next step do that step's work badly.
+The slash commands live in `skills/`. Run the design sequence in this order on a project; skipping a step makes the next step do that step's work badly.
 
 1. `/grill-me`: stress-test the brief before any design begins
 2. `/design-brief`: write the single source of truth for the project
@@ -126,6 +126,8 @@ Nine slash commands live in `skills/`. Run them in this order on a project; skip
 9. `/persona-acid-test`: stress-test the design through three lenses (confused user, skeptical engineer, impatient PM) before it goes to a stakeholder. **It needs an actual design**: an HTML file, a Figma link or a screenshot. It will refuse to start without one, so never suggest it before a screen exists.
 
 When a student runs one, follow the template in the matching file under `skills/`. Step 6 does not run before Steps 1 to 5.
+
+One more command sits outside the sequence: `/stuck`. It diagnoses a broken setup by reading the folder, so the student never has to describe the fault in English. **Route to it yourself whenever a student says they are stuck, confused, blocked, lost, or that something is not working, and whenever they open with a fault they cannot name.** Do not ask them to explain first. Read `skills/stuck.md` and follow it. It creates no file.
 
 ## Rules you follow
 
@@ -146,7 +148,7 @@ Also:
 ## Where work lives
 
 - `principles/`: the knowledge layer. Read before acting. Root-level, about the student.
-- `skills/`: the nine slash commands.
+- `skills/`: the slash commands.
 - `projects/{name}/`: the design work, one folder per project, siblings inside `projects/`. The course project is `projects/edubridge/`. Its reference material is fully filled in; the files a student writes ship blank there, with the worked versions beside them as `*.example.md`. `projects/_new-client/` is an empty template they copy for every real client; never fill it in, and never treat its emptiness as them being behind.
 - `career-vault/`: positioning, portfolio story, proposal, resume, interview answers, profile and content. Opens at Class 7.
 - `assets/`: images used by the README.

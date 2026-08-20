@@ -6,7 +6,7 @@ Three things live here:
 
 | Folder | What it is |
 |---|---|
-| `_new-client/` | **The empty template. Copy this.** Six files, each carrying the questions it wants answered |
+| `_new-client/` | **The empty template. Copy this.** Seven files, each carrying the questions it wants answered |
 | `_brief-bank/` | Four practice briefs that are deliberately not EduBridge, for weeks when you have no live client |
 | `edubridge/` | The course's client, fully filled in. The answer key. Read it, do not copy it |
 
@@ -23,11 +23,12 @@ Duplicating `edubridge/` drags one client's users, tokens, decisions and briefs 
 Then, in roughly this order:
 
 1. `context.md`: who is on the other end of the screen. Overrides your root defaults.
-2. `engagement.md`: what the job is, what is out, revisions, who signs off. **Before you quote a price.**
-3. `brief-interrogated.md`: run `/design-brief` on everything you were sent, together in one session.
-4. `critique-notes.md`: `/design-review` and `/heuristic-evaluation`, ending in a decision.
-5. `tokens.md`: `/information-architecture` first, then `/design-tokens`.
-6. `screen.html`: `/brief-to-tasks`, then `/frontend-design` on one task.
+2. `claude-contract.md`: this client's five rules. The root contract stays about you.
+3. `engagement.md`: what the job is, what is out, revisions, who signs off. **Before you quote a price.**
+4. `brief-interrogated.md`: run `/grill-me` on everything you were sent, together in one session.
+5. `critique-notes.md`: `/design-review` and `/heuristic-evaluation`, ending in a decision.
+6. `tokens.md`: `/information-architecture` first, then `/design-tokens`.
+7. `screen.html`: `/brief-to-tasks`, then `/frontend-design` on one task.
 
 Only two orderings are load-bearing: `engagement.md` before you give a number, and `context.md` plus your `principles/` files before you run anything generative.
 

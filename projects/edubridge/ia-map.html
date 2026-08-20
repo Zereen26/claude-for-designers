@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduBridge BD: Journey to Screens</title>
+<style>
+  /*
+     Class 5 output of /information-architecture, drawn.
+     The markdown in tokens.md is the source of truth. This page is how you
+     show the mapping to a client, and how you see the two failures at a glance.
+     Plain HTML and CSS. Every line is a border on a grid cell, so nothing is
+     positioned by hand and nothing can drift out of place.
+  */
+
+  :root {
+    --navy: #0A2540;
+    --surface: #FFFFFF;
+    --surround: #F3F4F6;
+    --line: #E5E7EB;
+    --ink-2: #374151;
+    --ink-3: #6B7280;
+
+    --flag-red: #B4232B;
+    --flag-red-bg: #FEF2F2;
+    --flag-red-line: #E4A9A9;
+
+    --flag-amber: #92500B;
+    --flag-amber-bg: #FFF8ED;
+    --flag-amber-line: #E3BA85;
+
+    --outside-bg: #F9FAFB;
+    --outside-line: #D1D5DB;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--surround);
+    color: var(--navy);
+    padding: 20px 16px 48px;
+    line-height: 1.45;
+  }
+
+  .page {
+    max-width: 920px;
+    margin: 0 auto;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px 20px 28px;
+  }
+
+  h1 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+
+  .standfirst {
+    font-size: 15px;
+    color: var(--ink-2);
+    max-width: 62ch;
+    margin-bottom: 6px;
+  }
+  .standfirst b { font-weight: 600; }
+  .no-step { color: var(--flag-red); font-weight: 600; }
+  .no-screen { color: var(--flag-amber); font-weight: 600; }
+
+  .source {
+    font-size: 13px;
+    color: var(--ink-3);
+    margin-bottom: 24px;
+  }
+  /* File names sit in the same face as the prose. No monospace costume. */
+  code {
+    font-family: inherit;
+    font-weight: 600;
+    color: var(--ink-2);
+  }
+
+  .colhead {
+    display: grid;
+    grid-template-columns: minmax(150px, 250px) 44px minmax(0, 1fr);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 8px;
+  }
+  .colhead span:first-child { grid-column: 1; }
+  .colhead span:last-child { grid-column: 3; }
+
+  /* The map. Three columns: the spine, the connector gutter, the screens.
+     Every box is placed on a named row, so the connector in that row always
+     starts at the spine and ends at the box. */
+  .map {
+    display: grid;
+    grid-template-columns: minmax(150px, 250px) 44px minmax(0, 1fr);
+    align-items: center;
+  }
+
+  /* Spine */
+  .step {
+    grid-column: 1;
+    align-self: stretch;
+    background: var(--navy);
+    color: #FFFFFF;
+    border-bottom: 1px solid #1D3D5C;
+    padding: 12px 14px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .step:last-of-type { border-bottom: none; }
+  .num {
+    flex-shrink: 0;
+    width: 22px; height: 22px;
+    border-radius: 100px;
+    background: #FFFFFF;
+    color: var(--navy);
+    font-size: 12px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .step-text { display: block; font-size: 15px; font-weight: 600; }
+  .step-want {
+    display: block;
+    font-size: 13px; font-weight: 400;
+    color: #C7D3DF;
+    margin-top: 2px;
+  }
+  .branch {
+    display: block;
+    font-size: 12px; font-weight: 600;
+    color: #8FB6D6;
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  /* Connector: a border on a cell that sits between the two things it joins. */
+  .tie {
+    grid-column: 2;
+    align-self: center;
+    height: 0;
+    border-top: 2px solid var(--navy);
+  }
+  .tie.dashed { border-top-style: dashed; border-top-color: var(--outside-line); }
+  .tie.amber { border-top-style: dashed; border-top-color: var(--flag-amber-line); }
+
+  /* Screens */
+  .screen {
+    grid-column: 3;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--navy);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 5px 0;
+  }
+  /* A screen that serves two steps spans both rows, so both connectors land on it. */
+  .screen.spans {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .screen-name { display: block; font-size: 15px; font-weight: 600; }
+  .screen-note { display: block; font-size: 13px; color: var(--ink-3); margin-top: 2px; }
+  .built {
+    display: inline-block;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--navy);
+    border: 1px solid var(--navy);
+    border-radius: 100px;
+    padding: 1px 7px;
+    margin-left: 6px;
+    vertical-align: 1px;
+  }
+
+  .screen.outside {
+    background: var(--outside-bg);
+    border: 1px dashed var(--outside-line);
+    border-left: 1px dashed var(--outside-line);
+    color: var(--ink-3);
+  }
+  .screen.outside .screen-name { font-weight: 400; font-size: 14px; }
+
+  .screen.missing {
+    background: var(--flag-amber-bg);
+    border: 1px solid var(--flag-amber-line);
+    border-left: 3px solid var(--flag-amber);
+  }
+  .screen.missing .screen-name { color: var(--flag-amber); }
+
+  .screen.stray {
+    background: var(--flag-red-bg);
+    border: 1px solid var(--flag-red-line);
+    border-left: 3px solid var(--flag-red);
+    margin-top: 22px;
+  }
+  .screen.stray .screen-name { color: var(--flag-red); }
+
+  .flag {
+    display: block;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+  .screen.missing .flag { color: var(--flag-amber); }
+  .screen.stray .flag { color: var(--flag-red); }
+
+  /* Row placement. */
+  .r1  { grid-row: 1; }
+  .r2  { grid-row: 2; }
+  .r3  { grid-row: 3; }
+  .r4  { grid-row: 4; }
+  .r5  { grid-row: 5; }
+  .r6  { grid-row: 6; }
+  .r7  { grid-row: 7; }
+  .r8  { grid-row: 8; }
+  .r9  { grid-row: 9; }
+  .r10 { grid-row: 10; }
+  .r11 { grid-row: 11; }
+  .r12 { grid-row: 12; }
+  .r13 { grid-row: 13; }
+  .r14 { grid-row: 14; }
+  .r2x2 { grid-row: 2 / span 2; }
+  .r5x2 { grid-row: 5 / span 2; }
+  .r8x2 { grid-row: 8 / span 2; }
+  .r10x3 { grid-row: 10 / span 3; }
+
+  .footnote {
+    font-size: 13px;
+    color: var(--ink-3);
+    border-top: 1px solid var(--line);
+    margin-top: 24px;
+    padding-top: 14px;
+    max-width: 70ch;
+  }
+  .footnote p + p { margin-top: 8px; }
+  .footnote strong { color: var(--ink-2); }
+
+  /* One column on a narrow screen. Block layout ignores the grid placement
+     above, so nothing has to be repositioned and nothing can collide. */
+  @media (max-width: 720px) {
+    .map { display: block; }
+    .colhead { display: none; }
+    .tie { display: none; }
+    .step { border-radius: 8px 8px 0 0; }
+    .screen { margin: 0 0 8px 16px; }
+    .screen.stray { margin-top: 20px; margin-left: 0; }
+    .step + .screen { border-radius: 0 0 8px 8px; margin-left: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>EduBridge BD: journey to screens</h1>
+  <p class="standfirst">
+    The journey runs down the left as numbered steps. Every screen hangs off the step it
+    serves. Two failures are visible without reading anything: a step with
+    <span class="no-screen">no screen attached to it</span>, and a screen with
+    <span class="no-step">no line back to the spine</span>.
+  </p>
+  <p class="source">
+    Journey: the parent who pays, on a sub-15,000 taka Android, evening.
+    Sources: <code>PRODUCT.md</code>, <code>brief-v3-interrogated.md</code>,
+    <code>critique-notes.md</code>, <code>booking-screen.html</code>.
+  </p>
+
+  <div class="colhead">
+    <span>What the parent does</span>
+    <span>Screens that serve it</span>
+  </div>
+
+  <div class="map">
+
+    <div class="step r1">
+      <span class="num">1</span>
+      <span class="step-text">Decides the child needs a tutor
+        <span class="step-want">For one named subject, HSC Physics, not "tutoring".</span>
+      </span>
+    </div>
+    <div class="tie dashed r1"></div>
+    <div class="screen outside r1">
+      <span class="screen-name">Happens before the product. No screen needed, and that is correct.</span>
+    </div>
+
+    <div class="step r2x2">
+      <span class="num">2</span>
+      <span class="step-text">Looks for tutors who teach it
+        <span class="step-want">Wants a shortlist small enough to compare.</span>
+      </span>
+    </div>
+    <div class="tie r2"></div>
+    <div class="screen r2">
+      <span class="screen-name">Subject search</span>
+      <span class="screen-note">Tutors for one subject. Serves step 2.</span>
+    </div>
+    <div class="tie r3"></div>
+    <div class="screen r3">
+      <span class="screen-name">Search results, empty</span>
+      <span class="screen-note">No tutors for that subject yet. Serves step 2.</span>
+    </div>
+
+    <div class="step r4">
+      <span class="num">3</span>
+      <span class="step-text">Judges whether the tutor is real
+        <span class="step-want">Looking for who checked the qualifications.</span>
+        <span class="branch">Branch: leaves and asks a neighbour instead</span>
+      </span>
+    </div>
+    <div class="tie r4"></div>
+    <div class="screen r4">
+      <span class="screen-name">Tutor profile</span>
+      <span class="screen-note">Who this person is, and who verified them. Serves step 3. Open
+        question: nobody has named the issuer of the badge, so half of this step has no screen yet.</span>
+    </div>
+
+    <div class="step r5">
+      <span class="num">4</span>
+      <span class="step-text">Works out what one session costs
+        <span class="step-want">Wants the total in BDT, not an hourly rate to multiply.</span>
+      </span>
+    </div>
+    <div class="tie r5"></div>
+    <div class="screen spans r5x2">
+      <span class="screen-name">Booking request<span class="built">built</span></span>
+      <span class="screen-note">The session, the total, one CTA. Serves steps 4 and 5.
+        This is <code>booking-screen.html</code>.</span>
+    </div>
+
+    <div class="step r6">
+      <span class="num">5</span>
+      <span class="step-text">Sends the booking request
+        <span class="step-want">Needs to understand this is a request, not a purchase.</span>
+        <span class="branch">Branch: abandons if the wording promised an instant booking</span>
+      </span>
+    </div>
+    <div class="tie r6"></div>
+
+    <div class="step r7">
+      <span class="num">6</span>
+      <span class="step-text">Waits for the tutor to confirm
+        <span class="step-want">Wants to know the request arrived, and when the answer comes.</span>
+        <span class="branch">Branch: nothing arrives, and the parent gives up quietly</span>
+      </span>
+    </div>
+    <div class="tie amber r7"></div>
+    <div class="screen missing r7">
+      <span class="flag">No screen for this step</span>
+      <span class="screen-name">Nothing serves step 6</span>
+      <span class="screen-note">Not in the build, not in the brief. The CTA promises an answer in
+        about two hours and there is nowhere to go and see it. The parent has paid nothing yet,
+        so leaving costs them nothing.</span>
+    </div>
+
+    <div class="step r8x2">
+      <span class="num">7</span>
+      <span class="step-text">Pays
+        <span class="step-want">Card through SSLCOMMERZ for the card minority. bKash or Nagad for
+          everyone else: leave the site, switch app, PIN, OTP.</span>
+      </span>
+    </div>
+    <div class="tie r8"></div>
+    <div class="screen r8">
+      <span class="screen-name">Payment method choice</span>
+      <span class="screen-note">Card or mobile money. Serves step 7.</span>
+    </div>
+    <div class="tie r9"></div>
+    <div class="screen r9">
+      <span class="screen-name">Mobile money handoff</span>
+      <span class="screen-note">What is about to happen, and what to bring back. Serves step 7.</span>
+    </div>
+
+    <div class="step r10x3">
+      <span class="num">8</span>
+      <span class="step-text">Proves the payment
+        <span class="step-want">Types the transaction ID back in by hand, then waits for
+          verification that is not instant.</span>
+      </span>
+    </div>
+    <div class="tie r10"></div>
+    <div class="screen r10">
+      <span class="screen-name">Transaction ID entry</span>
+      <span class="screen-note">The hand-typed TrxID. Serves step 8.</span>
+    </div>
+    <div class="tie r11"></div>
+    <div class="screen r11">
+      <span class="screen-name">Verification pending</span>
+      <span class="screen-note">Waiting, with a time on it. Serves step 8.</span>
+    </div>
+    <div class="tie r12"></div>
+    <div class="screen r12">
+      <span class="screen-name">Payment failed, five states</span>
+      <span class="screen-note">Wrong TrxID, expired OTP, insufficient balance, duplicate payment,
+        timeout. Serves step 8.</span>
+    </div>
+
+    <div class="step r13">
+      <span class="num">9</span>
+      <span class="step-text">Knows the session is booked
+        <span class="step-want">Time, subject, and how the session will happen.</span>
+      </span>
+    </div>
+    <div class="tie r13"></div>
+    <div class="screen r13">
+      <span class="screen-name">Booking confirmed</span>
+      <span class="screen-note">The session exists. Serves step 9.</span>
+    </div>
+
+    <div class="screen stray r14">
+      <span class="flag">No step. No line.</span>
+      <span class="screen-name">Pay with bKash panel, inside the booking request screen</span>
+      <span class="screen-note">It collects a payment number at step 5. Payment is step 7, after the
+        tutor confirms, and the panel's own note says no payment is charged yet. Either the panel
+        moves to step 7, or the journey is wrong about when money is taken.</span>
+    </div>
+
+  </div>
+
+  <div class="footnote">
+    <p><strong>Ended well, for the parent.</strong> The money reached a person whose documents
+      somebody checked, and the total paid is the total that was shown.</p>
+    <p><strong>The same fault, smaller.</strong> The session details on the built screen show a
+      Format row reading "Online (video call)". <code>brief-v3-interrogated.md</code> puts video calling out of scope,
+      so step 9 cannot state the format truthfully yet.</p>
+    <p><strong>Still open.</strong> Who issues the verified badge. Whether Nagad is in MVP, which
+      turns the payment method choice from one option into two. Whether search is in the first
+      build: <code>PRODUCT.md</code> lists it in MVP, <code>brief-v3-interrogated.md</code> puts
+      search and discovery out. Steps 2 and 9 depend on which is true.</p>
+  </div>
+
+</div>
+</body>
+</html>

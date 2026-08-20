@@ -14,13 +14,14 @@ Then fill in the copy. Leave this one empty so it is there for the client after 
 
 ## The eight classes are not eight weeks
 
-The course teaches one client over eight classes because that is how long it takes to learn. **Running it is a different thing.** On a real job you do the same seven moves in about a week, and most of them take under an hour.
+The course teaches one client over eight classes because that is how long it takes to learn. **Running it is a different thing.** On a real job you do the same eight moves in about a week, and most of them take under an hour.
 
 That is the point of this folder. If you finish the course thinking the method needs eight weeks, you will never use it again.
 
 | The move | The file | Course class | Real job |
 |---|---|---|---|
 | Say who these users are | `context.md` | 1 | 20 minutes |
+| Say how Claude behaves on this client | `claude-contract.md` | 2 | 20 minutes, before you run anything |
 | Agree what the job actually is | `engagement.md` | 2, 3 | 30 minutes, before you quote |
 | Interrogate what you were handed | `brief-interrogated.md` | 3 | 1 hour, day one |
 | Decide, and record why | `critique-notes.md` | 4 | 1 hour, after the first draft |
@@ -28,7 +29,9 @@ That is the point of this folder. If you finish the course thinking the method n
 | Build one real screen | `screen.html` | 6 | half a day |
 | Turn it into evidence | `career-vault/` at root | 7, 8 | 1 hour, when the job ends |
 
-Your working contract, your taste and your slop bans live at the **root**, in `principles/`. You wrote those once, and they carry across every client in this table. That is the compounding part: client number four costs you less than client number one did.
+**Two file names read differently on the assignment sheets, and they mean the files above.** The sheets call the interrogated brief `brief-v3-interrogated.md`, because EduBridge ships three versions of its brief and yours is version three. They call the built screen `my-booking-screen.html`, because EduBridge keeps a read-only `booking-screen.html` beside it. In your own folder the short names are correct. Rename them to match the sheet if that is easier to hand in.
+
+Your taste and your slop bans live at the **root**, in `principles/`. You wrote those once, and they carry across every client in this table. The contract is the one file that exists at both levels: the root copy is about you and never changes per client, and the copy in this folder is about this client only. That is the compounding part: client number four costs you less than client number one did.
 
 ---
 

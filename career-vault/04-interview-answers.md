@@ -99,7 +99,7 @@ You already have the answers. Every one of them is a file in your workspace. Tha
 
 *Strong:* "I assume the brief is out of date before I open it, because it usually is. First pass I read every version I was sent together, not one at a time, because contradictions only show up side by side. Then I pick the questions only I can answer, the ones where two readings are both defensible, and I answer them with a confidence label attached. On the last project three of my answers were guesses and I marked them as guesses. The client corrected one of them in week one instead of week four."
 
-*Why it works:* it describes a repeatable method with a specific outcome, and the confidence labelling is unusual enough to be remembered. **Source: `brief-interrogated.md`.**
+*Why it works:* it describes a repeatable method with a specific outcome, and the confidence labelling is unusual enough to be remembered. **Source: `brief-interrogated.md`, which is `brief-v3-interrogated.md` if you worked on EduBridge.**
 
 ---
 
@@ -185,7 +185,7 @@ Write your own answers below, grounded in the work you actually did in Class 6. 
 
 The test for every answer: pull out the sentence that names the decision. If you cannot find one, or if the only concrete thing in the answer is a tool name, the answer is not finished. "I used Claude Code to build the screen" is not an answer to anything. "I decided the photo goes below the fold because the page has to load on 3G" is.
 
-Use STAR for questions 2, 3 and 4. Two sentences per part, plus one line on what you learned.
+Use STAR for questions 2, 3, 4 and 5. Two sentences per part, plus one line on what you learned.
 
 When the drafts are done, open Claude Code at the root of this workspace on Sonnet 5 at medium effort. Ask it to interview you: it asks the question, you answer from memory without looking, then it tells you which decision you failed to name. Do that round three times. Fits in one session.
 
@@ -243,11 +243,25 @@ Result:
 
 What I learned:
 
-### 5. Answer the five process questions
+### 5. STAR: a time you cut scope
+
+A second decision from the same project is fine here. Pick the moment you said no to something, or moved it out of this round, and told the client why. `engagement.md` has the material. Vary the decision, not the project.
+
+Situation:
+
+Task:
+
+Action:
+
+Result:
+
+What I learned:
+
+### 6. Answer the five process questions
 
 One paragraph each, in your own words, from your own files. Open the file named under each one first.
 
-- How do you work on a brief? (`brief-interrogated.md`)
+- How do you work on a brief? (`brief-interrogated.md`, or `brief-v3-interrogated.md` on EduBridge)
 - Your boss changes the brief halfway through. What do you do? (`engagement.md`)
 - How do you negotiate? (`engagement.md`, `critique-notes.md`)
 - How do you plan a piece of work? (`/brief-to-tasks`)
@@ -255,7 +269,7 @@ One paragraph each, in your own words, from your own files. Open the file named 
 
 Then say each one out loud once. Fix whatever falls apart when spoken.
 
-### 6. What three questions do you ask them?
+### 7. What three questions do you ask them?
 
 One about the work, one about how you would grow there, one about how the team handles AI. Write your actual wording, not the categories.
 

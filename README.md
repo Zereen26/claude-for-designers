@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT-101828?style=flat-square&labelColor=FFC000" alt="MIT License">
   <img src="https://img.shields.io/badge/built%20with-Claude-101828?style=flat-square&labelColor=FFC000" alt="Built with Claude">
-  <img src="https://img.shields.io/badge/skills-9-101828?style=flat-square&labelColor=FFC000" alt="9 skills">
+  <img src="https://img.shields.io/badge/skills-included-101828?style=flat-square&labelColor=FFC000" alt="skills included">
   <img src="https://img.shields.io/badge/surface-Claude%20Code-101828?style=flat-square&labelColor=FFC000" alt="Runs in Claude Code">
   <img src="https://img.shields.io/badge/for-UI%2FUX%20designers-101828?style=flat-square&labelColor=FFC000" alt="For UI/UX designers">
 </p>
@@ -42,10 +42,10 @@ You do not get a finished workspace. You build it one file at a time. Each class
 |---|---|---|
 | 1 | What Claude Is and Why This Matters Now | Two files: `principles/context-block.md` (your defaults) and `projects/<your-client>/context.md`, copied from `_new-client/`, for a real brief of your own |
 | 2 | The Working Agreement | `principles/claude-contract.md` and `projects/edubridge/claude-contract.md` |
-| 3 | The New Brief | `projects/edubridge/brief-v3-interrogated.md` and `engagement.md` |
+| 3 | The New Brief | `projects/edubridge/brief-v3-interrogated.md`, `engagement.md`, and a `scope-email.md` you write by hand in the same folder |
 | 4 | Claude as Critic | `principles/design-taste.md`, `principles/anti-ai-slop.md`, then `projects/edubridge/critique-notes.md` |
 | 5 | Figma as Source of Truth | `projects/edubridge/tokens.md` |
-| 6 | Claude Code and Building One Real Flow | `projects/edubridge/my-booking-screen.html` |
+| 6 | Claude Code and Building One Real Flow | `projects/edubridge/my-booking-screen.html`, plus `ia-map.md`, `tasks.md` and `build-notes.md`, which Claude writes into the same folder as you go |
 | 7 | How to Sell Yourself: Brand and Portfolio | `career-vault/01-positioning.md`, `02-portfolio-story.md`, `06-proposal.md` |
 | 8 | How to Sell Yourself: The Interview | `career-vault/03-resume.md`, `04-interview-answers.md`, `05-linkedin-content.md` |
 
@@ -70,12 +70,13 @@ Run them in order on any project. Skip a step and the next one does that step's 
 ```
 claude-for-designers/
 ├── CLAUDE.md              what Claude reads when you open this folder
+├── .claude/skills/        the slash commands, already installed. Never open it
 ├── principles/            the knowledge layer: how you work
 │   ├── claude-contract.md     your working contract with Claude
 │   ├── design-taste.md        taste principles for designers using AI
 │   ├── anti-ai-slop.md        patterns to refuse to ship
 │   └── context-block.md       your defaults: your market, clients and surface
-├── skills/                the capability layer: the nine commands
+├── skills/                the readable copy of those commands. Edit them here
 ├── projects/              where work happens, one folder per client
 │   ├── _new-client/           EMPTY TEMPLATE. Copy this for every real client
 │   ├── _brief-bank/           four practice briefs that are not EduBridge
@@ -91,36 +92,13 @@ claude-for-designers/
 
 **Model settings.** Sonnet 5 at medium effort, for everything in this course. Do not spend your session budget on a bigger model.
 
-**Turning the nine skills into slash commands.** You need this from Class 2, which is the first class that runs one (`/grill-me`).
+**The slash commands are already here.** There is nothing to install. The folder carries them at `.claude/skills/`, so Claude Code finds them the moment you open this folder as your project. Open it at the root, type `/`, and the names appear. You need them from Class 2, which is the first class that runs one (`/grill-me`).
 
-**No terminal.** Open Claude Code at the root of this folder and paste this:
+You never open `.claude/skills/` yourself. The readable copies are in `skills/`, one file per command, and that is the folder to edit when you want to change how a command behaves.
 
-```
-Install the nine skills in the skills/ folder as slash commands for me.
-Each one needs to end up at ~/.claude/skills/<skill-name>/SKILL.md, where
-<skill-name> is the filename without .md. Do not change any of the contents.
-Then list the nine folders you created so I can check.
-```
+**If nothing appears when you type `/`,** check two things before asking. You opened the folder itself, not a folder above or below it. And you opened the unzipped folder, not the ZIP. If it is still empty after that, bring it to office hours.
 
-That is it. Claude Code has file access, so it does the copying and tells you what it did. Restart Claude Code, type `/`, and the nine commands appear.
-
-**Getting Claude to do your setup is not cheating and it is not a shortcut.** It is the first time in this course that you direct it at a real task instead of a design task, and it is a fair preview of the rest.
-
-<details>
-<summary>If you would rather run it yourself in a terminal</summary>
-
-Nothing in this course needs the terminal, and you can ignore this. But if you are comfortable there:
-
-```bash
-mkdir -p ~/.claude/skills
-for f in grill-me design-brief information-architecture design-tokens brief-to-tasks frontend-design design-review heuristic-evaluation persona-acid-test; do
-  mkdir -p ~/.claude/skills/$f
-  cp skills/$f.md ~/.claude/skills/$f/SKILL.md
-done
-```
-</details>
-
-If the skills do not appear after a restart, that is an office hours question. Do not reinstall repeatedly.
+**Nothing here needs a terminal.** If a command is missing and you want to work while you wait, open the file in `skills/` for that command, paste the whole thing into your session, then name the file you want it run against. Same text, same behaviour.
 
 ## Start your own client
 
@@ -130,7 +108,7 @@ Duplicate the empty template, never EduBridge. EduBridge is filled in as the ans
 
 Getting Claude to do the boring part is the point, not a shortcut.
 
-You do this for the first time in Class 1, on a real brief of your own, and you do it again for every client after the course. Inside you get the six files the course teaches, empty, each carrying the questions it wants answered and one example of the standard.
+You do this the week you pick your own client, and again for every client after the course. Inside you get the seven files the course teaches, empty, each carrying the questions it wants answered and one example of the standard.
 
 `projects/_new-client/README.md` maps the eight classes onto a one-week engagement, because **the course takes eight classes to teach a process that takes about a week to run.** If you finish this course thinking the method needs two months, you will never use it on a real job.
 

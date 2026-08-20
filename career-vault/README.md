@@ -10,23 +10,24 @@ Everything else in this workspace is about the project. This folder is about you
 
 The premise is simple and it is the reason the course ends here instead of at the shipped screen. Most junior designers can do the work but cannot describe it. They sit in an interview, get asked about a project, and narrate the screens. Meanwhile another designer in Dhaka with the same skills and the same portfolio talks about the decision they made when the brief turned out to be wrong, and gets the offer. The gap is not talent. It is that one of them wrote it down in advance.
 
-Five files. You fill them in during Classes 7 and 8, then you keep updating them for the rest of your career. Over a year this becomes the most useful folder in the workspace.
+Six files. You fill them in during Classes 7 and 8, then you keep updating them for the rest of your career. Over a year this becomes the most useful folder in the workspace.
 
-## The five files, and when you open each one
+## The six files, and when you open each one
 
 | File | Class | What it holds |
 |---|---|---|
 | `01-positioning.md` | Class 7 | Who you are, what you are good at, what you are not good at yet, what makes you not interchangeable |
 | `02-portfolio-story.md` | Class 7 | The five-part story of one project: what you decided, not what AI produced |
+| `06-proposal.md` | Class 7 | What you send a client who said yes: outcome, scope, exclusions, timeline, approval, next step |
 | `03-resume.md` | Class 8 | Resume source content, built from your projects rather than from job descriptions |
 | `04-interview-answers.md` | Class 8 | The AI objection, STAR answers, the questions you ask them |
 | `05-linkedin-content.md` | Class 8 | Bio, post templates, outreach messages |
 
-The numbering is the order. Do not skip. `01` feeds `02`, and both feed everything in Class 8. If you try to write the resume before the positioning, you will write a resume assembled out of job-posting language, which is what everyone else sends.
+The numbering is the reading order, and the table is the class order. `06-proposal.md` carries a `06` because it was written last, but you fill it in Class 7, right after the positioning and the story. Do not skip. `01` feeds `02`, and both feed everything in Class 8. If you try to write the resume before the positioning, you will write a resume assembled out of job-posting language, which is what everyone else sends.
 
 ## How each file works
 
-All five follow the same shape, the same as every other workbook file in this course:
+All six follow the same shape, the same as every other workbook file in this course:
 
 1. What the file is for, and why Claude needs it.
 2. Which class it belongs to.
