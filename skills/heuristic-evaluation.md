@@ -4,8 +4,8 @@ Ask the user to provide: (1) the design output (HTML file, Figma link, or screen
 
 Review against Nielsen's 10 usability heuristics. For each heuristic, give:
 - **Rating**: Pass / Needs work / Fail
-- **Evidence**: one specific example from this design — name the element, the screen, the exact behaviour
-- **Fix**: one concrete recommendation (not "improve feedback" — say "add a spinner to the Submit button when the form is processing so the user knows the action was received")
+- **Evidence**: one specific example from this design. Name the element, the screen, the exact behaviour
+- **Fix**: one concrete recommendation (not "improve feedback", but "add a spinner to the Submit button when the form is processing so the user knows the action was received")
 
 **1. Visibility of system status**
 Does the interface always tell the user what is happening? Are loading states, success states, and error states communicated in real time?

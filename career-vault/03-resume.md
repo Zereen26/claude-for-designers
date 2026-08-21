@@ -1,12 +1,25 @@
+---
+created: 2026-07-27
+type: workbook
+status: complete
+tags: [ostad, batch-02, career-vault, class-08, resume]
+---
+
 # Resume Content
 
-The resume is not the document; this file is. The PDF is just the formatted output. Keep the source content here, structured, easy to remix for different roles.
+**What this file is for:** the source content for your resume, kept structured here so you never write one from scratch again.
 
-When you apply for a specific role, you copy from this file into a formatted template. Never write a resume from scratch for every application.
+**Why Claude needs it:** when you ask Claude to tailor a resume to a specific job posting, this file is what it works from. A resume built from the job description instead of from your own work reads as hollow, because it is.
+
+**Class:** Class 8. First version in class, then updated every time you finish a project or start a job hunt.
+
+The resume is not the document. This file is. The PDF is just formatted output. When you apply somewhere, you copy from here into a template and cut what does not fit the role. That takes twenty minutes instead of an evening.
+
+One rule that runs through the whole file: a bullet is a decision you made with a result attached, not a task you completed. "Designed the booking screen" is a task. "Redirected the brief from student-first to parent-first after brief interrogation, which changed the whole flow" is a decision.
 
 ---
 
-## Header
+## The EduBridge example
 
 **Name:** Nusrat Zereen
 **Title:** Product Designer
@@ -15,36 +28,33 @@ When you apply for a specific role, you copy from this file into a formatted tem
 
 ---
 
-## Profile (3-4 lines)
+## YOUR TURN
 
-A condensed version of your positioning. The most important block on the resume because most recruiters read this and skip the rest.
+<!-- COURSE SCAFFOLDING: delete everything above YOUR TURN once you have filled it in. This becomes your real working file. -->
 
 > "Junior product designer based in Bangladesh. I work on trust-first mobile experiences for BD users on entry-level Android devices. Built the EduBridge tutor-booking flow end-to-end: interrogated a desktop-first brief into a mobile-first parent-facing one, ran forced-perspective critique to reject two weaker layouts, and shipped a working, tokenized HTML prototype. I direct the decisions; Claude accelerates execution."
 
-Three to four lines. Not a paragraph. Recruiters do not read paragraphs.
+When the draft is done, open Claude Code at the root of this workspace on Sonnet 5 at medium effort and ask it to do two passes. First, find every bullet that describes a task rather than a decision, and every number you cannot source. Second, cut the whole thing to one page. Then make the edits yourself. Fits in one session.
 
----
+### 1. Header and profile
 
-## Experience
+Name, title, location, contact. Then the profile in three or four lines, built from your positioning sentence. Include one line that names how you work with AI, so the recruiter does not have to guess.
 
-Reverse chronological. For each role:
+### 2. Experience
 
-### [Role title]: [Company] *([dates])*
+For each role you have had, one summary line and three to five bullets. Every bullet is a decision plus a result. Before you move on, read each bullet and ask: could someone who did nothing on this project have written this sentence? If yes, rewrite it.
 
-*One line summary of what you did there.*
+If you have no design job yet, skip to section 3 and say so plainly. Nobody expects a first-year designer to have three roles.
 
-- *Achievement, with a specific outcome or metric. Not "designed the app." Use the format: "[verb] [specific thing] [for/to specific result]."*
-- *Example: "Rebuilt EduBridge booking flow for BD market. Mobile-first, bKash integration, document-verified tutor signal. Reduced time-to-first-booking by 40% in user testing."*
-- *Example: "Established design tokens system for fintech MVP. 12 screens, three engineers, zero pixel disputes during handoff."*
-- *Example: "Interrogated 8 client briefs before design started. Caught 23 contradictions that would have caused mid-sprint rework."*
+### 3. Selected projects
 
-Three to five bullets per role. Bullets are decisions you made, not tasks you completed.
+Two or three, one line each. Include the Class 6 screen. For each one, link to its story file in `career-vault/portfolio-stories/`.
 
----
+### 4. Skills
 
-## Selected projects
+Three groups: design, tools, specialized. Five items maximum per group. Then delete anything you could not demonstrate live if an interviewer opened a laptop and asked you to.
 
-If your experience section is thin (junior career), list 2-3 projects here with one-line summaries each. Link to the corresponding portfolio story in `02-portfolio-story.md`.
+### 5. Which variant are you sending?
 
 - **EduBridge BD: Tutor booking flow** *(course project, 2026)*
   - Rewrote a desktop-first, student-targeted brief into a mobile-first, parent-facing flow after brief interrogation surfaced five contradictions between the client's brief and the PM's actual requirements. Rejected two competing layouts for weak or misplaced trust signals; cut a session-quantity stepper that let parents commit before tutor confirmation. Shipped a working, token-driven HTML prototype, verified at real phone width.

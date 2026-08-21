@@ -1,14 +1,27 @@
+---
+created: 2026-07-27
+type: workbook
+status: complete
+tags: [ostad, batch-02, career-vault, class-07, positioning]
+---
+
 # Positioning
 
-Who you are, what you stand for, what makes you not interchangeable with the next designer a recruiter scrolls past. This is the foundation of everything else in the vault.
+**What this file is for:** the four or five sentences that describe you, so you are not interchangeable with the next designer a recruiter scrolls past.
 
-Fill this in once during Class 7. Revisit every 3 months. The first version will be rough. That's fine.
+**Why Claude needs it:** when you ask Claude to write a bio, a resume profile, or a cover note, this file is the source it pulls from. Without it, Claude writes a generic designer.
+
+**Class:** Class 7. You fill it in once in class, then revisit every three months.
+
+Here is the problem this file solves. A recruiter has two tabs open. Yours, and another designer in Dhaka with the same years of experience and roughly the same Figma skills. If both profiles say "passionate UX designer with an eye for detail," the recruiter picks whichever loaded first. Positioning is how you stop being the second tab.
+
+Your first version will be rough. Write it anyway. A rough specific answer beats a polished vague one.
 
 ---
 
-## One-sentence positioning
+## The EduBridge example
 
-*Format: "I am a [role] who [specific verb] [specific kind of work] for [specific market or audience]."*
+This is the example, filled in by a designer who finished the EduBridge booking screen in Class 6. It is here so you can see the shape. Do not copy it.
 
 > "I am a product designer who turns confused offshore briefs into trust-first mobile flows for Bangladeshi parents and first-time users."
 
@@ -16,9 +29,9 @@ Evidence: EduBridge — took a desktop-first, Stripe-based, student-targeted bri
 
 ---
 
-## What I am good at (3 things, specific)
+## YOUR TURN
 
-Not "I am good at design." Specific things only.
+<!-- COURSE SCAFFOLDING: delete everything above YOUR TURN once you have filled it in. This becomes your real working file. -->
 
 1. Interrogating a brief: on EduBridge, running `/grill-me` against the client brief and PM thread surfaced five real contradictions (desktop vs. mobile, Stripe vs. bKash, English vs. Bengali, students vs. parents, scope vs. timeline) before any screen got drawn.
 2. Forced-perspective critique instead of "what do you think": ran three competing layouts through a confused-user, an engineer, and a skeptical-PM lens, and caught a real logic error (a session stepper appearing before tutor confirmation) that a taste-only review would have missed.
@@ -26,9 +39,9 @@ Not "I am good at design." Specific things only.
 
 *(Note: these are backed by the EduBridge project specifically. As more real projects land in `projects/`, add evidence from those too.)*
 
----
+### 1. What is your one-sentence positioning?
 
-## What I am NOT good at (yet)
+Write three versions using the format above. Then pick one and say why. The test: would a recruiter be able to repeat it to a colleague a day later?
 
 1. User testing with real people. The EduBridge critique work used forced-perspective AI prompts (confused user, engineer, skeptical PM), not actual interviews with real parents. Strong for catching logic errors fast; not a substitute for a real study.
 2. Visual/brand identity from scratch. EduBridge work was systemization — hygiene, tokens, a working prototype — starting from an existing brand direction, not inventing one.
@@ -36,17 +49,19 @@ Not "I am good at design." Specific things only.
 
 *(These three are backed by what's actually true of the EduBridge project. If any of them isn't true of you more broadly, edit it — but don't leave this section empty; naming real gaps is what makes the rest of this file credible.)*
 
----
+Picked, and why:
 
-## Where I want to be in 18 months
+### 2. What are you good at, and what is your evidence?
 
 > I want to be a product designer at a BD-based company, or an international company with a serious BD/South Asia focus, working in fintech or edtech where trust-first design for low-end devices is core to the product, not an afterthought. Path: finish the EduBridge case study and post it, ship 2-3 more real (non-course) projects with the same brief-interrogation-to-build process, and post on LinkedIn consistently enough that recruiters find me instead of the other way around.
 
 *(This is a reasonable default built from the trajectory visible in this repo, not a guess out of nowhere. Adjust the company type, domain, or timeline if your actual ambition is different — but it's a real position to start from, not a blank.)*
 
----
+Three things. Real ones. This is not a trap and it is not modesty. A designer who can name their edges reads as someone who knows what work looks like.
 
-## My elevator pitch (30 seconds)
+1.
+2.
+3.
 
 *(Practice this aloud and rewrite until it sounds like you, not like this draft.)*
 

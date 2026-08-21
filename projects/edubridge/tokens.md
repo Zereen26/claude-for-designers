@@ -1,17 +1,27 @@
 ---
+created: 2026-07-27
+type: reference
+status: template
+tags: [edubridge, class-5, workbook, design-tokens]
 project: EduBridge Bangladesh
 status: complete
 ---
 
-# EduBridge BD: Design Tokens (Class 5 output)
+# EduBridge BD: Design Tokens
 
-Tokens are how you stop describing colors and sizes in every prompt. Define them once, reference them by name. Then Claude reads "primary brand color" and knows you mean `#00A651`.
+**What this file is for:** the named values your design is made of, written once so you stop retyping hex codes into every prompt and every Figma layer.
 
 Source file: [Figma — EduBridge, Approach B2 AFTER (clean system)](https://www.figma.com/design/UKrHagmQWWdBAWUH0geIr3/Edubridge?node-id=5-3). Values below are pulled directly from that frame, not guessed. Use this file as the reference for any Claude Code prompt in Class 6.
 
 ---
 
-## Color
+## YOUR TURN
+
+Answer each question in place. Fill the tables with your own values, from your own critique.
+
+### Color
+
+***Which colors does your screen actually need, and what does each one mean? Give every token a use, and delete any row you cannot fill in. Keep the names; change the values.***
 
 | Token | Value | Use for | Wired? |
 |---|---|---|---|
@@ -44,7 +54,7 @@ Source file: [Figma — EduBridge, Approach B2 AFTER (clean system)](https://www
 | `text.caption` | 12px | 400/700 | Bio text, availability, PM suffix |
 | `text.micro` | 11px | 400 | Payment note |
 
-## Spacing
+### Spacing and radius
 
 Pulled from actual gaps/padding in the AFTER frame. Not a clean 4px multiple everywhere — flagged where it drifts.
 
@@ -59,7 +69,7 @@ Pulled from actual gaps/padding in the AFTER frame. Not a clean 4px multiple eve
 | `space.5` | 20px | content column gap *(off-scale — round to 16 or 24 next pass)* |
 | `space.6` | 24px | content horizontal padding |
 
-## Radius
+### Motion
 
 | Token | Value | Use for | Wired? |
 |---|---|---|---|
@@ -72,13 +82,13 @@ Pulled from actual gaps/padding in the AFTER frame. Not a clean 4px multiple eve
 
 | Token | Duration | Easing | Use for |
 |---|---|---|---|
-| `motion.fast` | 80ms | ease-out | Button press, micro-feedback |
-| `motion.default` | 150ms | ease-out | Most transitions |
-| `motion.slow` | 220ms | ease-out | Page-level changes, large surfaces |
+| `motion.fast` |  |  |  |
+| `motion.default` |  |  |  |
+| `motion.slow` |  |  |  |
 
-> Anything over 220ms is too slow for this product. If a transition needs more time, redesign it.
+### The one rule your system has to enforce
 
-## Trust signals
+***Write the single rule that keeps this system honest, in the shape "X appears only when it means Y." Name it. A rule with a name gets followed; a preference gets argued with.***
 
 Not a token strictly, but a design rule worth writing down here so Claude sees it: anywhere a tutor's verified status is shown, use `accent.primary` (the green) at full weight, paired with a check or shield icon. Verified badge is `space.6` tall, never decorative, always meaningful.
 

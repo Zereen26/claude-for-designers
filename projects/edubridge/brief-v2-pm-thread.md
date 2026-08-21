@@ -1,11 +1,17 @@
 ---
+created: 2026-07-27
+type: brief
+status: complete
+tags: [edubridge, class-3, reference, brief]
 project: EduBridge Bangladesh
-brief-version: 2: PM thread
+brief-version: "2: PM thread"
 source: Rafi Hossain (PM), via WhatsApp + email
 received: 3 days after the client brief
 ---
 
 # EduBridge BD: The PM Thread
+
+**Reference, not homework.** This is the brief as it actually arrives: in fragments, out of order, contradicting the document. You read it, you do not edit it. Your work for Class 3 goes in `brief-v3-interrogated.md`.
 
 *This is the second version of the brief. It does not arrive as a document. It arrives as a thread.*
 
@@ -32,7 +38,15 @@ Hey,
 
 Few things I forgot to loop you in on from yesterday's internal sync with Jamie's team.
 
-1. Stripe won't work in BD. Jamie's team didn't know this. We need bKash. Possibly Nagad too. They said "figure it out."
+1. Payment. I raised the card checkout with Jamie's team and it got complicated, so read this bit properly.
+
+   They know about bKash. That was not the problem. Jamie's exact words were "fine, we'll swap the card form for a bKash button." His team is treating it as a logo change on one screen.
+
+   Here is what I actually need you to work out. Cards do exist here, we can take them through SSLCOMMERZ, but most of our users will not have one. So realistically we need **both**: SSLCOMMERZ for the card minority, and bKash or Nagad for everyone else. And the mobile-money path is not their screen with a different button on it. You leave our site, you go to the bKash app, you enter your PIN, you get an OTP, you come back with a transaction ID that you type in by hand, and then it sits there until it is verified. That is not one screen.
+
+   Jamie's team have not seen this happen. They have UK numbers showing the card checkout converting at 19% and they trust it, so "it needs to be different here" is going to need more from you than my say-so.
+
+   Germany and the UAE are apparently getting the same one-checkout instruction. The UAE team have already pushed back about local cards. So we are not the only ones, which might help you or might not.
 
 2. The navy and green brand colors: Jamie's team sent updated brand guidelines this morning. The green changed to `#00A651`. They also want to use the color for trust signals. Not sure what that means exactly, just flagging.
 
@@ -70,5 +84,6 @@ Rafi
 
 ## How this file is used in the course
 
-- **Class 3:** You run `/grill-me` on this thread. The skill should surface the contradictions: desktop-first vs mobile-must, Stripe vs bKash, English vs Bengali, students-as-primary vs parents-as-decision-makers. Capture the output in `brief-v3-interrogated.md`.
-- **Class 4:** When you critique a generated screen, this thread is the reason most generated screens are wrong. They follow the client brief, not the real brief.
+- **Class 3:** you run `/design-brief` over this thread and the client brief together. It should surface the contradictions: desktop-first versus mobile-must, one global checkout versus a payment flow that is a different *shape* here, English versus Bengali, students-as-primary versus parents-as-decision-makers, and a three-week fixed budget that now has video calling in it. Your decisions go in `brief-v3-interrogated.md`, the commercial ones go in `engagement.md`, then `/persona-acid-test` checks whether they hold.
+- **The payment item is the hardest one and it is not about brand names.** Nobody is confused about whether bKash exists. The question is what a mobile-money flow does to a checkout designed around one instant card screen, how many screens and error states that adds, and who pays for the extra work. That last part is why it lands in `engagement.md` as well as in the brief.
+- **Class 4:** when you critique a generated screen, this thread is the reason most generated screens are wrong. They follow the client brief, not the real one.

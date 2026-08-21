@@ -1,24 +1,59 @@
 ---
+created: 2026-07-27
+type: brief
+status: template
+tags: [edubridge, class-3, workbook, brief]
 project: EduBridge Bangladesh
-brief-version: 3: interrogated synthesis
-status: template: you fill this in during Class 3
+brief-version: "3: interrogated synthesis"
 ---
 
-# EduBridge BD: Interrogated Brief (Class 3 output)
+# EduBridge BD: Interrogated Brief
 
-This file is the synthesis you produce during Class 3. You write it. Claude does not.
+**What this file is for:** the one brief you actually design from, written by you after you have pulled apart the client brief (v1) and the PM thread (v2).
 
-After running `/grill-me` on the client brief (v1) and the PM thread (v2), you should have answers to the questions both briefs left open. Write them down here. This becomes the source of truth for Classes 4-6.
+**Why Claude needs it:** v1 and v2 contradict each other in seven places. If you hand Claude both and no decision, it picks for you, quietly, and you get a screen built on the wrong user, the wrong device and the wrong payment method.
 
-Fill in the sections below. Delete the prompts in italics when you have written your answer. Keep the headings.
+**Which class:** Class 3. You keep using it in Classes 4, 5 and 6.
+
+<!--
+COURSE NOTE for the student. This is not an instruction to Claude.
+
+Everything between here and `## YOUR TURN` is teaching material. Delete it once your own answers are in.
+-->
+
+## How you produce it
+
+Read `brief-v1-client.md` and `brief-v2-pm-thread.md` first. Both, in full, before you write anything.
+
+Then, in one Claude Code session on Sonnet 5 at medium effort, opened at this project folder:
+
+1. Run `/design-brief` with both briefs in context. It will not resolve the contradictions for you. It will name them, and it will ask you to decide.
+2. Write your decisions into `## YOUR TURN` below. In your words, not Claude's.
+3. Run `/persona-acid-test` on what you wrote. If the confused user, the skeptical engineer or the impatient PM can knock a section over, that section is not finished.
+
+The skills surface the conflict. You make the call. That is the whole point of the class: a brief you agreed to without reading is a brief you will be blamed for.
+
+## Example: the instructor's filled version
+
+Labelled as the example. This is one designer's set of decisions, not the answer key. If your version comes out identical to this, you did not interrogate anything, you copied. The full worked version is in `brief-v3-interrogated.example.md`.
+
+**Who is actually using this.** A 42-year-old parent in Dhaka on a sub-15K taka Android, home Wi-Fi in the evening or slow 4G during the day. Choosing a tutor for a 16-year-old preparing for HSC. Afraid of being scammed by someone claiming qualifications they do not have. Will not book until they see proof of verification, and will not commit until the total cost is obvious.
+
+**What the contradictions actually were.** Desktop-first (v1) versus mobile-must (v2): mobile-first, because the sub-15K taka Android is the default device and desktop is the edge case. One global checkout (v1) versus the flow this market needs (v2): both paths, SSLCOMMERZ for the card minority and bKash or Nagad for everyone else. The finding is not the brand name, it is that mobile money is a different flow shape: an app switch, a PIN, an OTP, a hand-typed transaction ID and an async verification wait, which adds three to four screens and five error states the brief never budgeted for. English-only (v1) versus Bengali "strongly preferred" (v2): plan Bengali UI strings now, retrofitting is more expensive later. Students as primary (v1) versus parents as decision-makers (v2): parents, because they hold the money.
+
+**Scope.** Building first: the parent-facing tutor booking request screen (tutor name, subject, verified badge, qualifications, hourly rate in BDT, one CTA). Out: video calling, search and discovery, tutor onboarding, translation of tutor-written content.
+
+**Assumptions carried forward.** bKash first with Nagad likely second, priority unconfirmed. Tutors will hand over NID and qualification documents. Bengali means UI strings only. The 3-lakh budget is firm.
+
+**Open questions.** Who issues the verified badge and who checks the documents; without an issuer the badge is decoration. What "trust is the main thing" means in practice: badge, video, phone call, or all three. Whether Nagad is in MVP.
 
 ---
 
-## Who is actually using this
+## YOUR TURN
 
 The primary user is a 46-year-old parent in or outside Dhaka, on a sub-15K taka Android. The secondary user is a 33-40-year-old parent in or outside Dhaka, using a desktop. Both use the product on home Wi-Fi in the evening or slow 4G/5G during the day. They are choosing a tutor for their 16-year-old preparing for HSC. They are afraid of being scammed by an unverified person who claims qualifications they do not have. They want to see proof of qualifications and verification before they will consider booking, and they want the total cost, including any discount or monthly payment option (BD users respond well to these), to be obvious before they commit.
 
-## What the contradictions actually were
+***One paragraph. Who is the primary user, on what device, on what connection, in what language, trying to do what, and afraid of what? Name the fear. Trust work is designed against a fear.***
 
 - **Desktop-first vs mobile-must:** Mobile-first. The client brief said desktop-first with responsive as a nice-to-have, but the PM thread confirmed mobile is a hard must. Sub-15K taka Android is the default device.
 - **Stripe vs bKash:** bKash, likely with Nagad. Stripe does not operate in BD; the client brief assumed it without knowing this.
@@ -28,14 +63,14 @@ The primary user is a 46-year-old parent in or outside Dhaka, on a sub-15K taka 
   - Confidence: Confident
   - Gap: The brief never confirms whether the client has approved reducing the scope or extending the timeline.
 
-## What I am building first
+### Scope: what I am building first, and what I am not
 
 The tutor profile and booking request flow, parent-facing. The most meaningful success metric is successful bookings, not tutor signups alone. Since parents make the booking decision, I will prioritize the booking flow and trust-building screens before expanding other features.
 
 - Confidence: Guess
 - Gap: The brief does not define which KPI (signups, searches, or conversion) the client will actually use to evaluate the MVP after launch.
 
-## What is out of scope
+***What are you treating as true without confirmation? Write each one down so it stops being invisible. An unwritten assumption becomes someone else's fault later.***
 
 - Video calling in the booking flow. Separate epic after MVP launch; scope does not fit the current timeline and budget.
 - Search and discovery. Different sprint.

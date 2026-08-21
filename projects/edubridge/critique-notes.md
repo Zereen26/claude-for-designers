@@ -1,17 +1,56 @@
 ---
+created: 2026-07-27
+type: note
+status: template
+tags: [edubridge, class-4, workbook, critique]
 project: EduBridge Bangladesh
 status: complete
 ---
 
-# EduBridge BD: Critique Notes (Class 4 output)
+# EduBridge BD: Critique Notes
 
-In Class 4 you generate a first-pass screen from the PM brief (the confused one). Then you critique it using the three forced-perspective prompts. Capture the output here.
+**What this file is for:** the record of what was actually wrong with your first-pass screen, and what you decided to change because of it.
 
-The point of this file is to teach you that "what do you think" is a useless question, and that engineered critique surfaces real problems. Keep this file alive. Add to it whenever you critique any screen, not just EduBridge.
+**Why Claude needs it:** "what do you think of this?" gets you flattery. A named perspective with a named constraint gets you a real finding. This file holds the findings so Class 5 and Class 6 build the post-critique screen instead of the pre-critique one.
+
+**Which class:** Class 4. Class 5 and Class 6 read your synthesis out of it.
+
+<!--
+COURSE NOTE for the student. This is not an instruction to Claude.
+
+Everything between here and `## YOUR TURN` is teaching material. Delete it once your own answers are in.
+-->
+
+## How you produce it
+
+Generate a first-pass screen from the confused brief on purpose. Then, in one Claude Code session on Sonnet 5 at medium effort:
+
+1. Run `/design-review` on the screen. It gives you the structured pass.
+2. Run `/heuristic-evaluation` on the same screen. Nielsen's ten, every finding tied to one element and one fix.
+3. Run the three forced-perspective prompts below yourself, one at a time, and paste what comes back.
+4. Write your own synthesis last. Claude does not get to decide what you change.
+
+Keep this file alive after the course. Every screen you critique goes in here in the same shape.
+
+## Example: the instructor's filled version
+
+Labelled as the example. Shortened to one finding per perspective so you can see the shape.
+
+**Screen being critiqued.** Tutor booking request screen, v0.1, generated straight from the confused PM brief. Tutor name, large photo, hourly rate, a generic "verified" label, a "Book Now" button.
+
+**Confused user on a 3G phone.** "I think you want me to pay someone, but I do not know who checked this person. The word verified is sitting there with no explanation. The photo took long enough that I nearly closed the tab."
+
+**Engineer shipping in 10 days.** "The verified label is the expensive one, because right now it is a string, and making it true means a document pipeline, a reviewer and a status field. The full-bleed photo above the fold also needs responsive art direction and a real image CDN."
+
+**Skeptical PM.** "It will fail because a parent who does not know who verified the tutor will leave and ask a neighbour for a recommendation instead. Book Now reads like a vending machine, so the parent expects an instant confirmation and gets a pending request. And the price is shown per hour with no session total, so the parent does the maths themselves and abandons."
+
+**My synthesis, in priority order.** (1) Replace the generic verified label with an explicit badge naming the document type; trust is the stated conversion lever. (2) Move the photo below the decision area; it costs the most on 3G and buys the least. (3) Rename "Book Now" to "Send Booking Request", so the copy matches what actually happens. (4) Show the session total in BDT, not just the hourly rate.
+
+**What I would have missed.** On my own I would have caught the photo weight and stopped there, because it is the finding that looks like design work. The engineer perspective is what exposed that "verified" was a decoration with no system behind it, and the PM perspective is what caught the copy promising an instant booking the product cannot deliver. Neither is a visual problem, and both would have shipped.
 
 ---
 
-## Screen being critiqued
+## YOUR TURN
 
 Booking request screen for EduBridge BD. Three different layout approaches were built in Figma for the same flow (Search, Tutor Profile, Booking Request, Payment), each shown as a mobile screen sized for Android 13.
 
@@ -19,7 +58,7 @@ Booking request screen for EduBridge BD. Three different layout approaches were 
 - **Approach B2, Trust First:** Tutor profile, rating, a bio, language tags, a verification table naming three specific checks (NID Verification, Qualification Certificate, Background Check), a session counter, date and time, total cost, then the CTA.
 - **Approach C, Order Summary:** Tutor profile, a step indicator, a cost breakdown table (subtotal, discount, total), a small verified tag below the pricing, then the CTA.
 
-## Perspective 1: confused user on a 3G phone
+***Which screen, which version, and which brief did you generate it from? Paste a screenshot or describe it in two lines.***
 
 ```
 You are a first-time user, age 35, on a sub-15K taka Android, 3G
@@ -40,7 +79,8 @@ polite.
 ```
 You are an engineer who has to ship this in 10 days. List three
 things in this design that will be expensive to build and explain
-why, in code terms. Be specific about which CSS or interaction is hard.
+why, in code terms. Be specific about which CSS or interaction is
+hard.
 ```
 
 **Approach A:** The "Verified Tutor" badge is a static label with no real data behind it, and needs to be connected to an actual verification field before shipping. The empty space between the time and the button comes from a flexible spacer, and on a real device this needs a minimum height or the button will sit awkwardly on different screen sizes. The single time slot is shown as plain text, not a selectable control, so this section has to be rebuilt if multiple time options are needed.
@@ -63,7 +103,7 @@ reference a real user behavior, not aesthetics.
 
 **Approach C:** Showing a discount before confirming a discount program exists is risky. If this ships without real discount logic behind it, a parent could screenshot the page and hold the platform to a price it cannot support. Putting "Verified Tutor" below the price table means this design treats cost as more important than trust, but the brief and the PM thread both say trust is the main blocker for this audience.
 
-## My synthesis
+### My synthesis, and what I would have missed
 
 **Approach B2 wins.** The client brief and the PM thread both say trust is the main thing for this audience, and B2 is the only approach that names three specific verification checks (NID Verification, Qualification Certificate, Background Check) instead of one generic badge. Approach A reduces trust to a single word, "Verified," with no explanation behind it. Approach C pushes the verification signal below the price breakdown, which puts cost ahead of trust when the brief says the opposite should be true.
 

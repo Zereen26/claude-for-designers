@@ -3,8 +3,8 @@
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT-101828?style=flat-square&labelColor=FFC000" alt="MIT License">
   <img src="https://img.shields.io/badge/built%20with-Claude-101828?style=flat-square&labelColor=FFC000" alt="Built with Claude">
-  <img src="https://img.shields.io/badge/skills-9-101828?style=flat-square&labelColor=FFC000" alt="9 skills">
-  <img src="https://img.shields.io/badge/interfaces-Chat%20%C2%B7%20Cowork%20%C2%B7%20Code-101828?style=flat-square&labelColor=FFC000" alt="Works across Chat, Cowork, Code">
+  <img src="https://img.shields.io/badge/skills-included-101828?style=flat-square&labelColor=FFC000" alt="skills included">
+  <img src="https://img.shields.io/badge/surface-Claude%20Code-101828?style=flat-square&labelColor=FFC000" alt="Runs in Claude Code">
   <img src="https://img.shields.io/badge/for-UI%2FUX%20designers-101828?style=flat-square&labelColor=FFC000" alt="For UI/UX designers">
 </p>
 
@@ -12,21 +12,54 @@
 
 A working repository for designers who use Claude as a collaborator. Skills, principles, project templates, and a career vault. Not a pile of prompts to paste, a system to work inside.
 
-> **New here?** Jump to [Install](#install) to get the nine skills running in two minutes, or read [Why this exists](#why-this-exists) first.
+## Read this before you start
 
-Most designers use Claude like a vending machine: paste a request, take whatever drops out. This repo is the opposite. You download it, brief Claude once through a working contract, and then run a nine-step design process where every step builds on the last. The output stops being generic the moment Claude knows your project, your market, and your constraints.
+- **This is not a beginner UX course.** It assumes you already know UX fundamentals: research, flows, hierarchy, critique. What it teaches is how to get your Claude setup right so you direct AI instead of operating Figma.
+- **What it costs.** Claude Pro, about $20 a month, plus the free Claude Desktop app. That is the honest number. There is no free path that does what this course needs.
+- **Your account must be your own.** Never share a login, never buy a seat in someone else's account, never split one subscription between friends. Shared accounts get flagged by IP and held, and you lose access mid-course. Two students learned this the hard way last batch.
 
-Built for the [Claude for UI/UX Designers](https://ostad.app) course on Ostad, with Bangladesh-market design as the worked example. You do not need the course to use the repo.
+## Where to start
 
----
+Download the folder, open it in Claude Code, and type:
+
+```
+explain this folder to me
+```
+
+Claude reads [`CLAUDE.md`](CLAUDE.md), works out which class you are on by looking at which files are still blank, and tells you which file is today's. That is the fastest orientation available. Do it before reading the rest of this page.
 
 ## Why this exists
 
 Claude with no context produces work any agency in any city could ship with the same prompt. That is the commodity end of design, and it is the part AI is eating fastest.
 
-The designers who stay valuable are the ones who bring what Claude structurally cannot: a real brief, a real user, a real market, and the judgment to push back. This repo is the scaffolding for that. It makes the context permanent so you stop re-briefing Claude every conversation, and it keeps the decisions yours.
+The designers who stay valuable bring what Claude structurally cannot: a real brief, a real user, a real market, and the judgment to push back. This repo is the scaffolding for that. It makes the context permanent so you stop re-briefing Claude every conversation, and it keeps the decisions yours.
 
----
+## How the folder grows
+
+You do not get a finished workspace. You build it one file at a time. Each class: open one file, learn why it exists, fill it in for your own project, bring it back.
+
+| # | Class | The file you fill in |
+|---|---|---|
+| 1 | What Claude Is and Why This Matters Now | No file. The same prompt twice in a chat window, once cold and once with six lines of context, and four bullets on what changed. The repo opens in Class 2 |
+| 2 | The Working Agreement | `principles/claude-contract.md` and `projects/edubridge/claude-contract.md` |
+| 3 | The New Brief | `projects/edubridge/brief-v3-interrogated.md`, `engagement.md`, and a `scope-email.md` you write by hand in the same folder |
+| 4 | Claude as Critic | `principles/design-taste.md`, `principles/anti-ai-slop.md`, then `projects/edubridge/critique-notes.md` |
+| 5 | Figma as Source of Truth | `projects/edubridge/tokens.md` |
+| 6 | Claude Code and Building One Real Flow | `projects/edubridge/my-booking-screen.html`, plus `ia-map.md`, `tasks.md` and `build-notes.md`, which Claude writes into the same folder as you go |
+| 7 | How to Sell Yourself: Brand and Portfolio | `career-vault/01-positioning.md`, `02-portfolio-story.md`, `06-proposal.md` |
+| 8 | How to Sell Yourself: The Interview | `career-vault/03-resume.md`, `04-interview-answers.md`, `05-linkedin-content.md` |
+
+Every file you fill in opens the same way: what it is for, why Claude needs it, then a `## YOUR TURN` section you answer in place. When you are done, delete the scaffolding above `YOUR TURN`. What is left is your real working file.
+
+The worked EduBridge version sits in one of two places, and which one depends on the file. Some carry the example inline, above `YOUR TURN`, labelled as the example. The rest ship blank, with the worked version beside them under the same name plus `.example`: `context.example.md` next to `context.md`, `engagement.example.md` next to `engagement.md`, `brief-v3-interrogated.example.md` next to `brief-v3-interrogated.md`, `ia-map.example.md` next to the `ia-map.md` you write in Class 6.
+
+So the file with your name on it is blank when you get there, and the answer is never hidden. Read the example after you have written yours, not before. Comparing is the exercise; copying skips it.
+
+## Three rules about where files go
+
+1. **Root versus project.** Root holds what is true about *you*: how you work, your taste, your voice, your skills. A project folder holds what is true about *that client*: their brief, their users, their constraints. Test: if it would still be true on your next job, it goes at root.
+2. **Select a Folder is a decision.** Open Claude Code at the **root** when the work spans projects (writing your contract, building a skill). Open at the **project folder** when you are doing client work. Opening at the wrong level is how you get generic output, or one client's context leaking into another's.
+3. **Context has two levels, and rule 1 decides which.** The defaults block under `Who I am` in `principles/claude-contract.md` holds what you assume when a brief says nothing: the clients who keep finding you, the surface you usually work on, the device you design down to. `projects/<client>/context.md` holds **that client's** users and overrides those defaults. If your clients change every few weeks, which is normal, this split is what stops you starting from blank every time.
 
 ## The nine-step process
 
@@ -34,84 +67,59 @@ The designers who stay valuable are the ones who bring what Claude structurally 
 
 Run them in order on any project. Skip a step and the next one does that step's work badly.
 
----
-
 ## What's in here
 
 ```
 claude-for-designers/
-├── CLAUDE.md              what Claude reads when you open the project
+├── CLAUDE.md              what Claude reads when you open this folder
+├── .claude/skills/        the slash commands, already installed. Never open it
 ├── principles/            the knowledge layer: how you work
 │   ├── claude-contract.md     your working contract with Claude
 │   ├── design-taste.md        taste principles for designers using AI
-│   ├── anti-ai-slop.md        patterns to refuse to ship
-│   └── bd-defaults.md         market context block (swap for your market)
-├── skills/                the capability layer: the nine commands
-├── projects/              where work happens, one folder per project
+│   └── anti-ai-slop.md        patterns to refuse to ship
+├── skills/                the readable copy of those commands. Edit them here
+├── projects/              where work happens, one folder per client
+│   ├── _new-client/           EMPTY TEMPLATE. Copy this for every real client
+│   ├── _brief-bank/           four practice briefs that are not EduBridge
 │   └── edubridge/             the worked example, brief through built screen
-└── career-vault/          positioning, portfolio stories, interview prep
+└── career-vault/          positioning, case study, proposal, resume, interview, profile
 ```
 
-`principles/` is the part most people skip and the part that makes the difference. It is the working contract, the taste rules, and the anti-slop list. Claude reads it before it does anything, so its first draft already sounds like your work instead of everyone's.
-
----
+`principles/` is the part most people skip and the part that makes the difference. Claude reads it before it does anything, so the first draft already sounds like your work instead of everyone's.
 
 ## Install
 
-Pick the Claude interface you use. The files are the same everywhere; only the install path changes. **However you got the repo: the green Code button on GitHub gives you a ZIP (download and unzip it, no Git needed), or clone it if you know Git. The contents are identical. The unzipped folder may be named `claude-for-designers-main`; that is fine.**
+**Getting the repo.** The green Code button on GitHub gives you a ZIP: download and unzip it, no Git needed. Or clone it if you know Git. The contents are identical. The unzipped folder may be named `claude-for-designers-main`, which is fine.
 
-### Claude Code (the Desktop App's Code tab, or a terminal)
+**Model settings.** Sonnet 5 at medium effort, for everything in this course. Do not spend your session budget on a bigger model.
 
-You only need this from Class 6. The nine skills live in `skills/`. To turn them into slash commands, open a terminal in your unzipped (or cloned) repo folder and run:
+**The slash commands are already here.** There is nothing to install. The folder carries them at `.claude/skills/`, so Claude Code finds them the moment you open this folder as your project. Open it at the root, type `/`, and the names appear. You need them from Class 2, which is the first class that runs one (`/grill-me`).
 
-```bash
-mkdir -p ~/.claude/skills
-for f in grill-me design-brief information-architecture design-tokens brief-to-tasks frontend-design design-review heuristic-evaluation persona-acid-test; do
-  mkdir -p ~/.claude/skills/$f
-  cp skills/$f.md ~/.claude/skills/$f/SKILL.md
-done
-```
+You never open `.claude/skills/` yourself. The readable copies are in `skills/`, one file per command, and that is the folder to edit when you want to change how a command behaves.
 
-Restart Claude Code, type `/`, and the nine commands appear. Prefer Git over the ZIP? Run `git clone https://github.com/mshadmanrahman/claude-for-designers.git` first, then the loop. Not comfortable in a terminal? You do not need it; the Chat path below works without one.
+**If nothing appears when you type `/`,** check two things before asking. You opened the folder itself, not a folder above or below it. And you opened the unzipped folder, not the ZIP. If it is still empty after that, bring it to office hours.
 
-### Claude Cowork (Desktop App, Cowork tab)
+**Nothing here needs a terminal.** If a command is missing and you want to work while you wait, open the file in `skills/` for that command, paste the whole thing into your session, then name the file you want it run against. Same text, same behaviour.
 
-Open the Cowork tab, go to Settings, Plugins, Upload plugin, and point it at this repo's `skills/` folder. The nine skills become slash commands.
+## Start your own client
 
-### Claude (Chat, on claude.ai or the Desktop App)
+Duplicate the empty template, never EduBridge. EduBridge is filled in as the answer key; duplicating it means dragging one client's users, tokens and decisions into another client's folder.
 
-Settings, Projects, New Project. For each skill, paste the contents of `skills/{name}.md` into the project's custom instructions and save. Conversations inside that project follow the skill.
+**No terminal needed.** Right-click the `_new-client` folder, choose Duplicate, rename the copy. On Windows, copy and paste it, then rename. Or just tell Claude Code: *"duplicate the _new-client folder and call it acme-fintech."*
 
----
+Getting Claude to do the boring part is the point, not a shortcut.
 
-## Which Claude interface, when
+You do this the week you pick your own client, and again for every client after the course. Inside you get the seven files the course teaches, empty, each carrying the questions it wants answered and one example of the standard.
 
-- **Chat** for briefing, critique, and ideation. Lightest and fastest.
-- **Cowork** when you want Claude to do the work across local files: "restructure this Figma export folder," "build a comparison deck from these screenshots."
-- **Claude Code** when you are building components or HTML.
-- **Claude in Chrome** for design research: have Claude walk 30 competitor flows and summarize.
-- **Claude for Office** for client decks in PowerPoint, Word, Excel.
+`projects/_new-client/README.md` maps the eight classes onto a one-week engagement, because **the course takes eight classes to teach a process that takes about a week to run.** If you finish this course thinking the method needs two months, you will never use it on a real job.
 
----
-
-## Start your own project
-
-```bash
-cp -r projects/edubridge projects/your-project
-cd projects/your-project
-```
-
-Replace the brief, run `/grill-me`, and work down the nine steps. The folder is the process, not just the output of it.
-
----
+No live client this week? `projects/_brief-bank/` has four practice briefs that are deliberately not EduBridge: a desktop logistics dashboard, a Shopify storefront, a B2B landing page, and a Gulf booking app with Arabic and RTL. Each one breaks an assumption EduBridge would otherwise leave you with.
 
 ## Going deeper
 
 [**claudecodeguide.dev/for-designers**](https://claudecodeguide.dev/for-designers) has bite-sized guides for specific design workflows: brief decoding, critique gathering, research synthesis, handoff. Use it as your reference library once the skills are installed.
 
-[**Ostad: Claude for UI/UX Designers**](https://ostad.app) is the structured eight-class course that walks through this entire workspace with EduBridge Bangladesh as the running example.
-
----
+[**Ostad: Claude for UI/UX Designers**](https://ostad.app) is the eight-class course that walks through this workspace with EduBridge Bangladesh as the running example.
 
 ## License
 
