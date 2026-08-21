@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Aroggo Case Study Draft</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; color:#1a1a1a; width:1050px; }
+  h2 { font-size: 24px; color:#0F6E5E; margin-bottom: 6px; }
+  .cs-page { padding: 55px 65px; border-bottom: 3px solid #eee; }
+  .cs-num { display:inline-block; background:#111; color:#fff; font-size:11px; font-weight:700; padding:3px 10px; border-radius:10px; margin-bottom:10px; }
+  .cs-h1 { font-size: 22px; color:#111; margin-bottom: 4px; font-weight:800; }
+  .cs-sub { font-size: 12.5px; color:#666; margin-bottom: 16px; }
+  .cs-body { font-size: 13px; line-height: 1.7; color:#2a2a2a; margin-bottom: 10px; }
+  .cs-body b { color: #111; }
+  .placeholder { background:#F4F4F4; border:1.5px dashed #b8b8b8; border-radius:8px; padding:14px 18px; font-size:12px; color:#777; margin: 10px 0; }
+  .cs-list { margin-left: 20px; margin-bottom: 8px; }
+  .cs-list li { font-size: 13px; line-height: 1.7; color:#2a2a2a; margin-bottom: 4px; }
+  .persona-card { display:flex; gap:16px; background:#fff; border:1px solid #ddd; border-radius:10px; padding:14px; margin-bottom:10px; }
+  .persona-photo { width:56px; height:56px; border-radius:50%; background:#e0e0e0; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:20px; color:#999; }
+  .swatch-row { display:flex; gap:10px; margin: 10px 0; flex-wrap: wrap; }
+  .swatch { width:80px; }
+  .swatch-box { height:50px; border-radius:6px; border:1px solid #ddd; }
+  .swatch-label { font-size:10px; color:#666; margin-top:4px; }
+  .flow-badge { display:inline-block; background:#E8F3F0; color:#0F6E5E; font-size:11px; font-weight:700; padding:3px 10px; border-radius:6px; margin-right:6px; margin-bottom:6px; }
+  .fail-box { background:#FDECEC; border-left:4px solid #C94F4F; border-radius:6px; padding:14px 18px; margin-bottom:10px; }
+  .fix-box { background:#E8F3F0; border-left:4px solid #0F6E5E; border-radius:6px; padding:14px 18px; margin-bottom:10px; }
+  .ai-table { width:100%; border-collapse:collapse; margin-top:10px; font-size:12.5px; }
+  .ai-table th, .ai-table td { border:1px solid #ddd; padding:8px 10px; text-align:left; }
+  .ai-table th { background:#F0F9F6; color:#0F6E5E; }
+  .cs-cover { text-align:center; padding: 130px 60px; }
+  .cs-cover h1 { font-size: 34px; color:#fff; margin-bottom:12px; }
+  .cs-cover p { font-size:14px; color:#d8f0ea; }
+  .toc { padding: 40px 65px; background:#F7F6F3; }
+  .toc h3 { font-size:14px; color:#111; margin-bottom:10px; }
+  .toc ol { margin-left:20px; }
+  .toc li { font-size:12.5px; color:#333; line-height:1.9; }
+</style>
+</head>
+<body>
+
+<div class="cs-page" style="padding:0;">
+  <div class="cs-cover" style="background:#0F6E5E;">
+    <h1>Aroggo — Never Run Out</h1>
+    <p>Auto-Refill &amp; Per-Patient Prescription Tracking — Case Study Draft</p>
+    <p style="margin-top:20px; font-size:12px;">Built from the 12-case-study Behance research (Nayem Islam's portfolio), applied to your own Aroggo project.</p>
+  </div>
+</div>
+
+<div class="toc">
+  <h3>Ei case study-r 20-ta section</h3>
+  <ol>
+    <li>Thumbnail &amp; Hero</li>
+    <li>Project Overview</li>
+    <li>Problem &amp; Solution</li>
+    <li>Audit Goals &amp; Objectives</li>
+    <li>Competitor Analysis</li>
+    <li>Heuristic Evaluation</li>
+    <li>Design Process &amp; Timeline</li>
+    <li>User Persona</li>
+    <li>Design System &amp; Visual Direction</li>
+    <li>Color Palette</li>
+    <li>Target Audience</li>
+    <li>User Flow</li>
+    <li>Information Architecture</li>
+    <li>Sketch</li>
+    <li>Mid-Fi</li>
+    <li>Hi-Fi</li>
+    <li>Breakdown Banner (Before/After)</li>
+    <li>Where AI Was Used <i>(notun section)</i></li>
+    <li>Failure &amp; Redesign Journey <i>(notun section)</i></li>
+    <li>Thank You</li>
+  </ol>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">01 / 20 — Thumbnail &amp; Hero</div>
+  <div class="cs-h1">High-Quality Thumbnail &amp; Hero Image/Video</div>
+  <div class="cs-sub">Pattern source: ShareTrip, Pathao, Electricity Kiosk — sob case study-i ekta strong single-line hero diye shuru hoy, generic na.</div>
+  <div class="cs-body">Hero line draft (specific human, specific gap — Pathao/ShareTrip pattern onujayi):</div>
+  <div class="placeholder">"Never Run Out." — Auto-refill and per-patient dose tracking for families managing chronic medication in Bangladesh.<br><br>Subline: For Abdur Rahman, Metformin runs out every month — and no one remembers to reorder until it's already gone.</div>
+  <div class="cs-body">Hero visual: 3 phone mockups showing the "Digital Pill Box Dashboard" (stock countdown ring) — jekhane tomar wireframe-r <code>163:2</code> frame theke real screen export korte hobe. Video hole: 5-7 second screen-recording loop of the reorder flow (Setup → Countdown → Auto-refill confirm).</div>
+  <div class="placeholder">[Real screen export lagbe: Figma file 5RtYliDOkowaEuPkcN5h0u, page 67:10, frame 163:2 (Home v3 ring-hero) ke hero image hisebe export koro]</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">02 / 20 — Project Overview</div>
+  <div class="cs-h1">Project Overview</div>
+  <ul class="cs-list">
+    <li><b>Project:</b> Aroggo — Auto-Refill &amp; Per-Patient Prescription Tracking Feature</li>
+    <li><b>Category:</b> Healthcare / Medicine Delivery (Bangladesh)</li>
+    <li><b>Role:</b> UX Designer — [tomar naam]</li>
+    <li><b>Course:</b> Case Study Club BD, mentored by Kowsar Mamun, Nayem Islam, Rakib bhai</li>
+    <li><b>Type:</b> Conceptual redesign — adding a new feature to an existing real product (not affiliated with Aroggo)</li>
+    <li><b>Timeline:</b> [Workshop 8-9 er real date range boshao — jemon "3 Weeks, Aug 2026"]</li>
+    <li><b>Tools:</b> Figma, FigJam</li>
+  </ul>
+  <div class="cs-body">One-line summary: Aroggo already delivers medicine on demand, but has no way to track a patient's ongoing prescriptions or remind them before a refill is due — this project adds that missing layer.</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">03 / 20 — Problem &amp; Solution</div>
+  <div class="cs-h1">Problem &amp; Solution</div>
+  <div class="fail-box">
+    <b>Problem</b><br>
+    Real Aroggo app-e "Patients" ar "Prescriptions" menu already ache, kintu kaje lage na — ekbar order kore fele gele, pore reorder korte hobe seta mone rakhar kono system nei. Chronic-medicine patient (jemon diabetes/hypertension) proti mash manually abar order dey, kokhono kokhono medicine shesh hoye jawar por.
+  </div>
+  <div class="fix-box">
+    <b>Solution</b><br>
+    Per-patient prescription profile — ekbar setup korle, app nijei stock count kore, "Week 1-3 Days Remaining" dekhay, ar refill deadline-er age auto-refill cart ready kore dey. Out-of-stock hole 3-ta shomo bikolpo dekhay (dark pattern na, default selected na).
+  </div>
+  <div class="cs-body">Ei problem-solution pairing ShareTrip ("Problem 1/Solution") ar Travela ("Problem 01/02")-r moto numbered card format-e case study-te presenting korte hobe.</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">04 / 20 — Audit Goals &amp; Objectives</div>
+  <div class="cs-h1">Audit Goals &amp; Objectives</div>
+  <div class="cs-body">Pattern source: Unimart UX Audit-er "Objectives" 2-card format.</div>
+  <ul class="cs-list">
+    <li><b>Goal 1 — Reduce manual reorder effort:</b> Workshop 9 brief-er nijer suggestion onujayi target "4 taps against roughly 14" real-app baseline-er tulonay</li>
+    <li><b>Goal 2 — Make "days remaining" visible, not just stock count:</b> "Days not Strips" rule — user-ke count na kore, koto din bakche seta directly bolte hobe</li>
+    <li><b>Goal 3 — No forced auto-charge:</b> "Nothing is charged or shipped without an explicit tap" — trust-preserving confirmation gate</li>
+    <li><b>Goal 4 — Handle out-of-stock without dark pattern:</b> "Three equal buttons, no default" jokhon originally-prescribed medicine stock-e nei</li>
+  </ul>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">05 / 20 — Competitor Analysis</div>
+  <div class="cs-h1">Competitor Analysis</div>
+  <div class="cs-sub">Pattern source: HireMate (5-competitor feature table), ShareTrip SWOT (4-competitor grid).</div>
+  <div class="placeholder">
+    Ei section-ta ekhono raw audit lagbe — tumi nijei 20-30 min lagiye BD-r 3-4 ta medicine delivery app (jemon Praava Health, other pharmacy apps tomar market-e ja ache) check kore dekho:<br><br>
+    <b>Table format:</b> Feature (rows) × Aroggo/Competitor A/B/C (columns) — rows: Per-patient profile? / Auto-refill? / Dose reminder? / Days-remaining display? / Out-of-stock alternative flow?<br><br>
+    HireMate-e ei table-tai case study-r sobcheye credible section chilo — "amra data diye decision niyechi" prove kore.
+  </div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">06 / 20 — Heuristic Evaluation</div>
+  <div class="cs-h1">Heuristic Evaluation</div>
+  <div class="cs-sub">Pattern source: Unimart UX Audit — heuristic issue + recommendation pair format.</div>
+  <ul class="cs-list">
+    <li><b>Heuristic 1 — Visibility of System Status:</b> Real Aroggo app-e stock/refill status kothao dekhay na — user-ke nijer theke mনে rakhte hoy। Fix: Digital Pill Box Dashboard-e always-visible countdown ring।</li>
+    <li><b>Heuristic 3 — User Control &amp; Freedom:</b> Auto-refill mane jodi force-charge hoy, seta trust bhenge dey। Fix: explicit confirm-tap gate, "Nothing charged without a tap" rule।</li>
+    <li><b>Heuristic 6 — Recognition Rather Than Recall:</b> "Patients" menu-r moddhe ki ache seta mনে rakhte hoy user-ke। Fix: per-patient card home screen-e directly show kora।</li>
+  </ul>
+  <div class="placeholder">Baki 2-3 ta heuristic (Error Prevention, Consistency &amp; Standards) real Aroggo app-e giye check kore fill up koro — screenshot soho.</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">07 / 20 — Design Process &amp; Timeline</div>
+  <div class="cs-h1">Design Process &amp; Timeline</div>
+  <div class="cs-sub">Pattern source: ShareTrip 4-week (Research→Define→Design→Test), HireMate day-count.</div>
+  <div class="flow-badge">Week 1 — Research &amp; Audit</div>
+  <div class="flow-badge">Week 2 — IA &amp; User Flow</div>
+  <div class="flow-badge">Week 3 — Wireframe (Sketch → Mid-Fi)</div>
+  <div class="flow-badge">Week 4 — Review, Iterate, Finalize</div>
+  <div class="cs-body">Tomar actual kaj already ei order-e hoyeche: real app gap-finding → IA diagram → 3-ta interaction flow → 28+ screen wireframe → design-review iteration। Shudhu real date range boshate hobe protita week-e.</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">08 / 20 — User Persona</div>
+  <div class="cs-h1">User Persona</div>
+  <div class="persona-card">
+    <div class="persona-photo">👤</div>
+    <div>
+      <b>Abdur Rahman, 58 — Chronic Patient</b><br>
+      <span style="font-size:12px; color:#555;">Dhaka. Diabetes, Metformin proti mash lage. Nijer thekei order kore, kintu prottek mash-e 2-3 din late hoye jay — medicine shesh hoye jawar por mone pore.</span>
+    </div>
+  </div>
+  <div class="persona-card">
+    <div class="persona-photo">👤</div>
+    <div>
+      <b>Nusrat, 27 — Family Caregiver</b><br>
+      <span style="font-size:12px; color:#555;">Baba-mar medicine order kore dey remotely. Multiple patient (baba + ma) er alada medicine track korte gie confuse hoye jay — kar ki lage mনে rakhte hoy nijer thekei.</span>
+    </div>
+  </div>
+  <div class="cs-body">Ei duita persona-i "specific human, specific moment" pattern follow kore — Pathao-r "Nayem", Shujog-r "Rafi", FoodCo-r "Rahim"-er moto।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">09 / 20 — Design System &amp; Visual Direction</div>
+  <div class="cs-h1">Design System &amp; Visual Direction</div>
+  <div class="cs-body">Direction: Aroggo-r existing brand visual language follow kora — trust-first, medical-clean, BD-context (bKash-style payment pattern, Bangla+English mix, sub-15K Android-friendly)।</div>
+  <div class="placeholder">Baki: Aroggo-r real app theke exact font confirm kora ("Hind Siliguri" suggest kora hoyechilo, confirm baki), ar spacing/component token list.</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">10 / 20 — Color Palette</div>
+  <div class="cs-h1">Color Palette</div>
+  <div class="swatch-row">
+    <div class="swatch"><div class="swatch-box" style="background:#0F6E5E;"></div><div class="swatch-label">Primary Green</div></div>
+    <div class="swatch"><div class="swatch-box" style="background:#A8E8D8;"></div><div class="swatch-label">Light Green</div></div>
+    <div class="swatch"><div class="swatch-box" style="background:#B8860B;"></div><div class="swatch-label">Alert / Refill Due</div></div>
+    <div class="swatch"><div class="swatch-box" style="background:#F5B8D8;"></div><div class="swatch-label">Notification</div></div>
+    <div class="swatch"><div class="swatch-box" style="background:#1a1a1a;"></div><div class="swatch-label">Text</div></div>
+    <div class="swatch"><div class="swatch-box" style="background:#F7F6F3; border:1px solid #ccc;"></div><div class="swatch-label">Background</div></div>
+  </div>
+  <div class="placeholder">Ei swatch-gulo tomar wireframe theke actual hex value diye replace koro (jodi Aroggo-r real brand green different hoy, seta use koro — consistency shobcheye joruri).</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">11 / 20 — Target Audience</div>
+  <div class="cs-h1">Target Audience</div>
+  <ul class="cs-list">
+    <li>Chronic-medicine patients (diabetes, hypertension, thyroid) — proti mash regular medicine lage</li>
+    <li>Family caregivers managing an elderly or dependent patient's medication remotely</li>
+    <li>BD urban/semi-urban smartphone user, sub-15K taka Android, 3G/4G connection</li>
+  </ul>
+  <div class="cs-body">Ei ta User Persona-r theke alada — Persona-te "specific individual story", ekhane "broader group definition"।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">12 / 20 — User Flow</div>
+  <div class="cs-h1">User Flow</div>
+  <div class="flow-badge">Flow A — Setup Once Per Patient</div>
+  <div class="flow-badge">Flow B — Reorder Every Cycle</div>
+  <div class="flow-badge">Flow C — Medicine Out of Stock</div>
+  <div class="cs-body">Tomar already-built 3-ta flow ei section-e jabe। Full journey flowchart (App Open → Setup → Countdown → Refill Confirm → App Close) ekta merged diagram hisebe dekhano jete pare, Safe Ride Alert-r "User Flow" section-er moto pura ekta page occupy kore।</div>
+  <div class="placeholder">[Figma file 195RmCCMCmwGThvuQlB2jH theke full flow diagram export koro]</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">13 / 20 — Information Architecture</div>
+  <div class="cs-h1">Information Architecture</div>
+  <div class="cs-body">Home → Patients → Refill → Orders → Help &amp; Support → System Communication Layer — ei full IA diagram tomar already ache।</div>
+  <div class="placeholder">[Figma file 195RmCCMCmwGThvuQlB2jH, section 288:2597 theke full IA export koro]</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">14 / 20 — Sketch</div>
+  <div class="cs-h1">Sketch (Low-Fidelity)</div>
+  <div class="cs-body">Pattern source: Travela (07 — hand-drawn pen-paper), Electricity Kiosk (7-screen sketch), ShareTrip (LoFi Wireframe page)। Prottek case study-i ekta "From Rough Sketch" slide rakhe process dekhate।</div>
+  <div class="placeholder">Jodi tomar kono original hand-drawn sketch ache (paper-e ba Figma-te grayscale wireframe <code>144:2</code>), seta ei page-e boshao। Na thakle, mid-fi wireframe-r grayscale/no-color version-take "sketch stage" hisebe frame koro.</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">15 / 20 — Mid-Fi</div>
+  <div class="cs-h1">Mid-Fidelity Wireframe</div>
+  <div class="cs-body">Tomar 28+ screen mid-fi set (Add Patient, Digital Pill Box Dashboard, Prescription Scan, Review, Checkout, Out-of-Stock alternatives) ei section-e jabe — grayscale, real copy soho, placeholder text na (Workshop 9 rule)।</div>
+  <div class="placeholder">[Figma file 5RtYliDOkowaEuPkcN5h0u theke sob mid-fi frame grid layout-e export koro]</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">16 / 20 — Hi-Fi</div>
+  <div class="cs-h1">High-Fidelity Screens</div>
+  <div class="cs-body">Color+typography+iconography soho final polished screens — Home v3 ring-hero (<code>163:2</code>), Medication Screen (<code>163:54</code>), Notification (<code>159:2</code>), Auto Refill Cart, Family switcher, Reorder card v1/v2।</div>
+  <div class="placeholder">[Ei section-e color-system apply kora final screen-gulo boshao — jodi hi-fi kora na thake ekhono, seta ei case study-r "next step" hisebe likhe rakho]</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">17 / 20 — Breakdown Banner</div>
+  <div class="cs-h1">Before vs After — Breakdown Banner</div>
+  <div class="cs-body">Pattern source: Travela "5-point audit breakdown" (Header&amp;Hero / Category Tabs / Listing Cards / Bottom Nav / Visual Design)।</div>
+  <table class="ai-table">
+    <tr><th>Dimension</th><th>Before (real Aroggo)</th><th>After (this redesign)</th></tr>
+    <tr><td>Refill visibility</td><td>Not shown anywhere</td><td>Always-visible countdown ring</td></tr>
+    <tr><td>Reorder taps</td><td>~14 taps (manual, Workshop 9 baseline)</td><td>4 taps (target — needs real measurement)</td></tr>
+    <tr><td>Multi-patient tracking</td><td>None</td><td>Per-patient profile with own schedule</td></tr>
+    <tr><td>Out-of-stock handling</td><td>Not designed</td><td>3 equal, non-default alternatives</td></tr>
+  </table>
+  <div class="placeholder">Baki: real app-e giye actual tap-count measure kora — ei ta pura case study-r sobcheye shokto proof hobe.</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">18 / 20 — Where AI Was Used</div>
+  <div class="cs-h1">Where AI Was Used (New Section)</div>
+  <div class="cs-body">Ei section-ta unique — kono case study-te dekhi nai, kintu ekhon AI-collaborative design process transparent kora valuable, biseshoto Case Study Club-e।</div>
+  <table class="ai-table">
+    <tr><th>Task</th><th>AI Used For</th><th>How Much</th></tr>
+    <tr><td>Information Architecture</td><td>Structure sanity-check, missing node spotting</td><td>Draft review, human decided final structure</td></tr>
+    <tr><td>User Flow diagrams</td><td>SVG/Figma diagram generation from described logic</td><td>Full generation, human specified rules (Days not Strips, etc.)</td></tr>
+    <tr><td>Wireframe screens</td><td>Layout scaffolding in Figma via plugin script</td><td>Human specified content/copy, AI built layout</td></tr>
+    <tr><td>Design critique</td><td>Content-vs-brief gap finding (missing Out-of-Stock flow, empty Checkout screen)</td><td>AI flagged, human verified against real screens</td></tr>
+    <tr><td>Research writing</td><td>None — real Play Store reviews / competitor check</td><td>Human-only, to keep evidence authentic</td></tr>
+  </table>
+  <div class="cs-body">Note: final design decisions (rules, copy, what stays/what's cut) sob-i human-made — AI structure ar iteration speed-e help korche, judgment na।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">19 / 20 — Failure &amp; Redesign Journey</div>
+  <div class="cs-h1">Failure &amp; Redesign Journey (New Section)</div>
+  <div class="cs-body">Pattern-e kono case study-te explicit "failure" slide nei — sobai polished final dekhay. Kintu real process-e ekta decision-badol-er real example ache tomar kaj-e:</div>
+  <div class="fail-box">
+    <b>Original decision:</b> Team-er first mid-fidelity wireframe set-e Out-of-Stock/Alternative-Brand flow completely missing chilo — direct "in-stock" assumption kore design kora hoyechilo. Checkout screen-o almost-empty/placeholder-level chilo.
+  </div>
+  <div class="cs-body"><b>Feedback moment:</b> Content-focused design critique-e (real screen copy vs Workshop 9 brief compare kore) ei gap dhora pore — brief-e explicit "Medicine Out of Stock" flow required chilo, kintu wireframe-e kono screen-i chilo na.</div>
+  <div class="fix-box">
+    <b>Redesign:</b> "Three equal buttons, no default, no dark pattern" rule diye notun Out-of-Stock screen add kora holo — generic-medicine ar different-brand-same-strength options equal weight-e dekhano hoy, kono ekta pre-selected na.
+  </div>
+  <div class="cs-body">Ei section-ta case study-r sobcheye shokto part hote pare — eta dekhay j design "first try-tei perfect" hoyni, feedback-e improve hoyeche. Recruiter/mentor-der jonno eta trust-building.</div>
+</div>
+
+<div class="cs-page" style="padding:0;">
+  <div class="cs-cover" style="background:#0F6E5E;">
+    <h1>Thank You</h1>
+    <p>Mentors: Kowsar Mamun · Nayem Islam · Rakib bhai</p>
+    <p style="margin-top:10px;">Case Study Club BD</p>
+  </div>
+</div>
+
+</body>
+</html>

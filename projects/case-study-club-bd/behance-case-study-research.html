@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; color:#1a1a1a; width:1050px; }
+  .cover { padding: 70px 70px 40px; }
+  h1 { font-size: 30px; color:#0F6E5E; margin-bottom:10px; }
+  .subtitle { font-size: 14px; color: #666; margin-bottom: 10px; line-height:1.5; }
+  .note-box { background:#FFF3CD; border:1px solid #D4A017; border-radius:8px; padding:14px 18px; margin-top:16px; font-size:12.5px; color:#5a4500; line-height:1.6; }
+  .card { display:flex; gap:26px; padding: 30px 60px; page-break-inside: avoid; border-bottom: 1px solid #e5e5e5; align-items:flex-start; }
+  .card img { width: 320px; border-radius: 10px; border: 1px solid #ddd; object-fit: cover; max-height: 400px; }
+  .txt { flex: 1; }
+  .name-row { display:flex; align-items:baseline; gap:10px; margin-bottom: 4px; }
+  .name { font-size: 19px; font-weight:700; color:#111; }
+  .count-badge { font-size: 11px; font-weight:700; color:#fff; background:#0F6E5E; padding:2px 9px; border-radius:10px; }
+  .tag { font-size: 11px; color:#0F6E5E; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; margin-bottom: 10px; }
+  ul { margin-left: 18px; }
+  li { font-size: 12.5px; line-height: 1.6; color: #333; margin-bottom: 2.5px; }
+  .footer { font-size: 10.5px; color:#999; padding: 30px 60px 60px; }
+  .section-page { padding: 60px 70px; page-break-before: always; }
+  h2 { font-size: 24px; color:#0F6E5E; margin-bottom: 6px; }
+  .section-sub { font-size: 13.5px; color:#666; margin-bottom: 24px; }
+  .pattern-box { background:#F0F9F6; border-left: 4px solid #0F6E5E; border-radius: 6px; padding: 16px 20px; margin-bottom: 14px; }
+  .pattern-num { display:inline-block; background:#0F6E5E; color:white; width:22px; height:22px; border-radius:50%; text-align:center; line-height:22px; font-size:11.5px; font-weight:bold; margin-right:10px; }
+  .pattern-title { font-size: 14.5px; font-weight:700; color:#111; display:inline; }
+  .pattern-desc { font-size: 12.5px; color:#444; margin-top: 6px; margin-left: 32px; line-height: 1.55; }
+  h3 { font-size: 16px; color:#111; margin: 26px 0 10px; }
+  .step-box { background:#fff; border:1px solid #ddd; border-radius:8px; padding:14px 18px; margin-bottom:12px; }
+  .step-num { display:inline-block; background:#B8860B; color:white; width:22px; height:22px; border-radius:50%; text-align:center; line-height:22px; font-size:11.5px; font-weight:bold; margin-right:10px; }
+  .step-title { font-size: 13.5px; font-weight:700; color:#111; }
+  .step-desc { font-size: 12.5px; color:#444; margin-top: 6px; margin-left: 32px; line-height: 1.55; }
+  .status { font-size: 11.5px; padding: 6px 12px; border-radius: 6px; margin-top: 8px; margin-left: 32px; }
+  .done { background:#E8F3F0; color:#0F6E5E; border:1px solid #0F6E5E; }
+  .todo { background:#FFF3CD; color:#7a5c00; border:1px solid #D4A017; }
+  .cs-page { padding: 55px 65px; page-break-before: always; }
+  .cs-num { display:inline-block; background:#111; color:#fff; font-size:11px; font-weight:700; padding:3px 10px; border-radius:10px; margin-bottom:10px; }
+  .cs-h1 { font-size: 22px; color:#111; margin-bottom: 4px; font-weight:800; }
+  .cs-sub { font-size: 12.5px; color:#666; margin-bottom: 16px; }
+  .cs-body { font-size: 12.5px; line-height: 1.65; color:#2a2a2a; margin-bottom: 10px; }
+  .cs-body b { color: #111; }
+  .placeholder { background:#F4F4F4; border:1.5px dashed #b8b8b8; border-radius:8px; padding:14px 18px; font-size:11.5px; color:#777; margin: 10px 0; }
+  .cs-list { margin-left: 18px; margin-bottom: 8px; }
+  .cs-list li { font-size: 12.5px; line-height: 1.6; color:#2a2a2a; margin-bottom: 4px; }
+  .persona-card { display:flex; gap:16px; background:#fff; border:1px solid #ddd; border-radius:10px; padding:14px; margin-bottom:10px; }
+  .persona-photo { width:56px; height:56px; border-radius:50%; background:#e0e0e0; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:20px; color:#999; }
+  .swatch-row { display:flex; gap:10px; margin: 10px 0; flex-wrap: wrap; }
+  .swatch { width:80px; }
+  .swatch-box { height:50px; border-radius:6px; border:1px solid #ddd; }
+  .swatch-label { font-size:10px; color:#666; margin-top:4px; }
+  .flow-badge { display:inline-block; background:#E8F3F0; color:#0F6E5E; font-size:11px; font-weight:700; padding:3px 10px; border-radius:6px; margin-right:6px; margin-bottom:6px; }
+  .fail-box { background:#FDECEC; border-left:4px solid #C94F4F; border-radius:6px; padding:14px 18px; margin-bottom:10px; }
+  .fix-box { background:#E8F3F0; border-left:4px solid #0F6E5E; border-radius:6px; padding:14px 18px; margin-bottom:10px; }
+  .ai-table { width:100%; border-collapse:collapse; margin-top:10px; font-size:12px; }
+  .ai-table th, .ai-table td { border:1px solid #ddd; padding:8px 10px; text-align:left; }
+  .ai-table th { background:#F0F9F6; color:#0F6E5E; }
+  .cs-cover { text-align:center; padding: 130px 60px; }
+  .cs-cover h1 { font-size: 34px; color:#111; margin-bottom:12px; }
+  .cs-cover p { font-size:14px; color:#666; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>Nayem Islam — Behance Case Study Breakdown (v2, full re-read)</h1>
+  <p class="subtitle">behance.net/designernayem &nbsp;|&nbsp; Protita case study-r <b>protita image</b> individually khule dekha hoyeche (12-ta case study, ~290 image total) — ei ta age-r condensed version-er jaygay accurate replacement.</p>
+  <div class="note-box">
+    <b>Ki change hoyeche age-r version theke:</b> Age-r version-e protita case study-te shudhu 4-8 ta representative image dekhe 4-5 ta generic bullet banano hoyeche silo. Ei version-e protita folder-er shob image (12 theke 27 ta kore) individually poRa hoyeche, tai section count onek beshi accurate o granular — ekhon "12-15 section" tomar original estimate-er sathe match kore. ShareTrip case study-te toh explicit page-counter chilo (01/18, 02/18...) — tai oi ta-r 18 section 100% confirmed, guess na.
+  </div>
+</div>
+
+<div class="card">
+  <img src="file:///C:/Users/Nusrat/Downloads/New folder (3)/03ff93208798215.Y3JvcCw2NDM4LDUwMzYsMCww.webp">
+  <div class="txt">
+    <div class="name-row"><span class="name">Pathao — Scheduling</span><span class="count-badge">13 sections</span></div>
+    <div class="tag">Ride-hailing · 24 images read</div>
+    <ul>
+      <li>Cover + disclaimer slide</li>
+      <li>Problem statement — persona (Nayem) + 3 sub-problems (Ride Unavailability, Unpredictable Fare, Time Sensitivity)</li>
+      <li>Process — 3-step (Define / Ideation / Design)</li>
+      <li>Competitor Analysis table (Pathao vs Uber vs Indrive, feature matrix)</li>
+      <li>Key Insights — 4 cards (Scheduling Availability, Accessible UX, Vehicle Diversity, Dynamic Pricing)</li>
+      <li>Solution intro — "Book Now, Ride Later"</li>
+      <li>Screen-by-screen walkthrough — 9 screens (Schedule Journey, Select Ride, Confirm Schedule, Change Location, Finalize Booking, Manage Orders, Cancel Ride, Cancellation detail, Notification)</li>
+      <li>Full User Flow diagram (dark mode flowchart)</li>
+      <li>Section-divider headers ("Ride Manage Flow", "Scheduling Flow")</li>
+      <li>Competitive analysis screens collage</li>
+      <li>Closing CTA photo — "Book Your Ride Travel Stress-Free"</li>
+      <li>Team credits — 8 people, roles listed</li>
+      <li>Thanks/closing banner</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <img src="file:///C:/Users/Nusrat/Downloads/New folder (4)/0b8b86229240235.6861867a72f87.webp">
+  <div class="txt">
+    <div class="name-row"><span class="name">Pet Care App</span><span class="count-badge">15 sections</span></div>
+    <div class="tag">Healthcare / Lifestyle · 20 images read</div>
+    <ul>
+      <li>Dual cover slides (UI/UX case study tag + Behance-style cover)</li>
+      <li>Problem research — "What do pet owners truly need?" (3 pain-points from interview/survey/observation)</li>
+      <li>Process — wireframing + user interview quotes (2 FigJam board screenshots)</li>
+      <li>Hand-sketch wireframe collage (13 low-fi sketches)</li>
+      <li>Solution intro — "Thoughtful Design, Built Around You"</li>
+      <li>Screen walkthrough — Consultation form + Waiting Room</li>
+      <li>Screen walkthrough — Symptom Scanner, Medicine Reminder, Result</li>
+      <li>Feature highlight — Symptom checker + 24/7 Booking (2-panel)</li>
+      <li>Doctors List screen (detailed callout)</li>
+      <li>"50+ Screens" full UI collage grid</li>
+      <li>Typography & Color palette (Outfit font + swatches)</li>
+      <li>Closing tagline slide — variant 1 (cat)</li>
+      <li>Closing tagline slide — variant 2 (puppy)</li>
+      <li>Impact stat — "93% of pet owners..."</li>
+      <li>Team credit — "Thank you for scrolling" (10 members, Case Study Club BD tag)</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <img src="file:///C:/Users/Nusrat/Downloads/New folder (5)/2d090c253029365.6a5e7a1c458a9.webp">
+  <div class="txt">
+    <div class="name-row"><span class="name">Shujog</span><span class="count-badge">11 sections</span></div>
+    <div class="tag">Job Marketplace · 12 images read</div>
+    <ul>
+      <li>Cover hero — "Small Tasks, Big Opportunities With Sujog"</li>
+      <li>BD map banner — "A New Era of Freelancing... For Every Bangladeshi"</li>
+      <li>Problem/current scenario — "One Frustration, Shared by Millions" (unemployment stats + news clippings)</li>
+      <li>Persona quote — Rafi's story ("stuck in a circle I didn't build")</li>
+      <li>User research — survey, interview, competitive analysis, HMW table</li>
+      <li>Project overview — MVP details (timeline, team, tools)</li>
+      <li>Project timeline — 4-week breakdown</li>
+      <li>Solution/app exploration — screens grid (onboarding, login, home, project details, withdrawal, assessment)</li>
+      <li>Visual design — branding, app icon, typography (SF Pro), color mocks, ID card, social post</li>
+      <li>Team — "Meet The Minds Behind this journey" (7 members)</li>
+      <li>Closing — "Thank You For Exploring Shujog"</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <img src="file:///C:/Users/Nusrat/Downloads/New folder (6)/025ec0253029795.6a5e7cc469a27.webp">
+  <div class="txt">
+    <div class="name-row"><span class="name">Electricity Bill Payment Kiosk</span><span class="count-badge">21 sections</span></div>
+    <div class="tag">Public Utility Kiosk (Flexpay) · 25 images read</div>
+    <ul>
+      <li>Real-world problem photo hook — office queue</li>
+      <li>Problem Statement (Discovery card)</li>
+      <li>Real Voices — 3 elderly-persona quote bubbles</li>
+      <li>User interview photos + survey (4 charts: missed payments, methods, kiosk comfort, problems)</li>
+      <li>How Might We table — 6 insights → kiosk features</li>
+      <li>Project overview — target users</li>
+      <li>Cover/hero — "24/7 Self-service Kiosk" + team avatars</li>
+      <li>Solution cards 1-4 (pay anytime, built for everyone, confirmed done, pay in installment)</li>
+      <li>User Flow diagram (dark green flowchart)</li>
+      <li>Sketching — 7 hand-drawn wireframes</li>
+      <li>Mid-fidelity wireframe layout exploration</li>
+      <li>Final UI walkthrough — Step 1-3 (Welcome, bill search, QR scan)</li>
+      <li>Final UI walkthrough — Step 6-7 + Outcome (Processing, Confirmation, Feedback, FAQ, locations)</li>
+      <li>Typography — Li Ador Noirrit + Noto Serif Bengali</li>
+      <li>Colours palette</li>
+      <li>Key Features section header</li>
+      <li>Billboard mockup (Bangla marketing collateral)</li>
+      <li>Persona resolution photo — elderly user succeeded</li>
+      <li>Collage — QR scan + kiosk usage + Flexpay logo</li>
+      <li>Team — "The Minds Behind Smarter Utility Services" (7 + credits)</li>
+      <li>Closing — "Thanks for staying till the end"</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <img src="file:///C:/Users/Nusrat/Downloads/New folder (7)/03db76253028781.6a5e77642ffe8.webp">
+  <div class="txt">
+    <div class="name-row"><span class="name">Kiosk Self-Ordering (FoodCo)</span><span class="count-badge">26 sections</span></div>
+    <div class="tag">Restaurant Kiosk · 27 images read</div>
+    <ul>
+      <li>Hero/cover — kiosk mockup with restaurant background</li>
+      <li>Overview — category, team size, duration, tools</li>
+      <li>User Persona — 3-card (Restaurant owner, Family, Student)</li>
+      <li>Meet Rahim — persona intro (4-photo grid)</li>
+      <li>Research — Interview + Survey Insights</li>
+      <li>Research insight stats (44.9%, 61.5%, 62.2%)</li>
+      <li>Competitive Analysis — vs McDonald's/KFC + "Our MVP"</li>
+      <li>UI mockup collage (food items, modal states)</li>
+      <li>Team — "The Mind's Who Shaped Our Thinking"</li>
+      <li>HMW — "How Might We Help Rahim?" (3 questions)</li>
+      <li>Problem — "The Problem Behind Rahim's Lunch Queue" (14min/2.7min/44%/68% stats)</li>
+      <li>Persona quote — "I'm always the runner..."</li>
+      <li>Case Study Approach — 4-week timeline</li>
+      <li>Sketch & Mid-Fi wireframe evolution (7 screens)</li>
+      <li>Solution — "How FoodCo Solves the Problems" (Order/Pay/Track)</li>
+      <li>Hero UI screen + branding image</li>
+      <li>"Every Screen Has a Reason" — annotated walkthrough</li>
+      <li>Order screen detail (full kiosk menu)</li>
+      <li>User Flow diagram</li>
+      <li>Voices — "What Users Told Us" (3 testimonials)</li>
+      <li>Business benefits — Customer/Restaurant panel</li>
+      <li>Business Impact — 5-card grid</li>
+      <li>Brand/marketing hero photo</li>
+      <li>Resolution photo — "Rahim is happy now"</li>
+      <li>Typography/Color system (Manrope)</li>
+      <li>Closing — "Thanks For Scrolling"</li>
+    </ul>
+    <div class="status todo" style="margin-left:0;">Note: eta onno case study theke unusually dense — mone hocche 2-ta sub-deck (persona-set o Rahim-narrative-set) ekshathe merge kora ekta Behance gallery-te.</div>
+  </div>
+</div>
+
+<div class="card">
+  <img src="file:///C:/Users/Nusrat/Downloads/New folder (8)/10a991232555067.68ff07288be92.webp">
+  <div class="txt">
+    <div class="name-row"><span class="name">Unimart — UX Audit</span><span class="count-badge">19 sections</span></div>
+    <div class="tag">E-commerce Audit · 20 images read</div>
+    <ul>
+      <li>Cover — "Case Study, UX Audit 2025"</li>
+      <li>About — project description, industry/team/location</li>
+      <li>Disclaimer — 15 designers, conceptual project</li>
+      <li>Objectives — 2-card (Enhance Usability, Improve Hierarchy)</li>
+      <li>Demography stat — "86% traffic from mobile"</li>
+      <li>Our Approach — 3-step (Exploration, Heuristic Evaluation, Solution)</li>
+      <li>Tools & Platforms — SimilarWeb, PageSpeed, WAVE, Baymard</li>
+      <li>Sketch/wireframe collage transition</li>
+      <li>Before/After comparison — full screen grid</li>
+      <li>Home Page — Problems/Solutions card pair</li>
+      <li>Product Listing Page — Problems/Solutions card pair</li>
+      <li>Product Details Page — Problems/Solutions card pair</li>
+      <li>All UI Screens — large collage grid</li>
+      <li>Emotional hook image — grocery list quote</li>
+      <li>Brand visual — billboard mockup</li>
+      <li>Brand visual — Instagram story mockups</li>
+      <li>Typography & Color (DM Sans)</li>
+      <li>Team — 15-member circular diagram</li>
+      <li>FigJam board screenshot (workspace)</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <img src="file:///C:/Users/Nusrat/Downloads/New folder (9)/085189236779959.68f287e4bd5eb.webp">
+  <div class="txt">
+    <div class="name-row"><span class="name">Safe Ride Alert (MVP)</span><span class="count-badge">21 sections</span></div>
+    <div class="tag">Commuter Safety · 26 images read</div>
+    <ul>
+      <li>Cover</li>
+      <li>Project Overview</li>
+      <li>Problem Statement</li>
+      <li>User Research — 3 quote cards</li>
+      <li>Empathy Map</li>
+      <li>Research Framework — 5W1H</li>
+      <li>Competitive Analysis — 3 competitors + feature matrix</li>
+      <li>Design Process — 4-step</li>
+      <li>Information Architecture</li>
+      <li>User Flow</li>
+      <li>Storyboard — 6-step narrative</li>
+      <li>Iconography</li>
+      <li>Branding & Logo</li>
+      <li>Wireframe</li>
+      <li>All UI Screens — 40+ collage</li>
+      <li>Result stats</li>
+      <li>Team Collaboration</li>
+      <li>Notification mockup photo</li>
+      <li>Preview Mobile App</li>
+      <li>Closing — "Thanks for watching"</li>
+      <li>FigJam board screenshot</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <img src="file:///C:/Users/Nusrat/Downloads/New folder (10)/1c902e220164121.67bed90f12ecc.webp">
+  <div class="txt">
+    <div class="name-row"><span class="name">AROAM</span><span class="count-badge">12 sections</span></div>
+    <div class="tag">AR Wayfinding · 13 images read</div>
+    <ul>
+      <li>Cover — hero with hand+phone</li>
+      <li>About — description + team (7, incl. Nayem Islam) + problem statement + mall context photos</li>
+      <li>"Why we design like this?" — rationale for Home/AR nav/QR search/2D map</li>
+      <li>AR Navigation feature — turn-by-turn instruction detail</li>
+      <li>Mall Navigation Store Directory feature</li>
+      <li>Search Stores feature (Suggestions/Saved/Recent)</li>
+      <li>QR code scan feature</li>
+      <li>Store detail card (Apex example)</li>
+      <li>Typography & Color (Lufga font)</li>
+      <li>Outcomes — 16 screens, 2 weeks, 2 sprints stat</li>
+      <li>"You have reached destination" confetti moment</li>
+      <li>Closing — "Thanks for watching!"</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <img src="file:///C:/Users/Nusrat/Downloads/New folder (11)/24476e236724783.68f15457b9794.webp">
+  <div class="txt">
+    <div class="name-row"><span class="name">Stylii — Salon Management</span><span class="count-badge">15 sections</span></div>
+    <div class="tag">SaaS / Salon Ops · 16 images read</div>
+    <ul>
+      <li>Project Overview</li>
+      <li>Tablet hero mockup — "Book Your Perfect Salon"</li>
+      <li>Problem & Solution paired cards</li>
+      <li>Research validation stats (80%/65%/47%/72%)</li>
+      <li>Design Process — Discovery/Strategy/Experience Design (+ FigJam screenshots)</li>
+      <li>Dashboard mockup + problem stats</li>
+      <li>Dashboard screens + user quote</li>
+      <li>Top Rated Salons / Barber Republic detail screens</li>
+      <li>Branding collage — social proof, billboard, logo variations</li>
+      <li>Typography + Color system</li>
+      <li>Instagram story mockups (3)</li>
+      <li>UI screens collage — all screens grid</li>
+      <li>Booking modal / service detail</li>
+      <li>City banner ad mockup</li>
+      <li>Closing — "Thanks"</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <img src="file:///C:/Users/Nusrat/Downloads/New folder (13)/186633236563619.68ee78eb9975b.webp">
+  <div class="txt">
+    <div class="name-row"><span class="name">HireMate</span><span class="count-badge">17 sections</span></div>
+    <div class="tag">Job Application Tracking · 19 images read</div>
+    <ul>
+      <li>About Us — hero + tags</li>
+      <li>Problem Statement — survey stats + donut chart</li>
+      <li>User Persona</li>
+      <li>User Journey Map — 7-stage table</li>
+      <li>Project Timeline — Strategy/Discovery/Solution + day-counts</li>
+      <li>Application Tracker — laptop hero mockup</li>
+      <li>Timeline calendar view</li>
+      <li>Storyboard — 4-step narrative</li>
+      <li>HireMate wordmark hero</li>
+      <li>Application Tracker — laptop w/ device photo</li>
+      <li>Problem and Solution — 57%/75%/92% circle stats</li>
+      <li>Dashboard — laptop w/ device photo</li>
+      <li>Wireframe — low-fi to hi-fi progression</li>
+      <li>Design Rationale — Sign-in/Dashboard/Tracker/Timeline/Insights explained</li>
+      <li>User Flow diagram</li>
+      <li>Job cards grid w/ device</li>
+      <li>Thanks for Watching + team credits</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <img src="file:///C:/Users/Nusrat/Downloads/New folder (14)/4508a7249803905.6a0f6c896f1c3.webp">
+  <div class="txt">
+    <div class="name-row"><span class="name">Travela</span><span class="count-badge">13 sections</span></div>
+    <div class="tag">Accommodation Booking · 25 images read</div>
+    <ul>
+      <li>Problem & Solution paired cards — numbered 01/02 (unclear booking confirmation, no wishlist/partial payment)</li>
+      <li>Before/After screen comparison — 5-point audit (Header&Hero, Category Tabs, Listing Cards, Bottom Nav, Visual Design)</li>
+      <li>"Reviews Confirmed Our Audit" — ties findings to Play Store review evidence</li>
+      <li>Quote from real user — 2-star Google Play review ("app didn't guide me")</li>
+      <li>Hero — "Find Your Perfect Room, Fast." + search bar</li>
+      <li>Chat with Host screen + Travela Instagram profile stats (150 posts, 2.4M followers)</li>
+      <li>Booking flow — 6 screens (Home, Room Overview, Add booking info, Select date, Guest info, Payment)</li>
+      <li>"Recently Added" redesigned room-card overlay on street photo</li>
+      <li>Sketch & Mid-Fi Mockups — 7 hand-drawn Travela screens</li>
+      <li>Billboard marketing mockup (Bangla: "ভ্রমণ হোক সহজ")</li>
+      <li>Local payment detail — bKash shown in UI</li>
+      <li>Disclaimer slide</li>
+      <li>Team / closing (implied, not fully confirmed in sample)</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card">
+  <img src="file:///C:/Users/Nusrat/Downloads/New folder (15)/098abe249805153.6a0f73ce46abe.webp">
+  <div class="txt">
+    <div class="name-row"><span class="name">ShareTrip</span><span class="count-badge">18 sections — confirmed by page counter</span></div>
+    <div class="tag">Flight Booking · 26 images read</div>
+    <ul>
+      <li>01 — Project Overview (Team Venus, 5 weeks, Travel & Tour, Figma/Ai/Ps)</li>
+      <li>02 — Existing Experience UX/UI Audit (heuristic-annotated home screen)</li>
+      <li>03 — Existing Flight Booking Flow (annotated problems on real screens)</li>
+      <li>04 — SWOT Analysis (ShareTrip vs GoZayaan vs Travela vs Amy)</li>
+      <li>05 — User Feedback / Review Analysis (Trustpilot + Google reviews)</li>
+      <li>06 — Turning UX Problems Into Product Decisions (2 problem→solution sticky-note pairs)</li>
+      <li>07 — LoFi Wireframe (hand sketches)</li>
+      <li>08 — Color System & Brand Identity (Murecho font + palette)</li>
+      <li>09 — Mapping the Journey (user flow map: Onboarding→Home→Flight→Details)</li>
+      <li>10 — From Ideas to Early Exploration (LoFi wireframe photo spread)</li>
+      <li>11 — Core Components & Design Foundations</li>
+      <li>12 — Home Screen (detailed annotated callouts)</li>
+      <li>13 — Transforming Insights Into a Seamless Booking Experience (hi-fi collage)</li>
+      <li>14 — Chat with Mita (AI assistant introduction)</li>
+      <li>15 — Optimizing the Flight Searching Experience (6-screen walkthrough)</li>
+      <li>16 — Optimizing the Confusing Payment Experience (multi-screen walkthrough)</li>
+      <li>17 — Transforming user flow into mid-fi wireframes (phone-in-hand photo)</li>
+      <li>18 — Team — "The Minds Behind a Smarter Travel Experience" (7 members + 2 mentors)</li>
+      <li>+ bonus non-numbered slides: Disclaimer, app-icon/lockscreen mockup, "Travel Beyond Your Imagination" marketing collage, billboard ad, testimonial quote, closing IG collage</li>
+    </ul>
+  </div>
+</div>
+
+<div class="footer">
+  Source: behance.net/designernayem — every image in every downloaded folder read directly, Aug 2026. Folder (2) (unidentified project ID 183341909) not included — not part of the 12 confirmed Behance case studies; can be added if you confirm what it is.
+</div>
+
+<div class="section-page">
+  <h2>12-ta Case Study-r Modhe Common Pattern</h2>
+  <p class="section-sub">Full re-read-er por pattern-gulo aro shorshoto hoyeche. Ei ta-i "Nayem bhai style" case study-r formula.</p>
+
+  <div class="pattern-box">
+    <span class="pattern-num">1</span><span class="pattern-title">Hero-e generic na, specific angle</span>
+    <div class="pattern-desc">Pathao-e "pre-book rides" (generic "ride app" na), Safe Ride Alert-e "women & students" (generic "commuters" na), ShareTrip-e "Optimizing The Flight Searching Experience" (generic "flight app" na).</div>
+  </div>
+
+  <div class="pattern-box">
+    <span class="pattern-num">2</span><span class="pattern-title">Problem ↔ Solution — alada, paired card, number diye</span>
+    <div class="pattern-desc">ShareTrip-e explicit "The Problem 1 / The Solution", "The Problem 2 / The Solution" sticky-note pair. Travela-te "Problem 01/02" numbered card. Unimart-e protita page-r (Home/Listing/Details) nijer Problem-Solution pair.</div>
+  </div>
+
+  <div class="pattern-box">
+    <span class="pattern-num">3</span><span class="pattern-title">Evidence — review, survey, audit, competitor table</span>
+    <div class="pattern-desc">ShareTrip-e real Trustpilot/Google review screenshot ("Such a stupid service" — 1-star). Travela-te real Play Store 2-star quote. HireMate-e 5-competitor feature table. SWOT analysis (ShareTrip-e 4 competitor). Assumption na, real proof.</div>
+  </div>
+
+  <div class="pattern-box">
+    <span class="pattern-num">4</span><span class="pattern-title">Process transparency — timeline, day/week-count</span>
+    <div class="pattern-desc">ShareTrip-e "01/18" theke "18/18" explicit page-counter + "5 Weeks" timeline. HireMate-e Strategy/Discovery/Solution day-count. Electricity Kiosk-e 4-step research process. Eta prove kore kaj structured, random na.</div>
+  </div>
+
+  <div class="pattern-box">
+    <span class="pattern-num">5</span><span class="pattern-title">Sketch → Mid-fi → Hi-fi — visible progression</span>
+    <div class="pattern-desc">Prottekta case study-e hand-drawn sketch dekhano hoy (na hoyle audit-type case study-e heuristic annotation), tarpor mid-fi, tarpor hi-fi. Kono case study sudhu final screen dekhay na — process dekhay.</div>
+  </div>
+
+  <div class="pattern-box">
+    <span class="pattern-num">6</span><span class="pattern-title">Local context, brand collateral, outcome, team — shesh-e</span>
+    <div class="pattern-desc">bKash (Travela), Bangla billboard (ShareTrip, Electricity Kiosk, Travela), real BD landmark. Prottekta-r shesh-e outcome stat ba impact line, tarpor team credit + mentor thanks (ekhon confirm hoyeche: Nayem Islam nijeo AROAM-e credited team member hisebe).</div>
+  </div>
+</div>
+
+<div class="section-page">
+  <h2>Aroggo Auto-Refill — Ki Kora Uchit, Kivabe</h2>
+  <p class="section-sub">Upor-er 6-ta pattern Aroggo-r case study-te map kora holo, full-read theke pawa concrete example soho.</p>
+
+  <h3>Structure — protita section-e ki thakbe</h3>
+
+  <div class="step-box">
+    <span class="step-num">1</span><span class="step-title">Hero — specific patient, specific gap</span>
+    <div class="step-desc">ShareTrip-r "Optimizing The Flight Searching Experience" style-e likho: "Optimizing The Prescription Refill Experience" — tarpor specific patient (Abdur Rahman, Metformin proti mash shesh hoye jay).</div>
+    <div class="status todo">Baki: specific-human hero line likhte hobe.</div>
+  </div>
+
+  <div class="step-box">
+    <span class="step-num">2</span><span class="step-title">Problem ↔ Solution — numbered paired card</span>
+    <div class="step-desc">ShareTrip-r moto "The Problem 1 / The Solution" format-e: real Aroggo app-e "Patients" menu ache kintu kaje lage na — seta Problem 1, tomar auto-refill flow Solution 1.</div>
+    <div class="status done">Ache: real Aroggo app screenshot analysis, gap-finding already kora — card-format e rearrange korte hobe.</div>
+  </div>
+
+  <div class="step-box">
+    <span class="step-num">3</span><span class="step-title">Evidence — review/competitor table</span>
+    <div class="step-desc">ShareTrip-e real Trustpilot/Google 1-star review dekhano hoyeche. Aroggo-r nijer Play Store review-e giye real user complaint khuje ber koro (refill/reminder related), screenshot rakho.</div>
+    <div class="status todo">Baki: Aroggo-r real Play Store review dekhe 2-3 ta relevant complaint quote khuje ber korte hobe — 20 min-er kaj.</div>
+  </div>
+
+  <div class="step-box">
+    <span class="step-num">4</span><span class="step-title">Process timeline — explicit day/week count</span>
+    <div class="step-desc">ShareTrip-r "01/18" page counter-r moto — na hoy explicit page number, na hoy "5 Weeks" moto ekta timeline badge protita major section-e.</div>
+    <div class="status done">Ache: IA → 3-flow → 28+ screen wireframe process already hoyeche — shudhu "koto din lagse" number add korte hobe.</div>
+  </div>
+
+  <div class="step-box">
+    <span class="step-num">5</span><span class="step-title">Sketch → Mid-fi → Hi-fi visible progression</span>
+    <div class="step-desc">Tomar wireframe-gulo already mid-fi. Case study-te ekta "From Sketch to Wireframe" slide add korte paro jekhane প্রথম hand-drawn version (jodi ache) o pashe final version dekhao.</div>
+    <div class="status todo">Baki: jodi original hand-sketch ekhono ache, seta khuje rekhe dile "progression" story-ta shokto hobe.</div>
+  </div>
+
+  <div class="step-box">
+    <span class="step-num">6</span><span class="step-title">Before vs After — number diye</span>
+    <div class="step-desc">Real Aroggo app-e ekhon reorder korte koto tap lage, notun design-e koto lage.</div>
+    <div class="status todo">Baki: real app-e giye actual tap count kora ("4 against roughly 14").</div>
+  </div>
+
+  <div class="step-box">
+    <span class="step-num">7</span><span class="step-title">Local context + outcome + team credit</span>
+    <div class="step-desc">bKash-style payment already Aroggo-r nijer app-e ache. Shesh-e ekta outcome line + tomar nijer + mentor-der (Kowsar Mamun, Nayem Islam, Rakib bhai) credit likho — ShareTrip-e Nayem bhai nijeo AROAM-e "mentor" hisebe credited chilo, eta ekta valid pattern.</div>
+    <div class="status todo">Baki: outcome line-ta step 6-er tap-count theke ashbe.</div>
+  </div>
+
+  <h3>Shobcheye joruri 2-ta kaj ekhon</h3>
+  <div class="pattern-box">
+    <span class="pattern-num">A</span><span class="pattern-title">Real app-e tap count kora (Before vs After)</span>
+    <div class="pattern-desc">Eta chhara case study-te kono hard proof thakbe na j notun design better. 15-20 min lagbe.</div>
+  </div>
+  <div class="pattern-box">
+    <span class="pattern-num">B</span><span class="pattern-title">Aroggo-r real Play Store review theke 2-3 ta complaint quote</span>
+    <div class="pattern-desc">ShareTrip/Travela dujon-i real negative review dekhiye nijeder audit validate korche — Aroggo-o eta korte pare, 20 min-er kaj.</div>
+  </div>
+</div>
+
+<div class="cs-page" style="page-break-before: always; padding:0;">
+  <div class="cs-cover" style="background:#0F6E5E; color:#fff;">
+    <h1 style="color:#fff;">Aroggo — Never Run Out</h1>
+    <p style="color:#d8f0ea;">Auto-Refill &amp; Per-Patient Prescription Tracking — Case Study Draft</p>
+    <p style="color:#d8f0ea; margin-top:20px; font-size:12px;">Built from the 12-case-study Behance research on the previous pages, applied to your own Aroggo project.</p>
+  </div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">01 / 20 — Thumbnail &amp; Hero</div>
+  <div class="cs-h1">High-Quality Thumbnail &amp; Hero Image/Video</div>
+  <div class="cs-sub">Pattern source: ShareTrip, Pathao, Electricity Kiosk — sob case study-i ekta strong single-line hero diye shuru hoy, generic na.</div>
+  <div class="cs-body">Hero line draft (specific human, specific gap — Pathao/ShareTrip pattern onujayi):</div>
+  <div class="placeholder">"Never Run Out." — Auto-refill and per-patient dose tracking for families managing chronic medication in Bangladesh.<br><br>Subline: For Abdur Rahman, Metformin runs out every month — and no one remembers to reorder until it's already gone.</div>
+  <div class="cs-body">Hero visual: 3 phone mockups showing the "Digital Pill Box Dashboard" (stock countdown ring) — jekhane tomar wireframe-r `163:2` frame theke real screen export korte hobe. Video hole: 5-7 second screen-recording loop of the reorder flow (Setup → Countdown → Auto-refill confirm).</div>
+  <div class="placeholder">[Real screen export lagbe: Figma file 5RtYliDOkowaEuPkcN5h0u, page 67:10, frame 163:2 (Home v3 ring-hero) ke hero image hisebe export koro]</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">02 / 20 — Project Overview</div>
+  <div class="cs-h1">Project Overview</div>
+  <ul class="cs-list">
+    <li><b>Project:</b> Aroggo — Auto-Refill &amp; Per-Patient Prescription Tracking Feature</li>
+    <li><b>Category:</b> Healthcare / Medicine Delivery (Bangladesh)</li>
+    <li><b>Role:</b> UX Designer — [tomar naam]</li>
+    <li><b>Course:</b> Case Study Club BD, mentored by Kowsar Mamun, Nayem Islam, Rakib bhai</li>
+    <li><b>Type:</b> Conceptual redesign — adding a new feature to an existing real product (not affiliated with Aroggo)</li>
+    <li><b>Timeline:</b> [Workshop 8-9 er real date range boshao — jemon "3 Weeks, Aug 2026"]</li>
+    <li><b>Tools:</b> Figma, FigJam</li>
+  </ul>
+  <div class="cs-body">One-line summary: Aroggo already delivers medicine on demand, but has no way to track a patient's ongoing prescriptions or remind them before a refill is due — this project adds that missing layer.</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">03 / 20 — Problem &amp; Solution</div>
+  <div class="cs-h1">Problem &amp; Solution</div>
+  <div class="fail-box">
+    <b>Problem</b><br>
+    Real Aroggo app-e "Patients" ar "Prescriptions" menu already ache, kintu kaje lage na — ekbar order kore fele gele, pore reorder korte hobe seta mone rakhar kono system nei. Chronic-medicine patient (jemon diabetes/hypertension) proti mash manually abar order dey, kokhono kokhono medicine shesh hoye jawar por.
+  </div>
+  <div class="fix-box">
+    <b>Solution</b><br>
+    Per-patient prescription profile — ekbar setup korle, app nijei stock count kore, "Week 1-3 Days Remaining" dekhay, ar refill deadline-er age auto-refill cart ready kore dey. Out-of-stock hole 3-ta shomo bikolpo dekhay (dark pattern na, default selected na).
+  </div>
+  <div class="cs-body">Ei problem-solution pairing ShareTrip ("Problem 1/Solution") ar Travela ("Problem 01/02")-r moto numbered card format-e case study-te presenting korte hobe.</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">04 / 20 — Audit Goals &amp; Objectives</div>
+  <div class="cs-h1">Audit Goals &amp; Objectives</div>
+  <div class="cs-body">Pattern source: Unimart UX Audit-er "Objectives" 2-card format.</div>
+  <ul class="cs-list">
+    <li><b>Goal 1 — Reduce manual reorder effort:</b> Workshop 9 brief-er nijer suggestion onujayi target "4 taps against roughly 14" real-app baseline-er tulonay</li>
+    <li><b>Goal 2 — Make "days remaining" visible, not just stock count:</b> "Days not Strips" rule — user-ke count na kore, koto din bakche seta directly bolte hobe</li>
+    <li><b>Goal 3 — No forced auto-charge:</b> "Nothing is charged or shipped without an explicit tap" — trust-preserving confirmation gate</li>
+    <li><b>Goal 4 — Handle out-of-stock without dark pattern:</b> "Three equal buttons, no default" jokhon originally-prescribed medicine stock-e nei</li>
+  </ul>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">05 / 20 — Competitor Analysis</div>
+  <div class="cs-h1">Competitor Analysis</div>
+  <div class="cs-sub">Pattern source: HireMate (5-competitor feature table), ShareTrip SWOT (4-competitor grid).</div>
+  <div class="placeholder">
+    Ei section-ta ekhono raw audit lagbe — tumi nijei 20-30 min lagiye BD-r 3-4 ta medicine delivery app (jemon Praava Health, other pharmacy apps tomar market-e ja ache) check kore dekho:<br><br>
+    <b>Table format:</b> Feature (rows) × Aroggo/Competitor A/B/C (columns) — rows: Per-patient profile? / Auto-refill? / Dose reminder? / Days-remaining display? / Out-of-stock alternative flow?<br><br>
+    HireMate-e ei table-tai case study-r sobcheye credible section chilo — "amra data diye decision niyechi" prove kore.
+  </div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">06 / 20 — Heuristic Evaluation</div>
+  <div class="cs-h1">Heuristic Evaluation</div>
+  <div class="cs-sub">Pattern source: Unimart UX Audit — heuristic issue + recommendation pair format.</div>
+  <ul class="cs-list">
+    <li><b>Heuristic 1 — Visibility of System Status:</b> Real Aroggo app-e stock/refill status kothao dekhay na — user-ke nijer theke mনে rakhte hoy। Fix: Digital Pill Box Dashboard-e always-visible countdown ring।</li>
+    <li><b>Heuristic 3 — User Control &amp; Freedom:</b> Auto-refill mane jodi force-charge hoy, seta trust bhenge dey। Fix: explicit confirm-tap gate, "Nothing charged without a tap" rule।</li>
+    <li><b>Heuristic 6 — Recognition Rather Than Recall:</b> "Patients" menu-r moddhe ki ache seta mনে rakhte hoy user-ke। Fix: per-patient card home screen-e directly show kora।</li>
+  </ul>
+  <div class="placeholder">Baki 2-3 ta heuristic (Error Prevention, Consistency &amp; Standards) real Aroggo app-e giye check kore fill up koro — screenshot soho.</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">07 / 20 — Design Process &amp; Timeline</div>
+  <div class="cs-h1">Design Process &amp; Timeline</div>
+  <div class="cs-sub">Pattern source: ShareTrip 4-week (Research→Define→Design→Test), HireMate day-count.</div>
+  <div class="flow-badge">Week 1 — Research &amp; Audit</div>
+  <div class="flow-badge">Week 2 — IA &amp; User Flow</div>
+  <div class="flow-badge">Week 3 — Wireframe (Sketch → Mid-Fi)</div>
+  <div class="flow-badge">Week 4 — Review, Iterate, Finalize</div>
+  <div class="cs-body">Tomar actual kaj already ei order-e hoyeche: real app gap-finding → IA diagram → 3-ta interaction flow → 28+ screen wireframe → design-review iteration। Shudhu real date range boshate hobe protita week-e.</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">08 / 20 — User Persona</div>
+  <div class="cs-h1">User Persona</div>
+  <div class="persona-card">
+    <div class="persona-photo">👤</div>
+    <div>
+      <b>Abdur Rahman, 58 — Chronic Patient</b><br>
+      <span style="font-size:11.5px; color:#555;">Dhaka. Diabetes, Metformin proti mash lage. Nijer thekei order kore, kintu prottek mash-e 2-3 din late hoye jay — medicine shesh hoye jawar por mone pore.</span>
+    </div>
+  </div>
+  <div class="persona-card">
+    <div class="persona-photo">👤</div>
+    <div>
+      <b>Nusrat, 27 — Family Caregiver</b><br>
+      <span style="font-size:11.5px; color:#555;">Baba-mar medicine order kore dey remotely. Multiple patient (baba + ma) er alada medicine track korte gie confuse hoye jay — kar ki lage mনে rakhte hoy nijer thekei.</span>
+    </div>
+  </div>
+  <div class="cs-body">Ei duita persona-i "specific human, specific moment" pattern follow kore — Pathao-r "Nayem", Shujog-r "Rafi", FoodCo-r "Rahim"-er moto।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">09 / 20 — Design System &amp; Visual Direction</div>
+  <div class="cs-h1">Design System &amp; Visual Direction</div>
+  <div class="cs-body">Direction: Aroggo-r existing brand visual language follow kora — trust-first, medical-clean, BD-context (bKash-style payment pattern, Bangla+English mix, sub-15K Android-friendly)।</div>
+  <div class="placeholder">Baki: Aroggo-r real app theke exact font confirm kora ("Hind Siliguri" suggest kora hoyechilo, confirm baki), ar spacing/component token list.</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">10 / 20 — Color Palette</div>
+  <div class="cs-h1">Color Palette</div>
+  <div class="swatch-row">
+    <div class="swatch"><div class="swatch-box" style="background:#0F6E5E;"></div><div class="swatch-label">Primary Green</div></div>
+    <div class="swatch"><div class="swatch-box" style="background:#A8E8D8;"></div><div class="swatch-label">Light Green</div></div>
+    <div class="swatch"><div class="swatch-box" style="background:#B8860B;"></div><div class="swatch-label">Alert / Refill Due</div></div>
+    <div class="swatch"><div class="swatch-box" style="background:#F5B8D8;"></div><div class="swatch-label">Notification</div></div>
+    <div class="swatch"><div class="swatch-box" style="background:#1a1a1a;"></div><div class="swatch-label">Text</div></div>
+    <div class="swatch"><div class="swatch-box" style="background:#F7F6F3; border:1px solid #ccc;"></div><div class="swatch-label">Background</div></div>
+  </div>
+  <div class="placeholder">Ei swatch-gulo tomar wireframe theke actual hex value diye replace koro (jodi Aroggo-r real brand green different hoy, seta use koro — consistency shobcheye joruri).</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">11 / 20 — Target Audience</div>
+  <div class="cs-h1">Target Audience</div>
+  <ul class="cs-list">
+    <li>Chronic-medicine patients (diabetes, hypertension, thyroid) — proti mash regular medicine lage</li>
+    <li>Family caregivers managing an elderly or dependent patient's medication remotely</li>
+    <li>BD urban/semi-urban smartphone user, sub-15K taka Android, 3G/4G connection</li>
+  </ul>
+  <div class="cs-body">Ei ta User Persona-r theke alada — Persona-te "specific individual story", ekhane "broader group definition"।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">12 / 20 — User Flow</div>
+  <div class="cs-h1">User Flow</div>
+  <div class="flow-badge">Flow A — Setup Once Per Patient</div>
+  <div class="flow-badge">Flow B — Reorder Every Cycle</div>
+  <div class="flow-badge">Flow C — Medicine Out of Stock</div>
+  <div class="cs-body">Tomar already-built 3-ta flow ei section-e jabe। Full journey flowchart (App Open → Setup → Countdown → Refill Confirm → App Close) ekta merged diagram hisebe dekhano jete pare, Safe Ride Alert-r "User Flow" section-er moto pura ekta page occupy kore।</div>
+  <div class="placeholder">[Figma file 195RmCCMCmwGThvuQlB2jH theke full flow diagram export koro]</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">13 / 20 — Information Architecture</div>
+  <div class="cs-h1">Information Architecture</div>
+  <div class="cs-body">Home → Patients → Refill → Orders → Help &amp; Support → System Communication Layer — ei full IA diagram tomar already ache।</div>
+  <div class="placeholder">[Figma file 195RmCCMCmwGThvuQlB2jH, section 288:2597 theke full IA export koro]</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">14 / 20 — Sketch</div>
+  <div class="cs-h1">Sketch (Low-Fidelity)</div>
+  <div class="cs-body">Pattern source: Travela (07 — hand-drawn pen-paper), Electricity Kiosk (7-screen sketch), ShareTrip (LoFi Wireframe page)। Prottek case study-i ekta "From Rough Sketch" slide rakhe process dekhate।</div>
+  <div class="placeholder">Jodi tomar kono original hand-drawn sketch ache (paper-e ba Figma-te grayscale wireframe `144:2`), seta ei page-e boshao। Na thakle, mid-fi wireframe-r grayscale/no-color version-take "sketch stage" hisebe frame koro.</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">15 / 20 — Mid-Fi</div>
+  <div class="cs-h1">Mid-Fidelity Wireframe</div>
+  <div class="cs-body">Tomar 28+ screen mid-fi set (Add Patient, Digital Pill Box Dashboard, Prescription Scan, Review, Checkout, Out-of-Stock alternatives) ei section-e jabe — grayscale, real copy soho, placeholder text na (Workshop 9 rule)।</div>
+  <div class="placeholder">[Figma file 5RtYliDOkowaEuPkcN5h0u theke sob mid-fi frame grid layout-e export koro]</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">16 / 20 — Hi-Fi</div>
+  <div class="cs-h1">High-Fidelity Screens</div>
+  <div class="cs-body">Color+typography+iconography soho final polished screens — Home v3 ring-hero (`163:2`), Medication Screen (`163:54`), Notification (`159:2`), Auto Refill Cart, Family switcher, Reorder card v1/v2।</div>
+  <div class="placeholder">[Ei section-e color-system apply kora final screen-gulo boshao — jodi hi-fi kora na thake ekhono, seta ei case study-r "next step" hisebe likhe rakho]</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">17 / 20 — Breakdown Banner</div>
+  <div class="cs-h1">Before vs After — Breakdown Banner</div>
+  <div class="cs-body">Pattern source: Travela "5-point audit breakdown" (Header&amp;Hero / Category Tabs / Listing Cards / Bottom Nav / Visual Design)।</div>
+  <table class="ai-table">
+    <tr><th>Dimension</th><th>Before (real Aroggo)</th><th>After (this redesign)</th></tr>
+    <tr><td>Refill visibility</td><td>Not shown anywhere</td><td>Always-visible countdown ring</td></tr>
+    <tr><td>Reorder taps</td><td>~14 taps (manual, Workshop 9 baseline)</td><td>4 taps (target — needs real measurement)</td></tr>
+    <tr><td>Multi-patient tracking</td><td>None</td><td>Per-patient profile with own schedule</td></tr>
+    <tr><td>Out-of-stock handling</td><td>Not designed</td><td>3 equal, non-default alternatives</td></tr>
+  </table>
+  <div class="placeholder">Baki: real app-e giye actual tap-count measure kora — ei ta pura case study-r sobcheye shokto proof hobe.</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">18 / 20 — Where AI Was Used</div>
+  <div class="cs-h1">Where AI Was Used (New Section)</div>
+  <div class="cs-body">Ei section-ta unique — kono case study-te dekhi nai, kintu ekhon AI-collaborative design process transparent kora valuable, biseshoto Case Study Club-e।</div>
+  <table class="ai-table">
+    <tr><th>Task</th><th>AI Used For</th><th>How Much</th></tr>
+    <tr><td>Information Architecture</td><td>Structure sanity-check, missing node spotting</td><td>Draft review, human decided final structure</td></tr>
+    <tr><td>User Flow diagrams</td><td>SVG/Figma diagram generation from described logic</td><td>Full generation, human specified rules (Days not Strips, etc.)</td></tr>
+    <tr><td>Wireframe screens</td><td>Layout scaffolding in Figma via plugin script</td><td>Human specified content/copy, AI built layout</td></tr>
+    <tr><td>Design critique</td><td>Content-vs-brief gap finding (missing Out-of-Stock flow, empty Checkout screen)</td><td>AI flagged, human verified against real screens</td></tr>
+    <tr><td>Research writing</td><td>None — real Play Store reviews / competitor check</td><td>Human-only, to keep evidence authentic</td></tr>
+  </table>
+  <div class="cs-body">Note: final design decisions (rules, copy, what stays/what's cut) sob-i human-made — AI structure ar iteration speed-e help korche, judgment na।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">19 / 20 — Failure &amp; Redesign Journey</div>
+  <div class="cs-h1">Failure &amp; Redesign Journey (New Section)</div>
+  <div class="cs-body">Pattern-e kono case study-te explicit "failure" slide nei — sobai polished final dekhay. Kintu real process-e ekta decision-badol-er real example ache tomar kaj-e:</div>
+  <div class="fail-box">
+    <b>Original decision:</b> Team-er first mid-fidelity wireframe set-e Out-of-Stock/Alternative-Brand flow completely missing chilo — direct "in-stock" assumption kore design kora hoyechilo. Checkout screen-o almost-empty/placeholder-level chilo.
+  </div>
+  <div class="cs-body"><b>Feedback moment:</b> Content-focused design critique-e (real screen copy vs Workshop 9 brief compare kore) ei gap dhora pore — brief-e explicit "Medicine Out of Stock" flow required chilo, kintu wireframe-e kono screen-i chilo na.</div>
+  <div class="fix-box">
+    <b>Redesign:</b> "Three equal buttons, no default, no dark pattern" rule diye notun Out-of-Stock screen add kora holo — generic-medicine ar different-brand-same-strength options equal weight-e dekhano hoy, kono ekta pre-selected na.
+  </div>
+  <div class="cs-body">Ei section-ta case study-r sobcheye shokto part hote pare — eta dekhay j design "first try-tei perfect" hoyni, feedback-e improve hoyeche. Recruiter/mentor-der jonno eta trust-building.</div>
+</div>
+
+<div class="cs-page" style="page-break-before: always; padding:0;">
+  <div class="cs-cover" style="background:#0F6E5E; color:#fff;">
+    <h1 style="color:#fff;">Thank You</h1>
+    <p style="color:#d8f0ea;">Mentors: Kowsar Mamun · Nayem Islam · Rakib bhai</p>
+    <p style="color:#d8f0ea; margin-top:10px;">Case Study Club BD</p>
+  </div>
+</div>
+
+</body>
+</html>
