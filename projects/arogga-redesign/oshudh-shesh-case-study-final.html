@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>Oshudh Shesh — Case Study (Final)</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Noto Sans Bengali','Segoe UI', Arial, sans-serif; color:#1a1a1a; width:1050px; }
+  h2 { font-size: 24px; color:#0F6E5E; margin-bottom: 6px; }
+  .cs-page { padding: 50px 65px; border-bottom: 3px solid #eee; }
+  .cs-num { display:inline-block; background:#111; color:#fff; font-size:11px; font-weight:700; padding:3px 10px; border-radius:10px; margin-bottom:10px; }
+  .cs-h1 { font-size: 22px; color:#111; margin-bottom: 4px; font-weight:800; }
+  .cs-sub { font-size: 12.5px; color:#666; margin-bottom: 16px; }
+  .cs-body { font-size: 13px; line-height: 1.7; color:#2a2a2a; margin-bottom: 10px; }
+  .cs-body b { color: #111; }
+  .placeholder { background:#F4F4F4; border:1.5px dashed #b8b8b8; border-radius:8px; padding:14px 18px; font-size:12px; color:#777; margin: 10px 0; }
+  .placeholder b { color:#555; }
+  .cs-list { margin-left: 20px; margin-bottom: 8px; }
+  .cs-list li { font-size: 13px; line-height: 1.7; color:#2a2a2a; margin-bottom: 4px; }
+  .persona-card { display:flex; gap:16px; background:#fff; border:1px solid #ddd; border-radius:10px; padding:14px; margin-bottom:10px; }
+  .persona-photo { width:56px; height:56px; border-radius:50%; background:#e0e0e0; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:20px; color:#999; }
+  .swatch-row { display:flex; gap:10px; margin: 10px 0; flex-wrap: wrap; }
+  .swatch { width:90px; }
+  .swatch-box { height:50px; border-radius:6px; border:1px solid #ddd; }
+  .swatch-label { font-size:10px; color:#666; margin-top:4px; }
+  .swatch-hex { font-size:9.5px; color:#999; }
+  .flow-badge { display:inline-block; background:#E8F3F0; color:#0F6E5E; font-size:11px; font-weight:700; padding:3px 10px; border-radius:6px; margin-right:6px; margin-bottom:6px; }
+  .fail-box { background:#FDECEC; border-left:4px solid #C94F4F; border-radius:6px; padding:14px 18px; margin-bottom:10px; }
+  .fix-box { background:#E8F3F0; border-left:4px solid #0F6E5E; border-radius:6px; padding:14px 18px; margin-bottom:10px; }
+  .stat-card { background:#F6F4EF; border-left:4px solid #0F6E5E; border-radius:6px; padding:10px 14px; margin-bottom:8px; font-size:12.5px; }
+  .stat-card .num { font-size:18px; font-weight:800; color:#0F6E5E; }
+  .stat-card .src { font-size:10.5px; color:#888; margin-top:3px; }
+  .quote-card { background:#E3F3F0; border:1px solid #C7E4DE; border-radius:6px; padding:12px 16px; font-style:italic; font-size:12.5px; margin-bottom:10px; }
+  .quote-card .who { font-style:normal; font-size:11px; color:#666; margin-top:6px; }
+  .ai-table { width:100%; border-collapse:collapse; margin-top:10px; font-size:12.5px; }
+  .ai-table th, .ai-table td { border:1px solid #ddd; padding:8px 10px; text-align:left; }
+  .ai-table th { background:#F0F9F6; color:#0F6E5E; }
+  .ai-table td.yes { color:#1AAE4A; font-weight:700; text-align:center; }
+  .ai-table td.no { color:#E0483E; font-weight:700; text-align:center; }
+  .ai-table td.partial { color:#B8790F; font-weight:700; text-align:center; }
+  .cs-cover { text-align:center; padding: 130px 60px; }
+  .cs-cover h1 { font-size: 34px; color:#fff; margin-bottom:12px; }
+  .cs-cover p { font-size:14px; color:#d8f0ea; }
+  .toc { padding: 40px 65px; background:#F7F6F3; }
+  .toc h3 { font-size:14px; color:#111; margin-bottom:10px; }
+  .toc ol { margin-left:20px; }
+  .toc li { font-size:12.5px; color:#333; line-height:1.9; }
+</style>
+</head>
+<body>
+
+<div class="cs-page" style="padding:0;">
+  <div class="cs-cover" style="background:#0F6E5E;">
+    <h1>Oshudh Shesh — Never Run Out</h1>
+    <p>Auto-Refill &amp; Per-Patient Prescription Tracking — an Arogga redesign concept</p>
+    <p style="margin-top:20px; font-size:12px;">Case Study Club BD · mentored by Kowsar Mamun, Nayem Islam, Rakib bhai</p>
+  </div>
+</div>
+
+<div class="toc">
+  <h3>22-ta section</h3>
+  <ol>
+    <li>Hero</li><li>Project Overview</li>
+    <li>Problem Statement</li><li>Market Opportunity — Why Now</li><li>Real-World Evidence / Quote</li>
+    <li>Competitive Analysis</li><li>Audit Goals &amp; Objectives</li><li>Heuristic Evaluation</li>
+    <li>Design Process &amp; Timeline</li><li>User Persona</li><li>Target Audience</li>
+    <li>Design System &amp; Visual Direction</li><li>Color Palette</li>
+    <li>User Flow</li><li>Information Architecture</li>
+    <li>Sketch (Low-Fi)</li><li>Mid-Fi</li><li>Hi-Fi</li>
+    <li>Before/After Breakdown</li><li>Where AI Was Used</li><li>Failure &amp; Redesign Journey</li><li>Thank You</li>
+  </ol>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">01 / 22 — Hero</div>
+  <div class="cs-h1">Never Run Out</div>
+  <div class="cs-sub">In medias res: ওষুধ ফুরিয়ে যাওয়ার মুহূর্ত দিয়ে শুরু, generic app-intro দিয়ে না।</div>
+  <div class="cs-body"><b>Hero line:</b> "Never Run Out." — Auto-refill and per-patient dose tracking for families managing chronic medication in Bangladesh.<br><br><b>Subline:</b> For Abdur Rahman, Metformin runs out every month — and no one remembers to reorder until it's already gone.</div>
+  <div class="placeholder"><b>এখানে বসবে:</b> Hi-Fi mockup — "Digital Pill Box Dashboard" (countdown ring) থেকে 3-টা phone mockup, hero image হিসেবে। Video/animated হলে ভালো: reorder flow-র 5-7 সেকেন্ডের screen-recording loop (Setup → Countdown → Auto-refill confirm)।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">02 / 22 — Project Overview</div>
+  <div class="cs-h1">Project Overview</div>
+  <ul class="cs-list">
+    <li><b>Project:</b> Oshudh Shesh — Auto-Refill &amp; Per-Patient Prescription Tracking (Arogga redesign concept)</li>
+    <li><b>Category:</b> Healthcare / Medicine Delivery (Bangladesh)</li>
+    <li><b>Role:</b> UX Designer — [তোমার নাম]</li>
+    <li><b>Course:</b> Case Study Club BD, mentored by Kowsar Mamun, Nayem Islam, Rakib bhai</li>
+    <li><b>Type:</b> Conceptual redesign — Arogga-র বিদ্যমান প্রোডাক্টে একটা নতুন ফিচার যোগ করা (Arogga-র সাথে সরাসরি সম্পৃক্ত না)</li>
+    <li><b>Timeline:</b> [Workshop 8-9-এর real date range বসাও]</li>
+    <li><b>Tools:</b> Figma, FigJam</li>
+  </ul>
+  <div class="cs-body">এক লাইনে: Arogga ওষুধ ডেলিভারি করে ঠিকই, কিন্তু একজন রোগীর চলমান প্রেসক্রিপশন ট্র্যাক করার বা রিফিলের আগে মনে করিয়ে দেওয়ার কোনো ব্যবস্থা নেই — এই প্রজেক্ট সেই মিসিং লেয়ার যোগ করে।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">03 / 22 — Problem Statement</div>
+  <div class="cs-h1">Problem Statement</div>
+  <div class="stat-card"><div class="num">৫৫.৯%</div><div>উচ্চ রক্তচাপ রোগীদের মধ্যে medication adherence খারাপ — ডাক্তারের কথামতো ওষুধ খাচ্ছেন না।</div><div class="src">Research Square, 2025</div></div>
+  <div class="stat-card"><div class="num">যোগসূত্র</div><div>বয়স্ক রোগীদের মধ্যে cognitive impairment থাকলে medication non-adherence-এর ঝুঁকি সরাসরি বেশি — এটাই এই ফিচারের মূল যুক্তি।</div><div class="src">NCBI/PMC</div></div>
+  <div class="fail-box"><b>Real gap (competitive analysis থেকে):</b> Arogga-তে "Patients"/"Prescriptions" মেনু আছে, কিন্তু reorder ম্যানুয়াল — কেউ মনে রাখে না কবে ফুরাবে। Inbox-এ শুধু order-status notification আসে, refill reminder কোনোভাবেই নেই।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">04 / 22 — Market Opportunity — Why Now</div>
+  <div class="cs-h1">Market Opportunity — কেন এখন</div>
+  <div class="stat-card"><div class="num">&lt; ১%</div><div>বাংলাদেশের সামগ্রিক ফার্মা মার্কেটের মধ্যে অনলাইন ফার্মেসির শেয়ার — মার্কেট এখনও early stage, বড় সুযোগ আছে।</div><div class="src">The Business Standard</div></div>
+  <div class="stat-card"><div class="num">$৬ বিলিয়ন</div><div>২০২৫ নাগাদ বাংলাদেশের সামগ্রিক ফার্মা মার্কেট এই সাইজ ছাড়াবে।</div><div class="src">The Daily Star</div></div>
+  <div class="stat-card"><div class="num">৬.৪% → ১১.৫%</div><div>বাংলাদেশে ৬০+ বয়সীদের হার, ২০০১ থেকে ২০৩০ প্রজেকশন পর্যন্ত — chronic-medicine user group ক্রমাগত বড় হচ্ছে।</div><div class="src">The Daily Star / PMC</div></div>
+  <div class="cs-body">Arogga নিজেই $৫.৫ মিলিয়ন seed funding পেয়েছে (Forbes, ২০২৪), মূল মিশন — বাংলাদেশে counterfeit medicine (২০-৩০% ভেজাল) ঠেকানো। Oshudh Shesh সেই একই "trust" সমস্যার আরেকটা দিক সমাধান করে — ওষুধ সঠিক সময়ে হাতে পাওয়া নিশ্চিত করা।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">05 / 22 — Real-World Evidence / Quote</div>
+  <div class="cs-h1">Real-World Evidence</div>
+  <div class="quote-card">"এক উন্নয়নকর্মী বলেছেন, অনলাইনে ওষুধ অর্ডার করা তার বয়স্ক বাবা-মায়ের ওষুধ ব্যবস্থাপনার জন্য অপরিহার্য হয়ে উঠেছে — বিশেষ করে জরুরি মুহূর্তে।"<div class="who">— Dhaka Tribune রিপোর্ট থেকে</div></div>
+  <div class="placeholder"><b>এখানে বসবে:</b> তোমার নিজের real user interview-র ১-২টা quote (chronic patient বা caregiver থেকে) — `AI generated user interview qes.txt`-এর প্রশ্নগুলো ব্যবহার করে যাদের সাথে কথা বলেছ, তাদের আসল উত্তর থেকে একটা লাইন এখানে বসাও।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">06 / 22 — Competitive Analysis</div>
+  <div class="cs-h1">Competitive Analysis</div>
+  <div class="cs-sub">৫টা BD অ্যাপ সরাসরি ইনস্টল করে, কাস্টমার সার্ভিসে সরাসরি কথা বলে টেস্ট করা।</div>
+  <table class="ai-table">
+    <tr><th>ফিচার</th><th>Arogga</th><th>Osudhpotro</th><th>Dhaka Pharmacy</th><th>ePharma</th><th>MedEasy</th></tr>
+    <tr><td>Reminder</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="partial">△</td><td class="no">✕</td></tr>
+    <tr><td>Refill/Reorder</td><td class="partial">△</td><td class="yes">✓</td><td class="no">✕</td><td class="partial">△</td><td class="no">✕</td></tr>
+    <tr><td>Reminder ও Refill সংযুক্ত</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
+  </table>
+  <div class="cs-body" style="margin-top:10px;"><b>মূল সিদ্ধান্ত:</b> ePharma সবচেয়ে কাছে গিয়েছে (দুটো ফিচারই বানিয়েছে, নিজে চ্যাটে যাচাই করা হয়েছে) কিন্তু সংযুক্ত করেনি। এটাই সবচেয়ে বড় differentiation opportunity। Global বেঞ্চমার্ক: Amazon PillPack (auto-calculate + auto-refill, সবচেয়ে কাছের বাস্তব উদাহরণ), CVS (reminder+refill connected)।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">07 / 22 — Audit Goals &amp; Objectives</div>
+  <div class="cs-h1">Audit Goals &amp; Objectives</div>
+  <ul class="cs-list">
+    <li><b>Goal 1 — Reduce manual reorder effort:</b> target "৪ ট্যাপ" বনাম আনুমানিক "১৪ ট্যাপ" real-app বেসলাইন</li>
+    <li><b>Goal 2 — Days remaining দেখানো, শুধু stock count না:</b> "Days not Strips" নিয়ম</li>
+    <li><b>Goal 3 — No forced auto-charge:</b> explicit tap ছাড়া কিছু charge/ship হবে না</li>
+    <li><b>Goal 4 — Out-of-stock dark-pattern ছাড়া handle করা:</b> "৩টা সমান বাটন, no default"</li>
+  </ul>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">08 / 22 — Heuristic Evaluation</div>
+  <div class="cs-h1">Heuristic Evaluation</div>
+  <ul class="cs-list">
+    <li><b>Visibility of System Status:</b> Real Arogga app-এ stock/refill status কোথাও দেখায় না। Fix: always-visible countdown ring।</li>
+    <li><b>User Control &amp; Freedom:</b> Auto-refill যদি force-charge হয়, trust ভাঙে। Fix: explicit confirm-tap gate।</li>
+    <li><b>Recognition Rather Than Recall:</b> "Patients" মেনুর ভেতরে কী আছে মনে রাখতে হয়। Fix: per-patient card home screen-এ directly দেখানো।</li>
+  </ul>
+  <div class="placeholder">বাকি ২-৩টা heuristic (Error Prevention, Consistency) real Arogga app-এ গিয়ে check করে screenshot সহ ফিল আপ করো।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">09 / 22 — Design Process &amp; Timeline</div>
+  <div class="cs-h1">Design Process &amp; Timeline</div>
+  <div class="flow-badge">Week 1 — Research &amp; Audit</div>
+  <div class="flow-badge">Week 2 — IA &amp; User Flow</div>
+  <div class="flow-badge">Week 3 — Wireframe (Sketch → Mid-Fi)</div>
+  <div class="flow-badge">Week 4 — Review, Iterate, Finalize</div>
+  <div class="placeholder">real date range বসাও প্রতিটা week-এ (Workshop 8-9-এর সময়সীমা অনুযায়ী)।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">10 / 22 — User Persona</div>
+  <div class="cs-h1">User Persona</div>
+  <div class="persona-card"><div class="persona-photo">👤</div><div><b>Abdur Rahman, ৫৮ — Chronic Patient</b><br><span style="font-size:12px; color:#555;">ঢাকা। ডায়াবেটিস, Metformin প্রতি মাসে লাগে। নিজে থেকেই অর্ডার করে, কিন্তু প্রতি মাসে ২-৩ দিন লেট হয়ে যায় — ওষুধ শেষ হয়ে যাওয়ার পর মনে পড়ে।</span></div></div>
+  <div class="persona-card"><div class="persona-photo">👤</div><div><b>Nusrat, ২৭ — Family Caregiver</b><br><span style="font-size:12px; color:#555;">বাবা-মার ওষুধ অর্ডার করে দেয় remotely। একাধিক patient-এর আলাদা ওষুধ ট্র্যাক করতে গিয়ে confuse হয়ে যায়।</span></div></div>
+  <div class="placeholder">Real interview থেকে যদি এই দুই persona-র বাইরে তৃতীয় কোনো pattern পাওয়া যায়, এখানে যোগ করো।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">11 / 22 — Target Audience</div>
+  <div class="cs-h1">Target Audience</div>
+  <ul class="cs-list">
+    <li>Chronic-medicine patient (ডায়াবেটিস, হাইপারটেনশন, থাইরয়েড) — প্রতি মাসে regular medicine লাগে</li>
+    <li>দূরে থাকা family caregiver যিনি বয়স্ক/dependent patient-এর medication remotely manage করেন</li>
+    <li>BD urban/semi-urban smartphone user, sub-15K টাকার Android, 3G/4G connection</li>
+  </ul>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">12 / 22 — Design System &amp; Visual Direction</div>
+  <div class="cs-h1">Design System &amp; Visual Direction</div>
+  <div class="cs-body">Direction: Arogga-র বিদ্যমান visual language অনুসরণ করা — trust-first, medical-clean, BD-context (bKash-style payment pattern, Bangla+English mix, sub-15K Android-friendly)।</div>
+  <div class="placeholder">Font confirm করা বাকি ("Hind Siliguri" সাজেস্ট করা হয়েছিল)।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">13 / 22 — Color Palette</div>
+  <div class="cs-h1">Color Palette</div>
+  <div class="cs-sub">Arogga-র real app screenshot থেকে documented (color-picked না, visual approximation)।</div>
+  <div class="swatch-row">
+    <div class="swatch"><div class="swatch-box" style="background:#0E8074;"></div><div class="swatch-label">Primary</div><div class="swatch-hex">#0E8074</div></div>
+    <div class="swatch"><div class="swatch-box" style="background:#1AAE4A;"></div><div class="swatch-label">Success</div><div class="swatch-hex">#1AAE4A</div></div>
+    <div class="swatch"><div class="swatch-box" style="background:#F5A855;"></div><div class="swatch-label">Warning</div><div class="swatch-hex">#F5A855</div></div>
+    <div class="swatch"><div class="swatch-box" style="background:#E0483E;"></div><div class="swatch-label">Danger</div><div class="swatch-hex">#E0483E</div></div>
+    <div class="swatch"><div class="swatch-box" style="background:#1A1A1A;"></div><div class="swatch-label">Text</div><div class="swatch-hex">#1A1A1A</div></div>
+    <div class="swatch"><div class="swatch-box" style="background:#FFFFFF; border:1px solid #ccc;"></div><div class="swatch-label">Background</div><div class="swatch-hex">#FFFFFF</div></div>
+  </div>
+  <div class="cs-body">Icon style: outline/line icons, দুই-টোন পর্যন্ত। Border-radius: card ১০-১২px, button ৮px (pill না), status badge pill-shape।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">14 / 22 — User Flow</div>
+  <div class="cs-h1">User Flow</div>
+  <div class="flow-badge">Flow A — Setup Once Per Patient</div>
+  <div class="flow-badge">Flow B — Reorder Every Cycle</div>
+  <div class="flow-badge">Flow C — Medicine Out of Stock</div>
+  <div class="placeholder"><b>এখানে বসবে:</b> Figma থেকে full flow diagram export (dark-mode flowchart স্টাইল, ShareTrip/Electricity Kiosk pattern অনুযায়ী)। Mockup fidelity: high — এটা একটা diagram, wireframe না।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">15 / 22 — Information Architecture</div>
+  <div class="cs-h1">Information Architecture</div>
+  <div class="cs-body">Home → Patients → Refill → Orders → Help &amp; Support → System Communication Layer।</div>
+  <div class="placeholder"><b>এখানে বসবে:</b> Figma থেকে full IA diagram export। Mockup fidelity: high (diagram/tree structure)।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">16 / 22 — Sketch (Low-Fidelity)</div>
+  <div class="cs-h1">Sketch</div>
+  <div class="placeholder"><b>এখানে বসবে: Low-fidelity mockup।</b> হাতে আঁকা sketch (কাগজে বা Figma grayscale wireframe) — Add Patient, Digital Pill Box Dashboard, Reorder flow-র প্রথম rough ভার্সন। যদি হাতে আঁকা sketch না থাকে, mid-fi wireframe-র grayscale/no-color ভার্সনকে "sketch stage" হিসেবে ফ্রেম করো।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">17 / 22 — Mid-Fi</div>
+  <div class="cs-h1">Mid-Fidelity Wireframe</div>
+  <div class="placeholder"><b>এখানে বসবে: Mid-fidelity mockup।</b> grayscale, real copy সহ (placeholder text না) — Add Patient, Digital Pill Box Dashboard, Prescription Scan, Review, Checkout, Out-of-Stock alternatives, মোট ২৮+ screen। Figma থেকে grid layout-এ export করো।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">18 / 22 — Hi-Fi</div>
+  <div class="cs-h1">High-Fidelity Screens</div>
+  <div class="placeholder"><b>এখানে বসবে: High-fidelity mockup।</b> color+typography+iconography সহ final polished screens — Home v3 ring-hero, Medication Screen, Notification, Auto Refill Cart, Family switcher, Reorder card। যদি hi-fi এখনও করা না থাকে, এই section-এ "next step" হিসেবে লিখে রাখো, খালি রেখো না।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">19 / 22 — Before/After Breakdown</div>
+  <div class="cs-h1">Before vs After</div>
+  <table class="ai-table">
+    <tr><th>Dimension</th><th>Before (real Arogga)</th><th>After (এই redesign)</th></tr>
+    <tr><td>Refill visibility</td><td>কোথাও দেখায় না</td><td>Always-visible countdown ring</td></tr>
+    <tr><td>Reorder taps</td><td>~১৪ tap (আনুমানিক)</td><td>৪ tap (target)</td></tr>
+    <tr><td>Multi-patient tracking</td><td>নেই</td><td>Per-patient profile, নিজস্ব schedule</td></tr>
+    <tr><td>Out-of-stock handling</td><td>ডিজাইন করা হয়নি</td><td>৩টা সমান, non-default বিকল্প</td></tr>
+  </table>
+  <div class="placeholder"><b>বাকি:</b> real app-এ গিয়ে actual tap-count measure করা — এটাই পুরো case study-র সবচেয়ে শক্ত প্রমাণ হবে।</div>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">20 / 22 — Where AI Was Used</div>
+  <div class="cs-h1">Where AI Was Used</div>
+  <table class="ai-table">
+    <tr><th>Task</th><th>AI Used For</th><th>How Much</th></tr>
+    <tr><td>Information Architecture</td><td>Structure sanity-check, missing node খোঁজা</td><td>Draft review, human চূড়ান্ত structure ঠিক করেছে</td></tr>
+    <tr><td>User Flow diagrams</td><td>Diagram generation from described logic</td><td>Human rules বলে দিয়েছে (Days not Strips ইত্যাদি)</td></tr>
+    <tr><td>Wireframe screens</td><td>Layout scaffolding</td><td>Human content/copy ঠিক করেছে</td></tr>
+    <tr><td>Design critique</td><td>Content-vs-brief gap খোঁজা</td><td>AI flag করেছে, human verify করেছে</td></tr>
+    <tr><td>Research writing</td><td>None — real screenshots/interviews</td><td>Human-only, evidence authentic রাখতে</td></tr>
+  </table>
+</div>
+
+<div class="cs-page">
+  <div class="cs-num">21 / 22 — Failure &amp; Redesign Journey</div>
+  <div class="cs-h1">Failure &amp; Redesign Journey</div>
+  <div class="fail-box"><b>Original decision:</b> প্রথম mid-fidelity wireframe সেটে Out-of-Stock/Alternative-Brand flow সম্পূর্ণ missing ছিল — সরাসরি "in-stock" assumption করে design করা হয়েছিল। Checkout screen-ও almost-empty ছিল।</div>
+  <div class="cs-body"><b>Feedback moment:</b> content-focused design critique-এ (real screen copy বনাম brief compare করে) এই gap ধরা পড়ে — brief-এ explicit "Medicine Out of Stock" flow দরকার ছিল, কিন্তু wireframe-এ কোনো screen-ই ছিল না।</div>
+  <div class="fix-box"><b>Redesign:</b> "তিনটা সমান বাটন, no default, no dark pattern" নিয়ম দিয়ে নতুন Out-of-Stock screen যোগ করা হলো।</div>
+  <div class="cs-sub">Presentation-এর সময়: এই গল্পটা deck-এর শেষে না, Heuristic Evaluation (section 08)-এর কাছাকাছি বলাই বেশি কার্যকর — এটাই আসল turning point।</div>
+</div>
+
+<div class="cs-page" style="padding:0;">
+  <div class="cs-cover" style="background:#0F6E5E;">
+    <h1>Thank You</h1>
+    <p>Mentors: Kowsar Mamun · Nayem Islam · Rakib bhai</p>
+    <p style="margin-top:10px;">Case Study Club BD</p>
+  </div>
+</div>
+
+</body>
+</html>
