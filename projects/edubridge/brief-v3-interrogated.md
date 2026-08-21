@@ -64,3 +64,35 @@ The tutor profile and booking request flow, parent-facing. The most meaningful s
 - **Class 4:** When you critique a generated screen, you compare it against this file. Generated screens that don't match this brief are wrong, even if they look polished.
 - **Class 5:** Your Figma file should be built from this brief, not the client brief.
 - **Class 6:** Your prompt to Claude Code includes the constraints from this file. Specifically the user paragraph, the scope, and the assumptions.
+
+---
+
+## Appendix: raw grill-me notes (Skeptical PM, before synthesis)
+
+Kept as a record of the questioning that led to the synthesis above. Not re-litigated here, just archived.
+
+**First pass, 5 questions ordered by what kills fastest:**
+
+1. Stripe for BD payments, does it actually work? Brief says Stripe, but Stripe does not support Bangladesh merchant accounts well. If tutors and parents cannot complete a payment, the 15% conversion metric is dead on day one. What is the real payment rail, bKash, Nagad, local gateway?
+2. Desktop-first, for a market that is mobile-first? Brief says desktop-first, "mobile responsive is good to have." The working contract says sub-15K Android is the primary device. Which one is actually true for this audience?
+3. English-only MVP, but parents decide the purchase? Parents hold the money and trust concerns but are named secondary. If a parent cannot read the tutor's qualifications or the payment screen, who is completing the booking?
+4. How is a tutor actually verified, not just "has a profile"? Brief never says who checks the qualification. An unverified badge that looks verified is worse than no badge.
+5. Who is the buyer between student and parent, for the booking flow itself? Does the student search and browse, then the parent approves and pays? If undefined, the booking-to-payment handoff gets guessed wrong.
+
+**Second pass, what the brief closed and the PM thread reopened:**
+
+1. Payment: brief closed Stripe, thread reopens bKash/Nagad with client saying "figure it out." Who decides, design or engineering?
+2. Device priority: brief closed desktop-first, thread reopens mobile as "a must." Does the three-week timeline account for two real experiences instead of one plus a responsive pass?
+3. Language scope: brief closed English-only, thread reopens Bengali as "strongly preferred." This is a scope decision, not a design decision, and it changes IA and content structure.
+4. Primary user: brief closed students primary, thread reopens parents as the real decision-makers, without updating the brief.
+5. Scope, video calling: brief closed MVP as search/profile/booking/payment, thread adds video calling after the client saw a competitor, told to design for it while engineering "figures out the build side."
+6. Verification: never defined in the brief, thread adds "background verification visible, like a badge" without saying what it actually checks.
+7. Timeline and budget vs. all of the above: three weeks, 3 lakh, no change despite mobile-must, dual payment gateways, a possible second language, and a new feature ask. Has anyone told the client the scope no longer fits, or is design expected to absorb the gap silently?
+
+**Chosen 3 questions to answer directly:**
+
+1. Timeline and budget vs. growing scope, the one that kills fastest.
+2. What does the success metric actually mean, success metric-er mane ki (100 signup / 500 search / 15% conversion ashole design-e ki proman korbe), r shei onujayi ki age banaba.
+3. Verification: what does the badge actually check.
+
+Answers to these are folded into "What the contradictions actually were" and "Assumptions I am carrying forward" above.

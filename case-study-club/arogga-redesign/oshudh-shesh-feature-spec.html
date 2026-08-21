@@ -1,0 +1,468 @@
+<title>Oshudh Shesh — Refill Reminder Feature Spec</title>
+<style>
+  :root {
+    --color-brand: #0E8074;
+    --color-brand-tint: #E3F3F0;
+    --color-success: #1AAE4A;
+    --color-warning: #B8790F;
+    --color-warning-bg: #FCEEDD;
+    --color-warning-border: #F5A855;
+    --color-danger: #C43D33;
+    --color-danger-bg: #FBEAE8;
+    --color-danger-border: #E0483E;
+
+    --color-bg-page: #FDFCFA;
+    --color-bg-card: #FFFFFF;
+    --color-bg-mono: #F6F4EF;
+    --color-text-primary: #1A1A1A;
+    --color-text-secondary: #6B6B66;
+    --color-border: #E7E4DC;
+    --shadow-card: 0 1px 3px rgba(20, 20, 15, 0.06);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-brand: #4FBFAE;
+      --color-brand-tint: #12302C;
+      --color-success: #4ED17E;
+      --color-warning: #F0B25E;
+      --color-warning-bg: #3A2F1C;
+      --color-warning-border: #6B5228;
+      --color-danger: #E8776C;
+      --color-danger-bg: #3A2220;
+      --color-danger-border: #6B342E;
+
+      --color-bg-page: #16181A;
+      --color-bg-card: #1D2022;
+      --color-bg-mono: #14211F;
+      --color-text-primary: #EDEDE8;
+      --color-text-secondary: #9A9A93;
+      --color-border: #2C2F2F;
+      --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --color-brand: #4FBFAE;
+    --color-brand-tint: #12302C;
+    --color-success: #4ED17E;
+    --color-warning: #F0B25E;
+    --color-warning-bg: #3A2F1C;
+    --color-warning-border: #6B5228;
+    --color-danger: #E8776C;
+    --color-danger-bg: #3A2220;
+    --color-danger-border: #6B342E;
+
+    --color-bg-page: #16181A;
+    --color-bg-card: #1D2022;
+    --color-bg-mono: #14211F;
+    --color-text-primary: #EDEDE8;
+    --color-text-secondary: #9A9A93;
+    --color-border: #2C2F2F;
+    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  :root[data-theme="light"] {
+    --color-brand: #0E8074;
+    --color-brand-tint: #E3F3F0;
+    --color-success: #1AAE4A;
+    --color-warning: #B8790F;
+    --color-warning-bg: #FCEEDD;
+    --color-warning-border: #F5A855;
+    --color-danger: #C43D33;
+    --color-danger-bg: #FBEAE8;
+    --color-danger-border: #E0483E;
+
+    --color-bg-page: #FDFCFA;
+    --color-bg-card: #FFFFFF;
+    --color-bg-mono: #F6F4EF;
+    --color-text-primary: #1A1A1A;
+    --color-text-secondary: #6B6B66;
+    --color-border: #E7E4DC;
+    --shadow-card: 0 1px 3px rgba(20, 20, 15, 0.06);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--color-bg-page);
+    color: var(--color-text-primary);
+    font-family: "Segoe UI", "Noto Sans Bengali", "Nirmala UI", system-ui, -apple-system, sans-serif;
+    line-height: 1.65;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+
+  .eyebrow {
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--color-brand);
+  }
+
+  h1 {
+    font-size: 34px;
+    line-height: 1.15;
+    margin: 10px 0 6px;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  .subtitle {
+    color: var(--color-text-secondary);
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 21px;
+    margin: 0 0 14px;
+    letter-spacing: -0.005em;
+    text-wrap: balance;
+  }
+
+  h2 .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 7px;
+    background: var(--color-brand-tint);
+    color: var(--color-brand);
+    font-size: 13px;
+    font-weight: 700;
+    margin-right: 10px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  section.block {
+    margin-bottom: 40px;
+  }
+
+  p { margin: 0 0 12px; }
+  p:last-child { margin-bottom: 0; }
+
+  ul, ol {
+    margin: 0 0 12px;
+    padding-left: 22px;
+  }
+  ul:last-child, ol:last-child { margin-bottom: 0; }
+  li { margin-bottom: 6px; }
+  li:last-child { margin-bottom: 0; }
+
+  .callout {
+    border-radius: 10px;
+    padding: 18px 20px;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-card);
+    box-shadow: var(--shadow-card);
+    margin-bottom: 14px;
+  }
+  .callout:last-child { margin-bottom: 0; }
+
+  .callout.problem {
+    border-left: 3px solid var(--color-danger-border);
+    background: var(--color-danger-bg);
+  }
+  .callout.problem .label { color: var(--color-danger); }
+
+  .callout.feature {
+    border-left: 3px solid var(--color-brand);
+    background: var(--color-brand-tint);
+  }
+  .callout.feature .label { color: var(--color-brand); }
+
+  .callout.open {
+    border-left: 3px solid var(--color-warning-border);
+    background: var(--color-warning-bg);
+  }
+  .callout.open .label { color: var(--color-warning); }
+
+  .label {
+    display: block;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .card {
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-card);
+    border-radius: 10px;
+    padding: 20px 22px;
+    box-shadow: var(--shadow-card);
+    margin-bottom: 14px;
+  }
+  .card:last-child { margin-bottom: 0; }
+
+  .card h3 {
+    font-size: 14.5px;
+    margin: 0 0 8px;
+    color: var(--color-text-secondary);
+    font-weight: 600;
+  }
+
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  @media (max-width: 520px) {
+    .split { grid-template-columns: 1fr; }
+  }
+
+  .calc-box {
+    background: var(--color-bg-mono);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    font-variant-numeric: tabular-nums;
+    font-size: 15px;
+  }
+  .calc-box .line { margin-bottom: 6px; }
+  .calc-box .result {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--color-border);
+    font-weight: 700;
+    color: var(--color-brand);
+  }
+
+  .chip-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 10px 0 4px;
+  }
+  .chip {
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-mono);
+    border-radius: 999px;
+    padding: 4px 13px;
+    font-size: 13.5px;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-text-secondary);
+  }
+  .chip.active {
+    background: var(--color-brand);
+    border-color: var(--color-brand);
+    color: #fff;
+  }
+
+  .question {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .question:not(:first-child) { margin-top: 16px; }
+
+  .formula {
+    font-variant-numeric: tabular-nums;
+    background: var(--color-bg-mono);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 14.5px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .divider {
+    height: 1px;
+    background: var(--color-border);
+    margin: 44px 0;
+    border: none;
+  }
+
+  .source-note {
+    color: var(--color-text-secondary);
+    font-size: 13px;
+    margin-top: 4px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14.5px;
+  }
+  th, td {
+    text-align: left;
+    padding: 9px 10px;
+    border-bottom: 1px solid var(--color-border);
+    font-variant-numeric: tabular-nums;
+  }
+  th {
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    font-size: 12.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .table-wrap { overflow-x: auto; }
+
+  footer {
+    margin-top: 56px;
+    color: var(--color-text-secondary);
+    font-size: 13px;
+  }
+</style>
+
+<div class="page">
+
+  <div class="eyebrow">Arogga · Refill Reminder — Feature Spec</div>
+  <h1>Oshudh Shesh</h1>
+  <div class="subtitle">Prescription Refill Reminder — hand-written notes theke organize kora, 26 July 2026</div>
+
+  <section class="block">
+    <h2>Problem</h2>
+    <div class="callout problem">
+      <span class="label">Kothay atke jacche</span>
+      <p>Chronic health issue-er jonno jara regular medicine khan (beshirvag khetre elderly patient), tara shadharonoto reorder koren <strong>jokhon current supply shesh hoye jay</strong> — mane already lete geche.</p>
+      <p><strong>Karon hote pare:</strong></p>
+      <ul>
+        <li>Boyosher karone mone rakhte koshto hoy</li>
+        <li>Onek gulo medicine ekshathe hishab rakha kothin</li>
+        <li>Doctor dose change / add / edit korte paren, jekono somoy</li>
+        <li>Bhul kore kono din dose skip hoye jete pare</li>
+      </ul>
+      <p><strong>Fole ja ghote:</strong></p>
+      <ul>
+        <li>Patient stress feel koren</li>
+        <li>Ekdin dose miss hole chronic condition-e serious issue hote pare</li>
+        <li>Caregiver jini dure thaken, tini anxiety o guilt feel koren</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>The feature we're adding</h2>
+    <div class="callout feature">
+      <span class="label">Solution direction</span>
+      <ol>
+        <li>Checkout-er por shuru hoy emon ekta <strong>refill system</strong></li>
+        <li>Supply shesh hoye jaoar age-i patient o caregiver — dujon-keই reminder deya</li>
+        <li>Reminder-er shathe ekta <strong>readymade cart</strong> deya, jekhane proyojoniyo sob medicine already add kora thakbe</li>
+      </ol>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section class="block">
+    <h2><span class="num">1</span>Checkout date theke reorder date — eta ekbar-e calculate kore dile cholbe na</h2>
+    <p>App-ke shudhumatro "checkout date + X din" hishab kore next reorder date dhoriye dile cholbe na, karon teen-ta variable ache jeta cycle-er majhkhane change hote pare:</p>
+    <ul>
+      <li>Doctor dose <strong>change</strong> korte paren (barano/komano)</li>
+      <li>Koto medicine <strong>"left" ache</strong> — eta accurately track korte hobe</li>
+      <li>Patient bhule kono din <strong>skip</strong> korte paren</li>
+    </ul>
+    <p>Tai system-ta emon hote hobe: <strong>static, one-time calculation na — correctable.</strong> Kono input change hole system nijeke adjust korte parbe, prottekbar notun kore stop hoye giye recalculate na kore.</p>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">2</span>Calculation-ta actually kivabe hobe</h2>
+    <p>App nijer theke "koto diner medicine ache" bujhbe na — eta 2-ta input theke ashbe:</p>
+    <div class="split">
+      <div class="card">
+        <h3>(a) Quantity kena hoyeche</h3>
+        <p>Strip / tablet count — jeta cart-e kena hoyeche.</p>
+      </div>
+      <div class="card">
+        <h3>(b) Prescribed dosage</h3>
+        <p>Daily koto bar, ekbar-e koto tablet — prescription-e lekha thake.</p>
+      </div>
+    </div>
+
+    <div class="calc-box" style="margin-top:14px;">
+      <div class="line">1 strip = 10 tablets</div>
+      <div class="line">Dosage: daily 2 tablet</div>
+      <div class="line">Continue for: 7 days</div>
+      <div class="result">→ 14 tablet lagbe (2 × 7) — 1 strip-e hoye jabe, 6-ta tablet baki thakbe</div>
+    </div>
+
+    <p style="margin-top:14px;">Eta theke App nijei calculate korte parbe: <strong>date, medicine name, quantity.</strong> Kintu "daily koto bar, koto din khete hobe" — eta prescription-nirvor, App guess korte parbe na. Eta <strong>user input</strong> hobe:</p>
+
+    <div class="question">How many tablet per dose?</div>
+    <div class="chip-row">
+      <span class="chip">1</span><span class="chip active">2</span><span class="chip">3</span>
+    </div>
+
+    <div class="question">How many times a day?</div>
+    <div class="chip-row">
+      <span class="chip active">1×</span><span class="chip">2×</span><span class="chip">3×</span>
+    </div>
+
+    <div class="question">For how many days?</div>
+    <div class="chip-row">
+      <span class="chip">7</span><span class="chip">14</span><span class="chip active">30</span>
+    </div>
+
+    <div class="callout open" style="margin-top:16px;">
+      <span class="label">Edge case</span>
+      <p>Doctor 30 diner jonno bolechen, kintu user matro <strong>7 diner jonno-i kinte chan</strong> (poysha/stock-space-er karone) — tahole prothome 7-din-er hisheb-e cart banabe, kintu reorder-cart-e clearly mention thakte hobe je baki <strong>23 din-er oshudh-o lagbe</strong>, jate patient bhule na jay.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="num">3</span>Doctor jodi mid-cycle-e dose change kore</h2>
+    <p>Ei ta-ই sobcheye tricky part — 30 din-er medicine kena hoyeche, kintu day 15-te doctor dose change kore dile ki hobe:</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Change</th><th>Effect</th><th>App-ke ki korte hobe</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dose <strong>barale</strong></td>
+            <td>Medicine druto shesh hobe — prediction date-er age-i shesh hobe</td>
+            <td>Reminder-o age-i pathate hobe; purono reminder cancel kore notun date set korte hobe</td>
+          </tr>
+          <tr>
+            <td>Dose <strong>komale</strong></td>
+            <td>Medicine onek beshi din cholbe</td>
+            <td>Reorder-er shomoy hishebe onek medicine already baki thakbe — over-order avoid korte hobe</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout feature" style="margin-top:14px;">
+      <span class="label">Solution</span>
+      <p>User-ke <strong>jekono shomoy</strong> (checkout-er shomoy-e na shudhu) dosage update korar ekta easy option dite hobe. Update korle system <strong>shathe shathe</strong> notun kore calculate kore countdown ar reorder date thik kore dibe — wait na kore.</p>
+    </div>
+
+    <div class="formula" style="margin-top:14px;">
+      Reminder date&nbsp; = &nbsp;Medicine-shesh-hobar-date &minus; delivery time (~2 din) &minus; ideal buffer day
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Onnanno open consideration</h2>
+    <div class="callout open">
+      <span class="label">Ekhono decide hoyni</span>
+      <ul>
+        <li><strong>Emergency update button:</strong> medicine bazare unavailable thakle, user-ke manually janai dewar option</li>
+        <li><strong>Price:</strong> reorder cart-e price koto ta dekhano proyojon</li>
+        <li><strong>Stock threshold:</strong> user 7 diner stock rakhben naki 30 diner — eta app default nakay user-choice?</li>
+        <li><strong>Dashboard:</strong> shob medicine-er status ekshathe ekjagai dekhar jonno lagbe</li>
+        <li><strong>Same account, multiple patient:</strong> ekই account-e 2/3 jon-er reminder alada rakhte hobe — kar jonno kon reminder ta clear hote hobe</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    Handwritten notes (26 July 2026) theke transcribe + organize kora. Original pages: <span class="source-note">projects/arogga-redesign/</span> conversation-e reference kora ache.
+  </footer>
+
+</div>

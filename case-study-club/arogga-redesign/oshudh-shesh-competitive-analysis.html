@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8" />
+<title>Oshudh Shesh — Competitive Analysis</title>
+<style>
+  @page { size: A4; margin: 20mm 16mm; }
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: "Noto Sans Bengali", "Nirmala UI", "Vrinda", "Segoe UI", sans-serif;
+    color: #1A1A1A;
+    font-size: 13px;
+    line-height: 1.7;
+    background: #FFFFFF;
+    margin: 0;
+  }
+
+  .cover {
+    padding-bottom: 16px;
+    border-bottom: 3px solid #0E8074;
+    margin-bottom: 24px;
+  }
+  .eyebrow { font-size: 11px; letter-spacing: 0.06em; color: #0E8074; font-weight: 700; }
+  h1 { font-size: 25px; margin: 8px 0 4px; color: #0E8074; }
+  .subtitle { font-size: 12.5px; color: #6B6B66; }
+
+  .app-card {
+    border: 1px solid #E5E5E5;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 20px;
+    page-break-inside: avoid;
+  }
+  .app-card.baseline { border: 2px solid #0E8074; background: #F6FBFA; }
+
+  .app-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 4px;
+  }
+  .app-name { font-size: 18px; font-weight: 800; color: #0E8074; }
+  .app-tag {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #6B6B66;
+    background: #F0EEE7;
+    border-radius: 4px;
+    padding: 2px 8px;
+  }
+  .app-tag.own { background: #0E8074; color: #fff; }
+
+  .verdict {
+    font-size: 12.5px;
+    color: #6B6B66;
+    font-style: italic;
+    margin-bottom: 12px;
+  }
+
+  .feature-list {
+    margin: 0 0 14px;
+    padding-left: 0;
+    list-style: none;
+  }
+  .feature-list li {
+    padding: 5px 0 5px 22px;
+    position: relative;
+    border-bottom: 1px dashed #EFEFEA;
+    font-size: 12.5px;
+  }
+  .feature-list li:last-child { border-bottom: none; }
+  .feature-list li.has::before { content: "✓"; position: absolute; left: 0; color: #1AAE4A; font-weight: 800; }
+  .feature-list li.missing::before { content: "✕"; position: absolute; left: 0; color: #E0483E; font-weight: 800; }
+  .feature-list li.partial::before { content: "△"; position: absolute; left: 0; color: #B8790F; font-weight: 800; }
+  .feature-list b { font-weight: 700; }
+
+  .shots {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .shots figure {
+    margin: 0;
+    flex: 1;
+    text-align: center;
+  }
+  .shots img {
+    width: 100%;
+    max-width: 165px;
+    border-radius: 8px;
+    border: 1px solid #E5E5E5;
+    display: block;
+    margin: 0 auto;
+  }
+  .shots figcaption {
+    font-size: 10px;
+    color: #6B6B66;
+    margin-top: 4px;
+  }
+
+  .source-note {
+    font-size: 10.5px;
+    color: #6B6B66;
+    margin-top: 10px;
+  }
+
+  h2 {
+    font-size: 17px;
+    color: #0E8074;
+    margin: 28px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #E5E5E5;
+  }
+
+  .global-card {
+    background: #F6F4EF;
+    border: 1px solid #E5E5E5;
+    border-left: 4px solid #7A7A72;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    font-size: 12.5px;
+  }
+  .global-card b { color: #1A1A1A; }
+
+  .note {
+    background: #FCEEDD;
+    border-left: 4px solid #F5A855;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 12.5px;
+    margin: 14px 0;
+  }
+
+  .verify-box {
+    background: #E3F3F0;
+    border: 1px solid #C7E4DE;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 12px;
+    margin: 10px 0;
+  }
+  .verify-box .label {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #0E8074;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .verify-box .q { color: #1A1A1A; }
+  .verify-box .a { color: #1A1A1A; font-style: italic; margin-top: 4px; }
+
+  .gap-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  .gap-table th, .gap-table td {
+    text-align: left;
+    padding: 7px 8px;
+    border-bottom: 1px solid #E5E5E5;
+  }
+  .gap-table th {
+    color: #6B6B66;
+    font-weight: 700;
+    background: #F6F4EF;
+  }
+  .gap-table td.yes { color: #1AAE4A; font-weight: 700; text-align: center; }
+  .gap-table td.no { color: #E0483E; font-weight: 700; text-align: center; }
+  .gap-table td.partial { color: #B8790F; font-weight: 700; text-align: center; }
+
+  footer {
+    margin-top: 26px;
+    padding-top: 10px;
+    border-top: 1px solid #E5E5E5;
+    font-size: 10.5px;
+    color: #6B6B66;
+  }
+</style>
+</head>
+<body>
+
+  <div class="cover">
+    <div class="eyebrow">AROGGA · OSHUDH SHESH — COMPETITIVE ANALYSIS</div>
+    <h1>প্রতিযোগী বিশ্লেষণ</h1>
+    <div class="subtitle">৫টা বাংলাদেশি অ্যাপ সরাসরি ইনস্টল করে, কাস্টমার সার্ভিসে কথা বলে টেস্ট করা হয়েছে · ২৭ জুলাই ২০২৬</div>
+  </div>
+
+  <p>প্রতিটা অ্যাপ ফোনে ইনস্টল করে, রিয়েল প্রোডাক্ট ব্রাউজ করে এবং কাস্টমার সার্ভিসে সরাসরি প্রশ্ন করে এই তথ্য সংগ্রহ করা হয়েছে। ✓ = ফিচার আছে, ✕ = নেই, △ = আংশিক/আলাদাভাবে আছে কিন্তু একসাথে কাজ করে না।</p>
+
+  <div class="app-card baseline">
+    <div class="app-header">
+      <span class="app-name">Arogga</span>
+      <span class="app-tag own">নিজের অ্যাপ</span>
+    </div>
+    <div class="verdict">বেসলাইন — এই প্রজেক্টের রিডিজাইন যেটার উপর হচ্ছে।</div>
+    <ul class="feature-list">
+      <li class="has">১২টা ক্যাটাগরির মার্কেটপ্লেস (Medicine, Beauty, Home Lab, Food, Baby Care, Pet Care, Healthcare ইত্যাদি)</li>
+      <li class="partial">Doctor consultation ট্যাব হোমপেজে দেখা যায়, কিন্তু বাস্তবে সার্ভিসটা এখনো <b>চালু হয়নি</b> — "Under Construction" (নিজে টেস্ট করে যাচাই করা)। Lab test ফাংশনাল</li>
+      <li class="partial">Reorder বাটন আছে (Order history থেকে) — কিন্তু এটা কার্টের বর্তমান আইটেম <b>রিপ্লেস</b> করে দেয়, মার্জ করে না</li>
+      <li class="has">bKash, Card, Cash on Delivery — সব পেমেন্ট অপশন</li>
+      <li class="has">Coupon code, discount tracking</li>
+      <li class="missing">Refill reminder / pill reminder — <b>কোনো রূপেই নেই।</b> Inbox-এ শুধু অর্ডার স্ট্যাটাস নোটিফিকেশন আসে (Order Created, Cancelled), মেডিসিন শেষ হওয়ার আগাম রিমাইন্ডার না</li>
+    </ul>
+    <div class="shots">
+      <figure><img src="file:///C:/Users/Nusrat/Documents/claude-for-designers/projects/arogga-redesign/competitive-analysis-screens/arogga-home.jpeg" /><figcaption>হোমপেজ</figcaption></figure>
+      <figure><img src="file:///C:/Users/Nusrat/Documents/claude-for-designers/projects/arogga-redesign/competitive-analysis-screens/arogga-reorder.jpeg" /><figcaption>Reorder পপআপ (রিপ্লেস করে দেয়)</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="app-card">
+    <div class="app-header">
+      <span class="app-name">Osudhpotro</span>
+      <span class="app-tag">Direct Competitor</span>
+    </div>
+    <div class="verdict">কাস্টমার সার্ভিসে সরাসরি জিজ্ঞেস করা হয়েছিল — উত্তর ছিল "এটা এখনো ডেভেলপমেন্টে আছে।"</div>
+    <ul class="feature-list">
+      <li class="has">One-tap reorder — অর্ডার হিস্টোরি থেকে, রেটিং সহ ("Order Again")</li>
+      <li class="has">ডিটেইলড অর্ডার ট্র্যাকিং (Pending → Accepted → Packaging → Dispatched → On the Way → Arrived)</li>
+      <li class="has">"Request Medicine" — ক্যাটালগে না থাকা মেডিসিনের জন্য আলাদা রিকোয়েস্ট ফর্ম</li>
+      <li class="has">৩ ধরনের ডেলিভারি স্পিড — Next Day (৳১৯), Regular (৳৫০), Urgent (৳১০০)</li>
+      <li class="has">প্রেসক্রিপশন আপলোডে ১৫% ছাড়</li>
+      <li class="missing">"Ready cart" (মাসের প্রথম কেনাকাটার পর অটো-তৈরি কার্ট) + মাস শেষে রিমাইন্ডার নোটিফিকেশন — <b>লাইভ চ্যাটে সরাসরি জিজ্ঞেস করা হয়েছিল, উত্তর:</b> "Ma'am, it has not been added yet, but our app is under development."</li>
+    </ul>
+    <div class="shots">
+      <figure><img src="file:///C:/Users/Nusrat/Documents/claude-for-designers/projects/arogga-redesign/competitive-analysis-screens/osudhpotro-chat.png" /><figcaption>লাইভ চ্যাট — রিমাইন্ডার ফিচার নেই বলে স্বীকার করছে</figcaption></figure>
+      <figure><img src="file:///C:/Users/Nusrat/Documents/claude-for-designers/projects/arogga-redesign/competitive-analysis-screens/osudhpotro-reorder.jpeg" /><figcaption>মার্কেটিং স্ক্রিন — one-tap reorder</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="app-card">
+    <div class="app-header">
+      <span class="app-name">Dhaka Pharmacy</span>
+      <span class="app-tag">Direct Competitor</span>
+    </div>
+    <div class="verdict">সবচেয়ে বেসিক অ্যাপ — পুরনো UI, বেশিরভাগ আধুনিক ফিচার নেই।</div>
+    <ul class="feature-list">
+      <li class="missing">Reminder — নেই</li>
+      <li class="missing">Refill/reorder — নেই</li>
+      <li class="missing">Doctor consultation — নেই</li>
+      <li class="missing">Call center — নেই</li>
+      <li class="has">প্রেসক্রিপশন আপলোড, বেসিক ক্যাটালগ ও কার্ট, Wish List</li>
+      <li class="partial">হোমপেজে "Coming Soon" ব্যানার — নতুন ফিচার আনার পরিকল্পনা আছে বলে ইঙ্গিত দেয়, কিন্তু এখনো চালু হয়নি</li>
+    </ul>
+    <div class="shots">
+      <figure><img src="file:///C:/Users/Nusrat/Documents/claude-for-designers/projects/arogga-redesign/competitive-analysis-screens/dhakapharmacy-home.jpeg" /><figcaption>হোমপেজ — "Coming Soon" ব্যানার</figcaption></figure>
+      <figure><img src="file:///C:/Users/Nusrat/Documents/claude-for-designers/projects/arogga-redesign/competitive-analysis-screens/dhakapharmacy-profile.jpeg" /><figcaption>প্রোফাইল মেনু — reminder/refill অপশন নেই</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="app-card">
+    <div class="app-header">
+      <span class="app-name">ePharma</span>
+      <span class="app-tag">Direct Competitor — সবচেয়ে কাছের</span>
+    </div>
+    <div class="verdict">এই ৫টা অ্যাপের মধ্যে Oshudh Shesh-এর সবচেয়ে কাছাকাছি — কিন্তু দুটো বিল্ডিং ব্লক আলাদা, সংযুক্ত না।</div>
+    <ul class="feature-list">
+      <li class="has">Doctor Consultation — ভিডিও কল, রিয়েল ডাক্তার লিস্ট, আগের কনসালটেশন হিস্টোরি দেখা যায়</li>
+      <li class="partial"><b>Pill Reminder</b> — মেনুতে আলাদা ফিচার হিসেবে আছে, কিন্তু সম্পূর্ণ ম্যানুয়াল: মেডিসিনের নাম/টাইপ/স্ট্রেংথ, দৈনিক কতবার, নোটিফিকেশন সময়, কোন কোন দিন, শুরু-শেষ তারিখ — সব হাতে ভরতে হয়। কেনা মেডিসিনের quantity-র সাথে কোনো সংযোগ নেই</li>
+      <li class="partial"><b>Refill Request</b> — আলাদা ফিচার, কিন্তু ম্যানুয়াল: আগের অর্ডার সিলেক্ট করতে হয় অথবা অর্ডার নাম্বার নিজে টাইপ করতে হয়</li>
+      <li class="has">প্রেসক্রিপশন আপলোড, Order Medicine, Diabetic Care/Women Care-এর মতো বিশেষ ক্যাটাগরি</li>
+      <li class="missing">Reminder আর Refill — দুটো ফিচার থাকা সত্ত্বেও একে অপরের সাথে কথা বলে না। Reminder থেকে সরাসরি cart তৈরি হয় না</li>
+    </ul>
+    <div class="verify-box">
+      <span class="label">নিজে সরাসরি যাচাই করা — ePharma Business Chat</span>
+      <div class="q">প্রশ্ন: "এটা কি timely cart ready করে reminder দেবে? নাকি reminder দেওয়ার পর নিজে medicine search করে cart-এ রাখতে হবে? এই সার্ভিসটা কি চালু আছে?"</div>
+      <div class="a">ePharma-র উত্তর: "এই খানে মেডিসিন নেম দিয়ে যে ডেট টাইম দিবেন, ওই অনুযায়ী আপনাকে reminder notification দিবে।" — অর্থাৎ নিশ্চিত হলো: শুধু notification যায়, cart অটোমেটিক তৈরি হয় না।</div>
+    </div>
+    <div class="shots">
+      <figure><img src="file:///C:/Users/Nusrat/Documents/claude-for-designers/projects/arogga-redesign/competitive-analysis-screens/epharma-menu.jpeg" /><figcaption>মেনু — Pill Reminder ও Refill Request আলাদা টাইল</figcaption></figure>
+      <figure><img src="file:///C:/Users/Nusrat/Documents/claude-for-designers/projects/arogga-redesign/competitive-analysis-screens/epharma-addreminder.jpeg" /><figcaption>Add Reminder — সম্পূর্ণ ম্যানুয়াল ফর্ম</figcaption></figure>
+      <figure><img src="file:///C:/Users/Nusrat/Documents/claude-for-designers/projects/arogga-redesign/competitive-analysis-screens/epharma-refillrequest.jpeg" /><figcaption>Refill Request — অর্ডার নাম্বার লাগে</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="app-card">
+    <div class="app-header">
+      <span class="app-name">MedEasy</span>
+      <span class="app-tag">Direct Competitor</span>
+    </div>
+    <div class="verdict">অর্ডার করা সহজ করেছে (Call/WhatsApp দিয়েও অর্ডার নেয়), কিন্তু refill/reminder পুরোপুরি অনুপস্থিত।</div>
+    <ul class="feature-list">
+      <li class="has">Quick Order — অ্যাপ ছাড়াও Call to Order ও WhatsApp দিয়ে অর্ডার করা যায়</li>
+      <li class="has">Doctor consultation ট্যাব</li>
+      <li class="partial"><b>শুধু প্রোডাক্ট ডিটেইল পেজে</b> "Alternative Brands" সেকশন আছে — যেমন Zox 500mg (Nitazoxanide)-এর পেজে Alinix/Nidozox/Dianide দেখায়, এই ৩টাই একই জেনেরিক। এটা প্রোডাক্ট পেজেই সীমাবদ্ধ, সার্চ রেজাল্টে না</li>
+      <li class="missing"><b>সার্চ ফাংশন জেনেরিক/ড্রাগ-ক্লাস বুঝে গ্রুপ করে না</b> — "rinva 15 mg" লিখে সার্চ করলে Rivamer (Rivastigmine — ডিমেনশিয়ার ওষুধ), RivaXa/Rivarox (Rivaroxaban — রক্ত পাতলাকারী), এমনকি Mg 365 (Magnesium Oxide) একসাথে দেখায় — শুধু বানান কাছাকাছি বলে। এই ৩টা সম্পূর্ণ ভিন্ন ওষুধ, একে অন্যের বিকল্প না। ভুল বুঝে ভুল ওষুধ কার্টে যোগ হওয়ার বাস্তব ঝুঁকি আছে</li>
+      <li class="has">রেফারেল ক্যাশব্যাক প্রোগ্রাম, নির্দিষ্ট অ্যামাউন্টের উপর ফ্রি ডেলিভারি</li>
+      <li class="missing">Refill option — নেই। ওয়ার্কফ্লো: Upload prescription → Pharmacist Review → Medicine added to cart (প্রতিবার নতুন করে করতে হয়)</li>
+      <li class="missing">Reminder — কোনো রূপেই নেই</li>
+      <li class="has">"Pharmacist Review" আসলে কী — প্রেসক্রিপশন আপলোড করলে <b>কাস্টমার কেয়ার সরাসরি ফোন কল করে</b> মেডিসিনের নাম শুনে/শুনিয়ে ভেরিফাই করে (OCR/অটো-রিড না, human call-based verification)</li>
+      <li class="has">ডেলিভারি — যেদিন অর্ডার করা হয়, <b>সেদিনই</b> ডেলিভারি পাওয়া যায় (কাস্টমার কেয়ার কল থেকে নিশ্চিত করা)</li>
+    </ul>
+    <div class="verify-box">
+      <span class="label">নিজে সরাসরি যাচাই করা — MedEasy Customer Care Call</span>
+      <div class="q">প্রেক্ষাপট: অ্যাপে medicine order করতে সমস্যা হচ্ছিল বলে MedEasy-র কাস্টমার কেয়ার থেকে নিজে থেকেই কল এসেছিল।</div>
+      <div class="a">কলে জানানো হয়েছে: প্রেসক্রিপশন আপলোড করলে তারা ফোনে মেডিসিনের নাম শুনে ভেরিফাই করেন, এবং ডেলিভারি সিস্টেম হলো যেদিন অর্ডার করা হয় সেদিনই পৌঁছে যায়।</div>
+    </div>
+    <div class="note" style="margin-top:8px;">এখনো যাচাই করা হয়নি: same-day delivery ছাড়া আলাদা কোনো <b>emergency/express option</b> আছে কিনা — এটা জিজ্ঞেস করা বাকি, পরের কাস্টমার কেয়ার কল/চ্যাটে জেনে নিতে হবে।</div>
+    <div class="shots">
+      <figure><img src="file:///C:/Users/Nusrat/Documents/claude-for-designers/projects/arogga-redesign/competitive-analysis-screens/medeasy-home.jpeg" /><figcaption>হোমপেজ — Quick Order অপশন</figcaption></figure>
+      <figure><img src="file:///C:/Users/Nusrat/Documents/claude-for-designers/projects/arogga-redesign/competitive-analysis-screens/medeasy-cart.jpeg" /><figcaption>কার্ট — pack size সিলেক্ট, কিন্তু refill link নেই</figcaption></figure>
+    </div>
+  </div>
+
+  <h2>একটা কমন প্যাটার্ন — ৫টা অ্যাপ জুড়েই: Prescription Upload</h2>
+  <div class="note">
+    ৫টা অ্যাপের প্রায় সবগুলোতেই (Osudhpotro, Dhaka Pharmacy, ePharma, MedEasy) প্রেসক্রিপশন আপলোডের বাটন/অপশন আছে — কিন্তু বাস্তবে দুটো জায়গায় সবগুলোই দুর্বল:
+    <ul style="margin-top:8px;">
+      <li><b>আপলোড করা প্রেসক্রিপশন থেকে কোনো অ্যাপই অটোমেটিক মেডিসিন বের করে কার্টে যোগ করে না</b> — আপলোড মানে শুধু একটা ফাইল পাঠানো, তারপর pharmacist manually দেখে/মেসেজ করে; ইউজারকে নিজেই মেডিসিন খুঁজে কার্টে অ্যাড করতে হয়।</li>
+      <li><b>যেসব মেডিসিন আইনত প্রেসক্রিপশন ছাড়া বিক্রি করা উচিত না, সেগুলোর জন্যও কেউ প্রেসক্রিপশন verify/enforce করে না</b> — আপলোড অপশন থাকা মানেই সেটা বাধ্যতামূলক করা না। প্র্যাকটিসে যে কেউ prescription ছাড়াই সেসব মেডিসিন কিনতে পারছে।</li>
+    </ul>
+  </div>
+
+  <h2>গ্লোবাল প্ল্যাটফর্ম — indirect/reference বেঞ্চমার্ক</h2>
+  <p>এই ৪টা প্ল্যাটফর্ম বাংলাদেশে available না, তাই direct competitor না — কিন্তু "ভালো refill experience দেখতে কেমন হয়" তার বেঞ্চমার্ক হিসেবে রাখা হলো। এগুলো হাতে-কলমে টেস্ট করা হয়নি (দেশে অ্যাক্সেস নেই), শুধু পাবলিকলি জানা তথ্যের ভিত্তিতে।</p>
+
+  <div class="global-card">
+    <b>Amazon PillPack</b> — সবচেয়ে relevant বেঞ্চমার্ক। প্রতিটা ডোজ (সকাল/দুপুর/রাত) আলাদা প্যাকেটে প্রি-সর্টেড হয়ে আসে, এবং সিস্টেম নিজে থেকেই calculate করে কবে refill পাঠাতে হবে — patient-কে মনে রাখতে হয় না। Oshudh Shesh-এর "auto-calculate + auto-refill" আইডিয়ার সবচেয়ে কাছের বাস্তব উদাহরণ।
+  </div>
+  <div class="global-card">
+    <b>CVS Pharmacy (US)</b> — টেক্সট মেসেজ বা অ্যাপ স্ক্যান দিয়ে one-tap refill, এবং রিফিল-রেডি হলে push notification পাঠায়। Reminder + refill connected থাকে একটা সিস্টেমে।
+  </div>
+  <div class="global-card">
+    <b>Capsule</b> — ফুল-সার্ভিস ডিজিটাল ফার্মেসি, টেক্সট-বেইজড রিফিল রিকোয়েস্ট, ডেডিকেটেড pharmacist সাপোর্ট থাকে প্রতিটা patient-এর জন্য।
+  </div>
+  <div class="global-card">
+    <b>Truepill</b> — মূলত B2B (অন্য হেলথ অ্যাপকে pharmacy fulfillment API দেয়), সরাসরি consumer-facing না, তাই design reference হিসেবে সীমিত কাজে লাগবে।
+  </div>
+
+  <h2>Gap Analysis — সংক্ষেপে</h2>
+  <div class="table-wrap">
+    <table class="gap-table">
+      <tr><th>ফিচার</th><th>Arogga</th><th>Osudhpotro</th><th>Dhaka Pharmacy</th><th>ePharma</th><th>MedEasy</th></tr>
+      <tr><td>Reminder</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="partial">△</td><td class="no">✕</td></tr>
+      <tr><td>Refill/Reorder</td><td class="partial">△</td><td class="yes">✓</td><td class="no">✕</td><td class="partial">△</td><td class="no">✕</td></tr>
+      <tr><td>Reminder ও Refill সংযুক্ত</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
+      <tr><td>Doctor Consultation</td><td class="partial">△</td><td class="no">✕</td><td class="no">✕</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td>Prescription থেকে auto cart</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
+      <tr><td>Prescription verify/enforce করে</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
+    </table>
+  </div>
+
+  <div class="note"><b>মূল সিদ্ধান্ত:</b> এই ৫টা অ্যাপের একটাতেও "purchase quantity + dosage থেকে অটো-ক্যালকুলেট করা reminder, যেটা automatically ready cart বানিয়ে দেয়" — এই কম্বিনেশনটা নেই। ePharma সবচেয়ে কাছে গিয়েছে (দুটো ফিচারই বানিয়েছে) কিন্তু সংযুক্ত করেনি। এটাই Oshudh Shesh-এর সবচেয়ে বড় differentiation opportunity।</div>
+
+  <footer>
+    Oshudh Shesh — Arogga Redesign প্রজেক্ট · Competitive Analysis · সব অ্যাপ সরাসরি ইনস্টল করে টেস্ট করা, ২৭ জুলাই ২০২৬ · স্ক্রিনশট: নিজের ফোন থেকে নেওয়া
+  </footer>
+
+</body>
+</html>
