@@ -41,7 +41,7 @@ Problem-টা কারও carelessness ছিল না। Problem-টা ছ�
 🎯 তাহলে Case Study Club-এ কেন join করা উচিত?
 Design মানে শুধু Figma-তে সুন্দর screen বানানো না। নিজের thinking research আর decision অন্যের কাছে clearly বলতে পারাও একটা skill। এই storytelling skill-ই একটা ordinary case study-কে compelling case study বানায়। এখানে mentor-রা সেই gap ধরিয়ে দেন যেটা নিজে দেখতে পাওয়া কঠিন। Brief-এ যা চাওয়া হয়েছিল আর screen-এ যা আছে তার মাঝের ফাঁক।
 
-❤️ শুনলাম Workshop 9-এর registration deadline বাড়ানো হয়েছে। যারা নিজের design process সত্যিকারভাবে present করতে চান আর case study-কে শুধু screens হিসেবে না story আকারে বলতে চান তাদের Workshop 9-এ join করা উচিত। এখানে Kowsar Mamun ভাইয়া আর Nayem Islam ভাইয়া individually প্রত্যেকের gap ধরিয়ে দেন। কেউ কোনো topic না বুঝলে বা সময় নিয়ে আটকে গেলে বার বার নতুন example দিয়ে বুঝিয়ে দেন।
+❤️ শুনলাম Workshop 9-এর registration deadline বাড়ানো হয়েছে। শুধু ভালো design বানালেই hire হওয়া যায় না। কেন এই design বানানো হয়েছে সেটা বলতে পারলে hire হওয়া যায়। Storytelling শিখলে case study আর শুধু screens-এর গ্যালারি থাকে না। প্রত্যেকটা decision-এর পেছনের কারণ বোঝানো যায়। এটাই একটা ordinary case study-কে আলাদা করে তোলে। এই skill শিখতে চাইলে Workshop 9-এ join করা উচিত। এখানে Kowsar Mamun ভাইয়া আর Nayem Islam ভাইয়া individually প্রত্যেকের gap ধরিয়ে দেন। কেউ কোনো topic না বুঝলে বা সময় নিয়ে আটকে গেলে বার বার নতুন example দিয়ে বুঝিয়ে দেন।
 
 Maybe your next case study doesn't need more screens. It needs a better story. 🚀
 
