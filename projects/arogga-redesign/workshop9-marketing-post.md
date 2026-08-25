@@ -21,6 +21,8 @@ Three versions existed: the student's own draft (mother/son Aroggo example), an 
 
 Jeff White তার *UX Storytelling Guide* বইয়ে লিখেছেন "UX storytelling is the act of telling someone why a design is good or bad." মানে ডিজাইনটা কেন ভালো বা খারাপ সেটা বলাই আসল storytelling।
 
+এটা জরুরি কারণ ভালো design একা কথা বলে না। Stakeholder recruiter বা client কাউকেই বোঝানো যায় না কেন এই design ঠিক যদি সেই decision-এর পেছনের কারণটা না বলা হয়। Design যত ভালোই হোক গল্প ছাড়া সেটা মনে থাকে না।
+
 এই সপ্তাহে Kowsar Mamun ভাইয়া Case Study Club BD-তে ঠিক এই কথাটাই শিখালেন দুইটা structure দিয়ে। একটা case study কখনো final screens-এর collection না। এটা একটা journey।
 
 প্রথম structure In Medias Res। গল্পের মাঝখান থেকে শুরু হয়। সরাসরি সমস্যায় ঢুকে যাওয়া হয়। ধীরে ধীরে warm-up করা হয় না।
