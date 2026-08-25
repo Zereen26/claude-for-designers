@@ -5,51 +5,43 @@ type: marketing-post-draft
 project: arogga-redesign
 purpose: Case Study Club BD — Marketing Task 2 (UX Storytelling post)
 deadline: tonight 12:00 AM
-status: final — short version, replaces the earlier long draft
+status: final — merged from three drafts, this is the one to post
 ---
 
-# Final post — short, for submission
+# How the three drafts were compared
 
-Sources merged: Kowser Mamun vaia's storytelling class (In Medias Res, Story Mountain), Jeff White's *UX Storytelling Guide* (read in full), and the real Aroggo out-of-stock beat. All five required points are covered in under 200 words per platform: what UX storytelling is, how the mentor taught it, the Problem→Research→Insight→Solution→Impact flow, a real example, and why to join the club — closing with the Workshop 9 opinion.
+Three versions existed: the student's own draft (mother/son Aroggo example), an earlier long AI draft, and a short AI draft. The student's own draft won on voice and example quality — the hook ("ভালো ডিজাইন নজর কাড়ে, ভালো গল্প মনে গেঁথে যায়") and the mother-forgets-medicine story are more human and more specific than the out-of-stock/wireframe example used in the other two drafts, and it independently follows the book's "ground it in why, not what" rule without ever citing the book. Its one gap: it never names what the mentor actually taught (In Medias Res, Story Mountain), which the task's point 2 asks for. The merge below keeps the student's hook, example, club-reasoning, and closing line, and adds the template names in one short paragraph so point 2 is explicitly covered.
 
-## LinkedIn version
+## Final post (Bangla/Banglish, for both LinkedIn and Facebook)
 
-UX Storytelling isn't about Hollywood frameworks. It's simply this: telling someone why a design is good or bad — on a whiteboard, in Slack, or in a case study.
+🔥 UX Storytelling: "ভালো ডিজাইন নজর কাড়ে, ভালো গল্প মনে গেঁথে যায়।"
 
-This week Kowser Mamun vaiya taught us exactly how, at Case Study Club BD.
+একটা সুন্দর UI দেখে কেউ বলবে — "Wow, design-টা সুন্দর!"
+কিন্তু একজন UX Designer-এর আসল প্রশ্ন — "design-টা কেন করা হলো?"
 
-Two rules: open In Medias Res — drop the reader straight into the tension, no warmup. Then climb the Story Mountain — each slide raises the stakes, insight before task name, until you hit the climax: the failure, not just the finish.
+এই সপ্তাহে Kowsar Mamun ভাইয়া Case Study Club BD-তে ঠিক এই প্রশ্নটার উত্তর খুঁজতেই শিখালেন দুইটা জিনিস। একটা case study কখনো final screens-এর collection না — এটা একটা journey। ভাইয়া দুইটা structure দিলেন: In Medias Res — গল্পের মাঝখান থেকে শুরু, সরাসরি সমস্যায় ঢুকে যাওয়া, ধীরে ধীরে warm-up না। আর Story Mountain — প্রতিটা ধাপ আগেরটার চেয়ে বেশি tension আনবে, task-এর নাম না, insight।
 
-That maps directly to Problem → Research → Insight → Solution → Impact. Every step has to push the last one forward, or it's a checklist, not a story.
+এই দুইটা মিলিয়েই আসে সেই flow — Problem → Research → Insight → Solution → Impact। এটাই audience-কে বুঝতে সাহায্য করে কেন একটা design decision নেওয়া হয়েছিল।
 
-Example from my own Aroggo redesign: my first wireframe had no flow for when a medicine runs out of stock — I'd assumed it always would be in stock. Catching that late became my case study's real climax, and the fix (three equal options, none pre-selected) is now its strongest slide.
+💊 আমার Arogga case study-তে যেমন —
+একজন মা নিয়মিত ওষুধ খান। একদিন ওষুধ শেষ হয়ে গেল, কিন্তু ছেলেকে বলতে ভুলে গেলেন। ছেলে-ও office pressure-এ refill-এর কথা মনে রাখতে পারেনি। শেষ মুহূর্তে আবার medicine খুঁজে cart বানাতে হলো।
 
-That's why Case Study Club matters: it forces you to show the mistake, not hide it.
+Problem-টা কারও carelessness ছিল না — problem-টা ছিল system-এর gap। প্রশ্নটা তখনই আসে: "ওষুধ শেষ হওয়ার আগেই যদি Arogga মনে করিয়ে দিত?" সেখান থেকেই solution direction — Prescription Refill Reminder + Ready Refill Cart।
 
-Heard Workshop 9's deadline got extended — take it. This is where the storytelling actually gets tested on a real project.
+এটাই UX Storytelling-এর power — solution দেখানোর আগে মানুষকে বুঝতে দেওয়া, কেন solution-টা দরকার।
 
-Link in comments. 👇
-#UXStorytelling #CaseStudyClubBD #Workshop9
+🎯 তাহলে Case Study Club-এ কেন join করা উচিত?
+কারণ design মানে শুধু Figma-তে সুন্দর screen বানানো না। নিজের thinking, research আর decision-গুলো অন্যের কাছে clearly বলতে পারাও একটা skill — আর এটাই একটা ordinary case study-কে compelling case study বানায়। এখানে ভুলও লুকানো যায় না — mentor-রা brief আর screen-এর gap ধরে ফেলেন hiring manager-এর আগেই।
 
-## Facebook version (Banglish)
+❤️ শুনলাম Workshop 9-এর registration deadline বাড়ানো হয়েছে। যারা নিজের design process-কে সত্যিকারভাবে present করতে চান, case study-কে শুধু দেখাতে না, story হিসেবে বলতে চান — তাদের Workshop 9-এ join করা উচিত।
 
-UX Storytelling মানে Hollywood framework না — এটা শুধু এইটুকু: ডিজাইনটা কেন ভালো বা খারাপ, সেটা বলা। হোক হোয়াইটবোর্ডে, Slack-এ, বা case study-তে।
+Maybe your next case study doesn't need more screens. It needs a better story. 🚀
 
-এই সপ্তাহে Kowsar Mamun ভাইয়া Case Study Club BD-তে ঠিক এটাই শিখালেন।
-
-দুইটা rule: In Medias Res দিয়ে শুরু — সরাসরি tension-এ ঢুকে যাওয়া, warmup ছাড়া। এরপর Story Mountain বেয়ে ওঠা — প্রতিটা slide আগেরটার চেয়ে বেশি tension আনবে, task-এর নাম না, insight। Problem → Research → Insight → Solution → Impact — এই flow-ই আসলে সেই climb।
-
-আমার Aroggo redesign থেকে example: প্রথম wireframe-এ medicine out-of-stock হলে কী হবে, সেই flow-ই ছিলো না — ধরে নিয়েছিলাম stock সবসময় থাকবে। এই ভুলটা ধরা পড়াই আমার case study-র আসল climax, আর fix (তিনটা equal option, কোনোটা pre-selected না) এখন সবচেয়ে শক্ত slide।
-
-Case Study Club এজন্যই join করা উচিত — এখানে ভুল লুকানো যায় না, দেখাতে হয়।
-
-শুনলাম Workshop 9-এর deadline বাড়ানো হয়েছে — ভর্তি হয়ে যাও। এখানেই এই storytelling real project-এ apply হয়।
-
-Registration link কমেন্টে। 👇
-#CaseStudyClubBD #UXStorytelling #Workshop9
+Registration link comment-এ। 👇
+#UXStorytelling #CaseStudyClubBD #Workshop9 #DesignThinking
 
 ---
 
-## The earlier long draft (kept for reference)
+## The two earlier drafts (kept for reference only)
 
-See git history for the original ~350-word version — same five points, more detail per point. This short version is the one meant for submission; swap back if the task rewards depth over brevity.
+See git history for the previous long and short AI-written versions — both used the Out-of-Stock wireframe example instead of the mother/son one. That example is still true and still usable elsewhere (it's the strongest material for the actual case study's climax beat — see `case-study-storytelling-guide.md`), it just wasn't the better choice for *this* post.
