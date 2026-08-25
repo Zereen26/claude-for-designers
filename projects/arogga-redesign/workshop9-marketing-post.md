@@ -1,75 +1,55 @@
 ---
 created: 2026-08-24
+updated: 2026-08-25
 type: marketing-post-draft
 project: arogga-redesign
 purpose: Case Study Club BD — Marketing Task 2 (UX Storytelling post)
-deadline: tomorrow 12:00 AM
+deadline: tonight 12:00 AM
+status: final — short version, replaces the earlier long draft
 ---
 
-# LinkedIn version
+# Final post — short, for submission
 
-UX Storytelling: why "I built a screen" is not a case study, and "here's the moment it almost shipped broken" is.
+Sources merged: Kowser Mamun vaia's storytelling class (In Medias Res, Story Mountain), Jeff White's *UX Storytelling Guide* (read in full), and the real Aroggo out-of-stock beat. All five required points are covered in under 200 words per platform: what UX storytelling is, how the mentor taught it, the Problem→Research→Insight→Solution→Impact flow, a real example, and why to join the club — closing with the Workshop 9 opinion.
 
-Most portfolio pages read like a features list. Mine used to. This week's Case Study Club BD workshop, taught by Kowser Mamun, changed that.
+## LinkedIn version
 
-**What UX Storytelling actually is**
+UX Storytelling isn't about Hollywood frameworks. It's simply this: telling someone why a design is good or bad — on a whiteboard, in Slack, or in a case study. (Jeff White, *UX Storytelling Guide*)
 
-It's the difference between documenting your process and telling a story about it. A features list is flat — every section has equal weight, and a recruiter can skip half of it and lose nothing. A story climbs: it has a beginning that drops you into the tension, a middle that raises the stakes, and an ending that costs something. Nobody remembers a checklist. Everybody remembers the moment something almost went wrong.
+This week Kowser Mamun vaiya taught us exactly how, at Case Study Club BD.
 
-**How our mentor structured it**
+Two rules: open In Medias Res — drop the reader straight into the tension, no warmup. Then climb the Story Mountain — each slide raises the stakes, insight before task name, until you hit the climax: the failure, not just the finish.
 
-Two templates, used together.
+That maps directly to Problem → Research → Insight → Solution → Impact. Every step has to push the last one forward, or it's a checklist, not a story.
 
-*In Medias Res* — Latin for "into the middle of things." You don't open a case study with your name and your process. You open on the frustration itself, already in motion: the product, the "From [frustration] to [solution]" title, the problem in one sentence, and a hero visual. One slide, no warmup.
+Example from my own Aroggo redesign: my first wireframe had no flow for when a medicine runs out of stock — I'd assumed it always would be in stock. Catching that late became my case study's real climax, and the fix (three equal options, none pre-selected) is now its strongest slide.
 
-*Story Mountain* — every beat after that follows the same repeatable card: the key insight (not the task name), 2–3 sentences of context, a real quote, a visual, and what you did about it. The rule that actually matters: each card has to raise the tension versus the one before it. A deck where every slide is "here's a deliverable I made" isn't a story, it's a checklist wearing a story's clothes.
+That's why Case Study Club matters: it forces you to show the mistake, not hide it.
 
-Layered on top of both: content before visuals, always. Decide your sections, write the words, *then* touch Figma. Color and polish come last. Writing captions to fit a layout you built too early is how every generic case study gets made.
+Heard Workshop 9's deadline got extended — take it. This is where the storytelling actually gets tested on a real project.
 
-**A small example from my own work**
+Link in comments. 👇
+#UXStorytelling #CaseStudyClubBD #Workshop9
 
-I'm redesigning Aroggo's prescription-refill flow. The real app already has a "Patients" and "Prescriptions" menu — nobody uses it, because nothing tells you when to reorder. That's the background beat.
+## Facebook version (Banglish)
 
-The climax wasn't a deliverable, it was a mistake: my first wireframe pass had no flow at all for when a medicine is out of stock — I'd designed on an "always in stock" assumption. It only surfaced when I checked the screens against the brief line by line. The fix became the strongest rule in the whole project: three equal alternatives, none pre-selected, no dark pattern, because a forced substitution breaks the one thing a chronic-medicine app can't afford to lose — trust.
+UX Storytelling মানে Hollywood framework না — এটা শুধু এইটুকু: ডিজাইনটা কেন ভালো বা খারাপ, সেটা বলা। হোক হোয়াইটবোর্ডে, Slack-এ, বা case study-তে। (Jeff White-এর বই থেকে)
 
-That failure is a better case study slide than any of my finished screens. Story Mountain is why I know that now.
+এই সপ্তাহে Kowsar Mamun ভাইয়া Case Study Club BD-তে ঠিক এটাই শিখালেন।
 
-**Why join Case Study Club**
+দুইটা rule: In Medias Res দিয়ে শুরু — সরাসরি tension-এ ঢুকে যাওয়া, warmup ছাড়া। এরপর Story Mountain বেয়ে ওঠা — প্রতিটা slide আগেরটার চেয়ে বেশি tension আনবে, task-এর নাম না, insight। Problem → Research → Insight → Solution → Impact — এই flow-ই আসলে সেই climb।
 
-Because a portfolio built alone optimizes for "looks finished." A case study built here optimizes for "survives a real critique" — mentors who catch the gap between your brief and your screens before a hiring manager does, and a structure that forces you to say what you got wrong, not just what you shipped.
+আমার Aroggo redesign থেকে example: প্রথম wireframe-এ medicine out-of-stock হলে কী হবে, সেই flow-ই ছিলো না — ধরে নিয়েছিলাম stock সবসময় থাকবে। এই ভুলটা ধরা পড়াই আমার case study-র আসল climax, আর fix (তিনটা equal option, কোনোটা pre-selected না) এখন সবচেয়ে শক্ত slide।
 
-Heard the Workshop 9 registration deadline just got extended. My honest take: take it. Everything above, the storytelling structure, the discipline of writing before designing, only sticks once you've applied it to a project end to end with someone checking your work against reality. That's what Workshop 9 is for. Don't sit on the extension.
+Case Study Club এজন্যই join করা উচিত — এখানে ভুল লুকানো যায় না, দেখাতে হয়।
 
-Registration link in the comments. 👇
-
-#UXStorytelling #CaseStudyClubBD #UXDesign #DesignProcess #Bangladesh
-
----
-
-# Facebook version (community tone, Banglish)
-
-আজকে Case Study Club BD-র storytelling class-e Kowsar Mamun ভাইয়া যা শিখালেন, সেটা আমার পুরো case study লেখার approach-ই বদলে দিলো।
-
-আগে আমি ভাবতাম case study মানে — যা যা করেছি সব একটা একটা করে লিখে ফেলা। Competitor analysis, personas, wireframes, hi-fi screens — সব থাকবে, order-e সাজানো থাকবে। সেটা document, story না।
-
-**ভাইয়া দুইটা template শিখালেন:**
-
-🔹 **In Medias Res** — মাঝখান থেকে শুরু করা। Product name, "From [frustration] to [solution]" title, এক লাইনে problem, আর একটা strong hero visual। Slow warm-up না, সরাসরি tension-এ ঢুকে যাওয়া।
-
-🔹 **Story Mountain** — এরপর প্রতিটা beat একই format-এ: key insight (task-এর নাম না), ছোট context, একটা real quote, visual, আর কী করা হলো তার output। শর্ত একটাই — প্রতিটা card আগেরটার চেয়ে বেশি tension আনবে। সব card যদি সমান হয়, সেটা story না, checklist।
-
-**Presentation structure হিসেবে খুব practical:** Problem → Research → Insight → Solution → Impact — এই flow-টাই আসলে Story Mountain-এর logic। প্রতিটা ধাপ আগেরটাকে push করবে, শুধু পাশাপাশি বসিয়ে দিলে হবে না।
-
-**Real example, আমার Aroggo redesign থেকে:**
-Aroggo app-এ আগে থেকেই "Prescriptions" menu আছে, কিন্তু কেউ use করে না — কারণ কবে reorder করতে হবে সেটা কোথাও দেখায় না। এটা background।
-আসল climax হলো একটা ভুল — আমার প্রথম wireframe-এ medicine out-of-stock হলে কী হবে, সেই flow-ই ছিলো না, ধরে নিয়েছিলাম stock সবসময় থাকবে। Brief-এর সাথে screen মিলিয়ে দেখার সময় ধরা পড়লো। Fix হলো: তিনটা equal alternative, কোনোটা pre-selected না — কারণ chronic-medicine app-এ জোর করে বদলে দিলে trust ভেঙে যায়।
-
-এই ভুলটাই আমার case study-র সবচেয়ে শক্ত slide, কোনো finished screen না।
-
-**Case Study Club কেন join করা উচিত:** একা বসে বানানো portfolio "দেখতে ভালো" হওয়ার জন্য optimize হয়। এখানে বানানো case study হয় "real critique-এ টিকে থাকার" জন্য — mentor রা brief আর screen-এর gap ধরে ফেলেন hiring manager-এর আগেই।
-
-শুনলাম Workshop 9-এর registration deadline বাড়ানো হয়েছে। আমার মত: ভর্তি হয়ে যাও। আজকে যা শিখলাম সেটা তখনই কাজে লাগবে যখন পুরো একটা project-এ apply করে কেউ real feedback দেবে। সেটাই Workshop 9।
+শুনলাম Workshop 9-এর deadline বাড়ানো হয়েছে — ভর্তি হয়ে যাও। এখানেই এই storytelling real project-এ apply হয়।
 
 Registration link কমেন্টে। 👇
-
 #CaseStudyClubBD #UXStorytelling #Workshop9
+
+---
+
+## The earlier long draft (kept for reference)
+
+See git history for the original ~350-word version — same five points, more detail per point. This short version is the one meant for submission; swap back if the task rewards depth over brevity.
