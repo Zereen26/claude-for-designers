@@ -14,7 +14,7 @@ Sources merged: Kowser Mamun vaia's storytelling class (In Medias Res, Story Mou
 
 ## LinkedIn version
 
-UX Storytelling isn't about Hollywood frameworks. It's simply this: telling someone why a design is good or bad — on a whiteboard, in Slack, or in a case study. (Jeff White, *UX Storytelling Guide*)
+UX Storytelling isn't about Hollywood frameworks. It's simply this: telling someone why a design is good or bad — on a whiteboard, in Slack, or in a case study.
 
 This week Kowser Mamun vaiya taught us exactly how, at Case Study Club BD.
 
@@ -33,7 +33,7 @@ Link in comments. 👇
 
 ## Facebook version (Banglish)
 
-UX Storytelling মানে Hollywood framework না — এটা শুধু এইটুকু: ডিজাইনটা কেন ভালো বা খারাপ, সেটা বলা। হোক হোয়াইটবোর্ডে, Slack-এ, বা case study-তে। (Jeff White-এর বই থেকে)
+UX Storytelling মানে Hollywood framework না — এটা শুধু এইটুকু: ডিজাইনটা কেন ভালো বা খারাপ, সেটা বলা। হোক হোয়াইটবোর্ডে, Slack-এ, বা case study-তে।
 
 এই সপ্তাহে Kowsar Mamun ভাইয়া Case Study Club BD-তে ঠিক এটাই শিখালেন।
 
