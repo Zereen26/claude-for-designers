@@ -31,7 +31,7 @@ Problem-টা কারও carelessness ছিল না — problem-টা ছ
 এটাই UX Storytelling-এর power — solution দেখানোর আগে মানুষকে বুঝতে দেওয়া, কেন solution-টা দরকার।
 
 🎯 তাহলে Case Study Club-এ কেন join করা উচিত?
-কারণ design মানে শুধু Figma-তে সুন্দর screen বানানো না। নিজের thinking, research আর decision-গুলো অন্যের কাছে clearly বলতে পারাও একটা skill — আর এটাই একটা ordinary case study-কে compelling case study বানায়। এখানে ভুলও লুকানো যায় না — mentor-রা brief আর screen-এর gap ধরে ফেলেন hiring manager-এর আগেই।
+কারণ design মানে শুধু Figma-তে সুন্দর screen বানানো না। নিজের thinking, research আর decision-গুলো অন্যের কাছে clearly বলতে পারাও একটা skill — আর এই storytelling skill-ই একটা ordinary case study-কে compelling case study বানায়। এখানে mentor-রা সেই gap ধরিয়ে দেন যেটা নিজে দেখতে পাওয়া কঠিন — brief-এ যা চাওয়া হয়েছিল আর screen-এ যা আছে, তার মাঝের ফাঁক।
 
 ❤️ শুনলাম Workshop 9-এর registration deadline বাড়ানো হয়েছে। যারা নিজের design process-কে সত্যিকারভাবে present করতে চান, case study-কে শুধু দেখাতে না, story হিসেবে বলতে চান — তাদের Workshop 9-এ join করা উচিত।
 
