@@ -14,26 +14,32 @@ Three versions existed: the student's own draft (mother/son Aroggo example), an 
 
 ## Final post (Bangla/Banglish, for both LinkedIn and Facebook)
 
-🔥 UX Storytelling: "ভালো ডিজাইন নজর কাড়ে, ভালো গল্প মনে গেঁথে যায়।"
+🔥 UX Storytelling: "ভালো ডিজাইন নজর কাড়ে। ভালো গল্প মনে গেঁথে যায়।"
 
-একটা সুন্দর UI দেখে কেউ বলবে — "Wow, design-টা সুন্দর!"
-কিন্তু একজন UX Designer-এর আসল প্রশ্ন — "design-টা কেন করা হলো?"
+একটা সুন্দর UI দেখে কেউ বলবে "Wow design-টা সুন্দর!"
+একজন UX Designer-এর আসল প্রশ্ন অন্যরকম "design-টা কেন করা হলো?"
 
-এই সপ্তাহে Kowsar Mamun ভাইয়া Case Study Club BD-তে ঠিক এই প্রশ্নটার উত্তর খুঁজতেই শিখালেন দুইটা জিনিস। একটা case study কখনো final screens-এর collection না — এটা একটা journey। ভাইয়া দুইটা structure দিলেন: In Medias Res — গল্পের মাঝখান থেকে শুরু, সরাসরি সমস্যায় ঢুকে যাওয়া, ধীরে ধীরে warm-up না। আর Story Mountain — প্রতিটা ধাপ আগেরটার চেয়ে বেশি tension আনবে, task-এর নাম না, insight।
+Jeff White তার *UX Storytelling Guide* বইয়ে লিখেছেন "UX storytelling is the act of telling someone why a design is good or bad." মানে ডিজাইনটা কেন ভালো বা খারাপ সেটা বলাই আসল storytelling।
 
-এই দুইটা মিলিয়েই আসে সেই flow — Problem → Research → Insight → Solution → Impact। এটাই audience-কে বুঝতে সাহায্য করে কেন একটা design decision নেওয়া হয়েছিল।
+এই সপ্তাহে Kowsar Mamun ভাইয়া Case Study Club BD-তে ঠিক এই কথাটাই শিখালেন দুইটা structure দিয়ে। একটা case study কখনো final screens-এর collection না। এটা একটা journey।
 
-💊 আমার Arogga case study-তে যেমন —
-একজন মা নিয়মিত ওষুধ খান। একদিন ওষুধ শেষ হয়ে গেল, কিন্তু ছেলেকে বলতে ভুলে গেলেন। ছেলে-ও office pressure-এ refill-এর কথা মনে রাখতে পারেনি। শেষ মুহূর্তে আবার medicine খুঁজে cart বানাতে হলো।
+প্রথম structure In Medias Res। গল্পের মাঝখান থেকে শুরু হয়। সরাসরি সমস্যায় ঢুকে যাওয়া হয়। ধীরে ধীরে warm-up করা হয় না।
 
-Problem-টা কারও carelessness ছিল না — problem-টা ছিল system-এর gap। প্রশ্নটা তখনই আসে: "ওষুধ শেষ হওয়ার আগেই যদি Arogga মনে করিয়ে দিত?" সেখান থেকেই solution direction — Prescription Refill Reminder + Ready Refill Cart।
+দ্বিতীয় structure Story Mountain। প্রতিটা ধাপ আগেরটার চেয়ে বেশি curiosity বাড়ায়। প্রতিটা card-এর title হয় insight। task-এর নাম না।
 
-এটাই UX Storytelling-এর power — solution দেখানোর আগে মানুষকে বুঝতে দেওয়া, কেন solution-টা দরকার।
+এই দুইটা মিলিয়েই আসে সেই flow। Problem → Research → Insight → Solution → Impact। এই flow audience-কে বুঝতে সাহায্য করে কেন একটা design decision নেওয়া হয়েছিল।
+
+💊 আমার Arogga case study-তে যেমন
+একজন মা নিয়মিত ওষুধ খান। একদিন ওষুধ শেষ হয়ে গেল। কিন্তু ছেলেকে বলতে ভুলে গেলেন। ছেলে office pressure-এ refill-এর কথা মনে রাখতে পারেনি। শেষ মুহূর্তে আবার medicine খুঁজে cart বানাতে হলো।
+
+Problem-টা কারও carelessness ছিল না। Problem-টা ছিল system-এর gap। প্রশ্নটা তখনই আসে "ওষুধ শেষ হওয়ার আগেই যদি Arogga মনে করিয়ে দিত?" সেখান থেকেই এলো solution direction। Prescription Refill Reminder আর Ready Refill Cart।
+
+এটাই UX Storytelling-এর power। Solution দেখানোর আগে মানুষকে বুঝতে দেওয়া কেন solution-টা দরকার।
 
 🎯 তাহলে Case Study Club-এ কেন join করা উচিত?
-কারণ design মানে শুধু Figma-তে সুন্দর screen বানানো না। নিজের thinking, research আর decision-গুলো অন্যের কাছে clearly বলতে পারাও একটা skill — আর এই storytelling skill-ই একটা ordinary case study-কে compelling case study বানায়। এখানে mentor-রা সেই gap ধরিয়ে দেন যেটা নিজে দেখতে পাওয়া কঠিন — brief-এ যা চাওয়া হয়েছিল আর screen-এ যা আছে, তার মাঝের ফাঁক।
+Design মানে শুধু Figma-তে সুন্দর screen বানানো না। নিজের thinking research আর decision অন্যের কাছে clearly বলতে পারাও একটা skill। এই storytelling skill-ই একটা ordinary case study-কে compelling case study বানায়। এখানে mentor-রা সেই gap ধরিয়ে দেন যেটা নিজে দেখতে পাওয়া কঠিন। Brief-এ যা চাওয়া হয়েছিল আর screen-এ যা আছে তার মাঝের ফাঁক।
 
-❤️ শুনলাম Workshop 9-এর registration deadline বাড়ানো হয়েছে। যারা নিজের design process-কে সত্যিকারভাবে present করতে চান, case study-কে শুধু দেখাতে না, story হিসেবে বলতে চান — তাদের Workshop 9-এ join করা উচিত।
+❤️ শুনলাম Workshop 9-এর registration deadline বাড়ানো হয়েছে। যারা নিজের design process সত্যিকারভাবে present করতে চান। যারা case study শুধু দেখাতে না story হিসেবে বলতে চান। তাদের Workshop 9-এ join করা উচিত।
 
 Maybe your next case study doesn't need more screens. It needs a better story. 🚀
 
