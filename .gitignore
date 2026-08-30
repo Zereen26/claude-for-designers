@@ -11,3 +11,6 @@ node_modules/
 # both levels must be re-included or Git silently omits every slash command.
 !.claude/
 !.claude/**
+
+# Final case-study PDF export lives in Google Drive / Behance, not git (exceeds GitHub 100MB limit)
+projects/arogga-redesign/arogga case study.pdf
