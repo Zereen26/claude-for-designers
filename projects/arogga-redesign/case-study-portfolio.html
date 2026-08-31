@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Arogga Automatic Refill — Case Study</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root{
+    --primary:#0E7673; --primary-dark:#0A5B58; --mint:#E7F1F1; --amber:#F59E0B;
+    --ink:#16211F; --body:#39463F; --muted:#7C8A87; --line:#E2E9E8;
+  }
+  body{
+    font-family:'Inter',-apple-system,'Segoe UI',Arial,sans-serif;
+    color:var(--body); background:#8A9694; line-height:1.62;
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;
+  }
+  .page{ width:210mm; min-height:297mm; background:#fff; margin:14px auto; padding:22mm 20mm; position:relative; }
+  @page{ size:A4; margin:0; }
+  @media print{
+    body{background:#fff;}
+    .page{ margin:0; width:100%; min-height:auto; height:297mm; padding:20mm 18mm; overflow:hidden; page-break-after:always; }
+    .page:last-child{page-break-after:auto;}
+    .page.cover{ height:297mm; }
+  }
+
+  .label{ font-size:10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--primary); margin:20px 0 5px; }
+  .label:first-of-type{ margin-top:0; }
+  h1{ font-size:32px; font-weight:800; color:var(--ink); line-height:1.16; letter-spacing:-.015em; }
+  h2{ font-size:23px; font-weight:800; color:var(--ink); line-height:1.24; letter-spacing:-.01em; margin-bottom:8px; }
+  p{ font-size:13px; margin-bottom:9px; }
+  .val{ font-size:13.5px; color:var(--ink); font-weight:600; }
+  .keys span{ display:inline-block; background:var(--mint); color:var(--primary-dark); border-radius:5px; padding:3px 9px; margin:4px 5px 0 0; font-weight:600; font-size:11.5px; }
+  ul{ margin:6px 0 10px 17px; } li{ font-size:12.8px; margin-bottom:5px; }
+  .qlist{ margin-left:0; } .qlist li{ list-style:none; padding-left:18px; position:relative; }
+  .qlist li::before{ content:"?"; position:absolute; left:0; color:var(--amber); font-weight:800; }
+  .goal b{ color:var(--ink); }
+  .divider{ height:1px; background:var(--line); margin:16px 0; }
+  .two{ display:grid; grid-template-columns:1fr 1fr; gap:10px 28px; margin-top:6px; }
+
+  .cover{ background:var(--primary); color:#fff; display:flex; flex-direction:column; justify-content:center; }
+  .cover .label{ color:#A7D7D3; }
+  .cover h1{ color:#fff; font-size:44px; margin-bottom:18px; }
+  .cover .sub{ font-size:15px; color:#D8ECEA; max-width:82%; }
+  .cover .foot{ position:absolute; left:22mm; right:22mm; bottom:20mm; font-size:11px; color:#A7D7D3; border-top:1px solid rgba(255,255,255,.25); padding-top:11px; }
+
+  .card{ background:var(--mint); border-radius:10px; padding:16px 18px; margin:12px 0; }
+  .card.amber{ background:#FEF3E2; }
+  .card p:last-child{ margin-bottom:0; }
+  .stat-row{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:14px 0; }
+  .stat{ border:1px solid var(--line); border-left:3px solid var(--primary); border-radius:8px; padding:12px 14px; }
+  .stat .n{ font-size:21px; font-weight:800; color:var(--primary); line-height:1.1; }
+  .stat .t{ font-size:11px; margin-top:4px; }
+  .quote{ border-left:3px solid var(--amber); padding:3px 0 3px 15px; margin:11px 0; font-size:12.8px; font-style:italic; color:var(--ink); }
+  .quote .who{ display:block; font-style:normal; font-size:11px; color:var(--muted); margin-top:4px; }
+  table{ width:100%; border-collapse:collapse; margin:11px 0; font-size:12px; }
+  th,td{ border:1px solid var(--line); padding:7px 9px; text-align:left; vertical-align:top; }
+  th{ background:var(--mint); color:var(--primary-dark); font-weight:700; }
+  td.c{ text-align:center; font-weight:700; } .yes{color:#1AAE4A;} .no{color:#E0483E;} .mid{color:var(--amber);}
+  .swatches{ display:flex; gap:10px; flex-wrap:wrap; margin-top:8px; }
+  .sw{ width:96px; } .sw .chip{ height:44px; border-radius:6px; border:1px solid var(--line); }
+  .sw .nm{ font-size:10.5px; font-weight:600; color:var(--ink); margin-top:4px; } .sw .hx{ font-size:9.5px; color:var(--muted); }
+  .screen-head{ display:flex; align-items:baseline; gap:10px; }
+  .screen-head .num{ font-size:11px; font-weight:700; color:var(--muted); letter-spacing:.1em; }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="page cover">
+  <div class="label">UX Case Study · 2026</div>
+  <h1>Arogga Automatic Refill</h1>
+  <p class="sub">An automated prescription-refill experience so families managing chronic
+  medication never miss a dose, and never depend on a last-minute phone call.</p>
+  <div class="foot">
+    Conceptual case study · Team Spacing · Case Study Club Bangladesh, Workshop 8.0<br>
+    Not officially affiliated with Arogga. Created for learning and portfolio purposes.
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="page">
+  <div class="label">Person &amp; Role</div>
+  <p class="val">Nusrat Zareen — UI/UX Designer</p>
+  <p style="font-size:12px; color:var(--muted); margin-top:2px;">Team Spacing (5 designers: Sultan M. — lead,
+  Sultana Ayrin Opi, Sourav Bhuiyan, Mostain Billah, Nusrat Zareen). Mentors: Kawsar Mamun, Nayem Islam.</p>
+
+  <div class="label">Client</div>
+  <p class="val">Arogga — e-pharmacy, Bangladesh &nbsp;(conceptual brief, 4 weeks)</p>
+
+  <div class="label">In one line</div>
+  <p class="val">Before the medicine runs out, the app sends a reminder. The cart is already
+  filled, so one tap places the order.</p>
+
+  <div class="divider"></div>
+
+  <div class="label">Problem Understanding</div>
+  <p>The problem is not ordering medicine. The real problem is knowing a refill is due before it
+  becomes an emergency. Remote caregivers track a parent's chronic medication by memory and phone
+  calls, so the parent usually reports it only after the last pill is gone.</p>
+
+  <div class="label">Design Goal</div>
+  <p>Design a flow where a caregiver reorders a parent's monthly medicine in one tap, 3 to 4 days
+  before it runs out, without counting strips by hand and without the app ordering or paying on
+  its own.</p>
+
+  <div class="label">User Problems</div>
+  <ul>
+    <li>Parents call only after the last strip is finished</li>
+    <li>Manual pill counting fails: caregivers forget under work pressure, elderly patients forget to keep track</li>
+    <li>Remote caregivers feel guilt and panic over distance-driven delays</li>
+    <li>Elderly patients find complex app navigation hard to use</li>
+    <li>Users will not trust automation that places an order or takes payment without asking first</li>
+  </ul>
+
+  <div class="label">Define Design Principle</div>
+  <p>Automate the tracking, keep the human in control. The system predicts the run-out date and
+  prepares the cart, but nothing is ordered or paid without an explicit tap. The caregiver only
+  has to act on the one patient who needs a refill now.</p>
+</section>
+
+<!-- RESEARCH -->
+<section class="page">
+  <div class="label">Discovery &amp; Research</div>
+  <h2>People don't forget from lack of care. They forget because counting pills by hand every day is hard.</h2>
+  <p style="font-size:12px; color:var(--muted);">Secondary research on medication adherence, a
+  competitor scan of 4 apps, 13 interviews, and a 43-response survey.</p>
+
+  <div class="stat-row">
+    <div class="stat"><div class="n">73.7%</div><div class="t">forget to reorder before the supply runs out</div></div>
+    <div class="stat"><div class="n">89.5%</div><div class="t">want a proactive alert before depletion</div></div>
+    <div class="stat"><div class="n">63.2%</div><div class="t">ready to use a one-tap ready cart</div></div>
+  </div>
+  <p style="font-size:11.5px; color:var(--muted);">100% of respondents said managing a distant
+  family member's medication is challenging.</p>
+
+  <div class="label">From the interviews</div>
+  <div class="quote">"I got caught up in office work and completely forgot. My mother called to say the medicine was finished."<span class="who">Atique Rahman, remote caregiver, 29</span></div>
+  <div class="quote">"At the end of the month I count leftover strips by hand. I have run out of medicine several times doing this."<span class="who">Mahabubur Rahman, retired patient, 60</span></div>
+  <div class="quote">"I don't really understand apps. My daughter orders for me, or I ask someone to bring my medicines."<span class="who">Jakir Hossain, elderly patient, 70</span></div>
+
+  <div class="label">Competitor scan</div>
+  <p style="margin-bottom:4px;">Every platform we tested handles delivery. None connect daily tracking to a proactive refill.</p>
+  <table>
+    <tr><th>Capability</th><th>Arogga</th><th>Osudpotro</th><th>ePharma</th><th>DocTime</th></tr>
+    <tr><td>Medication tracking</td><td class="c no">No</td><td class="c no">No</td><td class="c no">No</td><td class="c no">No</td></tr>
+    <tr><td>Refill reminders</td><td class="c no">No</td><td class="c no">No</td><td class="c mid">Partial</td><td class="c no">No</td></tr>
+    <tr><td>Prescription handling</td><td class="c mid">Partial</td><td class="c yes">Yes</td><td class="c mid">Partial</td><td class="c yes">Yes</td></tr>
+    <tr><td>Delivery</td><td class="c yes">Yes</td><td class="c yes">Yes</td><td class="c yes">Yes</td><td class="c yes">Yes</td></tr>
+  </table>
+  <p style="font-size:11.5px; color:var(--muted);">Global benchmark: Amazon Subscribe &amp; Save / PillPack — automatic quantity calculation plus scheduled refill.</p>
+</section>
+
+<!-- JOURNEY + PERSONA -->
+<section class="page">
+  <div class="label">User Journey</div>
+  <h2>Five stages of chronic medicine management</h2>
+  <p style="font-size:12px; color:var(--muted);">Mapped in FigJam from the interview and survey findings. Every stage carries stress today.</p>
+  <table>
+    <tr><th>Stage</th><th>Feeling</th><th>What breaks</th></tr>
+    <tr><td>1. Realize need</td><td>Worried</td><td>Counting leftover pills manually is easy to forget</td></tr>
+    <tr><td>2. Prepare list</td><td>Confused</td><td>Doctor's handwriting is hard to read</td></tr>
+    <tr><td>3. Buy</td><td>Frustrated</td><td>Searching long medicine names one by one is slow</td></tr>
+    <tr><td>4. Receive</td><td>Anxious</td><td>Delivery delays create fear of a missed dose</td></tr>
+    <tr><td>5. Take medicine</td><td>Uncertain</td><td>Hard to know from far away if the parent actually took it</td></tr>
+  </table>
+
+  <div class="label">Primary Persona</div>
+  <div class="card">
+    <p><b>Atique, 29 — remote caregiver.</b> Businessman in Dhaka. His mother, Selina Begum (58),
+    lives in Rajshahi and takes 4 daily medicines for diabetes, blood pressure, and acid reflux.</p>
+    <p style="margin-bottom:4px;"><b>Goal:</b> make sure his parents never run out of critical
+    medication without repeated anxious phone calls.</p>
+    <p style="margin-bottom:0;"><b>Frustrations:</b> forgets reorder dates under office workload;
+    parents call only after the last strip; feels guilty and stressed when emergency orders are delayed.</p>
+  </div>
+
+  <div class="label">Problem Statement</div>
+  <div class="card amber">
+    <p style="margin-bottom:0;">Atique needs a way to automatically track and reorder his parents'
+    medications in one tap from a distance, because work pressure and physical distance frequently
+    delay purchases. Standard pharmacy apps do not help: they require manual searching and never
+    calculate remaining stock or usage rate.</p>
+  </div>
+</section>
+
+<!-- SOLUTION + HMW -->
+<section class="page">
+  <div class="label">The Solution</div>
+  <h2>An uploaded prescription becomes automated peace of mind</h2>
+  <p style="margin-top:4px;">The experience was designed to answer, quickly and from a distance:</p>
+  <ul class="qlist">
+    <li>When will this medicine run out</li>
+    <li>How many days of stock are left right now</li>
+    <li>What exactly needs reordering this month</li>
+    <li>Can I reorder without searching every medicine name</li>
+    <li>What happens if a medicine is out of stock</li>
+    <li>Did the order actually go through</li>
+  </ul>
+
+  <div class="label">How Might We → Feature</div>
+  <table>
+    <tr><th style="width:40%;">How might we…</th><th>Feature</th></tr>
+    <tr><td>warn users before medicine runs out?</td><td><b>Predictive refill reminders</b> — tracks daily intake, alerts 3 to 4 days early</td></tr>
+    <tr><td>make remaining home stock easy to see?</td><td><b>Digital pill-box dashboard</b> — daily countdown of leftover pills</td></tr>
+    <tr><td>help busy users reorder in seconds?</td><td><b>One-click automated cart</b> — past medicines assembled for single-tap checkout</td></tr>
+    <tr><td>assist elderly users who get stuck?</td><td><b>Direct support call</b> — one tap to pharmacy support</td></tr>
+    <tr><td>manage medicine for several family members?</td><td><b>Multi-patient profiles</b> — separate profiles so doses never mix</td></tr>
+    <tr><td>let users buy only the strips they need?</td><td><b>Flexible partial purchase</b> — pick strips or pack counts, not full boxes</td></tr>
+  </table>
+  <p style="font-size:11.5px; color:var(--muted);">Prioritised with MoSCoW and mind mapping.
+  Scoped for later: prescription update flow, generic stock-out alternatives, caregiver adherence tracking.</p>
+
+  <div class="label">Key screens</div>
+  <p class="keys">
+    <span>Add Patient</span><span>AI Prescription Scan &amp; Review</span><span>Digital Pill Box</span>
+    <span>Medicine Dashboard — Low Stock</span><span>Review Order — 1-tap cart</span>
+    <span>Checkout / Auto Refill</span><span>Out-of-Stock alternatives</span>
+  </p>
+</section>
+
+<!-- SCREENS 1 -->
+<section class="page">
+  <div class="label">Screens — Setup</div>
+
+  <div class="screen-head"><span class="num">01</span><h2 style="margin-bottom:2px;">Add Patient</h2></div>
+  <p>One profile per family member, so each person's medicine, dosage, and refill schedule stays separate.</p>
+  <p style="font-size:12px;"><b>Key sections —</b> upload photo · name · gender · relationship · age · "add more people anytime" · Add Patient CTA</p>
+  <p style="font-size:12px; color:var(--body);"><b>Design goal:</b> make multi-patient tracking possible from the first screen, in under two minutes.</p>
+
+  <div class="divider"></div>
+
+  <div class="screen-head"><span class="num">02</span><h2 style="margin-bottom:2px;">AI Prescription Scan &amp; Review</h2></div>
+  <p>The caregiver photographs the prescription once. The scan extracts each medicine and the
+  caregiver confirms it, instead of re-reading the whole prescription line by line.</p>
+  <p style="font-size:12px;"><b>Key sections —</b> scanned prescription + retake · extracted medicines list · name, strength, duration · frequency (1+0+1) · before / after meal · initial stock · "Confirmed Match" state · add medicine manually</p>
+  <p style="font-size:12px;"><b>Design goal:</b> let the caregiver trust the scan quickly. Unclear handwriting is flagged for verification; everything else is one tap to confirm.</p>
+</section>
+
+<!-- SCREENS 2 -->
+<section class="page">
+  <div class="label">Screens — Track</div>
+
+  <div class="screen-head"><span class="num">03</span><h2 style="margin-bottom:2px;">Digital Pill Box</h2></div>
+  <p>The per-patient home for tracked medicine. Every item shows how many days of supply remain, with no manual counting.</p>
+  <p style="font-size:12px;"><b>Key sections —</b> patient header + next refill date · Medicine / Prescription / History tabs · "30 Days Remaining (60 Tabs)" · Good Stock / Low Stock badge · dosage line · Change · Update prescription · Add medicine</p>
+  <p style="font-size:12px;"><b>Design goal:</b> replace hand-counting strips with a glanceable days-remaining view per medicine.</p>
+
+  <div class="divider"></div>
+
+  <div class="screen-head"><span class="num">04</span><h2 style="margin-bottom:2px;">Medicine Dashboard — Low Stock</h2></div>
+  <p>The alert state. When a patient drops to a few days of supply, the dashboard surfaces it with a single action.</p>
+  <p style="font-size:12px;"><b>Key sections —</b> per-patient card · "4 days of medicine in stock" · "taking 4 medicines daily" · Low Stock badge · Order Now CTA · Add Person</p>
+  <p style="font-size:12px;"><b>Design goal:</b> answer "is a refill due?" in one glance, 3 to 4 days before it becomes urgent.</p>
+</section>
+
+<!-- SCREENS 3 -->
+<section class="page">
+  <div class="label">Screens — Reorder</div>
+
+  <div class="screen-head"><span class="num">05</span><h2 style="margin-bottom:2px;">Review Order — 1-Tap Cart</h2></div>
+  <p>"We've prepared this month's refill for Selina Begum." The cart is assembled from past regular
+  medicines. The caregiver reviews and adjusts, rather than searching and adding.</p>
+  <p style="font-size:12px;"><b>Key sections —</b> prepared items list · qty, manufacturer, price · Change to Strips toggle · Add Item · running total · Proceed to Checkout</p>
+  <p style="font-size:12px;"><b>Design goal:</b> cut reorder time to seconds. A ready cart to check, not a form to fill.</p>
+
+  <div class="divider"></div>
+
+  <div class="screen-head"><span class="num">06</span><h2 style="margin-bottom:2px;">Checkout &amp; Out-of-Stock</h2></div>
+  <p>The confirm gate. Auto Refill is offered as an option, but the order is placed only on an
+  explicit tap. If a medicine is unavailable, alternatives are shown with no pre-selected default.</p>
+  <p style="font-size:12px;"><b>Key sections —</b> Cash on Delivery · Medicine Auto Refill option · order confirmation · out-of-stock alternatives, no default · direct support call</p>
+  <p style="font-size:12px;"><b>Design goal:</b> keep automation trustworthy — nothing is paid without consent, and no dark pattern pushes a substitute.</p>
+</section>
+
+<!-- DESIGN SYSTEM -->
+<section class="page">
+  <div class="label">Design System</div>
+  <h2>Trustworthy, legible, calm</h2>
+  <p>A light-mode system that follows Arogga's existing brand, built for dense medical lists and
+  status badges on a sub-15K Android screen.</p>
+
+  <div class="label">Typography — Inter</div>
+  <p style="font-size:12.5px;">Regular · Medium · Semi Bold · Bold. Clean geometric structure and
+  clear legibility across medicine names, strengths, dosage numbers, and stock badges.</p>
+
+  <div class="label">Colour</div>
+  <div class="swatches">
+    <div class="sw"><div class="chip" style="background:#0E7673;"></div><div class="nm">Primary</div><div class="hx">#0E7673</div></div>
+    <div class="sw"><div class="chip" style="background:#E7F1F1;"></div><div class="nm">Soft Mint</div><div class="hx">#E7F1F1</div></div>
+    <div class="sw"><div class="chip" style="background:#F59E0B;"></div><div class="nm">Amber</div><div class="hx">#F59E0B</div></div>
+    <div class="sw"><div class="chip" style="background:#FFFFFF;border:1px solid #ccc;"></div><div class="nm">White</div><div class="hx">#FFFFFF</div></div>
+  </div>
+  <p style="font-size:11.5px; color:var(--muted); margin-top:6px;">Primary for actions and active
+  state · mint for supporting surfaces · amber for low-stock and warnings. Payment surface
+  supports Cash on Delivery and Medicine Auto Refill.</p>
+
+  <div class="divider"></div>
+
+  <div class="label">Success metrics (set before design)</div>
+  <table>
+    <tr><th>Metric</th><th>Baseline</th><th>Target</th></tr>
+    <tr><td>Task success rate (complete a refill via the reminder)</td><td>3 of 6</td><td>6 of 6</td></tr>
+    <tr><td>Time to complete a reorder</td><td>120 sec</td><td>Under 30 sec</td></tr>
+    <tr><td>Refill-date prediction accuracy (user confirms it matched real stock)</td><td>3 of 6</td><td>5 of 6</td></tr>
+  </table>
+</section>
+
+<!-- DECISIONS + IMPACT -->
+<section class="page">
+  <div class="label">Key UX Decisions</div>
+  <ul>
+    <li>Show <b>days remaining</b>, not strip counts, so users never have to do the math</li>
+    <li>Next-refill date and countdown are <b>always visible</b> on the patient dashboard</li>
+    <li>The refill cart is <b>pre-assembled</b> from past orders for single-tap checkout</li>
+    <li>Auto Refill never orders or takes payment without an <b>explicit confirm tap</b></li>
+    <li><b>Per-patient profiles</b> keep multiple family members' medicine fully separate</li>
+    <li>Out-of-stock alternatives have <b>no pre-selected default</b> and no dark pattern</li>
+    <li>The AI scan <b>flags unclear handwriting</b> for human verification instead of guessing</li>
+    <li>A <b>direct support call</b> is one tap away for elderly users who get stuck</li>
+  </ul>
+
+  <div class="label">Expected Product Impact</div>
+  <p style="font-size:11.5px; color:var(--muted); margin-bottom:4px;">Projected from user-stated demand, not measured outcomes.</p>
+  <ul>
+    <li><b>73.7%</b> — target reduction in emergency stockouts (share who forget to reorder today)</li>
+    <li><b>5 min → 10 sec</b> — reorder time, replacing manual searches with a ready cart</li>
+    <li><b>89.5%</b> — surveyed users who want a proactive reminder before depletion</li>
+    <li><b>100%</b> — respondents who said managing a distant family member's medicine is hard</li>
+  </ul>
+  <div class="card">
+    <p style="margin-bottom:0;"><b>How we would validate this post-launch:</b> track auto-refill
+    opt-in rate, average stock-days-left at the moment of reorder, and emergency support-call
+    volume over the first 60 days.</p>
+  </div>
+
+  <div class="label">Final Outcome</div>
+  <ul>
+    <li>A per-patient tracking dashboard with a days-remaining countdown</li>
+    <li>An AI prescription scan with a human review-and-confirm step</li>
+    <li>A one-tap refill cart assembled from past orders</li>
+    <li>Out-of-stock handling with fair, no-default alternatives</li>
+    <li>An Auto Refill option gated by an explicit confirmation</li>
+  </ul>
+
+  <div class="divider"></div>
+  <p style="font-size:12.5px;"><b>In one statement.</b> This project shows how a proactive refill
+  layer can turn an anxious, memory-dependent routine into a calm, one-tap monthly task, without
+  ever taking the final decision away from the caregiver.</p>
+</section>
+
+<!-- THANKS -->
+<section class="page cover" style="background:var(--primary-dark);">
+  <div class="label" style="color:#A7D7D3;">Team &amp; Thanks</div>
+  <h1 style="color:#fff;">Thank you for reading</h1>
+  <p class="sub">Team Spacing — Sultan M. (lead), Sultana Ayrin Opi, Sourav Bhuiyan, Mostain Billah,
+  Nusrat Zareen. Mentored by Kawsar Mamun and Nayem Islam · Case Study Club Bangladesh, Workshop 8.0.</p>
+  <div class="foot" style="color:#A7D7D3;">Conceptual case study, not affiliated with Arogga.</div>
+</section>
+
+</body>
+</html>
